@@ -1,0 +1,1 @@
+pandoc -o Journal_2020.epub  text/01_title.md text/2020-01-02.md
