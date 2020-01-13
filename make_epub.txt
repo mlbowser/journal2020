@@ -1,1 +1,1 @@
-pandoc text/01_title.md text/2020-01-02.md text/2020-01-03.md text/2020-01-06.md text/2020-01-07.md text/2020-01-08.md text/2020-01-09.md text/2020-01-10.md text/2020-01-13.md -o Journal_2020.epub
+pandoc 01_title.md 2020-01-02.md 2020-01-03.md 2020-01-06.md 2020-01-07.md 2020-01-08.md 2020-01-09.md 2020-01-10.md 2020-01-13.md bibliography.md -o Journal_2020.epub
