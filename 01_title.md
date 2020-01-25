@@ -5,4 +5,5 @@ rights:  CC0
 language: en-US
 bibliography: bibliography.bib
 link-citations: true
+csl: genome.csl
 ...
