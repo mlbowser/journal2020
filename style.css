@@ -24,3 +24,13 @@ q { quotes: "“" "”" "‘" "’"; }
 div.column{ display: inline-block; vertical-align: top; width: 50%; }
 pre, code { white-space: pre-wrap; background-color: #D8D8D8; overflow-wrap: break-word; word-wrap: break-word;}
 a { overflow-wrap: break-word; word-wrap: break-word;}
+table {
+  border-collapse: collapse;
+}
+td, th {
+  border: 1px solid #888;
+  padding: 0.5rem;
+}
+tr.odd {
+  background-color: #eee;  
+}
