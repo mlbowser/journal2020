@@ -34,3 +34,7 @@ td, th {
 tr.odd {
   background-color: #eee;  
 }
+.references p {
+	padding-left: 10%;
+	text-indent: -10%;
+}
