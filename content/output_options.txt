@@ -1,0 +1,2 @@
+GitHub markdown:
+-o Journal_2020.md -t gfm
