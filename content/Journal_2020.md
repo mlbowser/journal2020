@@ -1400,8 +1400,8 @@ Contents:
 
 To do:
 
-  - Board of Fish meeting travel arrangements. ~~\* Elodea SEA call at
-    11:00.~~
+  - Board of Fish meeting travel arrangements.
+  - ~~Elodea SEA call at 11:00.~~
 
 I revised the Slikok manuscript based on the copy editor’s edits and
 comments.
@@ -1445,6 +1445,14 @@ Lattin [1963](#ref-drake_american_1963); Froeschner
 [1976](#ref-froeschner_zoogeographic_1976)). I made a new record for
 this specimen
 ([UAMObs:Ento:244398](http://arctos.database.museum/guid/UAMObs:Ento:244398)).
+
+## Tuesday, February 25
+
+To do:
+
+  - Board of Fish meeting travel arrangements.
+
+I started making travel arrangements for the Board of Fisheries meeting.
 
 # Bibliography
 
