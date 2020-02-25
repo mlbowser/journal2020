@@ -1436,6 +1436,16 @@ Contents:
 | Myrmicinae     |     1 |
 | Lepidoptera    |     1 |
 
+Attempting to key a tingid bug in Berlese sample
+[KNWR:Ento:11370](http://arctos.database.museum/guid/KNWR:Ento:11370)
+just by looking through the vial and using the key of Drake and Lattin
+([1963](#ref-drake_american_1963)), p. 334. 1 → 4 → 5 → 6 → *Acalypta
+nyctalis* Drake, 1928. This species is known from our area (Drake and
+Lattin [1963](#ref-drake_american_1963); Froeschner
+[1976](#ref-froeschner_zoogeographic_1976)). I made a new record for
+this specimen
+([UAMObs:Ento:244398](http://arctos.database.museum/guid/UAMObs:Ento:244398)).
+
 # Bibliography
 
 <div id="refs" class="references">
@@ -1482,6 +1492,25 @@ reconstruction algorithms based on the minimum-evolution principle.
 Journal of Computational Biology **9**(5): 687–705. Mary Ann Liebert
 Inc.
 doi:[10.1089/106652702761034136](https://doi.org/10.1089/106652702761034136).
+
+</div>
+
+<div id="ref-drake_american_1963">
+
+Drake, C.J., and Lattin, J.D. 1963. American species of the lacebug
+genus *Acalypta* (Hemiptera: Tingidae). Proceedings of the United States
+National Museum **115**(3486): 331–345 +15 plates.
+doi:[10.5479/si.00963801.115-3486.331](https://doi.org/10.5479/si.00963801.115-3486.331).
+
+</div>
+
+<div id="ref-froeschner_zoogeographic_1976">
+
+Froeschner, R.C. 1976. Zoogeographic notes on the lace bug genus
+*Acalypta* Westwood in the Americas with description of a new species
+from Mexico (Hemiptera: Tingidae). The American Midland Naturalist
+**96**(2): 257–269.
+doi:[10.2307/2424067](https://doi.org/10.2307/2424067).
 
 </div>
 

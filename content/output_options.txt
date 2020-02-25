@@ -1,2 +1,5 @@
 GitHub markdown:
--o Journal_2020.md -t gfm
+--filter pandoc-citeproc --css style.css -o Journal_2020.md -t gfm
+
+epub:
+--filter pandoc-citeproc --css style.css -o Journal_2020.epub
