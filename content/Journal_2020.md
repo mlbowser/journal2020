@@ -1154,7 +1154,7 @@ used on their map:
 | *Betula neoalaskana* Sarg.                 | MB   |
 | *Comarum palustre* L.                      | MFF  |
 | *Eleocharis* R.Br.                         | SR   |
-| *Equisetum* fluviatile L.                  | HTF  |
+| *Equisetum fluviatile* L.                  | HTF  |
 | *Iris setosa* Pall. ex Link                | WF   |
 | *Myrica gale* L.                           | SG   |
 | *Myriophyllum* L.                          | MR   |
@@ -1454,6 +1454,212 @@ To do:
 
 I started making travel arrangements for the Board of Fisheries meeting.
 
+I sorted Berlese sample
+[KNWR:Ento:11373](http://arctos.database.museum/guid/KNWR:Ento:11373).
+
+Contents:
+
+| identification | count |
+| :------------- | ----: |
+| Arachnida      |    76 |
+| Thysanoptera   |     1 |
+| Aphididae      |     3 |
+| Coleoptera     |     1 |
+| Insecta        |     2 |
+| Hemiptera      |     2 |
+| Collembola     |     7 |
+| Araneae        |     1 |
+
+The [KNWR:Env](https://arctos.database.museum/knwr_env) collection was
+created today to accomodate environmental samples beginning with soil
+samples from the black spruce inventory project.
+
+I formatted and posted the *Refuge Notebook* [article from
+December 13, 2019](https://www.fws.gov/uploadedFiles/Region_7/NWRS/Zone_2/Kenai/Sections/What_We_Do/In_The_Community/Refuge_Notebooks/2019_Articles/Refuge_Notebook_v21_n44.pdf).
+
+I edited this week’s *Refuge Notebook* article.
+
+## Wednesday, February 26
+
+To do:
+
+  - ~~Submit *Refuge Notebook* article.~~
+  - ~~Board of Fish meeting travel arrangements.~~
+  - ~~Swan Lake Fire burn severity/vegetation survey planning.~~
+
+I made final edits to this week’s Refuge Notebook\* article and got it
+sent off.
+
+Mark asked me to put together data/maps for planning work within the
+2019 Swan Lake Fire, so I did.
+
+``` r
+nm <- read.csv("site_names.csv", stringsAsFactors=FALSE)
+loc <- read.csv("2018-06-06-1309_points_wgs84.csv", stringsAsFactors=FALSE)
+loc2 <- loc[loc$site_name %in% nm$site_name,]
+write.csv(loc2, "2020-02-26-1122_Bowser_sites.csv", row.names=FALSE)
+```
+
+![Map of legacy vegation plots within the Swan Lake
+Fire.](2020-02-26-1129_Swan_Lake_Fire_plots_map.jpg)  
+Map of legacy vegation plots within the Swan Lake Fire.
+
+I started entering plant observation records from Jakubas and Firman
+([1984](#ref-jakubas_sandpiper_1984)) (records
+[KNWRObs:Herb:868](http://arctos.database.museum/guid/KNWRObs:Herb:868)–[KNWRObs:Herb:875](http://arctos.database.museum/guid/KNWRObs:Herb:875)).
+
+## Thursday, February 27
+
+The Slikok project manuscript was published today (Bowser et al.
+[2020](#ref-bowser_et_al_2020)).
+
+To do:
+
+  - ~~Add Arctos specimen citations for Bowser et
+    al. ([2020](#ref-bowser_et_al_2020)).~~
+
+<!-- end list -->
+
+``` r
+## Preparing a file of specimen citations to upload to Arctos.
+## Starting with Suppl. material 6: Raw occurrence data from the Slikok watershed biotic inventory (<https://doi.org/10.3897/BDJ.8.e50124.suppl6>).
+
+setwd("D:/projects/Slikok_watershed/manuscript/2020-02-27_Arctos_citations")
+d1 <- read.csv("oo_371432.csv", stringsAsFactors=FALSE)
+
+dim(d1)
+[1] 4764   28
+
+levels(as.factor(d1$SCIENTIFIC_NAME))
+
+## Starting citation upload data frame.
+d2 <- d1[,c("GUID", "SCIENTIFIC_NAME")]
+ 
+d2$publication_id <- 10009135
+d2$made_date <- "2020-02-27"
+d2$nature_of_id <- "unknown"
+d2$type_status <- "voucher"
+d2$USE_EXISTING_ACCEPTED_ID <- 0
+d2$accepted_id_fg <- 0
+d2$use_pub_authors <- 1
+
+## The tough part is that I need to convert some of the identifications to the "A {string}" formula used by Arctos.
+
+## First the names containing "sp."
+slsp <- grepl(" sp. ", d2$SCIENTIFIC_NAME)
+nsp <- d2$SCIENTIFIC_NAME[slsp]
+nsp0 <- strsplit(nsp, " sp. ")
+nsp1 <- sapply(nsp0, "[", 1)
+nsp2 <- sapply(nsp0, "[", 2)
+nsp3 <- paste0(nsp1, " {", nsp, "}")
+## There were some double spaces in there.
+nsp3 <- gsub("  ", " ", nsp3)
+d2$SCIENTIFIC_NAME[slsp] <- nsp3
+
+## Now I think I saw one cf. without a sp.
+slcf <- grepl(" cf. ", d2$SCIENTIFIC_NAME)
+## I want to exclude those I have already dealt with.
+sum(slcf)
+[1] 16
+slcf[slsp] <- FALSE
+sum(slcf)
+[1] 9
+levels(as.factor(d2$SCIENTIFIC_NAME[slcf]))
+## That looked good.
+
+ncf <- d2$SCIENTIFIC_NAME[slcf]
+ncf0 <- strsplit(ncf, " cf. ")
+ncf1 <- sapply(ncf0, "[", 1)
+ncf2 <- sapply(ncf0, "[", 2)
+ncf3 <- paste0(ncf1, " {", ncf, "}")
+d2$SCIENTIFIC_NAME[slcf] <- ncf3
+
+## Ok, making a test file to upload.
+write.csv(d2[1,], file="slikok_citations_0001-0001.csv", row.names=FALSE)
+
+## That worked. Trying some more.
+write.csv(d2[2:10,], file="slikok_citations_0002-0010.csv", row.names=FALSE)
+
+## That worked. Trying some more.
+write.csv(d2[11:100,], file="slikok_citations_0011-0100.csv", row.names=FALSE)
+
+## Those A {string} identifications were not handled exaclty as I had expected.
+## Record 121, KNWR:Herb:12254, Peltigera conspersa nom. prov., should be a good test case.
+write.csv(d2[101:150,], file="slikok_citations_0101-0150.csv", row.names=FALSE)
+## That one did not work. Got error: taxon 1 not found.
+
+## Fixing this.
+slnp <- grepl("nom. prov.", d2$SCIENTIFIC_NAME)
+d2$SCIENTIFIC_NAME[slnp]
+## Just one name like this.
+d2$SCIENTIFIC_NAME[slnp] <- "Peltigera {Peltigera conspersa nom. prov.}"
+
+## Trying again.
+write.csv(d2[101:150,], file="slikok_citations_0101-0150.csv", row.names=FALSE)
+# That worked.
+
+write.csv(d2[151:500,], file="slikok_citations_0151-0500.csv", row.names=FALSE)
+## That did not load. Had problem with Simulium arcticum complex.
+
+d2$SCIENTIFIC_NAME[d2$SCIENTIFIC_NAME=="Simulium arcticum complex"] <- "Simulium {Simulium arcticum complex}"
+
+## Trying again.
+write.csv(d2[151:500,], file="slikok_citations_0151-0500.csv", row.names=FALSE)
+## That worked.
+
+write.csv(d2[501:1000,], file="slikok_citations_0501-1000.csv", row.names=FALSE)
+
+write.csv(d2[1001:2000,], file="slikok_citations_1001-2000.csv", row.names=FALSE)
+
+write.csv(d2[2001:3000,], file="slikok_citations_2001-3000.csv", row.names=FALSE)
+## That gave me an error: value too large for column "UAM"."CF_TEMP_CITATION"."SCIENTIFIC_NAME" (actual: 67, maximum: 60)
+
+summary(nchar(d2$SCIENTIFIC_NAME)) 
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+    6.0    17.0    20.0    23.8    30.0    67.0 
+
+## What was this?   
+d2$SCIENTIFIC_NAME[nchar(d2$SCIENTIFIC_NAME)==67]
+[1] "Pachynematus albipennis {Pachynematus albipennis sp. SlikokOtu1704}"
+
+d2[nchar(d2$SCIENTIFIC_NAME)==67,]
+## That is UAMObs:Ento:239052.
+
+## Bumping that back to a genus resolution ID.
+d2$SCIENTIFIC_NAME[nchar(d2$SCIENTIFIC_NAME)==67] <- "Pachynematus {Pachynematus albipennis sp. SlikokOtu1704}"
+
+write.csv(d2[2001:3000,], file="slikok_citations_2001-3000.csv", row.names=FALSE)
+## Got an error with the Simulium venustum complex.
+
+d2$SCIENTIFIC_NAME[d2$SCIENTIFIC_NAME=="Simulium venustum complex"] <- "Simulium {Simulium venustum complex}"
+
+write.csv(d2[2001:3000,], file="slikok_citations_2001-3000.csv", row.names=FALSE)
+
+write.csv(d2[3001:4000,], file="slikok_citations_3001-4000.csv", row.names=FALSE)
+## Did not like this one:   Arthonia edgewoodensis ined..
+
+d2$SCIENTIFIC_NAME[d2$SCIENTIFIC_NAME=="Arthonia edgewoodensis ined."] <- "Arthonia {Arthonia edgewoodensis ined.}"
+
+write.csv(d2[3001:4000,], file="slikok_citations_3001-4000.csv", row.names=FALSE)
+## Did not like Lecanora allophana forma soralifera.
+
+d2$SCIENTIFIC_NAME[d2$SCIENTIFIC_NAME=="Lecanora allophana forma soralifera"] <- "Lecanora allophana {Lecanora allophana forma soralifera}"
+
+write.csv(d2[3001:4000,], file="slikok_citations_3001-4000.csv", row.names=FALSE)
+
+write.csv(d2[4001:4764,], file="slikok_citations_4001-4764.csv", row.names=FALSE)
+## Did not like Lasiomma nr. consobrinum.
+
+d2$SCIENTIFIC_NAME[d2$SCIENTIFIC_NAME=="Lasiomma nr. consobrinum"] <- "Lasiomma {Lasiomma nr. consobrinum}"
+
+write.csv(d2[4001:4764,], file="slikok_citations_4001-4764.csv", row.names=FALSE)
+
+## All done.
+
+## Saving the whole data frame.
+write.csv(d2, file="slikok_citations.csv", row.names=FALSE)
+```
+
 # Bibliography
 
 <div id="refs" class="references">
@@ -1480,6 +1686,17 @@ of Aquatic Plant Management **33**: 13–19. Available from
 Bowser, M.L. 2019. Work journal 2019. Exported pdf version. U.S. Fish &
 Wildlife Service, Kenai National Wildlife Refuge., Soldotna, Alaska.
 doi:[doi.org/10.7299/X7RB74XZ](https://doi.org/doi.org/10.7299/X7RB74XZ).
+
+</div>
+
+<div id="ref-bowser_et_al_2020">
+
+Bowser, M.L., Brassfield, R., Dziergowski, A., Eskelin, T., Hester, J.,
+Magness, D.R., McInnis, M., Melvin, T., Morton, J.M., and Stone, J.
+2020. Towards conserving natural diversity: A biotic inventory by
+observations, specimens, dna barcoding and high-throughput sequencing
+methods. Biodiversity Data Journal **8**: e50124. Pensoft Publishers.
+doi:[10.3897/BDJ.8.e50124](https://doi.org/10.3897/BDJ.8.e50124).
 
 </div>
 
