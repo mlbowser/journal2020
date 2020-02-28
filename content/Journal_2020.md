@@ -1660,9 +1660,62 @@ write.csv(d2[4001:4764,], file="slikok_citations_4001-4764.csv", row.names=FALSE
 write.csv(d2, file="slikok_citations.csv", row.names=FALSE)
 ```
 
+I sorted Berlese sample
+[KNWR:Ento:11374](http://arctos.database.museum/guid/KNWR:Ento:11374).
+
+Contents:
+
+| identification | count |
+| :------------- | ----: |
+| Arachnida      |   220 |
+| Insecta        |     1 |
+| Formicidae     |     1 |
+| Araneae        |     1 |
+| Collembola     |     7 |
+
+I sorted Berlese sample
+[KNWR:Ento:11375](http://arctos.database.museum/guid/KNWR:Ento:11375).
+
+Contents:
+
+| identification | count |
+| :------------- | ----: |
+| Araneae        |     5 |
+| Collembola     |    11 |
+| Arachnida      |    64 |
+
+This was a sparser sample.
+
+I entered more observation records from Jakubas and Firman
+([1984](#ref-jakubas_sandpiper_1984)) (records
+[KNWRObs:Herb:876](http://arctos.database.museum/guid/KNWRObs:Herb:876)–[KNWRObs:Herb:882](http://arctos.database.museum/guid/KNWRObs:Herb:882)).
+
+I started reading through Alaska Region Data Stewardship Team
+([2019](#ref-ak_region_data_stewardship_team_alaska_2020)[a](#ref-ak_region_data_stewardship_team_alaska_2020),
+[2019](#ref-alaska_region_data_stewardship_team_alaska_2020)[b](#ref-alaska_region_data_stewardship_team_alaska_2020)),
+required reading for tomorrow’s meeting.
+
 # Bibliography
 
 <div id="refs" class="references">
+
+<div id="ref-ak_region_data_stewardship_team_alaska_2020">
+
+Alaska Region Data Stewardship Team. 2019a. Alaska Region Interim Data
+Management User Guide. Available from
+<https://ak-region-dst.gitbook.io/alaska-region-interim-data-management-user-guide/>
+\[accessed 27 February 2020\].
+
+</div>
+
+<div id="ref-alaska_region_data_stewardship_team_alaska_2020">
+
+Alaska Region Data Stewardship Team. 2019b. Alaska Region Interim
+Metadata Guide. Available from
+<https://ak-region-dst.gitbook.io/alaska-region-mdeditor-interim-user-guide/>
+\[accessed 27 February 2020\].
+
+</div>
 
 <div id="ref-bella_Vogel_2013">
 
