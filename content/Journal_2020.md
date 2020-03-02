@@ -1500,10 +1500,6 @@ loc2 <- loc[loc$site_name %in% nm$site_name,]
 write.csv(loc2, "2020-02-26-1122_Bowser_sites.csv", row.names=FALSE)
 ```
 
-![Map of legacy vegation plots within the Swan Lake
-Fire.](2020-02-26-1129_Swan_Lake_Fire_plots_map.jpg)  
-Map of legacy vegation plots within the Swan Lake Fire.
-
 I started entering plant observation records from Jakubas and Firman
 ([1984](#ref-jakubas_sandpiper_1984)) (records
 [KNWRObs:Herb:868](http://arctos.database.museum/guid/KNWRObs:Herb:868)–[KNWRObs:Herb:875](http://arctos.database.museum/guid/KNWRObs:Herb:875)).
@@ -1695,6 +1691,104 @@ I started reading through Alaska Region Data Stewardship Team
 [2019](#ref-alaska_region_data_stewardship_team_alaska_2020)[b](#ref-alaska_region_data_stewardship_team_alaska_2020)),
 required reading for tomorrow’s meeting.
 
+## Friday, February 28
+
+To do:
+
+  - ~~Data Management Early Adopter Discussion and
+    [mdEditor](https://www.mdeditor.org/) Training at 10:00~~
+
+Potential projects to use as a test case:
+
+  - 2019 black spruce bioinventory
+  - 2019 Alaska blackfish diet study
+  - 2020 Sandpiper Lake *Elodea* eradication
+  - 2020 Swan Lake Fire burn severity and vegetation work
+
+I sorted Berlese sample
+[KNWR:Ento:11376](http://arctos.database.museum/guid/KNWR:Ento:11376).
+
+Contents:
+
+| identification | count |
+| :------------- | ----: |
+| Coleoptera     |     2 |
+| Arachnida      |   211 |
+| Araneae        |     5 |
+| Collembola     |    24 |
+| Cicadellidae   |     1 |
+| Hemiptera      |    13 |
+| Insecta        |     1 |
+
+Most of the Hemiptera look like *Arctorthezia*.
+
+Data Management talk/telecon notes/questions:
+
+  - Why a new standard for metadata? What already exists? How does it
+    relate to existing standards, e.g. Darwin Core, Dublin Core, RDF
+    (Resource Description Framework)
+
+  - Where are these metadata files going?
+
+  - Where are the nicely structured project archives going?
+
+  - Which laws for sharing data?
+    
+      - 1967 FOIA
+      - Open Governemnt Data Act
+      - Also AK regional strategic intent
+
+  - Where is the form for the Regional Data Repository?
+
+  - McCrea is my point of contact.
+
+  - What is the ISO metadata standard that is being referring to? See
+    <https://ak-region-dst.gitbook.io/alaska-region-mdeditor-interim-user-guide/glossary-of-terms-lcc-metadata-manual#iso>.
+    ISO 19110, ISO 19115-1, ISO 19115-2? Answer: It is based off of ISO
+    19115-2 or ISO 19115-1, geospatial standards.
+
+![A slide from the Data Management Early Adopter
+Discussion.](2020-02-28_data_manamgement_slide.jpg)  
+A slide from the Data Management Early Adopter Discussion.
+
+I entered more observation records from Jakubas and Firman
+([1984](#ref-jakubas_sandpiper_1984)) (records
+[KNWRObs:Herb:883](http://arctos.database.museum/guid/KNWRObs:Herb:883)–
+).
+
+I talked with McCrea about which project to use for the data management
+work. We decided to use the snowshoe hare pellet count survey for this.
+I am not excited about this because it is a dataset that is not in the
+best shape and it is not one that I have worked with.
+
+# March
+
+## Monday, March 2
+
+To do:
+
+  - Write this week’s *Refuge Notebook* article.
+  - Finish arrangements for next week’s Anchorage trip.
+  - Data Management Early Adopter follow-up. Start preparing hare survey
+    data.
+  - 1:00 pm Swan Lake Fire studies planning meeting.
+
+I sorted Berlese sample
+[KNWR:Ento:11377](http://arctos.database.museum/guid/KNWR:Ento:11377).
+
+Contents:
+
+| identification | count |
+| :------------- | ----: |
+| Arachnida      |   260 |
+| Collembola     |    30 |
+| Insecta        |     1 |
+| Araneae        |     2 |
+| Lithobiomorpha |     1 |
+| Chilopoda      |     1 |
+| Myrmicinae     |     3 |
+| Hemiptera      |     3 |
+
 # Bibliography
 
 <div id="refs" class="references">
@@ -1702,9 +1796,8 @@ required reading for tomorrow’s meeting.
 <div id="ref-ak_region_data_stewardship_team_alaska_2020">
 
 Alaska Region Data Stewardship Team. 2019a. Alaska Region Interim Data
-Management User Guide. Available from
-<https://ak-region-dst.gitbook.io/alaska-region-interim-data-management-user-guide/>
-\[accessed 27 February 2020\].
+Management User Guide.
+doi:[10.7944/P9JF0RT6](https://doi.org/10.7944/P9JF0RT6).
 
 </div>
 
