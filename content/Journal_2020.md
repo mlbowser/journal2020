@@ -1796,7 +1796,7 @@ Contents:
 <div id="ref-ak_region_data_stewardship_team_alaska_2020">
 
 Alaska Region Data Stewardship Team. 2019a. Alaska Region Interim Data
-Management User Guide.
+Management User Guide (v.3).
 doi:[10.7944/P9JF0RT6](https://doi.org/10.7944/P9JF0RT6).
 
 </div>
