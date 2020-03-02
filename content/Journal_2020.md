@@ -1753,8 +1753,7 @@ A slide from the Data Management Early Adopter Discussion.
 
 I entered more observation records from Jakubas and Firman
 ([1984](#ref-jakubas_sandpiper_1984)) (records
-[KNWRObs:Herb:883](http://arctos.database.museum/guid/KNWRObs:Herb:883)–
-).
+[KNWRObs:Herb:883](http://arctos.database.museum/guid/KNWRObs:Herb:883)–[KNWRObs:Herb:951](http://arctos.database.museum/guid/KNWRObs:Herb:951)).
 
 I talked with McCrea about which project to use for the data management
 work. We decided to use the snowshoe hare pellet count survey for this.
