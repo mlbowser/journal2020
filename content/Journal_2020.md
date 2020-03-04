@@ -1767,10 +1767,11 @@ best shape and it is not one that I have worked with.
 To do:
 
   - Write this week’s *Refuge Notebook* article.
-  - Finish arrangements for next week’s Anchorage trip.
+  - ~~Finish arrangements for next week’s Anchorage trip.~~
   - Data Management Early Adopter follow-up. Start preparing hare survey
     data.
-  - 1:00 pm Swan Lake Fire studies planning meeting.
+  - ~~1:00 pm Swan Lake Fire studies planning meeting.~~
+  - Take tissue samples of worm specimens from Tyler.
 
 I sorted Berlese sample
 [KNWR:Ento:11377](http://arctos.database.museum/guid/KNWR:Ento:11377).
@@ -1787,6 +1788,63 @@ Contents:
 | Chilopoda      |     1 |
 | Myrmicinae     |     3 |
 | Hemiptera      |     3 |
+
+I uploaded citations for Jakubas and Firman
+([1984](#ref-jakubas_sandpiper_1984)). When I looked at the map I saw a
+couple of missing records, so I added these
+([KNWRObs:Herb:952](http://arctos.database.museum/guid/KNWRObs:Herb:952)–[KNWRObs:Herb:953](http://arctos.database.museum/guid/KNWRObs:Herb:953)).
+
+I started work on this week’s *Refuge Notebook* article.
+
+I participated in the planning meeting for burn severity mapping and
+invasive species work for the Swan Lake Fire burn area.
+
+``` r
+## How many species were documented at site MG28?
+## Downloaded analysis dataset.
+wd <- "C:/Users/mattbowser/Documents/Refuge_Notebook/2020/submissions/2020-03-06_Refuge_Notebook"
+setwd(wd)
+
+d1 <- read.csv("oo_371428.csv", stringsAsFactors=FALSE)
+
+sl <- grepl("site MG28", d1$SPEC_LOCALITY)
+d1[sl,]
+levels(as.factor(d1$SPECIES[sl]))
+## 80 species or BIN resolution identifications were obtained at this site.
+
+```
+
+## Tuesday, March 3
+
+To do:
+
+  - Write this week’s *Refuge Notebook* article.
+  - Data managmenet follow-up.
+  - Prepare information/comment for next week’s BOF meeting.
+
+I worked some on my *Refuge Notebook* article.
+
+I sorted Berlese sample
+[KNWR:Ento:11378](http://arctos.database.museum/guid/KNWR:Ento:11378).
+
+Contents:
+
+| identification | count |
+| :------------- | ----: |
+| Araneae        |     5 |
+| Collembola     |   179 |
+| Arachnida      |   333 |
+| Insecta        |     3 |
+| Oligochaeta    |     7 |
+| Nematoda       |     2 |
+| Lithobiomorpha |     2 |
+| Hemiptera      |     4 |
+| Coleoptera     |     2 |
+| Hymenoptera    |     1 |
+| Staphylinidae  |     1 |
+
+I submitted a Record of General Use to Dan and Katherine for fluridone
+applied to Hilda-Seppu Lakes in 2019.
 
 # Bibliography
 
