@@ -1866,7 +1866,7 @@ sent this to the data management folks.
 
 To do:
 
-  - Prepare information/comment for next week’s BOF meeting.
+  - Prepare information/comment/images for next week’s BOF meeting.
 
 I sorted Berlese sample
 [KNWR:Ento:11379](http://arctos.database.museum/guid/KNWR:Ento:11379).
@@ -1882,6 +1882,12 @@ Contents:
 | Arachnida      |   310 |
 | Hemiptera      |     3 |
 | Phoridae       |     1 |
+
+I worked on my statements for next week’s meeting. I learned that
+non-native earthworms can increase nitrogen flux into streams (Pinder
+[2013](#ref-pinder_ecology_2013); Costello and Lamberti
+[2008](#ref-costello_non-native_2008),
+[2009](#ref-costello_biological_2009)).
 
 # Bibliography
 
@@ -1937,6 +1943,24 @@ Magness, D.R., McInnis, M., Melvin, T., Morton, J.M., and Stone, J.
 observations, specimens, dna barcoding and high-throughput sequencing
 methods. Biodiversity Data Journal **8**: e50124. Pensoft Publishers.
 doi:[10.3897/BDJ.8.e50124](https://doi.org/10.3897/BDJ.8.e50124).
+
+</div>
+
+<div id="ref-costello_non-native_2008">
+
+Costello, D.M., and Lamberti, G.A. 2008. Non-native earthworms in
+riparian soils increase nitrogen flux into adjacent aquatic ecosystems.
+Oecologia **158**(3): 499–510.
+doi:[10.1007/s00442-008-1149-0](https://doi.org/10.1007/s00442-008-1149-0).
+
+</div>
+
+<div id="ref-costello_biological_2009">
+
+Costello, D.M., and Lamberti, G.A. 2009. Biological and physical effects
+of non-native earthworms on nitrogen cycling in riparian soils. Soil
+Biology and Biochemistry **41**(10): 2230–2235.
+doi:[10.1016/j.soilbio.2009.08.007](https://doi.org/10.1016/j.soilbio.2009.08.007).
 
 </div>
 
@@ -2173,6 +2197,14 @@ Paez, C.E. 1991. Alpine vegetation of areas utilized by introduced
 populations of caribou (*Rangifer tarandus*) on the Kenai Peninsula,
 Alaska. Master’s thesis, University of Wisconsin-Madison, Madison,
 Wisconsin.
+
+</div>
+
+<div id="ref-pinder_ecology_2013">
+
+Pinder, R.A. 2013. Ecology of earthworms in riparian habitats. PhD
+Thesis, University at Albany, State University of New York, Albany, New
+York. Available from <https://search.proquest.com/docview/1419999664>.
 
 </div>
 
