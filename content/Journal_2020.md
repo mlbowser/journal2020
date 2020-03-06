@@ -1846,6 +1846,43 @@ Contents:
 I submitted a Record of General Use to Dan and Katherine for fluridone
 applied to Hilda-Seppu Lakes in 2019.
 
+I worked more on my *Refuge Notebook* article.
+
+## Wednesday, March 4
+
+To do:
+
+  - ~~Submit this week’s *Refuge Notebook* article.~~
+  - ~~Data managmenet follow-up.~~
+  - Prepare information/comment for next week’s BOF meeting.
+
+I finished my *Refuge Notebook* article and got it sent in.
+
+I created an entry for the Kenai National Wildlife Refuge Snowshoe Hare
+Grid Surveys project using [mdEditor](https://www.mdeditor.org/) and
+sent this to the data management folks.
+
+## Thursday, March 5
+
+To do:
+
+  - Prepare information/comment for next week’s BOF meeting.
+
+I sorted Berlese sample
+[KNWR:Ento:11379](http://arctos.database.museum/guid/KNWR:Ento:11379).
+
+Contents:
+
+| identification | count |
+| :------------- | ----: |
+| Hymenoptera    |     2 |
+| Araneae        |    25 |
+| Insecta        |     4 |
+| Collembola     |   158 |
+| Arachnida      |   310 |
+| Hemiptera      |     3 |
+| Phoridae       |     1 |
+
 # Bibliography
 
 <div id="refs" class="references">
