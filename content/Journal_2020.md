@@ -1889,6 +1889,78 @@ non-native earthworms can increase nitrogen flux into streams (Pinder
 [2008](#ref-costello_non-native_2008),
 [2009](#ref-costello_biological_2009)).
 
+## Friday, March 6
+
+I prepared for my Anchorage trip this week, including jump-starting and
+fueling up the SUV that I am to use.
+
+I added *Cortinarius lucorum*, *Corticarina minuta*, and *Stephostethus
+armatulus* to the Kenai National Wildlife Refuge’s checklist on
+FWSpecies. I worked a little on trying to fill in missing values in the
+taxonomy exported from FWSpecies.
+
+## Sunday, March 8
+
+I rose early, drove to work, switched vehicles, and drove to Anchorage
+for the Board of Fisheries meeting. Late in the afternoon I gave my 3
+minute testimony on proposal 281 regarding the use of *Lumbricus* worms
+as bait in fresh waters.
+
+I gave my three-minute testimony and answered questions from the Board
+of Fisheries.
+
+## Monday, March 9
+
+I attended the Board of Fisheries meeting, today the committee of the
+whole.
+
+While sitting through discussions of other proposals, I revisited
+examining sequences from the *Aporrectodea* specimens from Pilgrim Hot
+Springs. These are *Aporrectodea longa* or *Aporrectodea trapezoides*.
+
+Our sequences agreed with sequences from BOLD BIN
+[BOLD:AAA6243](http://boldsystems.org/index.php/Public_BarcodeCluster?clusteruri=BOLD:AAA6243),
+which is mostly *Aporrectodea trapezoides* (100% to 99.83% similarity to
+multiple sequences). There are three sequences of *Aporrectodea longa*
+in this BIN. All three of these were collected from Ontario and
+identified by Benoit Richard.
+
+The *Aporrectodea longa* sequences from Porco et
+al. ([2018](#ref-porco_reference_2018)) are in BIN
+[BOLD:AAA2181](http://boldsystems.org/index.php/Public_BarcodeCluster?clusteruri=BOLD:AAA2181).
+
+Our Pilgrim Hot springs sequences aligned with sequences on BOLD from
+lineage *Aporrectodea trapezoides* L2 of Martinsson et
+al. ([2015](#ref-martinsson_dna-barcoding_2015)) that are on BOLD.
+Their *Aporrectodea trapezoides* L1 lineage is in BOLD BIN
+[BOLD:AAC5530](http://boldsystems.org/index.php/Public_BarcodeCluster?clusteruri=BOLD:AAC5530).
+
+Ok, our second Pilgrim Hot Springs samples is 100% similar to
+*Aporrectodea trapezoides* lineage II, clade H, clone 1 *sensu*
+Fernández et al. ([2011](#ref-fernandez_vagrant_2011)). This is the
+widespread, peregrine clone.
+
+The meeting ended early at around 15:00, so I checked out of the hotel
+and drove home.
+
+## Tuesday, March 10
+
+I attended the Certified Pesticide Applicator workshop at the
+Cooperative Extension Service office in Soldotna from 07:30 to 17:00.
+
+I learned that the earthworm proposal did not pass due to enforceability
+issues.
+
+## Thursday, March 12, 2020
+
+To do
+
+  - ~~Time sheet.~~
+  - ~~Get *Refuge Notebook* submitted.~~
+  - ~~Travel voucher, etc.~~
+  - Data management telecon.
+  - ~~Send pesticide applicator card info to Casey.~~
+
 # Bibliography
 
 <div id="refs" class="references">
@@ -1990,6 +2062,17 @@ Drake, C.J., and Lattin, J.D. 1963. American species of the lacebug
 genus *Acalypta* (Hemiptera: Tingidae). Proceedings of the United States
 National Museum **115**(3486): 331–345 +15 plates.
 doi:[10.5479/si.00963801.115-3486.331](https://doi.org/10.5479/si.00963801.115-3486.331).
+
+</div>
+
+<div id="ref-fernandez_vagrant_2011">
+
+Fernández, R., Almodóvar, A., Novo, M., Gutiérrez, M., and Díaz Cosín,
+D.J. 2011. A vagrant clone in a peregrine species: Phylogeography, high
+clonal diversity and geographical distribution in the earthworm
+Aporrectodea trapezoides (Dugès, 1828). Soil Biology and Biochemistry
+**43**(10): 2085–2093.
+doi:[10.1016/j.soilbio.2011.06.007](https://doi.org/10.1016/j.soilbio.2011.06.007).
 
 </div>
 
@@ -2167,6 +2250,16 @@ plants. Aquilo, Serie Botanica **23**: 57–61.
 
 </div>
 
+<div id="ref-martinsson_dna-barcoding_2015">
+
+Martinsson, S., Cui, Y., Martin, P.J., Pinder, A., Quinlan, K., Wetzel,
+M.J., and Erséus, C. 2015. DNA-barcoding of invasive European earthworms
+(Clitellata: Lumbricidae) in south-western Australia. Biological
+Invasions **17**(9): 2527–2532.
+doi:[10.1007/s10530-015-0910-7](https://doi.org/10.1007/s10530-015-0910-7).
+
+</div>
+
 <div id="ref-mcalpine_manual_1983">
 
 McAlpine, J.F., Peterson, B.V., Shewell, G.E., Teskey, H.J., Vockeroth,
@@ -2205,6 +2298,17 @@ Wisconsin.
 Pinder, R.A. 2013. Ecology of earthworms in riparian habitats. PhD
 Thesis, University at Albany, State University of New York, Albany, New
 York. Available from <https://search.proquest.com/docview/1419999664>.
+
+</div>
+
+<div id="ref-porco_reference_2018">
+
+Porco, D., Chang, C.-H., Dupont, L., James, S., Richard, B., and
+Decaëns, T. 2018. A reference library of DNA barcodes for the
+earthworms from Upper Normandy: Biodiversity assessment, new records,
+potential cases of cryptic diversity and ongoing speciation. Applied
+Soil Ecology **124**: 362–371.
+doi:[10.1016/j.apsoil.2017.11.001](https://doi.org/10.1016/j.apsoil.2017.11.001).
 
 </div>
 
