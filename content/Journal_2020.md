@@ -19,8 +19,7 @@
       - [Monday, January 27](#monday-january-27)
       - [Tuesday, January 28](#tuesday-january-28)
       - [Wednesday, January 29](#wednesday-january-29)
-      - [Thursday, January 30
-        {\#2020-01-30}](#thursday-january-30-2020-01-30)
+      - [Thursday, January 30](#thursday-january-30)
       - [Friday, January 31](#friday-january-31)
   - [February](#february)
       - [Monday, February 3](#monday-february-3)
@@ -53,9 +52,8 @@
       - [Sunday, March 8](#sunday-march-8)
       - [Monday, March 9](#monday-march-9)
       - [Tuesday, March 10](#tuesday-march-10)
-      - [Thursday, March 12, 2020](#thursday-march-12-2020)
-          - [Data management meeting,
-            11:00](#data-management-meeting-1100)
+      - [Thursday, March 12](#thursday-march-12)
+      - [Friday, March 13](#friday-march-13)
   - [Bibliography](#bibliography)
 
 # January
@@ -850,7 +848,7 @@ next few weeks.
 
 I worked on revising the BDJ Slikok manuscript.
 
-## Thursday, January 30 {\#2020-01-30}
+## Thursday, January 30
 
 To do:
 
@@ -2011,17 +2009,17 @@ Cooperative Extension Service office in Soldotna from 07:30 to 17:00.
 I learned that the earthworm proposal did not pass due to enforceability
 issues.
 
-## Thursday, March 12, 2020
+## Thursday, March 12
 
 To do
 
   - ~~Time sheet.~~
   - ~~Get *Refuge Notebook* submitted.~~
   - ~~Travel voucher, etc.~~
-  - Data management telecon.
+  - ~~Data management telecon.~~
   - ~~Send pesticide applicator card info to Casey.~~
-  - *Refuge Notebook* scheduling/correspondence.
-  - Deal with Tyler’s earthworms.
+  - \~\~*Refuge Notebook* scheduling/correspondence.
+  - Deal with Tyler’s earthworms.\~\~
   - Start 2020 *AKES Newsletter.*
 
 I entered data for the Pilgrim Hot Springs worms
@@ -2132,6 +2130,45 @@ I am identifying
 
 Both of these are in *Aporrectodea trapezoides* lineage L2 *sensu*
 Martinsson et al. ([2015](#ref-martinsson_dna-barcoding_2015)).
+
+## Friday, March 13
+
+I finished data entry for Pilgrim Hot Springs worm specimens I worked
+with yesterday.
+
+I sorted Berlese sample
+[KNWR:Ento:11380](http://arctos.database.museum/guid/KNWR:Ento:11380).
+
+Contents:
+
+| identification | count |
+| :------------- | ----: |
+| Chilopoda      |     3 |
+| Scarabaeidae   |     2 |
+| Arachnida      |   494 |
+| Collembola     |    80 |
+| Insecta        |     6 |
+| Thysanoptera   |     2 |
+| Hemiptera      |     2 |
+| Araneae        |     2 |
+
+I sorted Berlese sample
+[KNWR:Ento:11381](http://arctos.database.museum/guid/KNWR:Ento:11381).
+
+Contents:
+
+| identification | count |
+| :------------- | ----: |
+| Hemiptera      |     1 |
+| Collembola     |    14 |
+| Arachnida      |   213 |
+| Staphylinidae  |     1 |
+| Coleoptera     |     1 |
+| Thysanoptera   |     3 |
+| Insecta        |     3 |
+| Araneae        |     4 |
+| Hymenoptera    |     2 |
+| Formicidae     |     1 |
 
 # Bibliography
 
