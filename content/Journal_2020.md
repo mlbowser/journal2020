@@ -2052,7 +2052,7 @@ the tree on iTOL and the tree is available at
 worms.](2020-03-12_Pilgrim_Hot_Springs_worm_tree.png)  
 Phylogenetic tree including COI DNA barcode sequences from Fernández et
 al. ([2011](#ref-fernandez_vagrant_2011)), Martinsson et
-al. ([2015](#ref-martinsson_dna-barcoding_2015)), the Pilgrim Hot
+al. ([2015](#ref-martinsson_dna-barcoding_2015)), and the Pilgrim Hot
 Springs worms.
 
 It looks like
@@ -2060,6 +2060,18 @@ It looks like
 a new clone within *Aporrectodea trapezoides* lineage L2 near clone 1
 and [KNWR:Inv:46](http://arctos.database.museum/guid/KNWR:Inv:46)
 (1-1-1) is *Aporrectodea trapezoides* clone 1.
+
+I am identifying
+[KNWR:Inv:45](http://arctos.database.museum/guid/KNWR:Inv:45) as
+*Aporrectodea trapezoides* lineage II, clade H, affinis clone 1. That is
+a long name.
+
+I am identifying
+[KNWR:Inv:46](http://arctos.database.museum/guid/KNWR:Inv:46) as
+*Aporrectodea trapezoides* lineage II, clade H, clone 1.
+
+Both of these are in *Aporrectodea trapezoides* lineage L2 *sensu*
+Martinsson et al. ([2015](#ref-martinsson_dna-barcoding_2015)).
 
 # Bibliography
 
