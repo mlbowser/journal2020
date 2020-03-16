@@ -54,6 +54,8 @@
       - [Tuesday, March 10](#tuesday-march-10)
       - [Thursday, March 12](#thursday-march-12)
       - [Friday, March 13](#friday-march-13)
+      - [Sunday, March 15](#sunday-march-15)
+      - [Monday, March 16](#monday-march-16)
   - [Bibliography](#bibliography)
 
 # January
@@ -2169,6 +2171,42 @@ Contents:
 | Araneae        |     4 |
 | Hymenoptera    |     2 |
 | Formicidae     |     1 |
+
+## Sunday, March 15
+
+I modified the file structure of the *AKES Newsletter* and a made an
+*[AKES Newsletter](https://github.com/mlbowser/AKES_Newsletter)*
+repository on GitHub.
+
+## Monday, March 16
+
+To do:
+
+  - *Refuge Notebook* catch-up.
+  - Format *AKES Newsletter* meeting article.
+  - Deal with worm specimens from Tyler.
+  - Early adopter data management homework.
+  - Slikok occupancy.
+
+I sorted Berlese sample
+[KNWR:Ento:11382](http://arctos.database.museum/guid/KNWR:Ento:11382).
+
+Contents:
+
+| identification | count |
+| :------------- | ----: |
+| Oligochaeta    |    10 |
+| Collembola     |   164 |
+| Carabidae      |     2 |
+| Arachnida      |   332 |
+| Araneae        |     4 |
+| Thysanoptera   |     4 |
+| Staphylinidae  |     1 |
+| Insecta        |     4 |
+
+We just received word that we are strongly advised to telework as much
+as possible, so I will not be getting any more lab work done for a
+while.
 
 # Bibliography
 
