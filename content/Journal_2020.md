@@ -56,6 +56,7 @@
       - [Friday, March 13](#friday-march-13)
       - [Sunday, March 15](#sunday-march-15)
       - [Monday, March 16](#monday-march-16)
+      - [Tuesday, March 17](#tuesday-march-17)
   - [Bibliography](#bibliography)
 
 # January
@@ -257,7 +258,8 @@ write.csv(identifiers, "2020-01-03-1341_identifiers.csv", row.names=FALSE)
 
 I selected the mlCOIlintF/jgHCO2198
 (GGWACWGGWTGAACWGTWTAYCCYCC/TAIACYTCIGGRTGICCRAARAAYCA) primer set based
-on the analysis of Hajibabaei et al. ([2019](#ref-hajibabaei_coi_2019)).
+on the analysis of Hajibabaei et
+al. ([2019](#ref-hajibabaei_coi_2019)[a](#ref-hajibabaei_coi_2019)).
 
 ## Monday, January 6
 
@@ -2183,7 +2185,7 @@ repository on GitHub.
 To do:
 
   - *Refuge Notebook* catch-up.
-  - Format *AKES Newsletter* meeting article.
+  - ~~Format *AKES Newsletter* meeting article.~~
   - Deal with worm specimens from Tyler.
   - Early adopter data management homework.
   - Slikok occupancy.
@@ -2207,6 +2209,74 @@ Contents:
 We just received word that we are strongly advised to telework as much
 as possible, so I will not be getting any more lab work done for a
 while.
+
+I entered data for the earthworm specimens sent to me by Tyler
+([KNWR:Inv:47](http://arctos.database.museum/guid/KNWR:Inv:47)–[KNWR:Inv:52](http://arctos.database.museum/guid/KNWR:Inv:52)).
+
+I worked at home in the afternoon. I formatted an initial draft version
+of the [meeting
+article](https://github.com/mlbowser/AKES_Newsletter/blob/master/2020/01/meeting.tex)
+for the *AKES Newsletter*.
+
+This evening I received from RTL Genomics the metagenomic sequence data
+from the blackfish gut contents that Apphia and I had sent in on January
+30. I set up a project on [mBRAVE](http://www.mbrave.net/) with guesses
+at analysis parameters and then I uploaded the first pair of compressed
+FASTQ files.
+
+## Tuesday, March 17
+
+To do:
+
+  - *Refuge Notebook* catch-up.
+  - Early adopter data management homework.
+  - Blackfish diet analysis.
+
+I fiddled around with the first pair of FASTQ files I had uploaded to
+mBRAVE. I failed to figure out how to merge the paired FASTQ files.
+Maybe this functionality is not fully available yet on mBRAVE. I saw
+that Braukmann et al. ([2019](#ref-braukmann_metabarcoding_2019)) used
+QIIME to pair all of their sequences before uploading them to mBRAVE.
+Stolz ([2019](#ref-stolz_nestling_2019)) used mBRAVE, but with
+single-end reads. I could not find any other references where methods
+using mBRAVE were detailed. There appears to be no help, guide, or
+manual on mBRAVE right now.
+
+I fiddled around with parameters for a while. Selecting “MERGED PAIRED
+END READS” turned paired end merging on. I am not sure about the
+trimming and masking. I turned primer masking on and selected trimming
+the first 26 bp, both of which might remove the primers. Run parameters
+are included below.
+
+1.  Trimming  
+    Trim Front: 26 bp  
+    Trim End: 0 bp  
+    Trim Length: 500 bp  
+    Primer Masking: On
+2.  Filtering  
+    Min QV: 10 qv  
+    Min Length: 150 bp  
+    Max Bases with Low QV ( \<20): 4.0%  
+    Max Bases with Ultra Low QV ( \<10): 1.0%
+3.  Other Parameters  
+    Pre-Clustering Threshold: None  
+    ID Distance Threshold: 3.0%  
+    Exclude From OTU Threshold: 3.0%  
+    Minimum OTU Size: 1OTU Threshold: 0.0%
+4.  Paired End (optional - Illumina instruments only)  
+    Paired End Merging: On  
+    Assembler Min Overlap: 25 bp  
+    Assembler Max Substitution: 5 bp
+
+That failed to run on the first filtering steps. I turned primer masking
+off. This failed, also.
+
+If I cannot get this to work, then I may be trying the [SCVUC
+metabarcode
+pipeline](https://github.com/Hajibabaei-Lab/SCVUC_COI_metabarcode_pipeline)
+used by Hajibabaei et
+al. ([2019](#ref-hajibabaei_coi_2019b)[b](#ref-hajibabaei_coi_2019b)).
+This will require some setup to make this happen on Yeti.
 
 # Bibliography
 
@@ -2262,6 +2332,16 @@ Magness, D.R., McInnis, M., Melvin, T., Morton, J.M., and Stone, J.
 observations, specimens, dna barcoding and high-throughput sequencing
 methods. Biodiversity Data Journal **8**: e50124. Pensoft Publishers.
 doi:[10.3897/BDJ.8.e50124](https://doi.org/10.3897/BDJ.8.e50124).
+
+</div>
+
+<div id="ref-braukmann_metabarcoding_2019">
+
+Braukmann, T.W.A., Ivanova, N.V., Prosser, S.W.J., Elbrecht, V.,
+Steinke, D., Ratnasingham, S., Waard, J.R. de, Sones, J.E., Zakharov,
+E.V., and Hebert, P.D.N. 2019. Metabarcoding a diverse arthropod mock
+community. Molecular Ecology Resources **19**(3): 711–727.
+doi:[10.1111/1755-0998.13008](https://doi.org/10.1111/1755-0998.13008).
 
 </div>
 
@@ -2374,10 +2454,19 @@ molekulartaxonomische methoden. Deutsche Gesellschaft für Limnologie
 
 <div id="ref-hajibabaei_coi_2019">
 
-Hajibabaei, M., Porter, T.M., Wright, M., and Rudar, J. 2019. COI
+Hajibabaei, M., Porter, T.M., Wright, M., and Rudar, J. 2019a. COI
 metabarcoding primer choice affects richness and recovery of indicator
 taxa in freshwater systems. bioRxiv.
 doi:[10.1101/572628](https://doi.org/10.1101/572628).
+
+</div>
+
+<div id="ref-hajibabaei_coi_2019b">
+
+Hajibabaei, M., Porter, T.M., Wright, M., and Rudar, J. 2019b. COI
+metabarcoding primer choice affects richness and recovery of indicator
+taxa in freshwater systems. PLOS ONE **14**(9): e0220953.
+doi:[10.1371/journal.pone.0220953](https://doi.org/10.1371/journal.pone.0220953).
 
 </div>
 
@@ -2591,6 +2680,14 @@ publication-quality point maps. Available from
 State of Alaska Department of Environmental Conservation. 2005. Ambient
 water quality monitoring system. Available from
 <https://awqms2.goldsystems.com/Login.aspx>.
+
+</div>
+
+<div id="ref-stolz_nestling_2019">
+
+Stolz, C. 2019. The nestling diet of Svalbard snow buntings identified
+by DNA metabarcoding. Master’s thesis, The Arctic University of Norway.
+Available from <https://hdl.handle.net/10037/15438>.
 
 </div>
 
