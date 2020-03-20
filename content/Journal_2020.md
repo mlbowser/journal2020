@@ -57,6 +57,9 @@
       - [Sunday, March 15](#sunday-march-15)
       - [Monday, March 16](#monday-march-16)
       - [Tuesday, March 17](#tuesday-march-17)
+      - [Wednesday, March 18](#wednesday-march-18)
+      - [Thursday, March 19](#thursday-march-19)
+      - [Friday, March 20](#friday-march-20)
   - [Bibliography](#bibliography)
 
 # January
@@ -2231,6 +2234,7 @@ To do:
   - *Refuge Notebook* catch-up.
   - Early adopter data management homework.
   - Blackfish diet analysis.
+  - Sandpiper Lake *Elodea* project PUPs.
 
 I fiddled around with the first pair of FASTQ files I had uploaded to
 mBRAVE. I failed to figure out how to merge the paired FASTQ files.
@@ -2277,6 +2281,566 @@ pipeline](https://github.com/Hajibabaei-Lab/SCVUC_COI_metabarcode_pipeline)
 used by Hajibabaei et
 al. ([2019](#ref-hajibabaei_coi_2019b)[b](#ref-hajibabaei_coi_2019b)).
 This will require some setup to make this happen on Yeti.
+
+For the data managmenet early adopters’ homework, I downloaded the
+directory structure template from McCrea, which generally follows the
+structure described by the Alaska Region Data Stewardship Team
+([2019](#ref-ak_region_data_stewardship_team_alaska_2020)[a](#ref-ak_region_data_stewardship_team_alaska_2020)).
+
+I worked on organizing files and authoring metadata for the snowshoe
+hare project, part of the data management homework.
+
+``` r
+## Assemble plot location data.
+data_dir <- "../data/raw_data/geodata"
+file_list <- dir(data_dir)
+
+## Select only .txt files.
+file_list <- file_list[grepl("\\.txt", file_list)]
+
+plot_data <- read.csv(paste0(data_dir, "/", file_list[1]), stringsAsFactors=FALSE)
+
+dim(plot_data)
+[1] 50  3
+## Whoa, there should be 49 rows.
+dim(unique(plot_data))
+[1] 50  3
+## All rows are unique.
+length(levels(as.factor(plot_data$Ident)))
+[1] 49 ## The number of unique labels is right.
+
+plot_data <- plot_data[order(plot_data$Ident),]
+plot_data
+
+## There are two locations for plot CF-43.
+
+## Plotting.
+plot(plot_data$Longitude, plot_data$Latitude)
+text(plot_data$Longitude, 
+ plot_data$Latitude,
+ labels=plot_data$Ident
+ )
+## One of the CF-43's is over by CF-49 far to the west of where it should be.
+
+## Removing the western CF-43.
+sl <- (plot_data$Ident=="CF-43") & (plot_data$Longitude < -150.603)
+plot_data <- plot_data[!sl,]
+
+## Plotting.
+plot(plot_data$Longitude, plot_data$Latitude)
+text(plot_data$Longitude, 
+ plot_data$Latitude,
+ labels=plot_data$Ident
+ )
+
+plot_data$grid_name <- gsub("\\.txt", "", gsub("_", " ", file_list[1]))
+
+## Now loop through the rest of the files.
+for (this_grid in 2:length(file_list))
+ {
+ plot_data_temp <- read.csv(paste0(data_dir, "/", file_list[this_grid]),
+  stringsAsFactors=FALSE
+  )
+ plot_data_temp <- plot_data_temp[order(plot_data_temp$Ident),]
+ plot_data_temp$grid_name <- gsub("\\.txt", "", gsub("_", " ", file_list[this_grid]))
+ plot_data <- rbind(plot_data, plot_data_temp)
+ }
+ 
+names(plot_data)[1:3] <- c("plot_name", "longitude", "latitude")
+plot_data <- plot_data[,c(4,1,3,2)]
+
+## Now it is time to start reorganizing the observation data.
+
+## Starting with the first sheet, Swanson River.
+obs <- read.csv("../data/raw_data/observations/2020-03-17-2151_Swanson_River.csv", stringsAsFactors=FALSE)
+obs$plot_name <- paste0("SR-", obs$plot_name)
+obs$habitat <- tolower(obs$habitat)
+
+## I will join this to the plot data later.
+plot_hab <- obs[,c(1:2)]
+
+obs <- obs[,c(1,3:38)]
+
+library(reshape2)
+obs <- melt(obs, id.vars="plot_name")
+names(obs)[2:3] <- c("year", "pellet_count")
+obs$year <- as.character(obs$year)
+obs$year <- gsub("X", "", obs$year)
+obs$year <- as.integer(obs$year)
+
+obs_all <- obs
+
+## Oil field.
+obs <- read.csv("../data/raw_data/observations/2020-03-17-2218_Oil_field.csv", stringsAsFactors=FALSE)
+obs$plot_name <- paste0("OF-", obs$plot_name)
+obs$habitat <- tolower(obs$habitat)
+
+## For joining to the plot data later.
+plot_hab <- rbind(plot_hab, obs[,c(1:2)])
+
+obs <- obs[,c(1,3:ncol(obs))]
+
+obs <- melt(obs, id.vars="plot_name")
+names(obs)[2:3] <- c("year", "pellet_count")
+obs$year <- as.character(obs$year)
+obs$year <- gsub("X", "", obs$year)
+obs$year <- as.integer(obs$year)
+
+obs_all <- rbind(obs_all, obs)
+
+## Campfire.
+obs <- read.csv("../data/raw_data/observations/2020-03-17-2229_Campfire.csv", stringsAsFactors=FALSE)
+obs$plot_name <- paste0("CF-", obs$plot_name)
+obs$habitat <- tolower(obs$habitat)
+
+## For joining to the plot data later.
+plot_hab <- rbind(plot_hab, obs[,c(1:2)])
+
+obs <- obs[,c(1,3:ncol(obs))]
+
+obs <- melt(obs, id.vars="plot_name")
+names(obs)[2:3] <- c("year", "pellet_count")
+obs$year <- as.character(obs$year)
+obs$year <- gsub("X", "", obs$year)
+obs$year <- as.integer(obs$year)
+
+obs_all <- rbind(obs_all, obs)
+
+## Skilak.
+obs <- read.csv("../data/raw_data/observations/2020-03-18-0729_Skilak.csv", stringsAsFactors=FALSE)
+obs$plot_name <- paste0("SK-", obs$plot_name)
+obs$habitat <- tolower(obs$habitat)
+
+## For joining to the plot data later.
+plot_hab <- rbind(plot_hab, obs[,c(1:2)])
+
+obs <- obs[,c(1,3:ncol(obs))]
+
+obs <- melt(obs, id.vars="plot_name")
+names(obs)[2:3] <- c("year", "pellet_count")
+obs$year <- as.character(obs$year)
+obs$year <- gsub("X", "", obs$year)
+obs$year <- as.integer(obs$year)
+
+obs_all <- rbind(obs_all, obs)
+
+## Funny River.
+obs <- read.csv("../data/raw_data/observations/2020-03-18-0734_Funny_River.csv", stringsAsFactors=FALSE)
+obs$plot_name <- paste0("FR-", obs$plot_name)
+obs$habitat <- tolower(obs$habitat)
+
+## For joining to the plot data later.
+plot_hab <- rbind(plot_hab, obs[,c(1:2)])
+
+obs <- obs[,c(1,3:ncol(obs))]
+
+obs <- melt(obs, id.vars="plot_name")
+names(obs)[2:3] <- c("year", "pellet_count")
+obs$year <- as.character(obs$year)
+obs$year <- gsub("X", "", obs$year)
+obs$year <- as.integer(obs$year)
+
+obs_all <- rbind(obs_all, obs)
+
+## Funny River New.
+obs <- read.csv("../data/raw_data/observations/2020-03-18-0738_Funny_River_New.csv", stringsAsFactors=FALSE)
+obs$plot_name <- paste0("FRN-", obs$plot_name)
+obs$habitat <- tolower(obs$habitat)
+
+plot_hab <- rbind(plot_hab, obs[,c(1:2)])
+
+obs <- obs[,c(1,3:ncol(obs))]
+
+obs <- melt(obs, id.vars="plot_name")
+names(obs)[2:3] <- c("year", "pellet_count")
+obs$year <- as.character(obs$year)
+obs$year <- gsub("X", "", obs$year)
+obs$year <- as.integer(obs$year)
+
+obs_all <- rbind(obs_all, obs)
+
+## Skilak New.
+obs <- read.csv("../data/raw_data/observations/2020-03-18-0742_Skilak_New.csv", stringsAsFactors=FALSE)
+obs$plot_name <- paste0("SKN-", obs$plot_name)
+obs$habitat <- tolower(obs$habitat)
+
+plot_hab <- rbind(plot_hab, obs[,c(1:2)])
+
+obs <- obs[,c(1,3:ncol(obs))]
+
+obs <- melt(obs, id.vars="plot_name")
+names(obs)[2:3] <- c("year", "pellet_count")
+obs$year <- as.character(obs$year)
+obs$year <- gsub("X", "", obs$year)
+obs$year <- as.integer(obs$year)
+
+obs_all <- rbind(obs_all, obs)
+
+## Checking before joining...
+levels(as.factor(plot_hab$habitat))
+[1] "black spruce" "mixed mature" "reburn mixed"
+## Wow, that is really clean!
+
+## Now conforming some of the plot names.
+plot_data$plot_name <- gsub("FRB ", "FRN-", plot_data$plot_name)
+plot_data$plot_name <- gsub("FRN-0", "FRN-", plot_data$plot_name)
+
+plot_data_2 <- merge(x=plot_data, y=plot_hab, all.x=TRUE)
+
+## Saving here.
+write.csv(plot_data_2, "../data/final_data/geodata/2020-03-18_snowshoe_hare_plot_data.csv", row.names=FALSE)
+
+write.csv(obs_all, "../data/final_data/observations/2020-03-18_snowshoe_hare_pellet_counts.csv", row.names=FALSE)
+```
+
+## Wednesday, March 18
+
+To do:
+
+  - ~~Submit this week’s *Refuge Notebook* article.~~
+  - *Refuge Notebook* catch-up.
+  - Early adopter data management homework.
+  - Blackfish diet analysis.
+  - ~~Sandpiper Lake *Elodea* project PUPs~~.
+
+I finished processing snowshoe hare data that I had started yesterday.
+
+That updated run on mBRAVE that I initiated yesterday never got
+anywhere. It gives the message, “Please Wait: Initial Processing of This
+Run is Underway.” This is how it has looked since the middle of the day
+yesterday. I think there must be a problem with the run parameters.
+
+I received and worked on formatting this week’s *Refuge Notebook*
+article, getting it submitted to the
+*[Clarion](https://www.peninsulaclarion.com/)*. I worked some on
+formatting older articles, but the connection to the CMS was so slow
+that I could not get this work posted.
+
+I started working on the PUPs for herbicides to be used in *Elodea*
+eradication work, spending most of the afternoon on PUPs.
+
+We had a biology staff meeting via conference call this afternoon. We
+are going to be teleworking for a while.
+
+## Thursday, March 19
+
+To do:
+
+  - *Refuge Notebook* catch-up.
+  - Early adopter data management homework.
+  - Blackfish diet analysis.
+
+I received an e-mail from Todd Steinlage regarding the Sandpiper Lake
+*Elodea* sample. Based on a qPCR test and an ITS sequence, this one
+appears to be *Elodea canadensis* (specimen record:
+[KNWR:Herb:12443](http://arctos.database.museum/guid/KNWR:Herb:12443)).
+This is consistent with our guess that this population was started by a
+floatplane bringing it from Anchorage because Anchorage populations were
+identified as *Elodea canadensis* (Morton et al.
+[2019](#ref-morton_responding_2019)).
+
+I entered data for the five *Dallia pectoralis* specimens from which
+Apphia and I had dissected out gut contents
+([KNWRObs:Fish:12](http://arctos.database.museum/guid/KNWRObs:Fish:12)–[KNWRObs:Fish:16](http://arctos.database.museum/guid/KNWRObs:Fish:16)).
+
+Now I would like to set up the SCVUC pipeline on Yeti for analyzing the
+blackfish gut contents. Using the instructions from
+<https://github.com/Hajibabaei-Lab/SCVUC_COI_metabarcode_pipeline#prepare-your-environment-to-run-the-pipeline>.
+
+I spent quite a while trying to get the SCVUC pipeline installed and
+working. I think I need to give up on ORFfinder for now.
+
+``` 
+ 846  2020-03-19 11:03:36  ls
+  847  2020-03-19 11:03:46  cd /lustre
+  848  2020-03-19 11:03:47  ls
+  849  2020-03-19 11:03:55  cd projects
+  850  2020-03-19 11:03:57  ls
+  851  2020-03-19 11:04:00  cd fws
+  852  2020-03-19 11:04:03  ls
+  853  2020-03-19 11:04:10  cd fws_bio
+  854  2020-03-19 11:04:13  ls
+  855  2020-03-19 11:04:19  cd mattbowser
+  856  2020-03-19 11:04:31  cwd
+  857  2020-03-19 11:04:37  pwd
+  858  2020-03-19 11:07:01  cd /lustre/projects/fws/fws_bio/mattbowser
+  859  2020-03-19 11:10:45  ls
+  860  2020-03-19 11:10:52  cd projects
+  861  2020-03-19 11:10:54  ls
+  862  2020-03-19 11:11:28  cd /lustre/projects/fws/fws_bio/mattbowser/projects
+  863  2020-03-19 11:12:23  mkdir COI_metabarcoding
+  864  2020-03-19 11:12:35  cd COI_metabarcoding
+  865  2020-03-19 11:32:54  git clone https://github.com/Hajibabaei-Lab/SCVUC_COI_metabarcode_pipeline.git
+  866  2020-03-19 11:33:03  ls
+  867  2020-03-19 11:33:15  cd SCV*
+  868  2020-03-19 11:34:08  ls
+  869  2020-03-19 11:35:11  module avail
+  870  2020-03-19 11:36:31  module load python/anaconda3
+  871  2020-03-19 11:40:46  conda env create -f environment.yml
+  872  2020-03-19 12:06:37  conda activate SCVUCv4.3
+  873  2020-03-19 12:09:03  source activate SCVUCv4.3
+  874  2020-03-19 12:09:55  wget ftp://ftp.ncbi.nlm.nih.gov/genomes/TOOLS/ORFfinder/linux-i64/ORFfinder.gz
+  875  2020-03-19 12:10:23  gunzip ORFfinder.gz
+  876  2020-03-19 12:10:35  chmod 755 ORFfinder
+  877  2020-03-19 12:10:58  mv ORFfinder ~/bin/.
+  878  2020-03-19 12:11:41  mkdir /home/mattbowser/bin
+  879  2020-03-19 12:11:47  mv ORFfinder ~/bin/.
+  880  2020-03-19 12:12:04  ORFfinder
+  881  2020-03-19 12:15:02  cd ~/miniconda3/envs/SCVUCv4.3/etc/conda/activate.d/
+  882  2020-03-19 12:15:08  cd ~/
+  883  2020-03-19 12:15:11  ls
+  884  2020-03-19 12:28:43  cd /lustre/projects/fws/fws_bio/mattbowser/projects/COI_metabarcoding/SCVUC_COI_metabarcode_pipeline
+  885  2020-03-19 12:28:46  ls
+  886  2020-03-19 12:32:05  ls -al
+  887  2020-03-19 12:32:34  cd ~/
+  888  2020-03-19 12:32:38  ls -al
+  889  2020-03-19 12:32:46  cd .conda
+  890  2020-03-19 12:32:47  ls
+  891  2020-03-19 12:32:51  cd envs
+  892  2020-03-19 12:32:53  ls
+  893  2020-03-19 12:33:27  cd SCV*
+  894  2020-03-19 12:33:28  ls
+  895  2020-03-19 12:33:35  cd etc
+  896  2020-03-19 12:33:36  ls
+  897  2020-03-19 12:33:52  cd conda
+  898  2020-03-19 12:33:54  ls
+  899  2020-03-19 12:34:00  cd activate.d
+  900  2020-03-19 12:34:01  ls
+  901  2020-03-19 12:34:52  vi LD_PATH.sh
+  902  2020-03-19 12:37:05  ls
+  903  2020-03-19 12:37:36  cd ..
+  904  2020-03-19 12:37:54  cd deactivate.d
+  905  2020-03-19 12:37:55  ls
+  906  2020-03-19 12:38:14  vi LD_PATH.sh
+  907  2020-03-19 12:39:03  ls
+  908  2020-03-19 12:39:40  cd ..
+  909  2020-03-19 12:39:51  ls
+  910  2020-03-19 12:40:16  cd lib64
+  911  2020-03-19 12:40:34  ls
+  912  2020-03-19 12:40:53  ln -s ../glibc-2.14/lib/libc.so.6 libc.so.6
+  913  2020-03-19 12:40:57  ls
+  914  2020-03-19 12:43:10  source deactivate SCVUCv4.3
+  915  2020-03-19 12:43:35  source activate SCVUCv4.3
+  916  2020-03-19 12:44:26  ORFfinder
+  917  2020-03-19 12:56:21  ls
+  918  2020-03-19 12:59:06  cd ..
+  919  2020-03-19 12:59:09  ls
+  920  2020-03-19 13:02:57  cd lib
+  921  2020-03-19 13:02:59  ls
+  922  2020-03-19 13:05:50  cd glib
+  923  2020-03-19 13:06:21  cd glib*
+  924  2020-03-19 13:06:22  ls
+  925  2020-03-19 13:06:29  cd ..
+  926  2020-03-19 13:06:33  cd lib
+  927  2020-03-19 13:06:34  ls
+  928  2020-03-19 13:44:57  cd ~/.conda/env/SCVUCv4.3
+  929  2020-03-19 13:45:03  ls
+  930  2020-03-19 13:45:07  ls -al
+  931  2020-03-19 13:45:11  cd .conda
+  932  2020-03-19 13:45:12  ls
+  933  2020-03-19 13:45:18  cd envs
+  934  2020-03-19 13:45:33  cd ~/.conda/envs/SCVUCv4.3
+  935  2020-03-19 13:45:36  ls
+  936  2020-03-19 13:45:51  cd include
+  937  2020-03-19 13:45:56  ls
+  938  2020-03-19 13:46:08  cd ..
+  939  2020-03-19 13:46:09  ls
+  940  2020-03-19 13:46:22  cd lib
+  941  2020-03-19 13:46:25  ls
+  942  2020-03-19 13:46:46  cd glib*
+  943  2020-03-19 13:46:48  ls
+  944  2020-03-19 13:46:52  cd include
+  945  2020-03-19 13:46:53  ls
+  946  2020-03-19 13:46:56  cd ..
+  947  2020-03-19 13:50:15  find ~/.conda/envs/SCVUCv4.3 -name "*glibc*"
+  948  2020-03-19 13:51:42  module avail
+  949  2020-03-19 14:27:01  cd /lustre/projects/fws/fws_bio/mattbowser/projects/COI_metabarcoding/SCVUC_COI_metabarcode_pipeline
+  950  2020-03-19 14:27:03  ls
+  951  2020-03-19 14:41:08  cd ~/
+  952  2020-03-19 14:41:32  wget http://ftp.gnu.org/gnu/glibc/glibc-2.14.tar.gz
+  953  2020-03-19 14:44:28  tar -xzvf glibc-2.14.tar.gz
+  954  2020-03-19 14:53:57  ls
+  955  2020-03-19 14:54:29  rm -R glibc-2.14
+  956  2020-03-19 14:57:24  ls
+  957  2020-03-19 14:57:32  ls -al
+  958  2020-03-19 14:57:42  cd glibc*
+  959  2020-03-19 14:57:44  ls
+  960  2020-03-19 14:57:59  rm -R *
+  961  2020-03-19 14:59:13  ls
+  962  2020-03-19 14:59:31  rm -R *
+  963  2020-03-19 15:01:34  ls
+  964  2020-03-19 15:01:49  rm -R *
+  965  2020-03-19 15:08:51  module avail
+  966  2020-03-19 15:15:57  module list
+  967  2020-03-19 15:16:15  module load python/miniconda3-gcc6.1.0
+  968  2020-03-19 15:16:57  source activate SCVUCv4.3
+  969  2020-03-19 15:17:21  cd ..
+  970  2020-03-19 15:17:24  ls
+  971  2020-03-19 15:17:52  source deactivate SCVUCv4.3
+  972  2020-03-19 15:18:00  module purge
+  973  2020-03-19 15:19:05  rmdir glibc-2.14
+  974  2020-03-19 15:19:07  ls
+  975  2020-03-19 15:19:34  tar -xzvf glibc-2.14.tar.gz
+  976  2020-03-19 15:21:50  ls
+  977  2020-03-19 15:22:04  cd glibc-2.14
+  978  2020-03-19 15:22:06  ls
+  979  2020-03-19 15:24:06  uname -r
+  980  2020-03-19 15:25:51  cat /etc/os-release
+  981  2020-03-19 15:26:39  ./configure
+  982  2020-03-19 15:27:06  mkdir build
+  983  2020-03-19 15:27:38  dmesg | head -1
+  984  2020-03-19 15:28:11  cat /proc/version
+  985  2020-03-19 15:32:32  cd /lib
+  986  2020-03-19 15:32:34  ls
+  987  2020-03-19 15:34:56  ldd --version
+  988  2020-03-19 15:36:13  /lib64/libc.so.6 --version
+  989  2020-03-19 15:37:01  ## So Yeti has glib version glibc version 2.12.
+  990  2020-03-19 15:39:59  cd ~/
+  991  2020-03-19 15:40:00  ls
+  992  2020-03-19 15:40:07  cd glibc*
+  993  2020-03-19 15:40:08  ls
+  994  2020-03-19 15:40:17  cd build
+  995  2020-03-19 15:40:26  ../configure
+  996  2020-03-19 15:41:39  ls
+  997  2020-03-19 15:41:54  make
+  998  2020-03-19 15:44:38  ../configure --prefix /home/mattbowser/.conda/envs/SCVUCv4/glibc-2.14
+  999  2020-03-19 15:44:50  ls
+ 1000  2020-03-19 15:44:56  make
+ 1001  2020-03-19 15:56:17  wget https://ayera.dl.sourceforge.net/project/rdp-classifier/rdp-classifier/rdp_classifier_2.12.zip
+ 1002  2020-03-19 16:04:04  ls
+ 1003  2020-03-19 16:04:11  cd glib*
+ 1004  2020-03-19 16:04:14  cd build
+ 1005  2020-03-19 16:04:15  ls
+ 1006  2020-03-19 16:05:05  make
+ 1007  2020-03-19 16:26:00  ls
+ 1008  2020-03-19 16:29:28  history
+ 1009  2020-03-19 16:30:39  pwd
+ 1010  2020-03-19 16:32:33  cd /conda/envs/
+ 1011  2020-03-19 16:32:47  cd ~/.conda/envs
+ 1012  2020-03-19 16:32:48  ls
+ 1013  2020-03-19 16:32:56  cd SCVUC*
+ 1014  2020-03-19 16:32:58  ls
+ 1015  2020-03-19 16:33:42  mkdir pwd
+ 1016  2020-03-19 16:33:53  rmdir pwd
+ 1017  2020-03-19 16:33:56  pwd
+ 1018  2020-03-19 16:34:49  mkdir glibc-2.14
+ 1019  2020-03-19 16:34:52  ls
+ 1020  2020-03-19 16:35:08  cp /home/mattbowser/glibc-2.14/build/* /home/mattbowser/.conda/envs/SCVUCv4.3
+ 1021  2020-03-19 16:35:29  /glibc-2.14/ls
+ 1022  2020-03-19 16:35:32  ls
+ 1023  2020-03-19 16:35:53  cd /home/mattbowser/.conda/envs/SCVUCv4.3
+ 1024  2020-03-19 16:36:17  /glibc-2.14/ls
+ 1025  2020-03-19 16:36:20  ls
+ 1026  2020-03-19 16:36:48  ls -al
+ 1027  2020-03-19 16:39:10  find . -type f -cmin -10
+ 1028  2020-03-19 16:39:33  find . -type f -cmin -10 -delete
+ 1029  2020-03-19 16:39:38  ls
+ 1030  2020-03-19 16:39:59  cd glibc-2.14
+ 1031  2020-03-19 16:40:00  ls
+ 1032  2020-03-19 16:40:16  cp -R /home/mattbowser/glibc-2.14/build/* /home/mattbowser/.conda/envs/SCVUCv4.3/glibc-2.14/
+ 1033  2020-03-19 16:44:43  ls
+ 1034  2020-03-19 16:45:15  cd ..
+ 1035  2020-03-19 16:45:16  ls
+ 1036  2020-03-19 16:45:23  cd lib64
+ 1037  2020-03-19 16:45:24  ls
+ 1038  2020-03-19 16:46:14  ln -s ../glibc-2.14/libc.so.6 libc.so.6
+ 1039  2020-03-19 16:46:24  rm libc.so.6
+ 1040  2020-03-19 16:46:28  ln -s ../glibc-2.14/libc.so.6 libc.so.6
+ 1041  2020-03-19 16:46:30  ls
+ 1042  2020-03-19 16:47:23  history
+ 1043  2020-03-19 16:48:27  module load python/anaconda3
+ 1044  2020-03-19 16:48:49  source activate SCVUCv4.3
+ 1045  2020-03-19 16:49:16  ORFfinder
+ 1046  2020-03-19 16:51:57  ## Wow, now we need version 2.17.
+ 1047  2020-03-19 16:52:21  history
+ 1048  2020-03-19 16:52:38  history | grep wget
+ 1049  2020-03-19 16:54:24  cd ~/
+ 1050  2020-03-19 16:54:26  ls
+ 1051  2020-03-19 16:54:33  wget http://ftp.gnu.org/gnu/glibc/glibc-2.17.tar.gz
+ 1052  2020-03-19 16:54:44  ls
+ 1053  2020-03-19 16:55:13  tar -zxvf glibc-2.17.tar.gz
+ 1054  2020-03-19 16:56:45  ls
+ 1055  2020-03-19 16:56:54  cd glibc-2.17
+ 1056  2020-03-19 16:56:55  ls
+ 1057  2020-03-19 16:57:00  mkdir build
+ 1058  2020-03-19 16:57:02  cd build
+ 1059  2020-03-19 16:57:03  ls
+ 1060  2020-03-19 16:57:37  history | grep configure
+ 1061  2020-03-19 16:57:56  ../configure --prefix /home/mattbowser/.conda/envs/SCVUCv4/glibc-2.14
+ 1062  2020-03-19 16:59:11  ## Maybe I need to give up on this. the autoconf version is not campatible.
+ 1063  2020-03-19 16:59:22  history
+ 1000  2020-03-19 17:02:07  exit
+ 1001  2020-03-19 19:05:32  ls
+ 1002  2020-03-19 19:05:46  gunzip rdp_class*
+ 1003  2020-03-19 19:08:06  unzip rdp_class*
+ 1004  2020-03-19 19:08:24  ls
+ 1005  2020-03-19 19:10:19  mv ~/rdp_classifier_2.12 /lustre/projects/fws/fws_bio/mattbowser/projects/COI_metabarcoding/SCVUC_COI_metabarcode_pipeline/rdp_classifier_2.12
+ 1006  2020-03-19 19:10:52  cd /lustre/projects/fws/fws_bio/mattbowser/projects/COI_metabarcoding/SCVUC_COI_metabarcode_pipeline/rdp_classifier_2.12
+ 1007  2020-03-19 19:10:55  ls
+ 1008  2020-03-19 19:14:31  cd ..
+ 1009  2020-03-19 19:14:33  ls
+ 1010  2020-03-19 19:14:57  wget https://github.com/terrimporter/CO1Classifier/releases/download/v4/CO1v4_trained.tar.gz
+ 1011  2020-03-19 19:18:12  ls
+ 1012  2020-03-19 19:18:31  tar -zxvf CO1v4_trained.tar.gz
+ 1013  2020-03-19 19:20:13  ls
+ 1014  2020-03-19 19:20:29  rm CO1v4_trained.tar.gz
+ 1015  2020-03-19 19:20:31  ls
+ 1016  2020-03-19 19:20:36  cd rdp*
+ 1017  2020-03-19 19:20:37  ls
+ 1018  2020-03-19 19:22:56  cd ..
+ 1019  2020-03-19 19:22:57  ls
+ 1020  2020-03-19 19:23:01  cd myd*
+ 1021  2020-03-19 19:23:03  ls
+ 1022  2020-03-19 19:27:34  pwd
+ 1023  2020-03-19 19:31:19  cd ..
+ 1024  2020-03-19 19:31:20  ls
+ 1025  2020-03-19 19:31:27  mkdir data
+ 1026  2020-03-19 19:31:28  ls
+ 1027  2020-03-19 19:31:31  cd data
+ 1028  2020-03-19 19:32:40  wget https://rtlgenomics.s3.amazonaws.com/7SLpgTzp2k/Bowser_6382Raw03132020.zip?AWSAccessKeyId=AKIAI4T5MZRBWMKZM5NA&Expires=1592265873&Signature=fCzfVZlfw5aQ6sFjUJrUb3466sY%3D
+ 1029  2020-03-19 20:02:16  history
+```
+
+## Friday, March 20
+
+To do:
+
+  - *Refuge Notebook* catch-up.
+  - Early adopter data management homework.
+  - Blackfish diet analysis.
+
+I set up a project on Arctos for the blakfish diet work at
+<http://arctos.database.museum/project/10003367>.
+
+I was able to get the SCVUC pipeline going under linux mint, but there
+was a problem with the reverse primer. I did overcome this later by
+reverting to the original reverse primer in the ml-jg script.
+
+I kept running into trouble with running out of memory for the RDP
+Classifier (Wang et al. [2007](#ref-wang_naive_2007)). The system would
+kill the process after it used all memory. The script asks for 8 Gb of
+RAM; this computer has 4. I tried modifying the script to ask for only 2
+Gb, but then RDP Classifier failed within Java, again running out of
+memory. I will try repartitioning to add a bunch of swap space on that
+computer.
+
+### Telecon at 11:00
+
+  - Send Mark a list of planned work for next week.
+  - Put together plans for this field season.
+
+Next week work list:
+
+  - Finish blackfish diet analysis to get an article into the upcoming
+    issue of the *Newsletter of the Alaska Entomological Society*.
+  - Catch up on formatting *Refuge Notebook* articles and posting them
+    to the CMS.
+  - Work on metadata / next data management steps for the Kenai NWR
+    snowshoe hare dataset as part of work for the regional data
+    management early adopters’ team.
+  - Write article on our finding *Bimastos parvus*, a second native
+    earthworm for Alaska, for the *AKES Newsletter*?
+  - Get started on Slikok watershed project occupancy analysis?
 
 # Bibliography
 
@@ -2612,6 +3176,15 @@ National Wildlife Refuge, Soldotna, Alaska. pp. 45–46. Available from
 
 </div>
 
+<div id="ref-morton_responding_2019">
+
+Morton, J., Bowser, M., and Eskelin, T. 2019, July. Responding rapidly
+to Elodea—the first freshwater invasive plant in Alaska. San Diego,
+California. Available from
+<https://www.fws.gov/uploadedFiles/Morton_JM_et_al_2019.pdf>.
+
+</div>
+
 <div id="ref-packer_bee_genera_2007">
 
 Packer, L., Genaro, J.A., and Sheffield, C.S. 2007. The bee genera of
@@ -2688,6 +3261,15 @@ water quality monitoring system. Available from
 Stolz, C. 2019. The nestling diet of Svalbard snow buntings identified
 by DNA metabarcoding. Master’s thesis, The Arctic University of Norway.
 Available from <https://hdl.handle.net/10037/15438>.
+
+</div>
+
+<div id="ref-wang_naive_2007">
+
+Wang, Q., Garrity, G.M., Tiedje, J.M., and Cole, J.R. 2007. Naïve
+Bayesian classifier for rapid assignment of rRNA sequences into the new
+bacterial taxonomy. Applied and Environmental Microbiology **73**(16):
+5261. doi:[10.1128/AEM.00062-07](https://doi.org/10.1128/AEM.00062-07).
 
 </div>
 
