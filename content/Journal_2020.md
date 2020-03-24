@@ -60,6 +60,9 @@
       - [Wednesday, March 18](#wednesday-march-18)
       - [Thursday, March 19](#thursday-march-19)
       - [Friday, March 20](#friday-march-20)
+      - [Saturday, March 21](#saturday-march-21)
+      - [Monday, March 23](#monday-march-23)
+      - [Tuesday, March 24](#tuesday-march-24)
   - [Bibliography](#bibliography)
 
 # January
@@ -2842,6 +2845,280 @@ Next week work list:
     earthworm for Alaska, for the *AKES Newsletter*?
   - Get started on Slikok watershed project occupancy analysis?
 
+<!-- end list -->
+
+    cd /home/matt/SCVUC_COI_metabarcode_pipeline
+    snakemake --jobs 1 --snakefile snakefile_withPseudogeneFiltering --configfile 2020-03-20-0747_config_ml-jg.yaml
+    
+    cutadapt: error: Character 'I' in adapter sequence 'TAIACYTCIGGRTGICCRAARAAYCA' is not a valid IUPAC code. Use only characters XACGTURYSWKMBDHVN.
+    
+    Subbing "D" for "I". See <https://en.wikipedia.org/wiki/Nucleotide>.
+    
+    snakemake --jobs 1 --snakefile snakefile_withPseudogeneFiltering --configfile 2020-03-20-0747_config_ml-jg.yaml
+    
+    Fatal error: Unable to read from file (ml-jg/cat.denoised)
+    Error in job chimera_removal while creating output file ml-jg/cat.denoised.nonchimeras.
+    RuleException:
+    CalledProcessError in line 412 of /home/matt/SCVUC_COI_metabarcode_pipeline/snakefile_withPseudogeneFiltering:
+    Command 'vsearch --uchime3_denovo ml-jg/cat.denoised --sizein --xsize --nonchimeras ml-jg/cat.denoised.nonchimeras --relabel 'Zotu' --log ml-jg/chimeraRemoval.log' returned non-zero exit status 1.
+      File "/home/matt/SCVUC_COI_metabarcode_pipeline/snakefile_withPseudogeneFiltering", line 412, in __rule_chimera_removal
+      File "/home/matt/miniconda3/envs/SCVUCv4.3/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    Removing output files of failed job chimera_removal since they might be corrupted:
+    ml-jg/cat.denoised.nonchimeras
+    Will exit after finishing currently running jobs.
+    Exiting because a job execution failed. Look above for error message
+    
+    This seems to have had problems with the reverse primer. After trimming the reverse primer the files were quite small.
+    
+    TGRTTYTTYGGNCAYCCNGARGTNTA ## From original config file
+    TADACYTCDGGRTGDCCRAARAAYCA ## What I ran last
+    TAIACYTCIGGRTGICCRAARAAYCA ## From lab
+    TANACYTCNGGRTGNCCRAARAAYCA ## Going to try this.
+    
+    stop @ 08:50 start @ 09:10
+    
+    snakemake --jobs 1 --snakefile snakefile_withPseudogeneFiltering --configfile 2020-03-20-0747_config_ml-jg.yaml
+    
+    ## That did not work, either.
+    ## Switching back to the original.
+    
+    /bin/bash: line 1:  6375 Killed                  java -Xmx8g -jar /home/matt/SCVUC_COI_metabarcode_pipeline/rdp_classifier_2.12/dist/classifier.jar classify -t /home/matt/SCVUC_COI_metabarcode_pipeline/mydata_trained/rRNAClassifier.properties -o ml-jg/rdp.out.tmp ml-jg/cat.denoised.nonchimeras
+    Error in job taxonomic_assignment while creating output file ml-jg/rdp.out.tmp.
+    RuleException:
+    CalledProcessError in line 445 of /home/matt/SCVUC_COI_metabarcode_pipeline/snakefile_withPseudogeneFiltering:
+    Command 'java -Xmx8g -jar /home/matt/SCVUC_COI_metabarcode_pipeline/rdp_classifier_2.12/dist/classifier.jar classify -t /home/matt/SCVUC_COI_metabarcode_pipeline/mydata_trained/rRNAClassifier.properties -o ml-jg/rdp.out.tmp ml-jg/cat.denoised.nonchimeras' returned non-zero exit status 137.
+      File "/home/matt/SCVUC_COI_metabarcode_pipeline/snakefile_withPseudogeneFiltering", line 445, in __rule_taxonomic_assignment
+      File "/home/matt/miniconda3/envs/SCVUCv4.3/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    Removing output files of failed job taxonomic_assignment since they might be corrupted:
+    ml-jg/rdp.out.tmp
+    Will exit after finishing currently running jobs.
+    Exiting because a job execution failed. Look above for error message
+    
+    ## Made that jar executable.
+    
+    ## Trying again.
+    snakemake --jobs 1 --snakefile snakefile_withPseudogeneFiltering --configfile 2020-03-20-0747_config_ml-jg.yaml
+    
+    Error in job taxonomic_assignment while creating output file ml-jg/rdp.out.tmp.
+    RuleException:
+    CalledProcessError in line 445 of /home/matt/SCVUC_COI_metabarcode_pipeline/snakefile_withPseudogeneFiltering:
+    Command 'java -Xmx8g -jar /home/matt/SCVUC_COI_metabarcode_pipeline/rdp_classifier_2.12/dist/classifier.jar classify -t /home/matt/SCVUC_COI_metabarcode_pipeline/mydata_trained/rRNAClassifier.properties -o ml-jg/rdp.out.tmp ml-jg/cat.denoised.nonchimeras' returned non-zero exit status 137.
+      File "/home/matt/SCVUC_COI_metabarcode_pipeline/snakefile_withPseudogeneFiltering", line 445, in __rule_taxonomic_assignment
+      File "/home/matt/miniconda3/envs/SCVUCv4.3/lib/python3.6/concurrent/futures/thread.py", line 56, in run
+    Removing output files of failed job taxonomic_assignment since they might be corrupted:
+    ml-jg/rdp.out.tmp
+    Will exit after finishing currently running jobs.
+    Exiting because a job execution failed. Look above for error message
+    
+    ## Just trying that failed command.
+    java -Xmx8g -jar /home/matt/SCVUC_COI_metabarcode_pipeline/rdp_classifier_2.12/dist/classifier.jar classify -t /home/matt/SCVUC_COI_metabarcode_pipeline/mydata_trained/rRNAClassifier.properties -o ml-jg/rdp.out.tmp ml-jg/cat.denoised.nonchimeras
+    
+    ## This was killed by the system, I think from using too much memory.
+    
+    Mar 20 09:59:42 aurochs kernel: [ 8396.151925] Out of memory: Killed process 6840 (java) total-vm:10309908kB, anon-rss:3333148kB, file-rss:0kB, shmem-rss:0kB
+    
+    ## Oh, I see. It is asking for 8 Gb of memory on a 4 Gb memory machine.
+    -Xmx8g
+    
+    ## Edited snakefile_withPseudogeneFiltering, saved as snakefile_withPseudogeneFiltering_2020-03-20-1141
+    
+    snakemake --jobs 1 --snakefile snakefile_withPseudogeneFiltering_2020-03-20-1141 --configfile 2020-03-20-0747_config_ml-jg.yaml
+    
+    That failed, also. This thing is really hungry for memory.
+    
+    Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+        at java.util.Arrays.copyOf(Arrays.java:3210)
+        at java.util.Arrays.copyOf(Arrays.java:3181)
+        at java.util.ArrayList.grow(ArrayList.java:261)
+        at java.util.ArrayList.ensureExplicitCapacity(ArrayList.java:235)
+        at java.util.ArrayList.ensureCapacityInternal(ArrayList.java:227)
+        at java.util.ArrayList.add(ArrayList.java:458)
+        at edu.msu.cme.rdp.classifier.io.GenusWordProbFileParser.createGenusWordProbList(GenusWordProbFileParser.java:59)
+        at edu.msu.cme.rdp.classifier.TrainingInfo.createGenusWordProbList(TrainingInfo.java:127)
+        at edu.msu.cme.rdp.classifier.utils.ClassifierFactory.getNonDefaultFactory(ClassifierFactory.java:161)
+        at edu.msu.cme.rdp.classifier.utils.ClassifierFactory.getFactory(ClassifierFactory.java:145)
+        at edu.msu.cme.rdp.multicompare.MultiClassifier.<init>(MultiClassifier.java:64)
+        at edu.msu.cme.rdp.multicompare.MultiClassifier.<init>(MultiClassifier.java:75)
+        at edu.msu.cme.rdp.multicompare.Main.main(Main.java:247)
+        at edu.msu.cme.rdp.classifier.cli.ClassifierMain.main(ClassifierMain.java:67)
+    
+    ## Ok, I repartitioned the hard drive, making 24 Gb more of swap, so now we have 4 Gb of memory and 26 Gb of swap.
+    
+    cd SC*
+    conda activate SCVUCv4.3
+    snakemake --jobs 1 --snakefile snakefile_withPseudogeneFiltering_2020-03-20-1528 --configfile 2020-03-20-0747_config_ml-jg.yaml
+    
+    ## That worked!
+
+## Saturday, March 21
+
+I looked at results from yesterday and worked on adding identifications.
+
+    ## Downloaded ASV Sequences from Bowser et al. (2020)
+    
+    Bowser, M. L. 2020. Supplementary material 5. ASV sequences. doi.org/10.3897/BDJ.8.e50124.suppl5
+    
+    oo_371419.fas
+    
+    cd SC*/ml-jg
+    source activate SCVUCv4.3
+    
+    ## Assign taxonomy from Bowser (2020).
+    vsearch --usearch_global chimera.denoised.nonchimeras.taxon \
+    --db 2020-03-21-0600_oo_371419.fas \
+    --id .90 \
+    --iddef 0 \
+    --blast6out 2020-03-21-0626_vsearch_Bowser_2020_matches.txt
+    
+    ## Assign taxonomy based on DS-BOWSER BOLD project.
+    vsearch --usearch_global chimera.denoised.nonchimeras.taxon \
+    --db 2020-03-21-0611_DS-BOWSER.fas \
+    --id .90 \
+    --iddef 0 \
+    --blast6out 2020-03-21-0629_vsearch_DS-BOWSER_matches.txt
+    
+    ## Assign taxonomy based on AKTerrInvCOILib.
+    vsearch --usearch_global chimera.denoised.nonchimeras.taxon \
+    --db 2019-03-25-0832_clusters.fas \
+    --id .90 \
+    --iddef 0 \
+    --blast6out 2020-03-21-0639_vsearch_AKTerrInvCOILib_matches.txt
+
+I started looking at these identifications. I think it is interesting
+that *Dallia pectoralis* did not make it through the filtering. This
+makes me think that the filtering is too stringent because there were
+*D. pectoralis* reads in the original FASTQ files.
+
+## Monday, March 23
+
+    ## Downloaded ASV Sequences from Bowser et al. (2020)
+    
+    Bowser, M. L. 2020. Supplementary material 5. ASV sequences. doi.org/10.3897/BDJ.8.e50124.suppl5
+    
+    oo_371419.fas
+    
+    cd SC*/ml-jg
+    source activate SCVUCv4.3
+    
+    ## Assign taxonomy from Bowser (2020).
+    vsearch --usearch_global chimera.denoised.nonchimeras.taxon \
+    --db 2020-03-21-0600_oo_371419.fas \
+    --id .90 \
+    --iddef 0 \
+    --blast6out 2020-03-21-0626_vsearch_Bowser_2020_matches.txt
+    
+    ## Assign taxonomy based on DS-BOWSER BOLD project.
+    vsearch --usearch_global chimera.denoised.nonchimeras.taxon \
+    --db 2020-03-21-0611_DS-BOWSER.fas \
+    --id .90 \
+    --iddef 0 \
+    --blast6out 2020-03-21-0629_vsearch_DS-BOWSER_matches.txt
+    
+    ## Assign taxonomy based on AKTerrInvCOILib.
+    vsearch --usearch_global chimera.denoised.nonchimeras.taxon \
+    --db 2019-03-25-0832_clusters.fas \
+    --id .90 \
+    --iddef 0 \
+    --blast6out 2020-03-21-0639_vsearch_AKTerrInvCOILib_matches.txt
+
+``` r
+setwd("D:/projects/blackfish/2020_blackfish_diet/2020-03_SCVUC/ml-jg")
+
+results1 <- read.csv("results.csv", stringsAsFactors=FALSE)
+
+length(levels(as.factor(results1$ml.jg_GlobalESV)))
+[1] 212
+
+aklib <- read.delim("2020-03-23-0659_vsearch_AKTerrInvCOILib_matches.txt", header=FALSE, stringsAsFactors=FALSE)
+
+names(results1)[1] <- "ESV_name"
+results1$ESV_name <- gsub("ml-jg_", "", results1$ESV_name)
+
+## column names from http://www.metagenomics.wiki/tools/blast/blastn-output-format-6
+names(aklib)[1:3] <- c("ESV_name", "AKlibprocessid", "pident")
+```
+
+I accidentally overwrote most of the rest of that R script.
+
+I attended the 11:00 biology check-in telecon.
+
+I prepared data for Rob Massengill, but I accidentally overwrote the R
+script. I had downloaded occurrence data from the Vogel Lake vicinity
+from GBIF (GBIF.org
+[2020](#ref-gbiforg_gbif_2020-3)[d](#ref-gbiforg_gbif_2020-3)), Arctos,
+and iNaturalist, then processed these.
+
+## Tuesday, March 24
+
+Picking up where I left off yesterday, preparing data for Rob.
+
+``` r
+## I did some editing by hand, adding lake_name and removing some terrestrial records.
+
+setwd("D:/projects/Elodea/Sandpiper_Lake/2020-03-23_occurrence_data_for_Rob")
+
+d4 <- read.csv("2020-03-24-0607_Vogel_Lake_vicinity_occurrence_data.csv", stringsAsFactors=FALSE)
+
+library(maptools)
+library(rgdal)
+
+wgs84 <- CRS("+proj=longlat +ellps=WGS84 +datum=WGS84")
+
+coordinates(d4) <- c("longitude", "latitude")
+proj4string(d4) <- wgs84
+
+writeOGR(
+ d4, 
+ dsn="2020-03-24-0607_Vogel_Lake_vicinity_occurrence_data.kml", 
+ layer="occurrences", 
+ driver="KML", 
+ dataset_options=c("NameField=scientific_name"), 
+ overwrite_layer=TRUE
+ )
+
+## I did some editing by hand.
+d4 <- read.csv("2020-03-24-0654_Vogel_Lake_vicinity_occurrence_data.csv", stringsAsFactors=FALSE)
+
+coordinates(d4) <- c("longitude", "latitude")
+proj4string(d4) <- wgs84
+
+writeOGR(
+ d4, 
+ dsn="2020-03-24-0654_Vogel_Lake_vicinity_occurrence_data.kml", 
+ layer="occurrences", 
+ driver="KML", 
+ dataset_options=c("NameField=scientific_name"), 
+ overwrite_layer=TRUE
+ )
+
+## Now for some summaries.
+library(reshape2)
+
+d4 <- read.csv("2020-03-24-0654_Vogel_Lake_vicinity_occurrence_data.csv", stringsAsFactors=FALSE)
+
+d5 <- d4[,1:9]
+d5$presence <- 1
+
+d6 <- melt(d5, measure.vars="presence")
+
+d7 <- dcast(d6, formula = ... ~ lake_name, fun.aggregate=length)
+d7 <- d7[,c(1:8, 10:12)]
+to10 <- function(x)
+ {
+ if (x > 0){1}
+ else {0}
+ }
+d7[,9:11] <- apply(d7[,9:11], c(1,2), to10)
+write.csv(d7, "2020-03-24-0728_Vogel_Lake_vicinity_occurrence_table.csv", row.names=FALSE)
+
+## Now for an aggregate table.
+d8 <- dcast(d6, formula = ... ~ ., fun.aggregate=length)
+d8 <- d8[,c(9,1:8)]
+write.csv(d8, "2020-03-24-0737_Vogel_Lake_vicinity_occrrence_aggregate.csv", row.names=FALSE)
+```
+
+https://drive.google.com/open?id=1gocg8w\_TI\_eAdq379PR4NJZPWJpYD9Zl
+
 # Bibliography
 
 <div id="refs" class="references">
@@ -2995,6 +3272,13 @@ doi:[10.15468/dl.3dfs26](https://doi.org/10.15468/dl.3dfs26).
 
 GBIF.org. 2020c. GBIF Occurrence Download. GBIF.org.
 doi:[10.15468/dl.deymas](https://doi.org/10.15468/dl.deymas).
+
+</div>
+
+<div id="ref-gbiforg_gbif_2020-3">
+
+GBIF.org. 2020d. GBIF Occurrence Download. GBIF.org.
+doi:[10.15468/dl.azbzw2](https://doi.org/10.15468/dl.azbzw2).
 
 </div>
 
