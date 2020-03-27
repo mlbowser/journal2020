@@ -13,4 +13,4 @@ ag$hours <- ag$hours/60
 ## Save this.
 write.csv(ag, "hours_agg.csv", row.names=FALSE)
 
-ag
+print(ag)
