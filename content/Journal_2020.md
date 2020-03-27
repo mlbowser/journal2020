@@ -64,6 +64,8 @@
       - [Monday, March 23](#monday-march-23)
       - [Tuesday, March 24](#tuesday-march-24)
       - [Wednesday, March 25](#wednesday-march-25)
+      - [Thursday, March 26](#thursday-march-26)
+      - [Friday, March 27](#friday-march-27)
   - [Bibliography](#bibliography)
 
 # January
@@ -3317,6 +3319,259 @@ the “NGPhylogeny Analyse - FastME/OneClick” option. Results should be
 available at
 <https://ngphylogeny.fr/workspace/history/47db2b18949f0c42>.
 
+## Thursday, March 26
+
+To do:
+
+  - Blackfish analysis.
+  - Publish blackfish sequence data.
+  - Early Adopters’ data management meeting at 11:00
+
+The phylogenetic analysis from yesterday ran just fine.
+
+For the purpose of keeping all ESV labels distinct for searchin on
+Arctos or combining FASTA datasets, I want to relabel at ESVs. In the
+output tree I relabeled “Zotu” to “bfdZotu”, with “bfd” standing for
+“blackfish diet”. Resulting output tree on iTOL:
+<https://itol.embl.de/tree/16415961276811585237767#>.
+
+I worked on examining results of the blackfish work.
+
+``` r
+## Today I want to look at results.
+
+setwd("D:/projects/blackfish/2020_blackfish_diet/2020-03_SCVUC/ml-jg")
+
+r5 <- read.csv("results_2020-03-25-1552.csv", stringsAsFactors=FALSE)
+
+guid <- read.csv("2020-03-26-0819_guids.csv", stringsAsFactors=FALSE)
+
+r6 <- merge(r5, guid, all.x=TRUE)
+
+## Renaming ESVs.
+r6$ESV_name <- gsub("Zotu", "bfdZotu", r6$ESV_name)
+r6$scientific_name <- gsub("Zotu", "bfdZotu", r6$scientific_name)
+
+## Saving here.
+write.csv(r6, "results_2020-03-26-0844.csv", row.names=FALSE)
+
+## Now making a summary data frame for making an overall pie chart.
+library(reshape2)
+
+## In this one I will look at all ESVs.
+sm1 <- melt(r6[r6$accept==1,c("scientific_name", "ESVsize")], measure.vars="ESVsize")
+sm1 <- sm1[order(-sm1$value),]
+
+pie(sm1$value, labels = sm1$scientific_name, main="ESV abundances, summed over all samples")
+
+## Now I want to add percentages.
+sm1$percentage <- round(sm1$value*100/sum(sm1$value))
+
+pie(sm1$value, labels = paste0(sm1$scientific_name, " ", sm1$percentage, "%"), main="ESV abundances, summed over all samples")
+
+png(filename="2020-03-26-0921_ESV_abundances.png",
+ width=1000,
+ height=600
+ )
+ pie(sm1$value, 
+  labels = paste0(sm1$scientific_name, " ", sm1$percentage, "%"), 
+  main="ESV abundances, summed over all samples"
+  )
+dev.off()
+
+## Now for each fish.
+for (this_fish in 1:5)
+ {
+ fish <- guid$guid[this_fish]
+ smf <- melt(r6[(r6$accept==1 & r6$guid==fish),c("scientific_name", "ESVsize")], measure.vars="ESVsize")
+ smf <- smf[order(-smf$value),]
+ smf$percentage <- round(smf$value*100/sum(smf$value))
+ png(filename=paste0("2020-03-26-0929_ESV_abundances_", this_fish, ".png"),
+  width=1000,
+  height=600
+  )
+  pie(smf$value, 
+   labels = paste0(smf$scientific_name, " ", smf$percentage, "%"), 
+   main=paste("ESV abundances, blackfish", fish)
+   )
+ dev.off()
+ }
+## It would be nice if the colors were consistent.
+
+## Downloaded color table from https://en.wikipedia.org/wiki/List_of_colors:_A%E2%80%93F
+cdf <- read.csv("2020-03-26-1055_cols_a-f.csv", stringsAsFactors=FALSE)
+
+set.seed(42) 
+r6$col <- sample(x=cdf$hex, size=nrow(r6), replace = FALSE)
+
+## Remaking some of those pie charts with new, consistent colors.
+sm1 <- melt(r6[r6$accept==1,c("scientific_name", "col", "ESVsize")], measure.vars="ESVsize")
+sm1 <- sm1[order(-sm1$value),]
+sm1$percentage <- round(sm1$value*100/sum(sm1$value))
+
+png(filename="2020-03-26-1103_ESV_abundances.png",
+ width=1000,
+ height=600
+ )
+ pie(sm1$value, 
+  labels = paste0(sm1$scientific_name, " ", sm1$percentage, "%"), 
+  main="ESV abundances, summed over all samples",
+  col=sm1$col
+  )
+dev.off() 
+
+## Remaking pie charts for each fish.
+for (this_fish in 1:5)
+ {
+ fish <- guid$guid[this_fish]
+ smf <- melt(r6[(r6$accept==1 & r6$guid==fish),c("scientific_name", "col", "ESVsize")], measure.vars="ESVsize")
+ smf <- smf[order(-smf$value),]
+ smf$percentage <- round(smf$value*100/sum(smf$value))
+ png(filename=paste0("2020-03-26-1109_ESV_abundances_", this_fish, ".png"),
+  width=1000,
+  height=600
+  )
+  pie(smf$value, 
+   labels = paste0(smf$scientific_name, " ", smf$percentage, "%"), 
+   main=paste("ESV abundances, blackfish", fish),
+   col=smf$col
+   )
+ dev.off()
+ }
+
+## Now trying to make a bigger plot for the individual fish.
+png(filename="2020-03-26-1131_ESV_abundances.png",
+ width=1000*2,
+ height=600*3
+ ) 
+ par(mfrow=c(3,2))
+ par(mar=c(0,0,1,0))
+ plot.new()
+for (this_fish in 1:5)
+ {
+ fish <- guid$guid[this_fish]
+ smf <- melt(r6[(r6$accept==1 & r6$guid==fish),c("scientific_name", "col", "ESVsize")], measure.vars="ESVsize")
+ smf <- smf[order(-smf$value),]
+ smf$percentage <- round(smf$value*100/sum(smf$value))
+  pie(smf$value, 
+   labels = paste0(smf$scientific_name, " ", smf$percentage, "%"), 
+   main=paste("ESV abundances, blackfish", fish),
+   col=smf$col
+   )
+ }
+dev.off() 
+
+## Putting everything on one plot.
+pdf(file="2020-03-26-1141_ESV_abundances.pdf",
+ width=10*2,
+ height=6*3,
+ pointsize=12
+ ) 
+ par(mfrow=c(3,2))
+ par(mar=c(0,0,1,0))
+ pie(sm1$value, 
+  labels = paste0(sm1$scientific_name, " ", sm1$percentage, "%"), 
+  main="ESV abundances, summed over all samples",
+  col=sm1$col,
+  radius=0.8
+  )
+for (this_fish in 1:5)
+ {
+ fish <- guid$guid[this_fish]
+ smf <- melt(r6[(r6$accept==1 & r6$guid==fish),c("scientific_name", "col", "ESVsize")], measure.vars="ESVsize")
+ smf <- smf[order(-smf$value),]
+ smf$percentage <- round(smf$value*100/sum(smf$value))
+  pie(smf$value, 
+   labels = paste0(smf$scientific_name, " ", smf$percentage, "%"), 
+   main=paste("ESV abundances, blackfish", fish),
+   col=smf$col
+   )
+ }
+dev.off() 
+
+## I might try to make the areas proportional to the number of reads.
+rtdf <- melt(r6[(r6$accept==1),c("guid", "ESVsize")], measure.vars="ESVsize")
+rtdf <- dcast(rtdf, guid ~ ., sum)
+
+tr <- sum(r6$ESVsize[r6$accept==1])
+ta <- pi*0.8^2 ## Area of the summed circle.
+
+rtdf$a <- rtdf[,2]*ta/tr
+rtdf$r <- (rtdf$a/pi)^0.5
+
+## Putting everything on one plot.
+pdf(file="2020-03-1432_ESV_abundances.pdf",
+ width=10*2,
+ height=6*3,
+ pointsize=12
+ ) 
+ par(mfrow=c(3,2))
+ par(mar=c(0,0,2,0))
+ pie(sm1$value, 
+  labels = paste0(sm1$scientific_name, " ", sm1$percentage, "%"), 
+  main="ESV abundances, summed over all samples",
+  col=sm1$col,
+  radius=0.8
+  )
+for (this_fish in 1:5)
+ {
+ fish <- guid$guid[this_fish]
+ smf <- melt(r6[(r6$accept==1 & r6$guid==fish),c("scientific_name", "col", "ESVsize")], measure.vars="ESVsize")
+ smf <- smf[order(-smf$value),]
+ smf$percentage <- round(smf$value*100/sum(smf$value))
+  pie(smf$value, 
+   labels = paste0(smf$scientific_name, " ", smf$percentage, "%"), 
+   main=paste("ESV abundances, blackfish", fish),
+   col=smf$col,
+   radius=rtdf$r[this_fish]
+   )
+ }
+dev.off() 
+
+write.csv(r6, "results_2020-03-26-1854.csv", row.names=FALSE)
+save.image("2020-03-26-1854_workspace.RData")
+```
+
+### 1:00 pm early adopters’ data management meeting
+
+  - Question: How can the metadata refer to a number of files? Answer:
+    Under the distribution tab there will be a way to associated files /
+    URLs, etc.
+
+  - Hilmar commented on mdEditor files. Should not use the “product”
+    resource type; use something more specific. Raw data means RAW data,
+    e.g. data sheets, that have not been processed at all.
+
+  - Collections. Question: I have thousands of files. Do I need to make
+    a metadata entry for each file? Answer: No, there is a collection
+    resource type for this kind of situation where there are many files
+    in a standard format.
+
+  - Data dictionaries. This tells the reader what each field is in your
+    data file. Data dictionaries must be linked to resources.
+
+  - Next steps are to complete three product medata records and to make
+    a data dictionary.
+
+I started writing an article on blackfish diet for the *AKES
+Newsletter*.
+
+## Friday, March 27
+
+To do:
+
+  - Blackfish analysis.
+  - Publish blackfish sequence data.
+  - Format Derek’s black spruce article.
+  - Early adopters’ homework.
+
+I worked on uploading images to the blackfish records on Arctos.
+
+I uploaded pecimen data downloaded from Arctos and DNA extraction
+methods, DNA sequencing methods, resulting raw metagenomic data, and
+related files from RTL Genomics to Zenodo (Bowser and Bowser
+[2020](#ref-bowser_raw_2020)).
+
 # Bibliography
 
 <div id="refs" class="references">
@@ -3359,7 +3614,16 @@ of Aquatic Plant Management **33**: 13–19. Available from
 
 Bowser, M.L. 2019. Work journal 2019. Exported pdf version. U.S. Fish &
 Wildlife Service, Kenai National Wildlife Refuge., Soldotna, Alaska.
-doi:[doi.org/10.7299/X7RB74XZ](https://doi.org/doi.org/10.7299/X7RB74XZ).
+doi:[10.7299/X7RB74XZ](https://doi.org/10.7299/X7RB74XZ).
+
+</div>
+
+<div id="ref-bowser_raw_2020">
+
+Bowser, M.L., and Bowser, A.M. 2020, March. Raw metagenomic data from
+gut contents of *Dallia pectoralis* specimens collected in Kenai,
+Alaska, in 2019. Zenodo.
+doi:[10.5281/zenodo.3731327](https://doi.org/10.5281/zenodo.3731327).
 
 </div>
 
