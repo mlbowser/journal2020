@@ -4317,6 +4317,12 @@ axis(side=3,
 dev.off()
 ```
 
+![Read abundances of identified food items from each of five blackfish
+specimens.](2020-04-03_abundance_plot.png)  
+Only food items that represented \>= 1% of the total number of reads
+were included. The area of each circle is proportional to read
+abundances.
+
 ### Biology check-in at 11:00
 
 ### USFWS R7 Town Hall telecon at 11:30
