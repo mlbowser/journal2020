@@ -75,6 +75,7 @@
       - [Friday, April 3](#friday-april-3)
       - [Saturday, April 4](#saturday-april-4)
       - [Monday, April 6](#monday-april-6)
+      - [Tuesday, April 7](#tuesday-april-7)
   - [Bibliography](#bibliography)
 
 # January
@@ -4319,8 +4320,9 @@ dev.off()
 
 ![Read abundances of identified food items from each of five blackfish
 specimens.](2020-04-03_abundance_plot.png)  
-Only food items that represented \>= 1% of the total number of reads
-were included. The area of each circle is proportional to read
+Read abundances of identified food items from each of five blackfish
+specimens. Only food items that represented \>= 1% of the total number
+of reads were included. The area of each circle is proportional to read
 abundances.
 
 ### Biology check-in at 11:00
@@ -4332,8 +4334,8 @@ I worked on the blackfish article.
 ## Saturday, April 4
 
 The kids and I skied, snowshoed, or kicksledded down to a seep by the
-Kasilof River, where we collected a worm, some fly larvae, and one
-caddisfly larva.
+Kasilof River at 60.365425N, 151.285797W where we collected a worm, some
+fly larvae, and one caddisfly larva.
 
 ![Collecting invertebrates from a seep near the Kasiof
 River.](2020-04-04_seep.jpg)  
@@ -4346,13 +4348,11 @@ To do:
   - *Refuge Notebook* catch-up.
   - JHAs
   - Finish blackfish article.
-  - Get herbicie quote.
   - pesticide applicator training.
-  - This week’s *Refuge Notebook* article?
-  - Write Lifescanner team and RTL Genomics to find out whether or not
-    they are acceptign specimens.
+  - ~~Write Lifescanner team and RTL Genomics to find out whether or not
+    they are accepting specimens.~~
   - Data management early adopters’ homework.
-  - upload iNaturalist/Lifescanner records.
+  - ~~Upload iNaturalist/Lifescanner records.~~
 
 I have the following JHAs to complete.
 
@@ -4360,7 +4360,41 @@ I have the following JHAs to complete.
   - field data collection
 
 I uploaded records to inaturalist records for a sciaroid fly
-([iNaturalist:41528440](https://www.inaturalist.org/observations/41528440)).
+([iNaturalist:41528440](https://www.inaturalist.org/observations/41528440)),
+a segmented worm
+([iNaturalist:41529724](https://www.inaturalist.org/observations/41529724)),
+a fly larva
+([iNaturalist:41531388](https://www.inaturalist.org/observations/41531388)),
+a chironomid midge
+([iNaturalist:41532738](https://www.inaturalist.org/observations/41532738)),
+and a caddisfly
+([iNaturalist:41534382](https://www.inaturalist.org/observations/41534382))
+and I made corresponding Lifescanner records.
+
+I worked on the blackfish diet article.
+
+### Biology staff meeting at 11:00
+
+  - Going to pick up microscope, etc. from lab.
+  - Need to obtain pesticide applicator CEUs.
+
+## Tuesday, April 7
+
+To do:
+
+  - *Refuge Notebook* catch-up.
+  - JHAs
+  - ~~Finish blackfish article draft.~~
+  - pesticide applicator training.
+  - Data management early adopters’ homework.
+  - Pick up microscope, etc. from the office.
+
+I have the following JHAs to complete.
+
+  - pesticide application
+  - field data collection
+
+I finished a draft of the blackfish diet article.
 
 # Bibliography
 
