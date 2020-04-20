@@ -77,6 +77,15 @@
       - [Monday, April 6](#monday-april-6)
       - [Tuesday, April 7](#tuesday-april-7)
       - [Wednesday, April 8](#wednesday-april-8)
+      - [Thursday, April 9](#thursday-april-9)
+      - [Friday, April 10](#friday-april-10)
+      - [Saturday, April 11](#saturday-april-11)
+      - [Monday, April 13](#monday-april-13)
+      - [Tuesday, April 14](#tuesday-april-14)
+      - [Wednesday, April 15](#wednesday-april-15)
+      - [Thursday, April 16](#thursday-april-16)
+      - [Friday, April 17](#friday-april-17)
+      - [Monday, April 20](#monday-april-20)
   - [Bibliography](#bibliography)
 
 # January
@@ -4595,6 +4604,207 @@ I started editing this week’s *Refuge Notebook* article.
 
 I finished editing this week’s *Refuge Notebook* article and got it sent
 to the *Clarion*.
+
+### Safety meeting at 14:30
+
+I worked a little on the Kenai NWR checklist.
+
+## Thursday, April 9
+
+To do:
+
+  - *Refuge Notebook* catch-up.
+  - JHAs
+  - pesticide applicator training.
+
+I have the following JHAs to complete.
+
+  - pesticide application
+  - field data collection
+
+I worked on formatting Liz’s article for the AKES Newsletter.
+
+I helped make some face masks.
+
+I worked some on the Kenai National Wildlife Refuge checklist.
+
+### Early adopters’ data management meeting at 13:00
+
+  - No new homework this time?
+  - Could add spatial extent.
+  - Next big step will be to actually archive the dataset.
+
+In the afternoon, Apphia and I walked down to Coal Creek where it
+crosses under Kalifornsky Beach Road. Where there was a little open
+water we collected two caddisflies (BOLD-UB0 and BOLD-7L9) and one worm
+(BOLD-OC2).
+
+![Collecting invertebrates at Coal Creek.](2020-04-09_Coal_Creek.jpg)  
+Collecting invertebrates at Coal Creek.
+
+## Friday, April 10
+
+To do:
+
+  - *Refuge Notebook* catch-up.
+  - JHAs
+  - pesticide applicator training.
+  - mid-year performance plans.
+  - credit card reconciliation.
+  - chainsaw refresher.
+
+I entered data from specimens collected yesterday into lifescanner.net.
+
+I sorted sweep net sample
+[KNWR:Ento:11385](http://arctos.database.museum/guid/KNWR:Ento:11385).
+
+Contents:
+
+| identification | count |
+| :------------- | ----: |
+| Araneae        |     1 |
+| Arachnida      |   384 |
+| Collembola     |    84 |
+| Hemiptera      |     3 |
+| Coleoptera     |     1 |
+| Insecta        |     2 |
+| Thysanoptera   |     3 |
+
+### Refuge staff meeting at 11:00
+
+## Saturday, April 11
+
+I sorted a Berlese sample from site SK22, soil sample 2. I put this into
+a vial with barcode UAM100185961.
+
+Contents:
+
+| identification | count |
+| :------------- | ----: |
+| Araneae        |    32 |
+| Collembola     |   108 |
+| Arachnida      |   226 |
+| Insecta        |     2 |
+| Hemiptera      |     4 |
+
+One of the Collembola looked like *Megalothorax*.
+
+## Monday, April 13
+
+I sorted a Berlese sample from site 3092, soil sample 2. I put this into
+a vial with barcode UAM100185962. Arctos is down for maintenance, so I
+do not have a GUID or URL for this record yet.
+
+Contents:
+
+| identification | count |
+| :------------- | ----: |
+| Coleoptera     |     2 |
+| Geophilomorpha |     1 |
+| Arachnida      |   354 |
+| Collembola     |   172 |
+| Thysanoptera   |     8 |
+| Insecta        |     6 |
+| Araneae        |     4 |
+| Annelida       |     1 |
+
+### Biology check-in meeting at 11:00
+
+  - There is a lot of trail use in the Skilak area and Skyline, even
+    though trails are closed.
+  - Next bio meeting is Thursday at 11:00.
+
+### Alaska Native Plant Material Meeting at 13:00
+
+## Tuesday, April 14
+
+I sorted a Berlese soil sample from site 3069, soil sample 1. Vial
+barcode: UAM100185963.
+
+Contents:
+
+| identification | count |
+| :------------- | ----: |
+| Arachnida      |   255 |
+| Araneae        |     2 |
+| Collembola     |    13 |
+| Thysanoptera   |     5 |
+| Hymenoptera    |     1 |
+| Hemiptera      |     2 |
+
+As has been typical in these samples, there were really more springtails
+and mites that were added in clumps at the end.
+
+## Wednesday, April 15
+
+I edited this week’s *Refuge Notebook* article and got it sent to the
+*Clarion*.
+
+I worked on formatting Derek’s *Scathophaga* misidentification article
+and Adam’s hare article for the *AKES Newsletter*.
+
+## Thursday, April 16
+
+I finished some editing for the upcomeing *AKES Newsletter*.
+
+I formatted the *Refuge Notebook* article form December 27, 2019 and
+started with 2020 articles.
+
+### Biology check-in at 11:00
+
+I attempted to attend a 13:30 meeting about the Mystery Creek gravel pit
+rehabilitation, but the connection was too poor.
+
+### AKEPIC meeting at 14:00
+
+I formatted and posted *Refuge Notebook* articles through January 17.
+
+## Friday, April 17
+
+I sorted the Berlese sample from site MG12, soil sample 1 (barcode:
+UAM100185964).
+
+Contents:
+
+| identification | count |
+| :------------- | ----: |
+| Lumbricidae    |     1 |
+| Araneae        |     4 |
+| Arachnida      |   300 |
+| Insecta        |     2 |
+| Collembola     |    42 |
+| Hemiptera      |     5 |
+| Coleoptera     |     4 |
+| Annelida       |     1 |
+| Hymenoptera    |     1 |
+
+I worked on formatting *Refuge Notebook* articles. I also did some
+editing of my blackfish article.
+
+## Monday, April 20
+
+This mornig I sorted a Berlese sample from site MG39, soil sample 1,
+barcode UAM100185965.
+
+| identification | count |
+| :------------- | ----: |
+| Thysanoptera   |     6 |
+| Araneae        |     6 |
+| Coleoptera     |     4 |
+| Arachnida      |   341 |
+| Collembola     |    23 |
+| Insecta        |     2 |
+
+Arctos is still down, so I still cannot enter data for these samples. I
+assigned catalog numbers manually.
+
+| barcode      | GUID                                                                  |
+| :----------- | :-------------------------------------------------------------------- |
+| UAM100185961 | [KNWR:Ento:11386](http://arctos.database.museum/guid/KNWR:Ento:11386) |
+| UAM100185962 | [KNWR:Ento:11387](http://arctos.database.museum/guid/KNWR:Ento:11387) |
+| UAM100185963 | [KNWR:Ento:11388](http://arctos.database.museum/guid/KNWR:Ento:11388) |
+| UAM100185964 | [KNWR:Ento:11389](http://arctos.database.museum/guid/KNWR:Ento:11389) |
+| UAM100185965 | [KNWR:Ento:11390](http://arctos.database.museum/guid/KNWR:Ento:11390) |
 
 # Bibliography
 
