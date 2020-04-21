@@ -86,6 +86,7 @@
       - [Thursday, April 16](#thursday-april-16)
       - [Friday, April 17](#friday-april-17)
       - [Monday, April 20](#monday-april-20)
+      - [Tuesday, April 21](#tuesday-april-21)
   - [Bibliography](#bibliography)
 
 # January
@@ -4783,6 +4784,17 @@ editing of my blackfish article.
 
 ## Monday, April 20
 
+To do:
+
+  - ~~Finish sorting Berlese samples.~~
+  - ~~Get other Berlese samples and LifeScanner samples from work.~~
+  - Compile data from sweep and Berlese samples.
+  - Slikok occupancy?
+  - Edit this week’s *Refuge Notebook* article.
+  - Proposals for 2019 to Mark?
+  - Contract for fluridone.
+  - Review Rob’s pike treatment plan.
+
 This mornig I sorted a Berlese sample from site MG39, soil sample 1,
 barcode UAM100185965.
 
@@ -4805,6 +4817,30 @@ assigned catalog numbers manually.
 | UAM100185963 | [KNWR:Ento:11388](http://arctos.database.museum/guid/KNWR:Ento:11388) |
 | UAM100185964 | [KNWR:Ento:11389](http://arctos.database.museum/guid/KNWR:Ento:11389) |
 | UAM100185965 | [KNWR:Ento:11390](http://arctos.database.museum/guid/KNWR:Ento:11390) |
+
+I worked on preparing documents for a contract for acquiring pelleted
+fluridone.
+
+I started to edits this week’s Refuge Notebook article.
+
+I did some reading, evaluating whether or not we should start doing
+metagenomic work in house with a minION sequencer.
+
+## Tuesday, April 21
+
+To do:
+
+  - Compile data from sweep and Berlese samples.
+  - Slikok occupancy?
+  - Edit this week’s *Refuge Notebook* article.
+  - ~~Proposals for 2019 to Mark?~~
+  - Contract for fluridone.
+  - Review Rob’s pike treatment plan.
+
+I did get a proposal to Mark for building capacity to do some DNA work
+in house.
+
+### Safety committee meeting at 09:00
 
 # Bibliography
 
