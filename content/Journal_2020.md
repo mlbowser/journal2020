@@ -88,6 +88,8 @@
       - [Monday, April 20](#monday-april-20)
       - [Tuesday, April 21](#tuesday-april-21)
       - [Wednesday, April 22](#wednesday-april-22)
+      - [Thursday, April 23](#thursday-april-23)
+      - [Friday, April 24](#friday-april-24)
   - [Bibliography](#bibliography)
 
 # January
@@ -4872,7 +4874,7 @@ afternoon, but I failed to get through.
 To do:
 
   - ~~Ship out Berlese samples.~~
-  - Compile data from sweep and Berlese samples.
+  - ~~Compile data from sweep and Berlese samples.~~
   - Slikok occupancy?
   - ~~Submit this week’s *Refuge Notebook* article.~~
   - Review Rob’s pike treatment plan.
@@ -5011,6 +5013,35 @@ save.image("2020-04-22-1523_workspace.RData")
 ![Counts of specimens by sample type and
 order.](2020-04-22-1457_barplot.png)  
 Counts of specimens by sample type and order.
+
+## Thursday, April 23
+
+To do:
+
+  - Slikok occupancy?
+  - Review Rob’s pike treatment plan.
+
+I spent much of the morning setting up and testing a PIPITS 2.5
+environment (Gweon et al. [2015](#ref-gweon_pipits_2015))
+(<https://github.com/hsgweon/pipits>) and working on some tweaks to run
+it using exact sequence variant methods instead of the OTU clustering
+method that is the default.
+
+I worked some on adding geographic extents to the metadata of the
+snowshow hare data in preparation for the data management early
+adopters’ meeting.
+
+### Data management early adopters’ meeting at 13:00
+
+  - Still no specific homework.
+
+Transferring 2019 black spruce soil fungi raw metagenomic data from the
+server over VPN to my laptop took a long time, but it worked in the end.
+I initiated a PIPITS analysis of this dataset.
+
+## Friday, April 24
+
+As of this morning that PIPITS analysis is still on the ITSx step.
 
 # Bibliography
 
@@ -5199,6 +5230,17 @@ unklarer morphotypen von *elodea* spp. Durch chemotaxonomische und
 molekulartaxonomische methoden. Deutsche Gesellschaft für Limnologie
 (DGL) - Tagungsbericht (Köln). Available from
 <https://docplayer.org/7100923-Unterscheidung-unklarer-morphotypen-von-elodea-spp-durch-chemotaxonomische-und-molekulartaxonomische-methoden.html>.
+
+</div>
+
+<div id="ref-gweon_pipits_2015">
+
+Gweon, H.S., Oliver, A., Taylor, J., Booth, T., Gibbs, M., Read, D.S.,
+Griffiths, R.I., and Schonrogge, K. 2015. PIPITS: An automated pipeline
+for analyses of fungal internal transcribed spacer sequences from the
+Illumina sequencing platform. Methods in Ecology and Evolution **6**(8):
+973–980.
+doi:[10.1111/2041-210X.12399](https://doi.org/10.1111/2041-210X.12399).
 
 </div>
 
