@@ -5499,7 +5499,7 @@ Error: Size values in headers added by USEARCH != number of sequences in .uc
 To do:
 
   - ~~Finish PIPITS soil fungal analysis.~~
-  - Edit this week’s *Refuge Notebook* article.
+  - ~~Edit next week’s *Refuge Notebook* article.~~
 
 <!-- end list -->
 
@@ -5756,7 +5756,15 @@ Matching unique query sequences: 682959 of 704602 (96.93%)
 ````
 
 I worked on editing a *Refuge Notebook* article on biotech life for next
-week.
+week, getting a revised draft back to the author.
+
+Arctos is still down.
+
+Update: Arctos is up as of 12:39\!
+
+I updated content for the Kenai NWR content in update to the [Kenai
+Peninsula Cooperative Weed Management Area](http://www.kenaiweeds.org/)
+strategic plan.
 
 # Bibliography
 
