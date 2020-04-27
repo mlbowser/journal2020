@@ -5043,6 +5043,57 @@ I initiated a PIPITS analysis of this dataset.
 
 As of this morning that PIPITS analysis is still on the ITSx step.
 
+Yesterday I saw that we have some *Rabdophaga* willow rosette galls on
+*Salix pulchra* and *Salix fuscescens* in the swamp behind our house. I
+had been looking for rosette galls on *S. fuscescens* last year because
+it looked like there might possibly be a difference between COI
+sequences of *Rabdophaga* gall makers on these two hosts based on
+previous work (Bowser et al. [2018](#ref-bowser_dna_2018)), but this
+included only two sequences from *Rabdophaga* on *S. pulchra* and one
+sequence from *Rabdophaga* on *S. fuscescens*. Sato et
+al. ([2020](#ref-Sato_et_al_Rabdophaga_2020)) did not include any
+sequences from *Rabdophaga* on *S. fuscescens*.
+
+I downloaded *Rabdophaga* sequences from GenBank with the search string
+“Sato Rabdophaga” and all *Rabdophaga* sequences from BOLD with the
+search string “Rabdophaga”.
+
+I put these sequences together into one FASTA file and I submitted them
+to NGPhylogeny.fr. I used the “NGPhylogeny Analyse - FastME/OneClick”
+analysis. This analysis is available at
+<https://ngphylogeny.fr/workspace/history/5d1c74c0f1258998>.
+
+### Biology check in meeting at 10:00.
+
+  - Acquisition of a MinION may be funded.
+  - Should try using NGS to look at sheep diet.
+
+That did not include the new sequences from Sato et
+al. ([2020](#ref-Sato_et_al_Rabdophaga_2020)). Sequence
+[AB244581](https://www.ncbi.nlm.nih.gov/nuccore/AB244581) was from the
+*Rabdophaga rosaria* group, though. It was identified as *Rabdophaga
+strobilina* by Sato and Yukawa ([2006](#ref-sato_resurrection_2006)).
+This is also in the BOLD dataset.
+
+I tried searching GenBank with the string “Genetic variation in
+intraspecific populations of Rabdophaga rosaria (Diptera: Cecidomyiidae)
+indicating possible diversification scenarios into sibling species along
+with host range expansion on willows (Salicaceae: Salix)”. This yielded
+44 sequences.
+
+I combined the BOLD and GenBank sequences and submitted them to
+NGPhylogeny.fr, using the “NGPhylogeny Analyse - FastME/OneClick”
+analysis. This analysis is available at
+<https://ngphylogeny.fr/workspace/history/9bcb72e8e1d20fe1>.
+
+It looks like all of our *Rabdophaga* sequences from *S. pulchra* and
+*S. fuscescens* are *Rabdophaga rosaria* subclade 2B *sensu* Sato et
+al. ([2020](#ref-Sato_et_al_Rabdophaga_2020)).
+
+![Phylogenetic tree of *Rabdophaga* COI
+sequences.](2020-04-24-1325_Rabdophaga_tree.png)  
+Phylogenetic tree of *Rabdophaga* COI sequences.
+
 # Bibliography
 
 <div id="refs" class="references">
@@ -5091,10 +5142,20 @@ doi:[10.7299/X7RB74XZ](https://doi.org/10.7299/X7RB74XZ).
 
 <div id="ref-bowser_raw_2020">
 
-Bowser, M.L., and Bowser, A.M. 2020, March. Raw metagenomic data from
-gut contents of *Dallia pectoralis* specimens collected in Kenai,
-Alaska, in 2019. Zenodo.
+Bowser, M.L., and Bowser, A.M. 2020. Raw metagenomic data from gut
+contents of *Dallia pectoralis* specimens collected in Kenai, Alaska, in
+2019. Zenodo.
 doi:[10.5281/zenodo.3731327](https://doi.org/10.5281/zenodo.3731327).
+
+</div>
+
+<div id="ref-bowser_dna_2018">
+
+Bowser, M.L., Bowser, A.M., Bowser, E.L., Bowser, M.D., Collet, D.M.,
+and Melvin, T. 2018. DNA barcoding Alaskan willow rosette gall makers
+(Diptera: Cecidomyiidae: *Rabdophaga*). Newsletter of the Alaska
+Entomological Society **11**(1): 8–14.
+doi:[10.7299/X7833SBX](https://doi.org/10.7299/X7833SBX).
 
 </div>
 
@@ -5465,6 +5526,18 @@ Genetic variation in intraspecific populations of *Rabdophaga rosaria*
 into sibling species along with host range expansion on willows
 (Salicaceae: *Salix*). Zoological Journal of the Linnean Society.
 doi:[10.1093/zoolinnean/zlz179](https://doi.org/10.1093/zoolinnean/zlz179).
+
+</div>
+
+<div id="ref-sato_resurrection_2006">
+
+Sato, S., and Yukawa, J. 2006. Resurrection of *Rabdophaga salicivora*
+Shinji (Diptera: Cecidomyiidae), a Japanese gall midge formerly
+misidentified as a North American species, *Rabdophaga rigidae* (Osten
+Sacken), with observations on the phylogenetic relationships of its
+populations in Japan and the Russian Far East. Entomological Science
+**9**(4): 423–434.
+doi:[10.1111/j.1479-8298.2006.00188.x](https://doi.org/10.1111/j.1479-8298.2006.00188.x).
 
 </div>
 
