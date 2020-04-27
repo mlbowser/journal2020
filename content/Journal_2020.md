@@ -90,6 +90,8 @@
       - [Wednesday, April 22](#wednesday-april-22)
       - [Thursday, April 23](#thursday-april-23)
       - [Friday, April 24](#friday-april-24)
+      - [Saturday, April 25](#saturday-april-25)
+      - [Monday, April 27](#monday-april-27)
   - [Bibliography](#bibliography)
 
 # January
@@ -5016,6 +5018,8 @@ Counts of specimens by sample type and order.
 
 ## Thursday, April 23
 
+Last night I downloaded and installed Miniconda 3 and PIPITS 2.5.
+
 To do:
 
   - Slikok occupancy?
@@ -5026,6 +5030,106 @@ environment (Gweon et al. [2015](#ref-gweon_pipits_2015))
 (<https://github.com/hsgweon/pipits>) and working on some tweaks to run
 it using exact sequence variant methods instead of the OTU clustering
 method that is the default.
+
+Testing, following directions at <https://github.com/hsgweon/pipits>.
+
+``` shell
+cd ~/Documents/FWS
+
+wget https://sourceforge.net/projects/pipits/files/PIPITS_TESTDATA/pipits_test.tar.gz -O pipits_test.tar.gz
+tar xvfz pipits_test.tar.gz
+
+cd pipits_test
+source activate pipits_env
+pispino_createreadpairslist -i rawdata -o readpairslist.txt
+pispino_seqprep -i rawdata -o out_seqprep -l readpairslist.txt
+pipits_funits -i out_seqprep/prepped.fasta -o out_funits -x ITS2 -v -r
+pipits_process -i out_funits/ITS.fasta -o out_process -v -r
+```
+
+That worked.
+
+Now I would like to use an exact sequence variant filtering method and
+avoid the OTU clustering.
+
+I looked at how this was done in the SCVUC pipeline shell: “vsearch
+–cluster\_unoise {input} –sizein –sizeout –minsize
+{config\[VSEARCH\_DENOISE\]\[minsize\]} –centroids {output} –log {log}”
+VSEARCH\_DENOISE: minsize: 3
+
+``` shell
+vsearch --cluster_unoise out_funits/ITS.fasta --sizein --sizeout --minsize 3 --centroids out_funits/ITS_denoised.fasta
+```
+
+That got rid of all the sequences. Trying `--minsize 2`.
+
+``` shell
+rm out_funits/ITS_denoised.fasta
+vsearch --cluster_unoise out_funits/ITS.fasta --sizein --sizeout --minsize 2 --centroids out_funits/ITS_denoised.fasta
+```
+
+That also discarded all sequences.
+
+I edited the input FASTA, manually making more copies of one sequence.
+
+``` shell
+rm out_funits/ITS_denoised.fasta
+vsearch --cluster_unoise out_funits/ITS_edited.fasta --sizein --sizeout --minsize 3 --centroids out_funits/ITS_denoised.fasta
+```
+
+Oh, I think I see. The `-sizein` and `--sizeout` options are for
+dereplicated input and output.
+
+``` shell
+rm out_funits/ITS_denoised.fasta
+vsearch --cluster_unoise out_funits/ITS.fasta --minsize 3 --centroids out_funits/ITS_denoised.fasta
+```
+
+That still filtered out all sequences. Trying again to make sure I did
+not mess anything up. Deleted products of ITS and processing steps.
+
+``` shell
+pipits_funits -i out_seqprep/prepped.fasta -o out_funits -x ITS2 -v -r
+```
+
+Ok, I see that the dereplicated file after ITS sequencing is
+out\_funits/intermediate/derep.ITS2.sizefiltered.fasta
+
+``` shell
+vsearch --cluster_unoise out_funits/intermediate/derep.ITS2.sizefiltered.fasta --sizein --sizeout --minsize 3 --centroids out_funits/ITS_denoised.fasta
+```
+
+Need to rereplicate now.
+
+``` shell
+pipits_rereplicate -i out_funits/ITS_denoised.fasta -o out_funits/ITS.fasta --uc out_funits/intermediate/derep.uc
+```
+
+Now trying the rest with no OTU clustering.
+
+``` shell
+pipits_process -i out_funits/ITS.fasta -o out_process -v -r -d 1.00
+```
+
+That worked\! Output looked good.
+
+Later in the day, trying this out on 2019 black spruce soil fungal
+samples.
+
+``` shell
+cd ~/Documents/FWS/2019_black_spruce_inventory/data/soil_fungi
+source activate pipits_env
+## renaming files.
+cd raw_fastq
+rename -n 's/6202-soifun//' *
+rename 's/6202-soifun//' *
+rename -n 's/-ITS3mix-ITS4ngs//' *
+rename 's/-ITS3mix-ITS4ngs//' *
+cd ..
+pispino_createreadpairslist -i raw_fastq -o readpairslist.txt
+pispino_seqprep -i raw_fastq -o out_seqprep -l readpairslist.txt
+pipits_funits -i out_seqprep/prepped.fasta -o out_funits -x ITS2 -v -r
+```
 
 I worked some on adding geographic extents to the metadata of the
 snowshow hare data in preparation for the data management early
@@ -5038,6 +5142,217 @@ adopters’ meeting.
 Transferring 2019 black spruce soil fungi raw metagenomic data from the
 server over VPN to my laptop took a long time, but it worked in the end.
 I initiated a PIPITS analysis of this dataset.
+
+Pretty complete I/O from today:
+
+``` shell
+(pipits_env) matt@line:~/Documents/FWS/2019_black_spruce_inventory/data/soil_fungi$ cd raw_fastq
+(pipits_env) matt@line:~/Documents/FWS/2019_black_spruce_inventory/data/soil_fungi/raw_fastq$ rename -n 's/6202-soifun//' *
+rename(6202-soifun3069-1-ITS3mix-ITS4ngs_R1.fastq, 3069-1-ITS3mix-ITS4ngs_R1.fastq)
+rename(6202-soifun3069-1-ITS3mix-ITS4ngs_R2.fastq, 3069-1-ITS3mix-ITS4ngs_R2.fastq)
+rename(6202-soifun3069-2-ITS3mix-ITS4ngs_R1.fastq, 3069-2-ITS3mix-ITS4ngs_R1.fastq)
+rename(6202-soifun3069-2-ITS3mix-ITS4ngs_R2.fastq, 3069-2-ITS3mix-ITS4ngs_R2.fastq)
+rename(6202-soifun3072-1-ITS3mix-ITS4ngs_R1.fastq, 3072-1-ITS3mix-ITS4ngs_R1.fastq)
+rename(6202-soifun3072-1-ITS3mix-ITS4ngs_R2.fastq, 3072-1-ITS3mix-ITS4ngs_R2.fastq)
+rename(6202-soifun3072-2-ITS3mix-ITS4ngs_R1.fastq, 3072-2-ITS3mix-ITS4ngs_R1.fastq)
+rename(6202-soifun3072-2-ITS3mix-ITS4ngs_R2.fastq, 3072-2-ITS3mix-ITS4ngs_R2.fastq)
+rename(6202-soifun3074-1-ITS3mix-ITS4ngs_R1.fastq, 3074-1-ITS3mix-ITS4ngs_R1.fastq)
+rename(6202-soifun3074-1-ITS3mix-ITS4ngs_R2.fastq, 3074-1-ITS3mix-ITS4ngs_R2.fastq)
+rename(6202-soifun3074-2-ITS3mix-ITS4ngs_R1.fastq, 3074-2-ITS3mix-ITS4ngs_R1.fastq)
+rename(6202-soifun3074-2-ITS3mix-ITS4ngs_R2.fastq, 3074-2-ITS3mix-ITS4ngs_R2.fastq)
+rename(6202-soifun3092-1-ITS3mix-ITS4ngs_R1.fastq, 3092-1-ITS3mix-ITS4ngs_R1.fastq)
+rename(6202-soifun3092-1-ITS3mix-ITS4ngs_R2.fastq, 3092-1-ITS3mix-ITS4ngs_R2.fastq)
+rename(6202-soifun3092-2-ITS3mix-ITS4ngs_R1.fastq, 3092-2-ITS3mix-ITS4ngs_R1.fastq)
+rename(6202-soifun3092-2-ITS3mix-ITS4ngs_R2.fastq, 3092-2-ITS3mix-ITS4ngs_R2.fastq)
+rename(6202-soifun3140-1-ITS3mix-ITS4ngs_R1.fastq, 3140-1-ITS3mix-ITS4ngs_R1.fastq)
+rename(6202-soifun3140-1-ITS3mix-ITS4ngs_R2.fastq, 3140-1-ITS3mix-ITS4ngs_R2.fastq)
+rename(6202-soifun3140-2-ITS3mix-ITS4ngs_R1.fastq, 3140-2-ITS3mix-ITS4ngs_R1.fastq)
+rename(6202-soifun3140-2-ITS3mix-ITS4ngs_R2.fastq, 3140-2-ITS3mix-ITS4ngs_R2.fastq)
+rename(6202-soifun3202-1-ITS3mix-ITS4ngs_R1.fastq, 3202-1-ITS3mix-ITS4ngs_R1.fastq)
+rename(6202-soifun3202-1-ITS3mix-ITS4ngs_R2.fastq, 3202-1-ITS3mix-ITS4ngs_R2.fastq)
+rename(6202-soifun3202-2-ITS3mix-ITS4ngs_R1.fastq, 3202-2-ITS3mix-ITS4ngs_R1.fastq)
+rename(6202-soifun3202-2-ITS3mix-ITS4ngs_R2.fastq, 3202-2-ITS3mix-ITS4ngs_R2.fastq)
+rename(6202-soifun3288-1-ITS3mix-ITS4ngs_R1.fastq, 3288-1-ITS3mix-ITS4ngs_R1.fastq)
+rename(6202-soifun3288-1-ITS3mix-ITS4ngs_R2.fastq, 3288-1-ITS3mix-ITS4ngs_R2.fastq)
+rename(6202-soifun3288-2-ITS3mix-ITS4ngs_R1.fastq, 3288-2-ITS3mix-ITS4ngs_R1.fastq)
+rename(6202-soifun3288-2-ITS3mix-ITS4ngs_R2.fastq, 3288-2-ITS3mix-ITS4ngs_R2.fastq)
+rename(6202-soifun5555-1-ITS3mix-ITS4ngs_R1.fastq, 5555-1-ITS3mix-ITS4ngs_R1.fastq)
+rename(6202-soifun5555-1-ITS3mix-ITS4ngs_R2.fastq, 5555-1-ITS3mix-ITS4ngs_R2.fastq)
+rename(6202-soifun5555-2-ITS3mix-ITS4ngs_R1.fastq, 5555-2-ITS3mix-ITS4ngs_R1.fastq)
+rename(6202-soifun5555-2-ITS3mix-ITS4ngs_R2.fastq, 5555-2-ITS3mix-ITS4ngs_R2.fastq)
+rename(6202-soifunMG07-1-ITS3mix-ITS4ngs_R1.fastq, MG07-1-ITS3mix-ITS4ngs_R1.fastq)
+rename(6202-soifunMG07-1-ITS3mix-ITS4ngs_R2.fastq, MG07-1-ITS3mix-ITS4ngs_R2.fastq)
+rename(6202-soifunMG07-2-ITS3mix-ITS4ngs_R1.fastq, MG07-2-ITS3mix-ITS4ngs_R1.fastq)
+rename(6202-soifunMG07-2-ITS3mix-ITS4ngs_R2.fastq, MG07-2-ITS3mix-ITS4ngs_R2.fastq)
+rename(6202-soifunMG19-1-ITS3mix-ITS4ngs_R1.fastq, MG19-1-ITS3mix-ITS4ngs_R1.fastq)
+rename(6202-soifunMG19-1-ITS3mix-ITS4ngs_R2.fastq, MG19-1-ITS3mix-ITS4ngs_R2.fastq)
+rename(6202-soifunMG19-2-ITS3mix-ITS4ngs_R1.fastq, MG19-2-ITS3mix-ITS4ngs_R1.fastq)
+rename(6202-soifunMG19-2-ITS3mix-ITS4ngs_R2.fastq, MG19-2-ITS3mix-ITS4ngs_R2.fastq)
+rename(6202-soifunMG24-1-ITS3mix-ITS4ngs_R1.fastq, MG24-1-ITS3mix-ITS4ngs_R1.fastq)
+rename(6202-soifunMG24-1-ITS3mix-ITS4ngs_R2.fastq, MG24-1-ITS3mix-ITS4ngs_R2.fastq)
+rename(6202-soifunMG24-2-ITS3mix-ITS4ngs_R1.fastq, MG24-2-ITS3mix-ITS4ngs_R1.fastq)
+rename(6202-soifunMG24-2-ITS3mix-ITS4ngs_R2.fastq, MG24-2-ITS3mix-ITS4ngs_R2.fastq)
+rename(6202-soifunMG39-1-ITS3mix-ITS4ngs_R1.fastq, MG39-1-ITS3mix-ITS4ngs_R1.fastq)
+rename(6202-soifunMG39-1-ITS3mix-ITS4ngs_R2.fastq, MG39-1-ITS3mix-ITS4ngs_R2.fastq)
+rename(6202-soifunMG39-2-ITS3mix-ITS4ngs_R1.fastq, MG39-2-ITS3mix-ITS4ngs_R1.fastq)
+rename(6202-soifunMG39-2-ITS3mix-ITS4ngs_R2.fastq, MG39-2-ITS3mix-ITS4ngs_R2.fastq)
+rename(6202-soifunSK22-1-ITS3mix-ITS4ngs_R1.fastq, SK22-1-ITS3mix-ITS4ngs_R1.fastq)
+rename(6202-soifunSK22-1-ITS3mix-ITS4ngs_R2.fastq, SK22-1-ITS3mix-ITS4ngs_R2.fastq)
+rename(6202-soifunSK22-2-ITS3mix-ITS4ngs_R1.fastq, SK22-2-ITS3mix-ITS4ngs_R1.fastq)
+rename(6202-soifunSK22-2-ITS3mix-ITS4ngs_R2.fastq, SK22-2-ITS3mix-ITS4ngs_R2.fastq)
+(pipits_env) matt@line:~/Documents/FWS/2019_black_spruce_inventory/data/soil_fungi/raw_fastq$ rename 's/6202-soifun//' *
+(pipits_env) matt@line:~/Documents/FWS/2019_black_spruce_inventory/data/soil_fungi/raw_fastq$ ls
+3069-1-ITS3mix-ITS4ngs_R1.fastq  3140-2-ITS3mix-ITS4ngs_R1.fastq  MG19-1-ITS3mix-ITS4ngs_R1.fastq
+3069-1-ITS3mix-ITS4ngs_R2.fastq  3140-2-ITS3mix-ITS4ngs_R2.fastq  MG19-1-ITS3mix-ITS4ngs_R2.fastq
+3069-2-ITS3mix-ITS4ngs_R1.fastq  3202-1-ITS3mix-ITS4ngs_R1.fastq  MG19-2-ITS3mix-ITS4ngs_R1.fastq
+3069-2-ITS3mix-ITS4ngs_R2.fastq  3202-1-ITS3mix-ITS4ngs_R2.fastq  MG19-2-ITS3mix-ITS4ngs_R2.fastq
+3072-1-ITS3mix-ITS4ngs_R1.fastq  3202-2-ITS3mix-ITS4ngs_R1.fastq  MG24-1-ITS3mix-ITS4ngs_R1.fastq
+3072-1-ITS3mix-ITS4ngs_R2.fastq  3202-2-ITS3mix-ITS4ngs_R2.fastq  MG24-1-ITS3mix-ITS4ngs_R2.fastq
+3072-2-ITS3mix-ITS4ngs_R1.fastq  3288-1-ITS3mix-ITS4ngs_R1.fastq  MG24-2-ITS3mix-ITS4ngs_R1.fastq
+3072-2-ITS3mix-ITS4ngs_R2.fastq  3288-1-ITS3mix-ITS4ngs_R2.fastq  MG24-2-ITS3mix-ITS4ngs_R2.fastq
+3074-1-ITS3mix-ITS4ngs_R1.fastq  3288-2-ITS3mix-ITS4ngs_R1.fastq  MG39-1-ITS3mix-ITS4ngs_R1.fastq
+3074-1-ITS3mix-ITS4ngs_R2.fastq  3288-2-ITS3mix-ITS4ngs_R2.fastq  MG39-1-ITS3mix-ITS4ngs_R2.fastq
+3074-2-ITS3mix-ITS4ngs_R1.fastq  5555-1-ITS3mix-ITS4ngs_R1.fastq  MG39-2-ITS3mix-ITS4ngs_R1.fastq
+3074-2-ITS3mix-ITS4ngs_R2.fastq  5555-1-ITS3mix-ITS4ngs_R2.fastq  MG39-2-ITS3mix-ITS4ngs_R2.fastq
+3092-1-ITS3mix-ITS4ngs_R1.fastq  5555-2-ITS3mix-ITS4ngs_R1.fastq  SK22-1-ITS3mix-ITS4ngs_R1.fastq
+3092-1-ITS3mix-ITS4ngs_R2.fastq  5555-2-ITS3mix-ITS4ngs_R2.fastq  SK22-1-ITS3mix-ITS4ngs_R2.fastq
+3092-2-ITS3mix-ITS4ngs_R1.fastq  MG07-1-ITS3mix-ITS4ngs_R1.fastq  SK22-2-ITS3mix-ITS4ngs_R1.fastq
+3092-2-ITS3mix-ITS4ngs_R2.fastq  MG07-1-ITS3mix-ITS4ngs_R2.fastq  SK22-2-ITS3mix-ITS4ngs_R2.fastq
+3140-1-ITS3mix-ITS4ngs_R1.fastq  MG07-2-ITS3mix-ITS4ngs_R1.fastq
+3140-1-ITS3mix-ITS4ngs_R2.fastq  MG07-2-ITS3mix-ITS4ngs_R2.fastq
+(pipits_env) matt@line:~/Documents/FWS/2019_black_spruce_inventory/data/soil_fungi/raw_fastq$ rename -n 's/-ITS3mix-ITS4ngs//' *
+rename(3069-1-ITS3mix-ITS4ngs_R1.fastq, 3069-1_R1.fastq)
+rename(3069-1-ITS3mix-ITS4ngs_R2.fastq, 3069-1_R2.fastq)
+rename(3069-2-ITS3mix-ITS4ngs_R1.fastq, 3069-2_R1.fastq)
+rename(3069-2-ITS3mix-ITS4ngs_R2.fastq, 3069-2_R2.fastq)
+rename(3072-1-ITS3mix-ITS4ngs_R1.fastq, 3072-1_R1.fastq)
+rename(3072-1-ITS3mix-ITS4ngs_R2.fastq, 3072-1_R2.fastq)
+rename(3072-2-ITS3mix-ITS4ngs_R1.fastq, 3072-2_R1.fastq)
+rename(3072-2-ITS3mix-ITS4ngs_R2.fastq, 3072-2_R2.fastq)
+rename(3074-1-ITS3mix-ITS4ngs_R1.fastq, 3074-1_R1.fastq)
+rename(3074-1-ITS3mix-ITS4ngs_R2.fastq, 3074-1_R2.fastq)
+rename(3074-2-ITS3mix-ITS4ngs_R1.fastq, 3074-2_R1.fastq)
+rename(3074-2-ITS3mix-ITS4ngs_R2.fastq, 3074-2_R2.fastq)
+rename(3092-1-ITS3mix-ITS4ngs_R1.fastq, 3092-1_R1.fastq)
+rename(3092-1-ITS3mix-ITS4ngs_R2.fastq, 3092-1_R2.fastq)
+rename(3092-2-ITS3mix-ITS4ngs_R1.fastq, 3092-2_R1.fastq)
+rename(3092-2-ITS3mix-ITS4ngs_R2.fastq, 3092-2_R2.fastq)
+rename(3140-1-ITS3mix-ITS4ngs_R1.fastq, 3140-1_R1.fastq)
+rename(3140-1-ITS3mix-ITS4ngs_R2.fastq, 3140-1_R2.fastq)
+rename(3140-2-ITS3mix-ITS4ngs_R1.fastq, 3140-2_R1.fastq)
+rename(3140-2-ITS3mix-ITS4ngs_R2.fastq, 3140-2_R2.fastq)
+rename(3202-1-ITS3mix-ITS4ngs_R1.fastq, 3202-1_R1.fastq)
+rename(3202-1-ITS3mix-ITS4ngs_R2.fastq, 3202-1_R2.fastq)
+rename(3202-2-ITS3mix-ITS4ngs_R1.fastq, 3202-2_R1.fastq)
+rename(3202-2-ITS3mix-ITS4ngs_R2.fastq, 3202-2_R2.fastq)
+rename(3288-1-ITS3mix-ITS4ngs_R1.fastq, 3288-1_R1.fastq)
+rename(3288-1-ITS3mix-ITS4ngs_R2.fastq, 3288-1_R2.fastq)
+rename(3288-2-ITS3mix-ITS4ngs_R1.fastq, 3288-2_R1.fastq)
+rename(3288-2-ITS3mix-ITS4ngs_R2.fastq, 3288-2_R2.fastq)
+rename(5555-1-ITS3mix-ITS4ngs_R1.fastq, 5555-1_R1.fastq)
+rename(5555-1-ITS3mix-ITS4ngs_R2.fastq, 5555-1_R2.fastq)
+rename(5555-2-ITS3mix-ITS4ngs_R1.fastq, 5555-2_R1.fastq)
+rename(5555-2-ITS3mix-ITS4ngs_R2.fastq, 5555-2_R2.fastq)
+rename(MG07-1-ITS3mix-ITS4ngs_R1.fastq, MG07-1_R1.fastq)
+rename(MG07-1-ITS3mix-ITS4ngs_R2.fastq, MG07-1_R2.fastq)
+rename(MG07-2-ITS3mix-ITS4ngs_R1.fastq, MG07-2_R1.fastq)
+rename(MG07-2-ITS3mix-ITS4ngs_R2.fastq, MG07-2_R2.fastq)
+rename(MG19-1-ITS3mix-ITS4ngs_R1.fastq, MG19-1_R1.fastq)
+rename(MG19-1-ITS3mix-ITS4ngs_R2.fastq, MG19-1_R2.fastq)
+rename(MG19-2-ITS3mix-ITS4ngs_R1.fastq, MG19-2_R1.fastq)
+rename(MG19-2-ITS3mix-ITS4ngs_R2.fastq, MG19-2_R2.fastq)
+rename(MG24-1-ITS3mix-ITS4ngs_R1.fastq, MG24-1_R1.fastq)
+rename(MG24-1-ITS3mix-ITS4ngs_R2.fastq, MG24-1_R2.fastq)
+rename(MG24-2-ITS3mix-ITS4ngs_R1.fastq, MG24-2_R1.fastq)
+rename(MG24-2-ITS3mix-ITS4ngs_R2.fastq, MG24-2_R2.fastq)
+rename(MG39-1-ITS3mix-ITS4ngs_R1.fastq, MG39-1_R1.fastq)
+rename(MG39-1-ITS3mix-ITS4ngs_R2.fastq, MG39-1_R2.fastq)
+rename(MG39-2-ITS3mix-ITS4ngs_R1.fastq, MG39-2_R1.fastq)
+rename(MG39-2-ITS3mix-ITS4ngs_R2.fastq, MG39-2_R2.fastq)
+rename(SK22-1-ITS3mix-ITS4ngs_R1.fastq, SK22-1_R1.fastq)
+rename(SK22-1-ITS3mix-ITS4ngs_R2.fastq, SK22-1_R2.fastq)
+rename(SK22-2-ITS3mix-ITS4ngs_R1.fastq, SK22-2_R1.fastq)
+rename(SK22-2-ITS3mix-ITS4ngs_R2.fastq, SK22-2_R2.fastq)
+(pipits_env) matt@line:~/Documents/FWS/2019_black_spruce_inventory/data/soil_fungi/raw_fastq$ rename 's/-ITS3mix-ITS4ngs//' *
+(pipits_env) matt@line:~/Documents/FWS/2019_black_spruce_inventory/data/soil_fungi/raw_fastq$ ls
+3069-1_R1.fastq  3074-1_R2.fastq  3140-2_R1.fastq  3288-2_R2.fastq  MG19-1_R1.fastq  MG39-1_R2.fastq
+3069-1_R2.fastq  3074-2_R1.fastq  3140-2_R2.fastq  5555-1_R1.fastq  MG19-1_R2.fastq  MG39-2_R1.fastq
+3069-2_R1.fastq  3074-2_R2.fastq  3202-1_R1.fastq  5555-1_R2.fastq  MG19-2_R1.fastq  MG39-2_R2.fastq
+3069-2_R2.fastq  3092-1_R1.fastq  3202-1_R2.fastq  5555-2_R1.fastq  MG19-2_R2.fastq  SK22-1_R1.fastq
+3072-1_R1.fastq  3092-1_R2.fastq  3202-2_R1.fastq  5555-2_R2.fastq  MG24-1_R1.fastq  SK22-1_R2.fastq
+3072-1_R2.fastq  3092-2_R1.fastq  3202-2_R2.fastq  MG07-1_R1.fastq  MG24-1_R2.fastq  SK22-2_R1.fastq
+3072-2_R1.fastq  3092-2_R2.fastq  3288-1_R1.fastq  MG07-1_R2.fastq  MG24-2_R1.fastq  SK22-2_R2.fastq
+3072-2_R2.fastq  3140-1_R1.fastq  3288-1_R2.fastq  MG07-2_R1.fastq  MG24-2_R2.fastq
+3074-1_R1.fastq  3140-1_R2.fastq  3288-2_R1.fastq  MG07-2_R2.fastq  MG39-1_R1.fastq
+(pipits_env) matt@line:~/Documents/FWS/2019_black_spruce_inventory/data/soil_fungi/raw_fastq$ pispino_createreadpairslist -i raw_fastq -o readpairslist.txt
+Generating a read-pair list file from the input directory...
+Traceback (most recent call last):
+  File "/home/matt/miniconda3/envs/pipits_env/bin/pispino_createreadpairslist", line 164, in <module>
+    make_read_pairs_list(options)
+  File "/home/matt/miniconda3/envs/pipits_env/bin/pispino_createreadpairslist", line 37, in make_read_pairs_list
+    for file in os.listdir(options.inputdir):
+FileNotFoundError: [Errno 2] No such file or directory: 'raw_fastq'
+(pipits_env) matt@line:~/Documents/FWS/2019_black_spruce_inventory/data/soil_fungi/raw_fastq$ cd ..
+(pipits_env) matt@line:~/Documents/FWS/2019_black_spruce_inventory/data/soil_fungi$ pispino_createreadpairslist -i raw_fastq -o readpairslist.txt
+Generating a read-pair list file from the input directory...
+Done - "readpairslist.txt" created
+(pipits_env) matt@line:~/Documents/FWS/2019_black_spruce_inventory/data/soil_fungi$ pispino_seqprep -i rawdata -o out_seqprep -l readpairslist.txt
+2020-04-23 22:22:54 pispino_seqprep started
+2020-04-23 22:22:54 ERROR: Cannot find "rawdata" directory. Ensure you have the correct name of the input directory.
+(pipits_env) matt@line:~/Documents/FWS/2019_black_spruce_inventory/data/soil_fungi$ pispino_seqprep -i raw_fastq -o out_seqprep -l readpairslist.txt
+2020-04-23 22:23:16 pispino_seqprep started
+2020-04-23 22:23:16 Checking listfile
+2020-04-23 22:23:16 ... done
+2020-04-23 22:23:16 Counting sequences in rawdata
+2020-04-23 22:23:17 ... number of reads: 748853
+2020-04-23 22:23:17 Reindexing forward reads
+2020-04-23 22:23:25 ... done
+2020-04-23 22:23:25 Reindexing reverse reads
+2020-04-23 22:23:32 ... done
+2020-04-23 22:23:32 Joining paired-end reads [VSEARCH]
+2020-04-23 22:24:09 ... number of joined reads: 710194
+2020-04-23 22:24:09 Quality filtering [FASTX]
+2020-04-23 22:31:43 ... number of quality filtered reads: 708943
+2020-04-23 22:31:43 Converting FASTQ to FASTA [FASTX] (also removing reads with "N" nucleotide if specified with "--FASTX-n")
+2020-04-23 22:35:34 ... number of prepped sequences: 708943
+2020-04-23 22:35:34 Merging into a single file
+2020-04-23 22:35:37 ... done
+2020-04-23 22:35:37 Cleaning temporary directory
+2020-04-23 22:35:38 ... done
+2020-04-23 22:35:38 Done - pispino_seqprep completed (Resulting file: out_seqprep/prepped.fasta)
+(pipits_env) matt@line:~/Documents/FWS/2019_black_spruce_inventory/data/soil_fungi$ pipits_funits -i out_seqprep/prepped.fasta -o out_funits -x ITS2 -v -r
+pipits_funits 2.5, the PIPITS Project
+https://github.com/hsgweon/pipits
+---------------------------------
+
+2020-04-23 22:37:33 pipits_funits started
+2020-04-23 22:37:33 Checking input FASTA for illegal characters
+2020-04-23 22:37:34 ... done
+2020-04-23 22:37:34 Counting input sequences
+2020-04-23 22:37:35 ... number of input sequences: 708943
+2020-04-23 22:37:35 Dereplicating sequences for efficiency
+vsearch v2.14.2_linux_x86_64, 7.8GB RAM, 2 cores
+https://github.com/torognes/vsearch
+
+Dereplicating file out_seqprep/prepped.fasta 100%
+257686201 nt in 708943 seqs, min 112, max 530, avg 363
+Sorting 100%
+328449 unique sequences, avg cluster 2.2, median 1, max 3136
+Writing output file 100%
+Writing uc file, first part 100%
+Writing uc file, second part 100%
+2020-04-23 22:37:41 ... done
+2020-04-23 22:37:41 Counting dereplicated sequences
+2020-04-23 22:37:41 ... number of dereplicated sequences: 328449
+2020-04-23 22:37:41 Extracting ITS2 from sequences [ITSx]
+ITSx -- Identifies ITS sequences and extracts the ITS region
+by Johan Bengtsson-Palme et al., University of Gothenburg
+Version: 1.1b1
+-----------------------------------------------------------------
+Thu Apr 23 22:37:41 2020 : Preparing HMM database (should be quick)...
+Thu Apr 23 22:37:42 2020 : Checking and handling input sequence data (should not take long)...
+Thu Apr 23 22:37:50 2020 : Comparing sequences to HMM database (this may take a long while)...
+```
 
 ## Friday, April 24
 
@@ -5093,6 +5408,355 @@ al. ([2020](#ref-Sato_et_al_Rabdophaga_2020)).
 ![Phylogenetic tree of *Rabdophaga* COI
 sequences.](2020-04-24-1325_Rabdophaga_tree.png)  
 Phylogenetic tree of *Rabdophaga* COI sequences.
+
+In the afternoon Ethan and I collected rosette galls on *Salix
+fuscescens* from the swamp in our back yard to determine whether the
+observed genetic distance between *Rabdophaga rosaria* on *Salix
+pulchra* and *Salix fuscescens* is real or an artifact of small sample
+size and errors. We have a total of four COI sequences from *Rabdophaga
+rosaria* on *Salix pulchra* (2 from Sato et
+al. ([2020](#ref-Sato_et_al_Rabdophaga_2020)) + 2 of ours) and one from
+*Rabdophaga rosaria* on *Salix fuscescens* (ours). I expect that in the
+end we will find that there is one *Rabdophaga* on both willow hosts,
+but we will check.
+
+The PIPITS `ITSx` step is still running. Complete I/O from today:
+
+``` shell
+    Fri Apr 24 15:47:53 2020 : Fungi analysis of main strand finished.
+```
+
+## Saturday, April 25
+
+``` shell
+## Denoising.
+vsearch --cluster_unoise out_funits/intermediate/derep.ITS2.sizefiltered.fasta --sizein --sizeout --minsize 3 --centroids out_funits/ITS_denoised.fasta
+## rereplicate.
+pipits_rereplicate -i out_funits/ITS_denoised.fasta -o out_funits/ITS_denoised_rerep.fasta --uc out_funits/intermediate/derep.uc
+## That did not work. Trying cluster_unoise on the ITS.fasta file.
+vsearch --cluster_unoise out_funits/ITS.fasta --minsize 3 --centroids out_funits/ITS_denoised.fasta
+## That did not work.
+```
+
+Complete I/O from today:
+
+``` shell
+    Sat Apr 25 04:39:37 2020 : Fungi analysis of complementary strand finished.
+Sat Apr 25 04:39:37 2020 : Analysing results of HMM-scan (this might take quite some time)...
+Sat Apr 25 04:49:42 2020 : Extraction finished!
+-----------------------------------------------------------------
+Thank you for using ITSx!
+Please report bugs or unsupported lineages to itsx@microbiology.se
+
+2020-04-25 04:49:45 ... done
+2020-04-25 04:49:45 Counting ITS sequences (dereplicated)
+2020-04-25 04:49:46 ... number of ITS sequences (dereplicated): 326274
+2020-04-25 04:49:46 Sorting by ID
+[INFO] read sequences ...
+[INFO] 326274 sequences loaded
+[INFO] sorting ...
+[INFO] output ...
+2020-04-25 04:49:51 ... done
+2020-04-25 04:49:51 Removing short sequences below < 100bp
+vsearch v2.14.2_linux_x86_64, 7.8GB RAM, 2 cores
+https://github.com/torognes/vsearch
+
+Reading input file 100%
+325804 sequences kept (of which 0 truncated), 470 sequences discarded.
+2020-04-25 04:49:52 ... done
+2020-04-25 04:49:52 Counting length-filtered sequences (dereplicated)
+2020-04-25 04:49:53 ... number of length-filtered sequences (dereplicated): 325804
+2020-04-25 04:49:53 Re-inflating sequences
+2020-04-25 04:50:08 ... done
+2020-04-25 04:50:08 Counting sequences after re-inflation
+2020-04-25 04:50:08 ... number of sequences with ITS subregion: 704602
+2020-04-25 04:50:08 Done - pipits_funits ended successfully. (Your ITS sequences are "out_funits/ITS.fasta")
+2020-04-25 04:50:08 Next step: pipits_process [ Example: pipits_process -i out_funits/ITS.fasta -o pipits_process ]
+(pipits_env) matt@line:~/Documents/FWS/2019_black_spruce_inventory/data/soil_fungi$ ls
+2020-04-24-0635_io.txt  out_funits  out_seqprep  raw_fastq  readpairslist.txt
+(pipits_env) matt@line:~/Documents/FWS/2019_black_spruce_inventory/data/soil_fungi$ vsearch --cluster_unoise out_funits/intermediate/derep.ITS2.sizefiltered.fasta --sizein --sizeout --minsize 3 --centroids out_funits/ITS_denoised.fasta
+vsearch v2.14.2_linux_x86_64, 7.8GB RAM, 2 cores
+https://github.com/torognes/vsearch
+
+Reading file out_funits/intermediate/derep.ITS2.sizefiltered.fasta 100%  
+3733528 nt in 21662 seqs, min 102, max 263, avg 172
+minsize 3: 304142 sequences discarded.
+Masking 100% 
+Sorting by abundance 100%
+Counting k-mers 100% 
+Clustering 100%  
+Sorting clusters 100%
+Writing clusters 100% 
+Clusters: 917 Size min 3, max 65239, avg 23.6
+Singletons: 0, 0.0% of seqs, 0.0% of clusters
+(pipits_env) matt@line:~/Documents/FWS/2019_black_spruce_inventory/data/soil_fungi$ pipits_rereplicate -i out_funits/ITS_denoised.fasta -o out_funits/ITS_denoised_rerep.fasta --uc out_funits/intermediate/derep.uc
+Error: Size values in headers added by USEARCH != number of sequences in .uc
+65239 3136
+```
+
+## Monday, April 27
+
+To do:
+
+  - ~~Finish PIPITS soil fungal analysis.~~
+  - Edit this week’s *Refuge Notebook* article.
+
+<!-- end list -->
+
+``` shell
+## Trying to figure out why denoising didn't work.
+## The denoise command I issued the other day yielded an output file with 0 lines.
+## Command: vsearch --cluster_unoise out_funits/intermediate/derep.ITS2.sizefiltered.fasta --sizein --sizeout --minsize 3 --centroids out_funits/ITS_denoised.fasta
+
+source activate pipits_env
+cd ~/Documents/FWS/2019_black_spruce_inventory/data/soil_fungi
+vsearch --cluster_unoise out_funits/intermediate/derep.ITS2.sizefiltered.fasta --sizein --sizeout --minsize 3 --centroids out_funits/ITS_denoised.fasta
+vsearch v2.14.2_linux_x86_64, 7.8GB RAM, 2 cores
+https://github.com/torognes/vsearch
+
+Reading file out_funits/intermediate/derep.ITS2.sizefiltered.fasta 100% 
+3733528 nt in 21662 seqs, min 102, max 263, avg 172
+minsize 3: 304142 sequences discarded.
+Masking 100% 
+Sorting by abundance 100%
+Counting k-mers 100% 
+Clustering 100% 
+Sorting clusters 100%
+Writing clusters 100% 
+Clusters: 917 Size min 3, max 65239, avg 23.6
+Singletons: 0, 0.0% of seqs, 0.0% of clusters
+## That seemed to work.
+
+## Trying to rereplicate
+pipits_rereplicate -i out_funits/ITS_denoised.fasta -o out_funits/ITS_denoised_rerep.fasta --uc out_funits/intermediate/derep.uc
+Error: Size values in headers added by USEARCH != number of sequences in .uc
+65239 3136
+
+## Ok, I see what happened. unoise clustered the sequences, and now the clusters are bigger than in the --uc file. ## How can I deal with this?
+```
+
+I am editing the `pipits_process` script, renaming it
+`pipits_process_ESV`. I am replacing with the OTU clustering section
+below.
+
+``` python
+    ##################
+    # OTU clustering #
+    ##################
+
+    logger(ENDC + "Picking OTUs [VSEARCH]" + ENDC, logging_file, display = True)
+    cmd = " ".join([VSEARCH, 
+                    "--cluster_fast", tmpDir + "/input_nr.fasta", 
+                    "--id", options.VSEARCH_id,
+                    "--centroids", tmpDir + "/input_nr_otus.fasta",
+                    "--uc", tmpDir + "/input_nr_otus.uc",
+                    "--threads", options.threads])
+    run_cmd(cmd, logging_file, options.verbose)
+```
+
+Replacement:
+
+``` python
+    ##################
+    # Denoising      #
+    ##################
+
+    logger(ENDC + "Denoising [VSEARCH]" + ENDC, logging_file, display = True)
+    cmd = " ".join([VSEARCH, 
+                    "--cluster_unoise", tmpDir + "/input_nr.fasta", 
+                    "--minsize 3",
+                    "--centroids", tmpDir + "/input_nr_otus.fasta",
+                    "--uc", tmpDir + "/input_nr_otus.uc",
+                    "--threads", options.threads])
+    run_cmd(cmd, logging_file, options.verbose)
+```
+
+Trying it out.
+
+``` shell
+pipits_process_ESV -i out_funits/ITS.fasta -o out_process -v -r
+
+## That worked!!
+```
+
+Complete relevant I/O from today:
+
+```` shell
+(base) matt@line:~/Documents/FWS/2019_black_spruce_inventory/data/soil_fungi$ source activate pipits_env
+(pipits_env) matt@line:~/Documents/FWS/2019_black_spruce_inventory/data/soil_fungi$ cd ~/Documents/FWS/2019_black_spruce_inventory/data/soil_fungi
+(pipits_env) matt@line:~/Documents/FWS/2019_black_spruce_inventory/data/soil_fungi$ ls
+2020-04-24-0635_io.txt  out_funits  out_seqprep  raw_fastq  readpairslist.txt
+(pipits_env) matt@line:~/Documents/FWS/2019_black_spruce_inventory/data/soil_fungi$ vsearch --cluster_unoise out_funits/intermediate/derep.ITS2.sizefiltered.fasta --sizein --sizeout --minsize 3 --centroids out_funits/ITS_denoised.fasta
+vsearch v2.14.2_linux_x86_64, 7.8GB RAM, 2 cores
+https://github.com/torognes/vsearch
+
+Reading file out_funits/intermediate/derep.ITS2.sizefiltered.fasta 100%  
+3733528 nt in 21662 seqs, min 102, max 263, avg 172
+minsize 3: 304142 sequences discarded.
+Masking 100% 
+Sorting by abundance 100%
+Counting k-mers 100% 
+Clustering 100%  
+Sorting clusters 100%
+Writing clusters 100% 
+Clusters: 917 Size min 3, max 65239, avg 23.6
+Singletons: 0, 0.0% of seqs, 0.0% of clusters
+(pipits_env) matt@line:~/Documents/FWS/2019_black_spruce_inventory/data/soil_fungi$ ls -al out_funits
+total 131980
+drwxrwxr-x 3 matt matt      4096 Apr 25 07:36 .
+drwxrwxr-x 5 matt matt      4096 Apr 25 10:52 ..
+drwxrwxr-x 2 matt matt      4096 Apr 25 04:49 intermediate
+-rw-rw-r-- 1 matt matt    178365 Apr 27 06:03 ITS_denoised.fasta
+-rw-rw-r-- 1 matt matt         0 Apr 25 07:36 ITS_denoised_rerep.fasta
+-rw-rw-r-- 1 matt matt 134937545 Apr 25 04:50 ITS.fasta
+-rw-rw-r-- 1 matt matt      3490 Apr 25 04:50 output.log
+-rw-rw-r-- 1 matt matt       228 Apr 25 04:50 summary.log
+-rw-rw-r-- 1 matt matt      7068 Apr 25 04:50 versions.log
+(pipits_env) matt@line:~/Documents/FWS/2019_black_spruce_inventory/data/soil_fungi$ head ITS_denoised.fasta
+head: cannot open 'ITS_denoised.fasta' for reading: No such file or directory
+(pipits_env) matt@line:~/Documents/FWS/2019_black_spruce_inventory/data/soil_fungi$ head out_funits/ITS_denoised.fasta
+>3069-1_320;size=65239
+CTGCCCTCAAGCACGGCTTGTGTGTTGGGCTCCGTCCCCCCGGGGACGGGTCCGAAAGGCAGCGGCGGCACCGAGTCCGG
+TCCTCGAGCGTATGGGGCTTTGTCACCCGCTCTGTAGGCCCGGCCGGCGCCAGCCGACAACCAATCATCCTTTTCA
+>3074-1_997;size=22437
+AACTCTCACCCTCTAGCTTTCTTAATCGTGGCTAGCGGCGTGGACGTGAGCGCTGCTGCTTTGTTGCGGCTCGCTCGAAA
+TGCATTAGCAGACCCTTTTCGTAATCGGTTCCACTCAACGTGATAAGTATTTCGTTGAGGACAGTTGCAGCAATGCGGCT
+GGCCGGGATAAGAAAGGCATAGTTGTCAGCTTCTAATCGCCCTTGGGCAATTTTTTATG
+>3288-1_526;size=21465
+AACTCTCAACCTATAGATTTTTGTTAATCTTGTAGGCTTGGACTTGGAAGTCTTGCTGGCTGAATAAGCCGGCTCTTCTG
+AAATGTATTAGCAGATCCTCTTTGTAATTGGTTCCTACTCAACGTGATAAGTATTTCGTTGAGGACATTTCCTTTATTGG
+(pipits_env) matt@line:~/Documents/FWS/2019_black_spruce_inventory/data/soil_fungi$ pipits_rereplicate -i out_funits/ITS_denoised.fasta -o out_funits/ITS_denoised_rerep.fasta --uc out_funits/intermediate/derep.uc
+Error: Size values in headers added by USEARCH != number of sequences in .uc
+65239 3136
+(pipits_env) matt@line:~/Documents/FWS/2019_black_spruce_inventory/data/soil_fungi$ ls
+2020-04-24-0635_io.txt  out_funits  out_seqprep  pipits_process_ESV  raw_fastq  readpairslist.txt
+(pipits_env) matt@line:~/Documents/FWS/2019_black_spruce_inventory/data/soil_fungi$ Trying it out.
+Trying: command not found
+(pipits_env) matt@line:~/Documents/FWS/2019_black_spruce_inventory/data/soil_fungi$ 
+(pipits_env) matt@line:~/Documents/FWS/2019_black_spruce_inventory/data/soil_fungi$ ```shell
+> ./pipits_process_ESV -i out_funits/ITS.fasta -o out_process -v -r
+> ```
+
+Command 'shell' not found, did you mean:
+
+  command 'spell' from deb spell
+  command 'qshell' from deb qtile
+  command 'shelr' from deb shelr
+  command 'jshell' from deb openjdk-11-jdk-headless
+  command 'bshell' from deb avahi-ui-utils
+  command 'pshell' from deb python-pyramid
+
+Try: sudo apt install <deb name>
+
+usage: PIPITS_PROCESS: Sequences to OTU Table [-h] -i <FILE> [-o <DIR>]
+                                              [-d <FLOAT>] [-c <FLOAT>]
+                                              [-l <TXT>] [--includeuniqueseqs]
+                                              [-r] [-v] [-t <INT>]
+                                              [--Xms <INT>] [--Xmx <INT>]
+                                              [--warcup]
+                                              [--unite {04.02.2020,02.02.2019,01.12.2017,28.06.2017}]
+PIPITS_PROCESS: Sequences to OTU Table: error: unrecognized arguments: 2.5, the PIPITS Project https://github.com/hsgweon/pipits --------------------------------- 2020-04-27 07:08:27 pipits_process started 2020-04-27 07:08:27 Generating a sample list from the input sequences python: can't open file '/home/matt/Documents/FWS/2019_black_spruce_inventory/data/soil_fungi/pipits_getsamplelistfromfasta': [Errno 2] No such file or directory 2020-04-27 07:08:27 Error: None zero returncode: python /home/matt/Documents/FWS/2019_black_spruce_inventory/data/soil_fungi/pipits_getsamplelistfromfasta
+(pipits_env) matt@line:~/Documents/FWS/2019_black_spruce_inventory/data/soil_fungi$ 
+(pipits_env) matt@line:~/Documents/FWS/2019_black_spruce_inventory/data/soil_fungi$ ./pipits_process_ESV -i out_funits/ITS.fasta -o out_process -v -r
+pipits_process 2.5, the PIPITS Project
+https://github.com/hsgweon/pipits
+---------------------------------
+
+2020-04-27 07:10:02 pipits_process started
+2020-04-27 07:10:02 Generating a sample list from the input sequences
+python: can't open file '/home/matt/Documents/FWS/2019_black_spruce_inventory/data/soil_fungi/pipits_getsamplelistfromfasta': [Errno 2] No such file or directory
+2020-04-27 07:10:02 Error: None zero returncode: python /home/matt/Documents/FWS/2019_black_spruce_inventory/data/soil_fungi/pipits_getsamplelistfromfasta -i out_funits/ITS.fasta -o out_process/sampleIDs.txt
+(pipits_env) matt@line:~/Documents/FWS/2019_black_spruce_inventory/data/soil_fungi$ pipits_process_ESV -i out_funits/ITS.fasta -o out_process -v -r
+pipits_process 2.5, the PIPITS Project
+https://github.com/hsgweon/pipits
+---------------------------------
+
+2020-04-27 07:11:12 pipits_process started
+2020-04-27 07:11:12 Generating a sample list from the input sequences
+2020-04-27 07:11:15 Downloading UNITE trained database, version: 04.02.2020
+[###################################################################################################################]100% | 275.1 KiB/s | 131112800 of 131112800 | Time:  0:07:45
+File size: 125.04 MB
+2020-04-27 07:19:05 ... Unpacking
+2020-04-27 07:19:15 ... done
+2020-04-27 07:19:15 Downloading WARCUP trained database: 
+[#####################################################################################################################]100% | 292.9 KiB/s | 17880783 of 17880783 | Time:  0:00:59
+File size: 17.05 MB
+2020-04-27 07:20:19 ... Unpacking
+2020-04-27 07:20:20 ... done
+2020-04-27 07:20:20 Downloading UCHIME database for chimera filtering: 
+[#######################################################################################################################]100% | 200.0 KiB/s | 4578703 of 4578703 | Time:  0:00:22
+File size: 4.37 MB
+2020-04-27 07:20:46 ... Unpacking
+2020-04-27 07:20:47 ... done
+2020-04-27 07:20:47 Dereplicating and removing unique sequences prior to picking OTUs
+vsearch v2.14.2_linux_x86_64, 7.8GB RAM, 2 cores
+https://github.com/torognes/vsearch
+
+Dereplicating file out_funits/ITS.fasta 100%
+124639323 nt in 704602 seqs, min 101, max 332, avg 177
+Sorting 100%
+75623 unique sequences, avg cluster 9.3, median 1, max 72255
+Writing output file 100%
+19852 uniques written, 55771 clusters discarded (73.7%)
+2020-04-27 07:20:49 Denoising [VSEARCH]
+vsearch v2.14.2_linux_x86_64, 7.8GB RAM, 2 cores
+https://github.com/torognes/vsearch
+
+Reading file out_process/intermediate/input_nr.fasta 100%
+2138936 nt in 11839 seqs, min 101, max 277, avg 181
+minsize 3: 8013 sequences discarded.
+Masking 100%
+Sorting by abundance 100%
+Counting k-mers 100%
+Clustering 100%
+Sorting clusters 100%
+Writing clusters 100%
+Clusters: 3413 Size min 1, max 449, avg 3.5
+Singletons: 2868, 24.2% of seqs, 84.0% of clusters
+2020-04-27 07:20:57 Removing chimeras [VSEARCH]
+vsearch v2.14.2_linux_x86_64, 7.8GB RAM, 2 cores
+https://github.com/torognes/vsearch
+
+Reading file pipits_db/uchime_reference_dataset_28.06.2017/uchime_reference_dataset_28.06.2017.fasta 100%
+16786547 nt in 30555 seqs, min 146, max 2570, avg 549
+Masking 100%
+Counting k-mers 100%
+Creating k-mer index 100%
+Detecting chimeras 100%
+Found 1069 (31.3%) chimeras, 2327 (68.2%) non-chimeras,
+and 17 (0.5%) borderline sequences in 3413 unique sequences.
+Taking abundance information into account, this corresponds to
+12349 (2.3%) chimeras, 526932 (97.4%) non-chimeras,
+and 1902 (0.4%) borderline sequences in 541183 total sequences.
+2020-04-27 07:21:19 Renaming OTUs
+2020-04-27 07:21:19 Mapping reads onto centroids [VSEARCH]
+vsearch v2.14.2_linux_x86_64, 7.8GB RAM, 2 cores
+https://github.com/torognes/vsearch
+
+Reading file out_process/intermediate/input_nr_otus_nonchimeras_relabelled.fasta 100%
+397037 nt in 2327 seqs, min 102, max 277, avg 171
+Masking 100%
+Counting k-mers 100%
+Creating k-mer index 100%
+Searching 100%
+Matching unique query sequences: 682959 of 704602 (96.93%)
+2020-04-27 07:27:06 Making OTU table
+2020-04-27 07:27:11 Converting classic tabular OTU into a BIOM format [BIOM]
+2020-04-27 07:27:15 Assigning taxonomy with UNITE [RDP Classifier]
+2020-04-27 07:38:25 Reformatting RDP_Classifier output
+2020-04-27 07:38:25 Adding assignment to OTU table [BIOM]
+2020-04-27 07:38:30 Converting OTU table with taxa assignment into a BIOM format [BIOM]
+2020-04-27 07:38:32 Phylotyping OTU table
+2020-04-27 07:38:39     Number of reads used to generate OTU table: 682959
+2020-04-27 07:38:39     Number of OTUs:                             2327
+2020-04-27 07:38:39     Number of phylotypes:                       784
+2020-04-27 07:38:39     Number of samples:                          26
+2020-04-27 07:38:39 Done - Resulting files are in "out_process" directory
+2020-04-27 07:38:39 pipits_process ended successfully.
+````
+
+I worked on editing a *Refuge Notebook* article on biotech life for next
+week.
 
 # Bibliography
 
