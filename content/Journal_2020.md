@@ -92,6 +92,7 @@
       - [Friday, April 24](#friday-april-24)
       - [Saturday, April 25](#saturday-april-25)
       - [Monday, April 27](#monday-april-27)
+      - [Tuesday, April 28](#tuesday-april-28)
   - [Bibliography](#bibliography)
 
 # January
@@ -5765,6 +5766,17 @@ Update: Arctos is up as of 12:39\!
 I updated content for the Kenai NWR content in update to the [Kenai
 Peninsula Cooperative Weed Management Area](http://www.kenaiweeds.org/)
 strategic plan.
+
+I installed a qiime2 environment in preparation for processing the
+bacterial 16S data from the 2019 black spruce project.
+
+## Tuesday, April 28
+
+Arctos is down again. I was going to work on uploading LTEMP bird and
+veg data.
+
+I formatted and posted the *Refuge Notebook* articles from January 31
+and February 7.
 
 # Bibliography
 
