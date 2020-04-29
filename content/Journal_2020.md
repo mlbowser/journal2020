@@ -498,14 +498,14 @@ proposed regulation on *Lumbricus* species worms.
 I generated maps of *Lumbricus* species distribution data using
 SimpleMappr (Shorthouse [2010](#ref-shorthouse_simplemappr_2010)) and
 data from GBIF (GBIF.org
-[2020](#ref-gbiforg_gbif_2020-1)[a](#ref-gbiforg_gbif_2020-1),
-[2020](#ref-gbiforg_gbif_2020)[b](#ref-gbiforg_gbif_2020)).
+[2020](#ref-gbiforg_gbif_2020-1)[b](#ref-gbiforg_gbif_2020-1),
+[2020](#ref-gbiforg_gbif_2020)[c](#ref-gbiforg_gbif_2020)).
 
 ![Map of *Lumbricus terrestris* distribution in
 Alaska.](2020-01-13-1013_Lumbricus_terrestris_in_Alaska.jpg)  
 Map of *Lumbricus terrestris* distribution in Alaska. Locations were
 obtained from GBIF (GBIF.org
-[2020](#ref-gbiforg_gbif_2020-1)[a](#ref-gbiforg_gbif_2020-1)).
+[2020](#ref-gbiforg_gbif_2020-1)[b](#ref-gbiforg_gbif_2020-1)).
 
 ![Map of *Lumbricus rubellus* distribution in
 Alaska.](2020-01-13-1014_Lumbricus_rubellus_in_Alaska.jpg)  
@@ -1042,7 +1042,7 @@ HUC12 190203021903 “Miller Creek-Frontal Cook Inlet” watershed. I
 simplified this using ArcMap’s Simplify Polygon tool, with a
 simplification tolerance of 500 m. I converted this to WKT so I could
 run a GBIF search (GBIF.org
-[2020](#ref-gbiforg_gbif_2020-2)[c](#ref-gbiforg_gbif_2020-2)).
+[2020](#ref-gbiforg_gbif_2020-2)[d](#ref-gbiforg_gbif_2020-2)).
 
 I finished sorting Berlese sample
 [KNWR:Ento:11362](http://arctos.database.museum/guid/KNWR:Ento:11362)
@@ -3076,7 +3076,7 @@ I attended the 11:00 biology check-in telecon.
 I prepared data for Rob Massengill, but I accidentally overwrote the R
 script. I had downloaded occurrence data from the Vogel Lake vicinity
 from GBIF (GBIF.org
-[2020](#ref-gbiforg_gbif_2020-3)[d](#ref-gbiforg_gbif_2020-3)), Arctos,
+[2020](#ref-gbiforg_gbif_2020-3)[e](#ref-gbiforg_gbif_2020-3)), Arctos,
 and iNaturalist, then processed these. I had entered data for specimen
 records
 [KNWR:Ento:11383](http://arctos.database.museum/guid/KNWR:Ento:11383)
@@ -5781,9 +5781,61 @@ and February 7.
 
 ## Wednesday, April 29
 
+To do:
+
+  - ~~Submit a *Refuge Notebook* article for this week.~~
+
 Arctos is up now, but with a restored data backup from the night of
 March 15. Media are still uploaded from mid April, but links to these
 media will need to be remade if possible.
+
+I checked:
+
+Specimen record
+[KNWR:Ento:11382](http://arctos.database.museum/guid/KNWR:Ento:11382)
+exists in Arctos; Specimen record
+[KNWR:Ento:11383](http://arctos.database.museum/guid/KNWR:Ento:11383)
+does not. I had entered data through
+[KNWR:Ento:11385](http://arctos.database.museum/guid/KNWR:Ento:11385).
+KNWR Invertebrate Collecion records
+[KNWR:Inv:46](http://arctos.database.museum/guid/KNWR:Inv:46)–[KNWR:Inv:53](http://arctos.database.museum/guid/KNWR:Inv:53)
+also no longer exist. This is frustrating.
+
+I worked on getting Jake set up for updating the Refuge’s checklist on
+FWSpecies.
+
+I edited this week’s *Refuge Notebook* article and sent it to the
+*Clarion*.
+
+Thankfully, it looks like Arctos had uploaded data to GBIF on March 23.
+
+| Arctos\_GUID                                                          |                                         GBIF\_occurrence |
+| :-------------------------------------------------------------------- | -------------------------------------------------------: |
+| [KNWR:Ento:11383](http://arctos.database.museum/guid/KNWR:Ento:11383) | [2592190565](https://www.gbif.org/occurrence/2592190565) |
+| [KNWR:Ento:11384](http://arctos.database.museum/guid/KNWR:Ento:11384) | [2592190569](https://www.gbif.org/occurrence/2592190569) |
+| [KNWR:Inv:46](http://arctos.database.museum/guid/KNWR:Inv:46)         | [2592190546](https://www.gbif.org/occurrence/2592190546) |
+| [KNWR:Inv:47](http://arctos.database.museum/guid/KNWR:Inv:47)         | [2592190550](https://www.gbif.org/occurrence/2592190550) |
+| [KNWR:Inv:48](http://arctos.database.museum/guid/KNWR:Inv:48)         | [2592190549](https://www.gbif.org/occurrence/2592190549) |
+| [KNWR:Inv:49](http://arctos.database.museum/guid/KNWR:Inv:49)         | [2592190554](https://www.gbif.org/occurrence/2592190554) |
+| [KNWR:Inv:50](http://arctos.database.museum/guid/KNWR:Inv:50)         | [2592190553](https://www.gbif.org/occurrence/2592190553) |
+| [KNWR:Inv:51](http://arctos.database.museum/guid/KNWR:Inv:51)         | [2592190548](https://www.gbif.org/occurrence/2592190548) |
+| [KNWR:Inv:52](http://arctos.database.museum/guid/KNWR:Inv:52)         | [2592190552](https://www.gbif.org/occurrence/2592190552) |
+
+There appears to be no record for
+[KNWR:Ento:11385](http://arctos.database.museum/guid/KNWR:Ento:11385) on
+GBIF. I should be able to figure out which sample this was by the
+process of elimination.
+
+I met with Jake over the phone about going through our Refuge’s
+checklist to move species from our old checklist to FWSpecies.
+
+I received a request to make my old bristletail key available, so I
+posted it as a preprint via ResearchGate (Bowser
+[2012](#ref-bowser_key_2012)).
+
+I was able to make a search to download the GBIF version of the lost
+data (GBIF.org
+[2020](#ref-gbiforg_gbif_2020-4)[a](#ref-gbiforg_gbif_2020-4)).
 
 # Bibliography
 
@@ -5820,6 +5872,14 @@ Bowmer, K.H., Jacobs, S.W.L., and Sainty, G.R. 1995. Identification,
 biology and management of *Elodea canadensis*, Hydrocharitaceae. Journal
 of Aquatic Plant Management **33**: 13–19. Available from
 <http://www.apms.org/wp/wp-content/uploads/2012/10/v33p13.pdf>.
+
+</div>
+
+<div id="ref-bowser_key_2012">
+
+Bowser, M.L. 2012. Key and checklist of the bristletails (Microcoryphia)
+of America north of Mexico. Soldotna, Alaska.
+doi:[10.13140/RG.2.2.19142.22087](https://doi.org/10.13140/RG.2.2.19142.22087).
 
 </div>
 
@@ -5939,30 +5999,37 @@ doi:[10.2307/2424067](https://doi.org/10.2307/2424067).
 
 </div>
 
-<div id="ref-gbiforg_gbif_2020-1">
+<div id="ref-gbiforg_gbif_2020-4">
 
 GBIF.org. 2020a. GBIF Occurrence Download. GBIF.org.
+doi:[10.15468/dl.ryvkwn](https://doi.org/10.15468/dl.ryvkwn).
+
+</div>
+
+<div id="ref-gbiforg_gbif_2020-1">
+
+GBIF.org. 2020b. GBIF Occurrence Download. GBIF.org.
 doi:[10.15468/dl.bguubm](https://doi.org/10.15468/dl.bguubm).
 
 </div>
 
 <div id="ref-gbiforg_gbif_2020">
 
-GBIF.org. 2020b. GBIF Occurrence Download. GBIF.org.
+GBIF.org. 2020c. GBIF Occurrence Download. GBIF.org.
 doi:[10.15468/dl.3dfs26](https://doi.org/10.15468/dl.3dfs26).
 
 </div>
 
 <div id="ref-gbiforg_gbif_2020-2">
 
-GBIF.org. 2020c. GBIF Occurrence Download. GBIF.org.
+GBIF.org. 2020d. GBIF Occurrence Download. GBIF.org.
 doi:[10.15468/dl.deymas](https://doi.org/10.15468/dl.deymas).
 
 </div>
 
 <div id="ref-gbiforg_gbif_2020-3">
 
-GBIF.org. 2020d. GBIF Occurrence Download. GBIF.org.
+GBIF.org. 2020e. GBIF Occurrence Download. GBIF.org.
 doi:[10.15468/dl.azbzw2](https://doi.org/10.15468/dl.azbzw2).
 
 </div>
