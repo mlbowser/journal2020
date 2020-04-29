@@ -93,6 +93,7 @@
       - [Saturday, April 25](#saturday-april-25)
       - [Monday, April 27](#monday-april-27)
       - [Tuesday, April 28](#tuesday-april-28)
+      - [Wednesday, April 29](#wednesday-april-29)
   - [Bibliography](#bibliography)
 
 # January
@@ -5777,6 +5778,12 @@ veg data.
 
 I formatted and posted the *Refuge Notebook* articles from January 31
 and February 7.
+
+## Wednesday, April 29
+
+Arctos is up now, but with a restored data backup from the night of
+March 15. Media are still uploaded from mid April, but links to these
+media will need to be remade if possible.
 
 # Bibliography
 
