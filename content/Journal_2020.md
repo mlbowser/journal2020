@@ -94,6 +94,9 @@
       - [Monday, April 27](#monday-april-27)
       - [Tuesday, April 28](#tuesday-april-28)
       - [Wednesday, April 29](#wednesday-april-29)
+      - [Thursday, April 30](#thursday-april-30)
+  - [May](#may)
+      - [Friday, May 1](#friday-may-1)
   - [Bibliography](#bibliography)
 
 # January
@@ -5837,6 +5840,48 @@ I was able to make a search to download the GBIF version of the lost
 data (GBIF.org
 [2020](#ref-gbiforg_gbif_2020-4)[a](#ref-gbiforg_gbif_2020-4)).
 
+## Thursday, April 30
+
+To do:
+
+  - Intra-Service Section 7 Biological Evaluation Form
+
+I worked on the Intra-Service Section 7 Biological Evaluation Form for
+the Sandpiper Lake *Elodea* erradication project.
+
+### I\&M call at 11:30
+
+  - Discussed possibility adding to FIA’s Interior inventories.
+  - Status of Kenai NWR Resources of Concern process: not much happening
+    right now.
+
+# May
+
+## Friday, May 1
+
+To do:
+
+  - Intra-Service Section 7 Biological Evaluation Form
+
+Responding to comments on iNaturalist
+(<https://www.inaturalist.org/observations/3815139>), I looked into
+*Dilophus femoratus* Meigen, 1804. From Skartveit
+([2002](#ref-skartveit_larvae_2002)):
+
+> Eurytopical species, most common on flower-rich meadows. Common up to
+> the subalpine zone. Full-grown larvae found in March to June.
+
+Interestingly, the Alaskan material identified as *D. femoratus* is
+different than European *D. femoratus*. The two BINs for these are not
+nearest neighbors based on BOLD’s BIN algorithm. This deserves looking
+into.
+
+BIN including Alaskan material:  
+<http://bins.boldsystems.org/index.php/Public_BarcodeCluster?clusteruri=BOLD:AAP6925>
+
+BIN including Palearctic D. femoratus:  
+<http://bins.boldsystems.org/index.php/Public_BarcodeCluster?clusteruri=BOLD:AAG6648>
+
 # Bibliography
 
 <div id="refs" class="references">
@@ -6304,6 +6349,14 @@ doi:[10.1111/j.1479-8298.2006.00188.x](https://doi.org/10.1111/j.1479-8298.2006.
 Shorthouse, D.P. 2010. SimpleMappr, an online tool to produce
 publication-quality point maps. Available from
 <https://www.simplemappr.net>.
+
+</div>
+
+<div id="ref-skartveit_larvae_2002">
+
+Skartveit, J. 2002. The larvae of European Bibioninae (Diptera,
+Bibionidae). Journal of Natural History **36**(4): 449–485.
+doi:[10.1080/00222930010023466](https://doi.org/10.1080/00222930010023466).
 
 </div>
 
