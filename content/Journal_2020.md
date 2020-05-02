@@ -5882,6 +5882,16 @@ BIN including Alaskan material:
 BIN including Palearctic D. femoratus:  
 <http://bins.boldsystems.org/index.php/Public_BarcodeCluster?clusteruri=BOLD:AAG6648>
 
+I found old correspondence and updated identifications of all biobionid
+specimens identified by John Skartveit in 2006.
+
+I downloaded all *Dilophus* COI sequences and one *Bibio* sequence
+(outgroup) and submitted these to NGPhylogeny.fr
+(<https://ngphylogeny.fr/workspace/history/30d01ce00572c3b7>).
+
+I worked on the Intra-Service Section 7 Biological Evaluation Form for
+the Sandpiper Lake *Elodea* eradication project.
+
 # Bibliography
 
 <div id="refs" class="references">
