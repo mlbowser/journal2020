@@ -5906,6 +5906,29 @@ beluga (GBIF.org
 occurrence records from GBIF and worked on mapping these and related
 data for the Intra-Service Section 7 Biological Evaluation Form.
 
+Sandpiper Lake is 59 km from the nearest occurrence of Kittlitz’s
+murrelet, 19 miles from the nearest potential nesting habitat for
+Kittlitz’s murrelet, 9.4 km from the nearest occurrence of belugas, and
+1.4 miles from beluga critical habitat.
+
+![Map of Cook Inlet Beluga occurrences and Cook Inlet Beluga Critical
+Habitat in relation to Sandpiper
+Lake.](2020-05-04-1550_beluga_map.jpg)  
+Map of Cook Inlet Beluga occurrences and Cook Inlet Beluga Critical
+Habitat in relation to Sandpiper Lake. Occurrence data are from GBIF.org
+([2020](#ref-gbiforg_gbif_2020-6)[c](#ref-gbiforg_gbif_2020-6)) and
+Critical Habitat areas are from NOAA Fisheries
+([2019](#ref-NOAA_beluga_habitat)).
+
+![Map of Kittlitz’s Murrelet occurrences and Kittlitz’s Murrelet
+potential nesting habitat in relation to Sandpiper
+Lake.](2020-05-04-1550_murrelet_map.jpg)  
+Map of Kittlitz’s Murrelet occurrences and Kittlitz’s Murrelet potential
+nesting habitat in relation to Sandpiper Lake. Occurrence data are from
+GBIF.org ([2020](#ref-gbiforg_gbif_2020-5)[b](#ref-gbiforg_gbif_2020-5))
+and potential nesting areas are from Felis et
+al. ([2016](#ref-Felis_et_al_2016)).
+
 # Bibliography
 
 <div id="refs" class="references">
@@ -6044,6 +6067,15 @@ Drake, C.J., and Lattin, J.D. 1963. American species of the lacebug
 genus *Acalypta* (Hemiptera: Tingidae). Proceedings of the United States
 National Museum **115**(3486): 331–345 +15 plates.
 doi:[10.5479/si.00963801.115-3486.331](https://doi.org/10.5479/si.00963801.115-3486.331).
+
+</div>
+
+<div id="ref-Felis_et_al_2016">
+
+Felis, J.J., Kissling, M.L., Kaler, R.S.A., Kenney, L.A., and Lawonn,
+M.J. and. 2016. Identifying kittlitz’s murrelet nesting habitat in north
+america at the landscape scale: U.S. Geological survey data release.
+doi:[10.5066/F71V5C2W](https://doi.org/10.5066/F71V5C2W).
 
 </div>
 
@@ -6312,6 +6344,14 @@ Morton, J., Bowser, M., and Eskelin, T. 2019, July. Responding rapidly
 to Elodea—the first freshwater invasive plant in Alaska. San Diego,
 California. Available from
 <https://www.fws.gov/uploadedFiles/Morton_JM_et_al_2019.pdf>.
+
+</div>
+
+<div id="ref-NOAA_beluga_habitat">
+
+NOAA Fisheries. 2019. Beluga whale – cook inlet dps critical habitat.
+Available from
+<https://www.fisheries.noaa.gov/resource/map/beluga-whale-cook-inlet-dps-critical-habitat>.
 
 </div>
 
