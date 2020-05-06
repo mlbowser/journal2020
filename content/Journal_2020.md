@@ -98,6 +98,7 @@
   - [May](#may)
       - [Friday, May 1](#friday-may-1)
       - [Monday, May 4](#monday-may-4)
+      - [Tuesday, May 5](#tuesday-may-5)
   - [Bibliography](#bibliography)
 
 # January
@@ -502,14 +503,14 @@ proposed regulation on *Lumbricus* species worms.
 I generated maps of *Lumbricus* species distribution data using
 SimpleMappr (Shorthouse [2010](#ref-shorthouse_simplemappr_2010)) and
 data from GBIF (GBIF.org
-[2020](#ref-gbiforg_gbif_2020-1)[d](#ref-gbiforg_gbif_2020-1),
-[2020](#ref-gbiforg_gbif_2020)[e](#ref-gbiforg_gbif_2020)).
+[2020](#ref-gbiforg_gbif_2020-1)[e](#ref-gbiforg_gbif_2020-1),
+[2020](#ref-gbiforg_gbif_2020)[f](#ref-gbiforg_gbif_2020)).
 
 ![Map of *Lumbricus terrestris* distribution in
 Alaska.](2020-01-13-1013_Lumbricus_terrestris_in_Alaska.jpg)  
 Map of *Lumbricus terrestris* distribution in Alaska. Locations were
 obtained from GBIF (GBIF.org
-[2020](#ref-gbiforg_gbif_2020-1)[d](#ref-gbiforg_gbif_2020-1)).
+[2020](#ref-gbiforg_gbif_2020-1)[e](#ref-gbiforg_gbif_2020-1)).
 
 ![Map of *Lumbricus rubellus* distribution in
 Alaska.](2020-01-13-1014_Lumbricus_rubellus_in_Alaska.jpg)  
@@ -1046,7 +1047,7 @@ HUC12 190203021903 “Miller Creek-Frontal Cook Inlet” watershed. I
 simplified this using ArcMap’s Simplify Polygon tool, with a
 simplification tolerance of 500 m. I converted this to WKT so I could
 run a GBIF search (GBIF.org
-[2020](#ref-gbiforg_gbif_2020-2)[f](#ref-gbiforg_gbif_2020-2)).
+[2020](#ref-gbiforg_gbif_2020-2)[g](#ref-gbiforg_gbif_2020-2)).
 
 I finished sorting Berlese sample
 [KNWR:Ento:11362](http://arctos.database.museum/guid/KNWR:Ento:11362)
@@ -3080,7 +3081,7 @@ I attended the 11:00 biology check-in telecon.
 I prepared data for Rob Massengill, but I accidentally overwrote the R
 script. I had downloaded occurrence data from the Vogel Lake vicinity
 from GBIF (GBIF.org
-[2020](#ref-gbiforg_gbif_2020-3)[g](#ref-gbiforg_gbif_2020-3)), Arctos,
+[2020](#ref-gbiforg_gbif_2020-3)[h](#ref-gbiforg_gbif_2020-3)), Arctos,
 and iNaturalist, then processed these. I had entered data for specimen
 records
 [KNWR:Ento:11383](http://arctos.database.museum/guid/KNWR:Ento:11383)
@@ -5929,6 +5930,40 @@ GBIF.org ([2020](#ref-gbiforg_gbif_2020-5)[b](#ref-gbiforg_gbif_2020-5))
 and potential nesting areas are from Felis et
 al. ([2016](#ref-Felis_et_al_2016)).
 
+## Tuesday, May 5
+
+To do:
+
+  - Intra-Service Section 7 Biological Evaluation Form
+
+I worked on the Intra-Service Section 7 Biological Evaluation Form for
+the Sandpiper Lake project. I downloaded occurrences from Sandpiper Lake
+(GBIF.org
+[2020](#ref-gbiforg_gbif_2020-7_Sandpiper)[d](#ref-gbiforg_gbif_2020-7_Sandpiper)).
+
+### Biology staff meeting at 11:00
+
+I happened to notice that the locations seem to be wrong on specimens
+[KNWR:Herb:1480](http://arctos.database.museum/guid/KNWR:Herb:1480)-[KNWR:Herb:1482](http://arctos.database.museum/guid/KNWR:Herb:1482).
+I need to check the labels on these specimens.
+
+### Reed canary grass meeting at 11:30
+
+Getting a species list from Sandpiper Lake.
+
+``` r
+sp1 <- read.delim("0056501-200221144449610/0056501-200221144449610.csv")
+
+plot(sp1$decimalLongitude, sp1$decimalLatitude)
+
+su1 <- unique(sp1[,c("kingdom", "phylum", "class", "order", "family", "genus", "species", "scientificName")])
+
+write.csv(su1, "2020-05-05-1337_Sandpiper_Lake_species.csv", row.names=FALSE)
+```
+
+I finished the Intra-Service Section 7 Biological Evaluation Form for
+the Sandpiper Lake elodea eradication project and sent it off.
+
 # Bibliography
 
 <div id="refs" class="references">
@@ -6121,30 +6156,37 @@ doi:[10.15468/dl.tt25kv](https://doi.org/10.15468/dl.tt25kv).
 
 </div>
 
-<div id="ref-gbiforg_gbif_2020-1">
+<div id="ref-gbiforg_gbif_2020-7_Sandpiper">
 
 GBIF.org. 2020d. GBIF Occurrence Download. GBIF.org.
+doi:[10.15468/dl.sc5xmu](https://doi.org/10.15468/dl.sc5xmu).
+
+</div>
+
+<div id="ref-gbiforg_gbif_2020-1">
+
+GBIF.org. 2020e. GBIF Occurrence Download. GBIF.org.
 doi:[10.15468/dl.bguubm](https://doi.org/10.15468/dl.bguubm).
 
 </div>
 
 <div id="ref-gbiforg_gbif_2020">
 
-GBIF.org. 2020e. GBIF Occurrence Download. GBIF.org.
+GBIF.org. 2020f. GBIF Occurrence Download. GBIF.org.
 doi:[10.15468/dl.3dfs26](https://doi.org/10.15468/dl.3dfs26).
 
 </div>
 
 <div id="ref-gbiforg_gbif_2020-2">
 
-GBIF.org. 2020f. GBIF Occurrence Download. GBIF.org.
+GBIF.org. 2020g. GBIF Occurrence Download. GBIF.org.
 doi:[10.15468/dl.deymas](https://doi.org/10.15468/dl.deymas).
 
 </div>
 
 <div id="ref-gbiforg_gbif_2020-3">
 
-GBIF.org. 2020g. GBIF Occurrence Download. GBIF.org.
+GBIF.org. 2020h. GBIF Occurrence Download. GBIF.org.
 doi:[10.15468/dl.azbzw2](https://doi.org/10.15468/dl.azbzw2).
 
 </div>
