@@ -99,6 +99,10 @@
       - [Friday, May 1](#friday-may-1)
       - [Monday, May 4](#monday-may-4)
       - [Tuesday, May 5](#tuesday-may-5)
+      - [Wednesday, May 6](#wednesday-may-6)
+      - [Thursday, May 7](#thursday-may-7)
+      - [Friday, May 8](#friday-may-8)
+      - [Monday, May 11](#monday-may-11)
   - [Bibliography](#bibliography)
 
 # January
@@ -5963,6 +5967,47 @@ write.csv(su1, "2020-05-05-1337_Sandpiper_Lake_species.csv", row.names=FALSE)
 
 I finished the Intra-Service Section 7 Biological Evaluation Form for
 the Sandpiper Lake elodea eradication project and sent it off.
+
+## Wednesday, May 6
+
+### Safety committee meeting at 09:00
+
+  - We are having trouble acquiring hand sanitizer. I may make some in
+    the lab.
+  - I will be responsible for delivering a blood borne pathogens talk
+    via zoom.
+
+I walked Jake through the process of moving species from our spreadsheet
+onto FWSpecies and providing evidence.
+
+## Thursday, May 7
+
+To do:
+
+  - Review Sandpiper Lake FONSI.
+  - Finish *AKES Newsletter*.
+
+I took care of correspondence, worked with Jake some on getting records
+moved to FWSpecies, got this week’s *Refuge Notebook* submitted, etc.
+
+## Friday, May 8
+
+To do:
+
+  - Review Sandpiper Lake FONSI.
+  - Finish *AKES Newsletter*.
+
+## Monday, May 11
+
+To do:
+
+  - ~~Review Sandpiper Lake FONSI.~~
+  - Take pesticide training.
+  - Finish *AKES Newsletter*.
+  - Improve Kenai NWR checklist processing/formatting.
+  - Examine *Rabodophaga* specimens.
+
+I reviewed the Sandpiper Lake *Elodea* eradication FONSI document.
 
 # Bibliography
 
