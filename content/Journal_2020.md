@@ -103,6 +103,7 @@
       - [Thursday, May 7](#thursday-may-7)
       - [Friday, May 8](#friday-may-8)
       - [Monday, May 11](#monday-may-11)
+      - [Tuesday, May 12](#tuesday-may-12)
   - [Bibliography](#bibliography)
 
 # January
@@ -6002,12 +6003,73 @@ To do:
 To do:
 
   - ~~Review Sandpiper Lake FONSI.~~
-  - Take pesticide training.
+  - ~~Take pesticide training.~~
   - Finish *AKES Newsletter*.
   - Improve Kenai NWR checklist processing/formatting.
-  - Examine *Rabodophaga* specimens.
+  - ~~Examine *Rabodophaga* specimens~~.
+  - Slikok occupancy.
+  - Finish 2019 black spruce project.
+  - Clean up stuff on Yeti.
 
 I reviewed the Sandpiper Lake *Elodea* eradication FONSI document.
+
+I formatted a UAM specimen count article for the *AKES Newsletter*. This
+one took a little while.
+
+I took the pesticide applicator training that I need.
+
+Examining rosette galls from *Salix fuscescens* that I collected
+yesterday.
+
+2020-05-10\_MLB01: This contained a single hymenopteran larva.
+
+2020-05-10\_MLB02: This contained the gooey remains of some insect
+larva.
+
+Examining rosette galls I had collected from *Salix fuscescens* from our
+swamp on April 24.
+
+2020-04-24\_MLB01: This gall contained a hymenopteran pupa.
+
+2020-04-24\_MLB02: Two sciaroid flies had emerged. These I put into
+vials BOLD-IH8 and BOLD-LB2.
+
+## Tuesday, May 12
+
+To do:
+
+  - Finish *AKES Newsletter*.
+  - ~~Take pesticide applicator training test.~~
+  - Edit this week’s *Refuge Notebook* article.
+  - Prepare blood borne pathogens presentation.
+  - First aid / CPR training.
+  - Improve Kenai NWR checklist processing/formatting.
+  - Enter data for *Rabdophaga* specimens.
+  - Slikok occupancy.
+  - Finish 2019 black spruce project.
+  - Clean up stuff on Yeti.
+
+I took the final exam for the UAF CES class I was taking for pesticide
+applicator CEUs.
+
+### 10:00 Swan Lake Fire invasives/burn severity meeting.
+
+  - I need to get GIS files (trailheads, etc. to Justin) and locations
+    of exotic species to Justin.
+
+  - I need to get Kenai NWR contacts to Justin.
+
+  - We need to come up with a sampling design for burn severity work for
+    this summer.
+
+I applied edits to the specimen count article for the *AKES Newsletter*.
+
+### 14:00 meeting with Hillcorp regarding non-native plant management.
+
+  - They have been making good progress reducing white sweetclover, reed
+    canary grass, and hawkweeds.
+
+I started formatting the *AKES Newsletter* article on *Bombus*.
 
 # Bibliography
 
