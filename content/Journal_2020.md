@@ -105,6 +105,7 @@
       - [Monday, May 11](#monday-may-11)
       - [Tuesday, May 12](#tuesday-may-12)
       - [Wednesday, May 13](#wednesday-may-13)
+      - [Thursday, May 14](#thursday-may-14)
   - [Bibliography](#bibliography)
 
 # January
@@ -6214,6 +6215,27 @@ write.csv(additions2, "../data/non_FWSpecies_records.csv", row.names=FALSE)
 
 I continued working on formatting the *Bombus* article for the *AKES
 Newsletter*.
+
+## Thursday, May 14
+
+To do:
+
+  - Finish *AKES Newsletter*.
+  - Prepare blood borne pathogens presentation.
+  - First aid / CPR training.
+  - Improve Kenai NWR checklist processing/formatting.
+  - Enter data for *Rabdophaga* specimens.
+  - Slikok occupancy.
+  - Finish 2019 black spruce project.
+  - Clean up stuff on Yeti.
+
+I continued working on formatting the *Bombus* article for the *AKES
+Newsletter*, finishing this at the end of the day. I sent a draft of
+this article to the authors for review and I sent the whole issue out
+the editorial committee for review.
+
+I added *Deschampsia beringensis* to the Refuge’s species list based on
+UAM Herbarium specimens.
 
 # Bibliography
 
