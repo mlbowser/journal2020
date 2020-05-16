@@ -106,6 +106,7 @@
       - [Tuesday, May 12](#tuesday-may-12)
       - [Wednesday, May 13](#wednesday-may-13)
       - [Thursday, May 14](#thursday-may-14)
+      - [Friday, May 15](#friday-may-15)
   - [Bibliography](#bibliography)
 
 # January
@@ -6236,6 +6237,27 @@ the editorial committee for review.
 
 I added *Deschampsia beringensis* to the Refuge’s species list based on
 UAM Herbarium specimens.
+
+## Friday, May 15
+
+To do:
+
+  - Finish *AKES Newsletter*.
+  - ~~Prepare blood borne pathogens presentation.~~
+  - First aid / CPR training.
+  - Improve Kenai NWR checklist processing/formatting.
+  - Enter data for *Rabdophaga* specimens.
+  - Slikok occupancy.
+  - Finish 2019 black spruce project.
+  - Clean up stuff on Yeti.
+
+I drove to the office this morning to take care of an administrative
+issue.
+
+I made corrections to the *Bombus* article for the *AKES Newsletter*.
+
+I worked on my bloodborne pathogens presentation for next week, getting
+it revised and submitted.
 
 # Bibliography
 
