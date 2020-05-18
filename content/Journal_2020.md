@@ -107,6 +107,9 @@
       - [Wednesday, May 13](#wednesday-may-13)
       - [Thursday, May 14](#thursday-may-14)
       - [Friday, May 15](#friday-may-15)
+      - [Saturday, May 16](#saturday-may-16)
+      - [Sunday, May 17](#sunday-may-17)
+      - [Monday, May 18](#monday-may-18)
   - [Bibliography](#bibliography)
 
 # January
@@ -6258,6 +6261,53 @@ I made corrections to the *Bombus* article for the *AKES Newsletter*.
 
 I worked on my bloodborne pathogens presentation for next week, getting
 it revised and submitted.
+
+## Saturday, May 16
+
+Ethan, Esther, and I collected morels for DNA sequencing to determine
+what species these are.
+
+| field ID          |                                                iNaturalist ID |
+| :---------------- | ------------------------------------------------------------: |
+| 2020-05-16\_MLB01 | [46129997](https://www.inaturalist.org/observations/46129997) |
+| 2020-05-16\_MLB02 | [46132276](https://www.inaturalist.org/observations/46132276) |
+
+Both of these were collected under cottonwoods.
+
+## Sunday, May 17
+
+Ethan, Esther, Apphia, and I collected morels for DNA sequencing from
+near Kenai National Wildlife Refuge headquarters.
+
+| field ID          |                                                iNaturalist ID |
+| :---------------- | ------------------------------------------------------------: |
+| 2020-05-17\_MLB01 | [46292862](https://www.inaturalist.org/observations/46292862) |
+| 2020-05-17\_MLB02 | [46293272](https://www.inaturalist.org/observations/46293272) |
+
+Both of these were collected under cottonwoods.
+
+![*Morchella* specimen 2020-05-17\_MLB01 (iNaturalist:
+[46292862](https://www.inaturalist.org/observations/46292862)) from near
+Kenai National Wildlife Refuge headquarters.](2020-05-17_MLB01.jpg)  
+*Morchella* specimen 2020-05-17\_MLB01 (iNaturalist:
+[46292862](https://www.inaturalist.org/observations/46292862)) from near
+Kenai National Wildlife Refuge headquarters.
+
+## Monday, May 18
+
+To do:
+
+  - Finish *AKES Newsletter*.
+  - First aid / CPR training.
+  - Improve Kenai NWR checklist processing/formatting.
+  - Enter data for *Rabdophaga* specimens.
+  - Slikok occupancy.
+  - Finish 2019 black spruce project.
+  - Clean up stuff on Yeti.
+
+I added *Geopyxis carbonaria* to the Kenai National Wildlife Refuge’s
+checklist based on iNaturalist observation
+[46393003](https://www.inaturalist.org/observations/46393003).
 
 # Bibliography
 
