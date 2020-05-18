@@ -6274,6 +6274,13 @@ what species these are.
 
 Both of these were collected under cottonwoods.
 
+![*Morchella* specimen 2020-05-16\_MLB01 (iNaturalist:
+[46129997](https://www.inaturalist.org/observations/46129997)) from
+Kasilof.](2020-05-16_MLB01.jpg)  
+*Morchella* specimen 2020-05-16\_MLB01 (iNaturalist:
+[46129997](https://www.inaturalist.org/observations/46129997)) from
+Kasilof.
+
 ## Sunday, May 17
 
 Ethan, Esther, Apphia, and I collected morels for DNA sequencing from
