@@ -110,6 +110,9 @@
       - [Saturday, May 16](#saturday-may-16)
       - [Sunday, May 17](#sunday-may-17)
       - [Monday, May 18](#monday-may-18)
+      - [Tuesday, May 19](#tuesday-may-19)
+      - [Wednesday, May 20](#wednesday-may-20)
+      - [Thursday, May 21](#thursday-may-21)
   - [Bibliography](#bibliography)
 
 # January
@@ -6364,8 +6367,92 @@ hyperparasitoid (2020-05-18\_MLB03, iNaturalist:
 smaller larva that might be a hyperparasitoid I put into LifeScanner
 vial BOLD-G57. The larger larva I put into LifeScanner vial BOLD-UJ8.
 
-I might be too late. This is frustrating because the first gall on
-*Salix barclayi* that I looked at still had a *Rabdophaga* larva in it.
+I might be too late. The *Rabdophaga rosaria* group midges may already
+be on the wing. This is frustrating because the first gall on *Salix
+barclayi* that I looked at still had a *Rabdophaga* larva in it.
+
+## Tuesday, May 19
+
+To do:
+
+  - ~~Edit this week’s *Refuge Notebook* article.~~
+  - ~~Check out new Sruvey123 form.~~
+  - Finish *AKES Newsletter*.
+  - First aid / CPR training.
+  - Improve Kenai NWR checklist processing/formatting.
+  - Slikok occupancy.
+  - Finish 2019 black spruce project.
+  - Clean up stuff on Yeti.
+
+I edited and submitted this week’s *Refuge Notebook* article.
+
+I downloaded, used, and reviewed a Survey123 form designed by Amanda for
+documenting non-native plant occurrence, recommending a number of
+changes. Most significantly, I think indicated how I think we should be
+integrating pesticide use reporting with the form.
+
+I started the American Heart Association First Aid CPR AED Online
+training, but I did not finish it.
+
+## Wednesday, May 20
+
+To do:
+
+  - Finish *AKES Newsletter*.
+  - Get non-native plant data to AKNHP folks.
+  - Get burn severity plot data to Lisa.
+  - ~~First aid / CPR training.~~
+  - Test new version of Survey123 form.
+  - Improve Kenai NWR checklist processing/formatting.
+  - Slikok occupancy.
+  - Finish 2019 black spruce project.
+  - Clean up stuff on Yeti.
+
+I completed the on-line first aid training.
+
+I drove to the Refuge for the 1:00 pm hand-on first aid training.
+
+## Thursday, May 21
+
+To do:
+
+  - ~~Presentation~~
+  - ~~mid-year appraisal~~
+  - terrestrial IPM plan to Ben
+  - ~~non-native species list to Amanda.~~
+  - Get non-native plant data to AKNHP folks.
+  - Get burn severity plot data to Lisa.
+  - ~~Test new version of Survey123 form.~~
+  - Improve Kenai NWR checklist processing/formatting.
+  - Slikok occupancy.
+  - Finish 2019 black spruce project.
+  - Clean up stuff on Yeti.
+
+I gave my presentation at the seasonal employee training zoom meeting.
+
+I filled out my part of my mid-year appraisal in DOI Talent.
+
+I downloaded non-native plant records from a polygon covering the Kenai
+Peninsula.
+
+``` r
+## Getting a species list for our Survey123 form...
+data1 <- read.csv("akepic.f8a5bcdd-1937-4de1-aae3-d7f21e7f2cac.csv", stringsAsFactors=FALSE)
+
+species_list <- levels(as.factor(data1$scientific_name))
+
+length(species_list)
+[1] 125
+ 
+## There were some wierd special characters.
+species_list <- gsub("Â ", " ", species_list)
+
+write.csv(species_list,
+ "2020-05-21-1540_AKEPIC_KP_species_list.csv",
+ row.names=FALSE
+ )
+
+```
 
 # Bibliography
 
