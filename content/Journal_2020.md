@@ -6492,6 +6492,18 @@ appears to be *Morchella exuberans* based on NCBI BLAST searches. Like
 I was unable to revise the aquatic herbicide PUPs. They appear to be
 locked.
 
+I examined the morels that Colin had collected on May 19. Three had dark
+ridges that were not tomentose; a fourth appeared to be *Morchella
+tomentosa*.
+
+![Detail of tomentose ridges of a morel specimen with iNaturalist
+observation ID 47411794, apparently *Morchella
+tomentosa*.](2020-05-26-1402_iNat-47411794.jpg)  
+Detail of tomentose ridges of a morel specimen with iNaturalist
+observation ID
+[47411794](https://www.inaturalist.org/observations/47411794),
+apparently *Morchella tomentosa*.
+
 # Bibliography
 
 <div id="refs" class="references">
