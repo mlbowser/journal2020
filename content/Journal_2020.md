@@ -113,6 +113,7 @@
       - [Tuesday, May 19](#tuesday-may-19)
       - [Wednesday, May 20](#wednesday-may-20)
       - [Thursday, May 21](#thursday-may-21)
+      - [Tuesday, May 26](#tuesday-may-26)
   - [Bibliography](#bibliography)
 
 # January
@@ -6454,6 +6455,43 @@ write.csv(species_list,
 
 ```
 
+## Tuesday, May 26
+
+To do:
+
+  - Write this week’s *Refuge Notebook* article.
+  - Revise aquatic herbicide PUPs.
+  - Get shortened list of non-native plant species to Amanda.
+  - Get non-native plant data to AKNHP folks.
+  - Get burn severity plot data to Lisa.
+  - Improve Kenai NWR checklist processing/formatting.
+  - Slikok occupancy.
+  - Finish 2019 black spruce project.
+  - Clean up stuff on Yeti.
+
+I started a *Refuge Notebook* article on morels.
+
+Article notes:
+
+There is apparently only a single species of morel identified from the
+Kenai Peninsula: *Morchella tomentosa* (gray morel) from the Crescent
+Lake Trail viscinity (iNaturalist:
+[17941556](https://www.inaturalist.org/observations/17941556)).
+
+I looked through the identifications of fungi from the 2019 black spruce
+inventory. None of these were *Morchella*.
+
+The unidentified *Morchella* from Interior Alaska in Stefani et
+al. ([2010](#ref-stefani_morchella_2010)) (Herbarium ID: QFB 8581;
+GenBank accessions:
+[GQ304982](https://www.ncbi.nlm.nih.gov/nuccore/GQ304982)-[GQ304986](https://www.ncbi.nlm.nih.gov/nuccore/GQ304986))
+appears to be *Morchella exuberans* based on NCBI BLAST searches. Like
+*Morchella tomentosa*, this is another post-fire species (Richard et al.
+[2015](#ref-richard_true_2015)).
+
+I was unable to revise the aquatic herbicide PUPs. They appear to be
+locked.
+
 # Bibliography
 
 <div id="refs" class="references">
@@ -6931,6 +6969,17 @@ Washington **82**: 86–98.
 
 </div>
 
+<div id="ref-richard_true_2015">
+
+Richard, F., Bellanger, J.-M., Clowez, P., Hansen, K., O’Donnell, K.,
+Urban, A., Sauve, M., Courtecuisse, R., and Moreau, P.-A. 2015. True
+morels (*Morchella*, Pezizales) of Europe and North America:
+Evolutionary relationships inferred from multilocus data and a unified
+taxonomy. Mycologia **107**(2): 359–382.
+doi:[10.3852/14-166](https://doi.org/10.3852/14-166).
+
+</div>
+
 <div id="ref-Sato_et_al_Rabdophaga_2020">
 
 Sato, S., Harris, K.M., Collet, D.M., Kim, W., and Yukawa, J. 2020.
@@ -6975,6 +7024,15 @@ doi:[10.1080/00222930010023466](https://doi.org/10.1080/00222930010023466).
 State of Alaska Department of Environmental Conservation. 2005. Ambient
 water quality monitoring system. Available from
 <https://awqms2.goldsystems.com/Login.aspx>.
+
+</div>
+
+<div id="ref-stefani_morchella_2010">
+
+Stefani, F.O.P., Sokolski, S., Wurtz, T.L., Piché, Y., Hamelin, R.C.,
+Fortin, J.A., and Bérubé, J.A. 2010. *Morchella tomentosa*: A unique
+belowground structure and a new clade of morels. Mycologia **102**(5):
+1082–1088. doi:[10.3852/09-294](https://doi.org/10.3852/09-294).
 
 </div>
 
