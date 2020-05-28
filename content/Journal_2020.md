@@ -520,14 +520,14 @@ proposed regulation on *Lumbricus* species worms.
 I generated maps of *Lumbricus* species distribution data using
 SimpleMappr (Shorthouse [2010](#ref-shorthouse_simplemappr_2010)) and
 data from GBIF (GBIF.org
-[2020](#ref-gbiforg_gbif_2020-1)[e](#ref-gbiforg_gbif_2020-1),
-[2020](#ref-gbiforg_gbif_2020)[f](#ref-gbiforg_gbif_2020)).
+[2020](#ref-gbiforg_gbif_2020-1)[f](#ref-gbiforg_gbif_2020-1),
+[2020](#ref-gbiforg_gbif_2020)[g](#ref-gbiforg_gbif_2020)).
 
 ![Map of *Lumbricus terrestris* distribution in
 Alaska.](2020-01-13-1013_Lumbricus_terrestris_in_Alaska.jpg)  
 Map of *Lumbricus terrestris* distribution in Alaska. Locations were
 obtained from GBIF (GBIF.org
-[2020](#ref-gbiforg_gbif_2020-1)[e](#ref-gbiforg_gbif_2020-1)).
+[2020](#ref-gbiforg_gbif_2020-1)[f](#ref-gbiforg_gbif_2020-1)).
 
 ![Map of *Lumbricus rubellus* distribution in
 Alaska.](2020-01-13-1014_Lumbricus_rubellus_in_Alaska.jpg)  
@@ -1064,7 +1064,7 @@ HUC12 190203021903 “Miller Creek-Frontal Cook Inlet” watershed. I
 simplified this using ArcMap’s Simplify Polygon tool, with a
 simplification tolerance of 500 m. I converted this to WKT so I could
 run a GBIF search (GBIF.org
-[2020](#ref-gbiforg_gbif_2020-2)[g](#ref-gbiforg_gbif_2020-2)).
+[2020](#ref-gbiforg_gbif_2020-2)[h](#ref-gbiforg_gbif_2020-2)).
 
 I finished sorting Berlese sample
 [KNWR:Ento:11362](http://arctos.database.museum/guid/KNWR:Ento:11362)
@@ -3098,7 +3098,7 @@ I attended the 11:00 biology check-in telecon.
 I prepared data for Rob Massengill, but I accidentally overwrote the R
 script. I had downloaded occurrence data from the Vogel Lake vicinity
 from GBIF (GBIF.org
-[2020](#ref-gbiforg_gbif_2020-3)[h](#ref-gbiforg_gbif_2020-3)), Arctos,
+[2020](#ref-gbiforg_gbif_2020-3)[i](#ref-gbiforg_gbif_2020-3)), Arctos,
 and iNaturalist, then processed these. I had entered data for specimen
 records
 [KNWR:Ento:11383](http://arctos.database.museum/guid/KNWR:Ento:11383)
@@ -6544,7 +6544,7 @@ To do:
 
   - ~~Submit this week’s *Refuge Notebook* article.~~
   - Revise aquatic herbicide PUPs.
-  - Get non-native plant data to AKNHP folks.
+  - ~~Get non-native plant data to AKNHP folks.~~
   - ~~Get burn severity plot data to Lisa.~~
   - Improve Kenai NWR checklist processing/formatting.
   - Slikok occupancy.
@@ -6561,6 +6561,16 @@ that are within 1 mile from
 roads.](2020-05-28-1132_Swan_Lake_Fire_LTEMP.jpg)  
 Map of FIA points that are within the Swan Lake Fire perimeter and that
 are within 1 mile from roads.
+
+For extracting non-native plant data I obtained the extent of the Swan
+Lake Fire perimeter in WGS84 coordinates:
+
+I downloaded data from GBIF (GBIF.org
+[2020](#ref-gbiforg_gbif_2020-8_Swan_Lake_Fire_plants)[e](#ref-gbiforg_gbif_2020-8_Swan_Lake_Fire_plants))
+and from iNaturalist.org
+(<https://www.inaturalist.org/observations?nelat=60.728891&nelng=-149.854865&place_id=any&swlat=60.430024&swlng=-150.529237&taxon_id=47126>),
+extracted records within the fire perimeter, dropped the iNaturalist
+records from the GBIF dataset, and send these data to Justin.
 
 # Bibliography
 
@@ -6761,30 +6771,37 @@ doi:[10.15468/dl.sc5xmu](https://doi.org/10.15468/dl.sc5xmu).
 
 </div>
 
-<div id="ref-gbiforg_gbif_2020-1">
+<div id="ref-gbiforg_gbif_2020-8_Swan_Lake_Fire_plants">
 
 GBIF.org. 2020e. GBIF Occurrence Download. GBIF.org.
+doi:[10.15468/dl.f46pcs](https://doi.org/10.15468/dl.f46pcs).
+
+</div>
+
+<div id="ref-gbiforg_gbif_2020-1">
+
+GBIF.org. 2020f. GBIF Occurrence Download. GBIF.org.
 doi:[10.15468/dl.bguubm](https://doi.org/10.15468/dl.bguubm).
 
 </div>
 
 <div id="ref-gbiforg_gbif_2020">
 
-GBIF.org. 2020f. GBIF Occurrence Download. GBIF.org.
+GBIF.org. 2020g. GBIF Occurrence Download. GBIF.org.
 doi:[10.15468/dl.3dfs26](https://doi.org/10.15468/dl.3dfs26).
 
 </div>
 
 <div id="ref-gbiforg_gbif_2020-2">
 
-GBIF.org. 2020g. GBIF Occurrence Download. GBIF.org.
+GBIF.org. 2020h. GBIF Occurrence Download. GBIF.org.
 doi:[10.15468/dl.deymas](https://doi.org/10.15468/dl.deymas).
 
 </div>
 
 <div id="ref-gbiforg_gbif_2020-3">
 
-GBIF.org. 2020h. GBIF Occurrence Download. GBIF.org.
+GBIF.org. 2020i. GBIF Occurrence Download. GBIF.org.
 doi:[10.15468/dl.azbzw2](https://doi.org/10.15468/dl.azbzw2).
 
 </div>
