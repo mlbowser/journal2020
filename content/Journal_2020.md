@@ -114,6 +114,8 @@
       - [Wednesday, May 20](#wednesday-may-20)
       - [Thursday, May 21](#thursday-may-21)
       - [Tuesday, May 26](#tuesday-may-26)
+      - [Wednesday, May 27](#wednesday-may-27)
+      - [Thursday, May 28](#thursday-may-28)
   - [Bibliography](#bibliography)
 
 # January
@@ -6503,6 +6505,62 @@ Detail of tomentose ridges of a morel specimen with iNaturalist
 observation ID
 [47411794](https://www.inaturalist.org/observations/47411794),
 apparently *Morchella tomentosa*.
+
+Ethan, Apphia, Esther, and I drove to the pull-off across from Katmai
+Avenue to look for morels. Here we found two morels (2020-05-26\_MLB01
+and 2020-05-26\_MLB02) at the edge of the gravel pad under small spruce,
+birches, short cottonwoods, and grass.
+
+## Wednesday, May 27
+
+To do:
+
+  - Write this week’s *Refuge Notebook* article.
+  - Revise aquatic herbicide PUPs.
+  - ~~Get shortened list of non-native plant species to Amanda.~~
+  - Get non-native plant data to AKNHP folks.
+  - Get burn severity plot data to Lisa.
+  - Improve Kenai NWR checklist processing/formatting.
+  - Slikok occupancy.
+  - Finish 2019 black spruce project.
+  - Clean up stuff on Yeti.
+
+I drove in and worked at the office this morning just to check in.
+
+I got a list of non-native plant species to Amanda.
+
+Steve Miller gave me two specimens of morels he had collected
+(iNaturalist observation IDs:
+[47524671](https://www.inaturalist.org/observations/47524671) and
+[47524963](https://www.inaturalist.org/observations/47524963)).
+
+I worked on the *Refuge Notebook* article due today.
+
+I added *Morchella tomentosa* to the Refuge’s checklist.
+
+## Thursday, May 28
+
+To do:
+
+  - ~~Submit this week’s *Refuge Notebook* article.~~
+  - Revise aquatic herbicide PUPs.
+  - Get non-native plant data to AKNHP folks.
+  - ~~Get burn severity plot data to Lisa.~~
+  - Improve Kenai NWR checklist processing/formatting.
+  - Slikok occupancy.
+  - Finish 2019 black spruce project.
+  - Clean up stuff on Yeti.
+
+I finished revising and submitted my *Refuge Notebook* article on morels
+this morning.
+
+I mapped FIA points within the Swan Lake fire and near roads for Lisa.
+
+![Map of FIA points that are within the Swan Lake Fire perimeter and
+that are within 1 mile from
+roads.](2020-05-28-1132_Swan_Lake_Fire_LTEMP.jpg)  
+Map of FIA points that are within the Swan Lake Fire perimeter and that
+are within 1 mile from roads.
 
 # Bibliography
 
