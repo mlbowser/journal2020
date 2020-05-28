@@ -6572,6 +6572,27 @@ and from iNaturalist.org
 extracted records within the fire perimeter, dropped the iNaturalist
 records from the GBIF dataset, and send these data to Justin.
 
+``` r
+## Now I am working on improving checklist output.
+
+source("make_DWC-A.R")
+
+sl <- dwc1[,3]=="" | 
+ dwc1[,4]=="" | 
+ dwc1[,5]=="" | 
+ dwc1[,6]=="" | 
+ dwc1[,7]==""  
+
+## Saving this to manually edit. 
+write.csv(dwc1[sl,], "../data/taxonomy_fill-ins.csv", row.names=FALSE)
+```
+
+I updated the
+[make\_DWC-A.R](https://github.com/mlbowser/KenaiNWRspecies/blob/master/scripts/make_DwC-A.R)
+script to incorporate the edited data. The
+[checklist](https://github.com/mlbowser/KenaiNWRspecies/blob/master/text/checklist.md)
+now looks much better. It now includes 1,868 species.
+
 # Bibliography
 
 <div id="refs" class="references">
