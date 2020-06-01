@@ -116,6 +116,9 @@
       - [Tuesday, May 26](#tuesday-may-26)
       - [Wednesday, May 27](#wednesday-may-27)
       - [Thursday, May 28](#thursday-may-28)
+      - [Friday, May 29](#friday-may-29)
+  - [June](#june)
+      - [Monday, June 1](#monday-june-1)
   - [Bibliography](#bibliography)
 
 # January
@@ -6592,6 +6595,70 @@ I updated the
 script to incorporate the edited data. The
 [checklist](https://github.com/mlbowser/KenaiNWRspecies/blob/master/text/checklist.md)
 now looks much better. It now includes 1,868 species.
+
+## Friday, May 29
+
+To do:
+
+  - Revise aquatic herbicide PUPs.
+  - Improve Kenai NWR checklist processing/formatting.
+  - Slikok occupancy.
+  - Finish 2019 black spruce project.
+  - Clean up stuff on Yeti.
+
+I am checking through the recent Kenai NWR checklist draft DwC-A file
+using GBIF’s validator (<https://www.gbif.org/tools/data-validator>).
+For some reason 5% of the taxa are missing genus names. Also, 189 out of
+1868 records were flagged as “Distribution invalid”, but I could not see
+what was different about these records.
+
+``` r
+## Filling in missing genus values.
+
+source("make_DWC-A.R")
+
+sl <- dwc1$genus=="" 
+spt <- strsplit(dwc1$scientificName[sl], " ")
+genus <- sapply(spt, "[", 1)
+dwc1_add <- dwc1[sl,]
+dwc1_add$genus <- genus
+fillin <- rbind(fillin, dwc1_add)
+write.csv(fillin, "../data/taxonomy_fill-ins.csv", row.names=FALSE)
+```
+
+This still had the 189 distribution invalid records. I do not know what
+is going on here.
+
+I worked on improving output formatting of the checlist.
+
+Later, Ethan, Apphia, and I drove to Cohoe Beach to look for morels. I
+had read that there are some special morel species that grow on dunes
+and in grasslands, so I wanted to check the best place I know locally
+for these kinds of situations. We looked in the dunes and around spruces
+that are growing out in the dunes, but we found no morels. The dunes
+have recovered quite a bit since the fence was but in and vehicles have
+been kept off of the dunes.
+
+# June
+
+## Monday, June 1
+
+To do:
+
+  - ~~Edit this week’s *Refuge Notebook* article.~~
+  - Get the *AKES Newsletter* out.
+  - *Refuge Notebook* catch-up.
+  - Revise aquatic herbicide PUPs.
+  - Improve Kenai NWR checklist processing/formatting.
+  - Slikok occupancy.
+  - Finish 2019 black spruce project.
+  - Clean up stuff on Yeti.
+
+I edited a draft of this week’s *Refuge Notebook* article.
+
+I worked on applying edits to articles in the *AKES Newsletter*
+
+AKES\_newsletter\_2020\_n1\_a01.pdf
 
 # Bibliography
 
