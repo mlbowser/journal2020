@@ -119,6 +119,8 @@
       - [Friday, May 29](#friday-may-29)
   - [June](#june)
       - [Monday, June 1](#monday-june-1)
+      - [Tuesday, June 2](#tuesday-june-2)
+      - [Wednesday, June 3](#wednesday-june-3)
   - [Bibliography](#bibliography)
 
 # January
@@ -6646,7 +6648,7 @@ been kept off of the dunes.
 To do:
 
   - ~~Edit this week’s *Refuge Notebook* article.~~
-  - Get the *AKES Newsletter* out.
+  - ~~Get the *AKES Newsletter* out.~~
   - *Refuge Notebook* catch-up.
   - Revise aquatic herbicide PUPs.
   - Improve Kenai NWR checklist processing/formatting.
@@ -6659,6 +6661,108 @@ I edited a draft of this week’s *Refuge Notebook* article.
 I worked on applying edits to articles in the *AKES Newsletter*
 
 AKES\_newsletter\_2020\_n1\_a01.pdf
+
+I spent some time getting [this issue of the *AKES
+Newsletter*](http://www.akentsoc.org/newsletter-v13-n1) posted, getting
+all of the DOIs set up, etc.
+
+I worked on merging Jake’s work in FWSpecies and generating new DwC-A
+and text files, getting a draft done.
+
+## Tuesday, June 2
+
+To do:
+
+  - Fill out a USFWS Alaska Region 2020 field project go/no go screening
+    matrix and individual project safety plan for the Swan Lake Fire
+    burn severity and vegetation response project.
+  - Submit this week’s *Refuge Notebook* article.
+  - *Refuge Notebook* catch-up.
+  - Revise aquatic herbicide PUPs.
+  - Improve Kenai NWR checklist processing/formatting.
+  - Slikok occupancy.
+  - Finish 2019 black spruce project.
+
+I started completing a field project plan for the Swan Lake Fire burn
+severity and vegetation response project that is now required under the
+current COVID-19 situation.
+
+``` r
+Filling in taxonomy again.
+
+source("make_DWC-A.R")
+
+sl <- dwc1[,3]=="" | 
+ dwc1[,4]=="" | 
+ dwc1[,5]=="" | 
+ dwc1[,6]=="" | 
+ dwc1[,7]=="" |
+ dwc1[,8]==""
+
+## Filling in genera.
+slg <- dwc1$genus == ""
+spt <- strsplit(dwc1$scientificName[slg], " ")
+genus <- sapply(spt, "[", 1)
+dwc1$genus[slg] <- genus
+ 
+## Saving this to manually edit. 
+write.csv(dwc1[sl,], "../data/taxonomy_fill-ins_new.csv", row.names=FALSE)
+```
+
+I see that some of the distribution information is missing for some
+species.
+
+``` r
+## Generate a distribution file.
+dist1 <- data1[,c(
+ "ID",
+ "locality",
+ "occurrenceStatus",
+ "Origin"
+ )]
+
+ head(dist1)
+## The species with ID 654758 has a missing Origin value of "".
+
+levels(as.factor(dist1$Origin))
+[1] ""           "Native"     "Non-native"
+
+missing_origin <- data1[data1$Origin=="" & data1$taxonRank=="species",]
+nrow(missing_origin)
+[1] 458 ## That is a lot.
+
+## Saving this to deal with it. 
+write.csv(missing_origin, "../data/missing_origin.csv", row.names=FALSE)
+```
+
+I worked on generating pdf output of the checklist, getting a first
+iteration done.
+
+Later I received two independent reports of thousands of caterpillars
+off of the Marsh Lake Trail. I looked through caterpillar images. I
+think they are noctuids, maybe Hadeninae.
+
+## Wednesday, June 3
+
+To do:
+
+  - Fill out a USFWS Alaska Region 2020 field project go/no go screening
+    matrix and individual project safety plan for the Swan Lake Fire
+    burn severity and vegetation response project.
+  - ~~Submit this week’s *Refuge Notebook* article.~~
+  - *Refuge Notebook* catch-up.
+  - Revise aquatic herbicide PUPs.
+  - Improve Kenai NWR checklist processing/formatting.
+  - Slikok occupancy.
+  - Finish 2019 black spruce project.
+
+I made final edits on this week’s *Refuge Notebook* article and got it
+sent in.
+
+I worked on adding origin values for species in the checklist for which
+this value was missing, starting at the bottom of the list with species
+starting with Z, but then FWSpecies’ editing interface apparently went
+down when I was trying to edit *Stereocaulon alpinum*.
 
 # Bibliography
 
