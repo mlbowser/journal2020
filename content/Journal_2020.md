@@ -6852,6 +6852,18 @@ I made a map for the Sandpiper Lake Project Aviation Safety Plan.
 map.](2020-06-08_Sandpiper_Lake_aviation_map.jpg)  
 Sandpiper Lake elodea eradication project aviation map.
 
+### 11:00 Biology staff meeting
+
+Steve Swenson tentatively identified the Marsh Lake Trail caterpillars
+as *Sunira verberata* and sent me photos from the Richardson Highway on
+cottonwoods in 2017. There were an outbreaks of this species in Alaska
+in the 2000s and in 2017 (USDA Forest Service, Alaska Region
+[2005](#ref-usda_forest_service_alaska_region_forest_2005),
+[2006](#ref-usda_forest_service_alaska_region_forest_2006),
+[2007](#ref-usda_forest_service_alaska_region_forest_2007),
+[2008](#ref-usda_forest_service_alaska_region_forest_2008); FS-R10-FHP
+[2018](#ref-fs-r10-fhp_forest_2018)).
+
 # Bibliography
 
 <div id="refs" class="references">
@@ -7020,6 +7032,15 @@ Froeschner, R.C. 1976. Zoogeographic notes on the lace bug genus
 from Mexico (Hemiptera: Tingidae). The American Midland Naturalist
 **96**(2): 257–269.
 doi:[10.2307/2424067](https://doi.org/10.2307/2424067).
+
+</div>
+
+<div id="ref-fs-r10-fhp_forest_2018">
+
+FS-R10-FHP. 2018. Forest Health Conditions in Alaska - 2017. FHP
+Protection Report, U.S. Forest Service, Alaska Region, Anchorage,
+Alaska. Available from
+<https://www.fs.usda.gov/Internet/FSE_DOCUMENTS/fseprd572286.pdf>.
 
 </div>
 
@@ -7408,6 +7429,42 @@ belowground structure and a new clade of morels. Mycologia **102**(5):
 Stolz, C. 2019. The nestling diet of Svalbard snow buntings identified
 by DNA metabarcoding. Master’s thesis, The Arctic University of Norway.
 Available from <https://hdl.handle.net/10037/15438>.
+
+</div>
+
+<div id="ref-usda_forest_service_alaska_region_forest_2005">
+
+USDA Forest Service, Alaska Region. 2005. Forest Health Conditions in
+Alaska—2004. USDA Forest Service, Alaska Region, Anchorage, Alaska.
+Available from
+<https://www.fs.usda.gov/Internet/FSE_DOCUMENTS/fsbdev2_038152.pdf>.
+
+</div>
+
+<div id="ref-usda_forest_service_alaska_region_forest_2006">
+
+USDA Forest Service, Alaska Region. 2006. Forest Health Conditions in
+Alaska—2005. Protection Report, USDA Forest Service, Alaska Region.
+Available from
+<https://www.fs.usda.gov/Internet/FSE_DOCUMENTS/fsbdev2_038151.pdf>.
+
+</div>
+
+<div id="ref-usda_forest_service_alaska_region_forest_2007">
+
+USDA Forest Service, Alaska Region. 2007. Forest Health Conditions in
+Alaska–2006. Protection Report, USDA Forest Service, Alaska Region.
+Available from
+<https://www.fs.usda.gov/Internet/FSE_DOCUMENTS/fsbdev2_037574.pdf>.
+
+</div>
+
+<div id="ref-usda_forest_service_alaska_region_forest_2008">
+
+USDA Forest Service, Alaska Region. 2008. Forest Health Conditions in
+Alaska—2007. Protection Report, United States Department of Agriculture
+Forest Service, Alaska Region. Available from
+<https://www.fs.usda.gov/Internet/FSE_DOCUMENTS/fsbdev2_038216.pdf>.
 
 </div>
 
