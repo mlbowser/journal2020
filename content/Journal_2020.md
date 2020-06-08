@@ -121,6 +121,9 @@
       - [Monday, June 1](#monday-june-1)
       - [Tuesday, June 2](#tuesday-june-2)
       - [Wednesday, June 3](#wednesday-june-3)
+      - [Thursday, June 4](#thursday-june-4)
+      - [Friday, June 5](#friday-june-5)
+      - [Monday, June 8](#monday-june-8)
   - [Bibliography](#bibliography)
 
 # January
@@ -6763,6 +6766,82 @@ I worked on adding origin values for species in the checklist for which
 this value was missing, starting at the bottom of the list with species
 starting with Z, but then FWSpecies’ editing interface apparently went
 down when I was trying to edit *Stereocaulon alpinum*.
+
+In the afternoon I drove in to the office, then to the Snowshoe Gun Club
+for bear firearms training, where I qualified.
+
+I received some of the caterpillars collected from the Marsh Lake Trail.
+
+## Thursday, June 4
+
+To do:
+
+  - Fill out a USFWS Alaska Region 2020 field project go/no go screening
+    matrix and individual project safety plan for the Swan Lake Fire
+    burn severity and vegetation response project.
+  - *Refuge Notebook* catch-up.
+  - Revise aquatic herbicide PUPs.
+  - Improve Kenai NWR checklist processing/formatting.
+  - Slikok occupancy.
+  - Finish 2019 black spruce project.
+
+### 09:00 KPWCMA meeting
+
+During the meeting I documented some reed canary grass on state land
+(iNaturalist:
+[48456585](https://www.inaturalist.org/observations/48456585)).
+
+I photographed the Marsh Lake Trail caterpillars and posted photos (
+BugGuide.Net: [1826667](https://bugguide.net/node/view/1826667);
+iNaturalist:
+[48469943](https://www.inaturalist.org/observations/48469943)).
+
+I reviewed and edited the Miller Creek Drainage Restoration Northern
+Pike Eradication Treatment Plan and got it back to Rob.
+
+I started a USFWS Alaska Region 2020 Field Project Go/No Go Screening
+Matrix and Individual Project Safety Plan for the Sandpiper Lake elodea
+eradication project.
+
+## Friday, June 5
+
+To do:
+
+  - Fill out a USFWS Alaska Region 2020 field project go/no go screening
+    matrix and individual project safety plan for the Sandpiper Lake
+    elodea eradication project.
+  - *Refuge Notebook* catch-up.
+  - Revise aquatic herbicide PUPs.
+  - Improve Kenai NWR checklist processing/formatting.
+  - Slikok occupancy.
+  - Finish 2019 black spruce project.
+
+I worked on the USFWS Alaska Region 2020 Field Project Go/No Go
+Screening Matrix and Individual Project Safety Plan for the Sandpiper
+Lake elodea eradication project.
+
+### 10:00 meeting regarding the Swan Lake Fire burn severity project.
+
+I finished and sent off a draft USFWS Alaska Region 2020 field project
+go/no go screening matrix and individual project safety plan for the
+Swan Lake Fire burn severity and vegetation response project.
+
+I worked on the same kind of document for the elodea project and I also
+started on the elodea project aviation safety plan.
+
+## Monday, June 8
+
+To do:
+
+  - Fill out a USFWS Alaska Region 2020 field project go/no go screening
+    matrix and individual project safety plan for the Sandpiper Lake
+    elodea eradication project.
+  - *Refuge Notebook* catch-up.
+  - Revise aquatic herbicide PUPs.
+  - Improve Kenai NWR checklist processing/formatting.
+  - Publish LTEMP bird and plant data.
+  - Slikok occupancy.
+  - Finish 2019 black spruce project.
 
 # Bibliography
 
