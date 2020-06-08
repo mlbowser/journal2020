@@ -6796,6 +6796,9 @@ BugGuide.Net: [1826667](https://bugguide.net/node/view/1826667);
 iNaturalist:
 [48469943](https://www.inaturalist.org/observations/48469943)).
 
+![Noctuid larva from Marsh Lake Trail.](2020-06-04_noctuid.jpg)  
+Noctuid larva from Marsh Lake Trail.
+
 I reviewed and edited the Miller Creek Drainage Restoration Northern
 Pike Eradication Treatment Plan and got it back to Rob.
 
