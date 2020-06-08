@@ -6843,6 +6843,12 @@ To do:
   - Slikok occupancy.
   - Finish 2019 black spruce project.
 
+I made a map for the Sandpiper Lake Project Aviation Safety Plan.
+
+![Sandpiper Lake elodea eradication project aviation
+map.](2020-06-08_Sandpiper_Lake_aviation_map.jpg)  
+Sandpiper Lake elodea eradication project aviation map.
+
 # Bibliography
 
 <div id="refs" class="references">
