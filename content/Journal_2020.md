@@ -124,6 +124,9 @@
       - [Thursday, June 4](#thursday-june-4)
       - [Friday, June 5](#friday-june-5)
       - [Monday, June 8](#monday-june-8)
+      - [Tuesday, June 9](#tuesday-june-9)
+      - [Wednesday, June 10](#wednesday-june-10)
+      - [Thursday, June 11](#thursday-june-11)
   - [Bibliography](#bibliography)
 
 # January
@@ -6862,7 +6865,79 @@ in the 2000s and in 2017 (USDA Forest Service, Alaska Region
 [2006](#ref-usda_forest_service_alaska_region_forest_2006),
 [2007](#ref-usda_forest_service_alaska_region_forest_2007),
 [2008](#ref-usda_forest_service_alaska_region_forest_2008); FS-R10-FHP
-[2018](#ref-fs-r10-fhp_forest_2018)).
+[2018](#ref-fs-r10-fhp_forest_2018)). I had collected this species on
+June 10, 2017 on the Fuller Lakes Trail (iNaturalist:
+[6586033](https://www.inaturalist.org/observations/6586033), BOLD:
+[MOBIL6501-18](http://boldsystems.org/index.php/Public_RecordView?processid=MOBIL6501-18)),
+where I had noted that these were numerous.
+
+## Tuesday, June 9
+
+To do:
+
+  - Fill out a USFWS Alaska Region 2020 field project go/no go screening
+    matrix and individual project safety plan for the Sandpiper Lake
+    elodea eradication project.
+  - Project aviation safety plan for the Sandpiper Lake elodea
+    eradication project.
+  - Take A-110 Aviation Transportation of Hazardous Materials course.
+  - Edit this week’s *Refuge Notebook* article.
+  - *Refuge Notebook* catch-up.
+  - Revise aquatic herbicide PUPs.
+
+I added the vernacularName field to Kenai NWR’s checklist DwC-A output.
+
+### 12:00 MRA discussion
+
+I have had a terrible time with internet connectivity today, so I worked
+on improving checklist format, which I can do locally. I added indexing
+for kingdoms through species.
+
+## Wednesday, June 10
+
+To do:
+
+  - Fill out a USFWS Alaska Region 2020 field project go/no go screening
+    matrix and individual project safety plan for the Sandpiper Lake
+    elodea eradication project.
+  - Project aviation safety plan for the Sandpiper Lake elodea
+    eradication project.
+  - Take A-110 Aviation Transportation of Hazardous Materials course.
+  - ~~Edit and submit this week’s *Refuge Notebook* article.~~
+  - *Refuge Notebook* catch-up.
+  - Revise aquatic herbicide PUPs.
+
+I received this week’s *Refuge Notebook* article today. I revised this
+and got it sent to the *Clarion*.
+
+In the evening I entered data for LifeScanner specimens: an immature
+earthworm from the large island in West Forest Lake (vial BOLD-XH4,
+iNaturalist:
+[49066582](https://www.inaturalist.org/observations/49066582)) and a
+tiny caterpillar from a volunteering *Brassica* sp. in our high tunnels
+(vial BOLD-0S1). I was not able to enter data from a leaf mining Diptera
+larva in a leaf of bok choy collected this evening (vial BOLD-BS8)
+because the LifeScanner interface would not accept this vial label.
+
+## Thursday, June 11
+
+To do:
+
+  - Fill out a USFWS Alaska Region 2020 field project go/no go screening
+    matrix and individual project safety plan for the Sandpiper Lake
+    elodea eradication project.
+  - Project aviation safety plan for the Sandpiper Lake elodea
+    eradication project.
+  - Take A-110 Aviation Transportation of Hazardous Materials course.
+  - *Refuge Notebook* catch-up.
+  - Revise aquatic herbicide PUPs.
+
+Jake and I worked on the checklist some today, fixing records for which
+origin was lacking. I also worked on improving the formatting of the
+checklist.
+
+I worked some on the Sandpiper Lake elodea eradication project aviation
+safety plan.
 
 # Bibliography
 
