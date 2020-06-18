@@ -127,6 +127,10 @@
       - [Tuesday, June 9](#tuesday-june-9)
       - [Wednesday, June 10](#wednesday-june-10)
       - [Thursday, June 11](#thursday-june-11)
+      - [Friday, June 12](#friday-june-12)
+      - [Tuesday, June 16](#tuesday-june-16)
+      - [Wednesday, June 17](#wednesday-june-17)
+      - [Thursday, June 18](#thursday-june-18)
   - [Bibliography](#bibliography)
 
 # January
@@ -6938,6 +6942,67 @@ checklist.
 
 I worked some on the Sandpiper Lake elodea eradication project aviation
 safety plan.
+
+I stopped by the office in the evening to get my field gear together for
+field work tomorrow. I also walked quickly down to Headquarters Lake.
+There does not appear to be a caterpillar outbreak going on in these
+woods. There were some geometrid caterpillars, but I saw no noctuids.
+The mosquitoes were nasty. I enjoyed just seeing some of these woods
+again.
+
+## Friday, June 12
+
+I arrived early to get things together for today.
+
+Mark, Amanda, Jake, and I hauled a UTV out to Adkins Road, then took the
+UTV down the pipeline, continuing with weed survey work that they had
+begun earlier.
+
+Our first stop was at a gated valve on the pipeline at 60.57667°N,
+150.471202°W. Here we just saw *Taraxacum officinale*, *Trifolium*, and
+other common weeds of trails and roads.
+
+Our next stop was at DP-100. This was quite clean. The only non-native
+plant we saw here was *Taraxacum officinale*.
+
+The vegetation response has looked quite nice along this pipeline. Most
+of the woods have burned with moderate severity and already aspens,
+willows, and fireweed are resprouting. It looks like these will be
+mostly aspen woods soon.
+
+![Burned woods at DP-100.](2020-06-12_woods_at_DP-100.jpg)  
+Burned woods at DP-100.
+
+Here I did collect aphids from *Salix bebbiana* -\> vial BOLD-PB6.
+
+We stopped next at H-35. Here were just *Taraxacum officinale*,
+*Plantago major*, and *Matricaria discoides*.
+
+Our next stop was DP-110. There was what I believe is *Leucanthemum
+vulgare* here, but it is immature. Near here I collected one morel with
+root-like structures (2020-06-12-MLB01).
+
+Observations from the day are available at
+<https://www.inaturalist.org/calendar/mbowser/2020/6/12>.
+
+## Tuesday, June 16
+
+I edited this week’s *Refuge Notebook* article and sent comments back to
+the author.
+
+I also quickly responded with an explanation of the DNA sequencing “Big
+Ideas” project funding request.
+
+## Wednesday, June 17
+
+I worked on making edits to this week’s *Refuge Notebook* article,
+getting it sent in.
+
+### Biology staff meeting at 09:00
+
+## Thursday, June 18
+
+I uploaded photo observations from June 12 to iNaturliast.
 
 # Bibliography
 
