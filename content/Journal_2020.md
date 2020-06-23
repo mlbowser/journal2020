@@ -131,6 +131,9 @@
       - [Tuesday, June 16](#tuesday-june-16)
       - [Wednesday, June 17](#wednesday-june-17)
       - [Thursday, June 18](#thursday-june-18)
+      - [Friday, June 19](#friday-june-19)
+      - [Monday, June 22](#monday-june-22)
+      - [Tuesday, June 23](#tuesday-june-23)
   - [Bibliography](#bibliography)
 
 # January
@@ -6958,12 +6961,12 @@ Mark, Amanda, Jake, and I hauled a UTV out to Adkins Road, then took the
 UTV down the pipeline, continuing with weed survey work that they had
 begun earlier.
 
-Our first stop was at a gated valve on the pipeline at 60.57667°N,
-150.471202°W. Here we just saw *Taraxacum officinale*, *Trifolium*, and
+Our first stop was at a gated valve on the pipeline at 60.57667 °N,
+150.471202 °W. Here we just saw *Taraxacum officinale*, *Trifolium*, and
 other common weeds of trails and roads.
 
-Our next stop was at DP-100. This was quite clean. The only non-native
-plant we saw here was *Taraxacum officinale*.
+Our next stop was at DP-100 at 60.5848 °N, 150.444657 °W. This was quite
+clean. The only non-native plant we saw here was *Taraxacum officinale*.
 
 The vegetation response has looked quite nice along this pipeline. Most
 of the woods have burned with moderate severity and already aspens,
@@ -6973,14 +6976,14 @@ mostly aspen woods soon.
 ![Burned woods at DP-100.](2020-06-12_woods_at_DP-100.jpg)  
 Burned woods at DP-100.
 
-Here I did collect aphids from *Salix bebbiana* -\> vial BOLD-PB6.
+Here I collected aphids from *Salix bebbiana* → vial BOLD-PB6.
 
-We stopped next at H-35. Here were just *Taraxacum officinale*,
-*Plantago major*, and *Matricaria discoides*.
+We stopped next at H-35 at 60.588818 °N, 150.430852 °W. Here were just
+*Taraxacum officinale*, *Plantago major*, and *Matricaria discoidea*.
 
-Our next stop was DP-110. There was what I believe is *Leucanthemum
-vulgare* here, but it is immature. Near here I collected one morel with
-root-like structures (2020-06-12-MLB01).
+Our next stop was DP-110 at 60.597067 °N, 150.395643 °W. There was what
+I believe is *Leucanthemum vulgare* here, but it was immature. Near here
+I collected one morel with root-like structures (2020-06-12-MLB01).
 
 Observations from the day are available at
 <https://www.inaturalist.org/calendar/mbowser/2020/6/12>.
@@ -7003,6 +7006,82 @@ getting it sent in.
 ## Thursday, June 18
 
 I uploaded photo observations from June 12 to iNaturliast.
+
+I tried to download data from FWSpecies to generate a list of species
+lacking evidence for Jake to work on, but I was unable to download these
+due to connectivity issues.
+
+``` r
+## Get a list of species lacking evidence.
+
+## Load functions and libraries.
+source("functions.R")
+
+## First load data.
+data1 <- assemble_csvs(directory="../data/FWSpecies")
+fields_crosswalk <- read.csv("../data/field_name_crosswalk.csv", colClasses="character")
+establishmentMeans_crosswalk <- read.csv("../data/establishmentMeans_crosswalk.csv", colClasses="character")
+fillin <- read.csv("../data/taxonomy_fill-ins.csv", colClasses="character")
+
+## Renaming fields.
+for (this_field in 1:nrow(fields_crosswalk))
+ {
+ sl <- which(names(data1) == fields_crosswalk$FWSpecies_field[this_field])
+ names(data1)[sl] <- fields_crosswalk$DwC_field[this_field]
+ }
+ 
+## Filling in some missing values.
+data1$scientificName[data1$scientificName == ""] <- data1$SciName[data1$scientificName == ""]
+ 
+data1$taxonRank <- tolower(data1$taxonRank)
+
+data1 <- data1[data1$taxonRank == "species",] ## Limiting the list to species only for now.
+
+sl <- data1$source == ""
+
+nosource <- data1[sl,c("SciName", "SpeciesNote")]
+nosource <- nosource[order(nosource$SciName),]
+
+write.csv(nosource,
+ "../data/species_lacking_evidence.csv",
+ row.names=FALSE
+ )
+```
+
+I got this list of 813 species on the checklist but lacking evidence to
+Jake for him to work on.
+
+## Friday, June 19
+
+I added *Gnathacmaeops pratensis* to the Refuge’s checklist based on
+iNaturalist observations. I started going through FS-R10-FHP
+([2020](#ref-fs-r10-fhp_forest_2020)) for Kenai National Wildlife Refuge
+records. I need to request that *Lirula macrospora* (Hartig) Darker be
+added to FWSpecies’ taxonomy.
+
+## Monday, June 22
+
+I updated the map for the Sandpiper Lake Aviation Safety Plan.
+
+![Sandpiper Lake project aviation safety plan
+map.](2020-06-22_Sandpiper_Lake_aviation_map.jpg)  
+Sandpiper Lake project aviation safety plan map.
+
+### 11:00 Biology staff check-in
+
+  - We may be able to begin some field work tomorrow.
+
+I edited this week’s *Refuge Notebook* article.
+
+I worked on the Sandpiper Lake Aviation Safety Plan.
+
+## Tuesday, June 23
+
+I took the Cybersecurity - Federal Information Systems Security
+Awareness (FISSA) training due June 30.
+
+I received word of a new paper on birches (Rowe et al.
+[2020](#ref-rowe_how_2020)), which I pored over.
 
 # Bibliography
 
@@ -7181,6 +7260,14 @@ FS-R10-FHP. 2018. Forest Health Conditions in Alaska - 2017. FHP
 Protection Report, U.S. Forest Service, Alaska Region, Anchorage,
 Alaska. Available from
 <https://www.fs.usda.gov/Internet/FSE_DOCUMENTS/fseprd572286.pdf>.
+
+</div>
+
+<div id="ref-fs-r10-fhp_forest_2020">
+
+FS-R10-FHP. 2020. Forest Health Conditions in Alaska 2019. FHP Report,
+U.S. Forest Service, Alaska Region, Anchorage, Alaska. Available from
+<https://www.fs.usda.gov/Internet/FSE_DOCUMENTS/fseprd712413.pdf>.
 
 </div>
 
@@ -7505,6 +7592,15 @@ morels (*Morchella*, Pezizales) of Europe and North America:
 Evolutionary relationships inferred from multilocus data and a unified
 taxonomy. Mycologia **107**(2): 359–382.
 doi:[10.3852/14-166](https://doi.org/10.3852/14-166).
+
+</div>
+
+<div id="ref-rowe_how_2020">
+
+Rowe, C.A., Lichvar, R.W., and Wolf, P.G. 2020. How many tree species of
+birch are in Alaska? Implications for wetland designations. Frontiers in
+Plant Science **11**: 750.
+doi:[10.3389/fpls.2020.00750](https://doi.org/10.3389/fpls.2020.00750).
 
 </div>
 
