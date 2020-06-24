@@ -134,6 +134,7 @@
       - [Friday, June 19](#friday-june-19)
       - [Monday, June 22](#monday-june-22)
       - [Tuesday, June 23](#tuesday-june-23)
+      - [Wednesday, June 24](#wednesday-june-24)
   - [Bibliography](#bibliography)
 
 # January
@@ -6983,7 +6984,22 @@ We stopped next at H-35 at 60.588818 °N, 150.430852 °W. Here were just
 
 Our next stop was DP-110 at 60.597067 °N, 150.395643 °W. There was what
 I believe is *Leucanthemum vulgare* here, but it was immature. Near here
-I collected one morel with root-like structures (2020-06-12-MLB01).
+I collected one morel with root-like structures (2020-06-12-MLB01,
+iNaturalist:
+[50778241](https://www.inaturalist.org/observations/50778241)).
+
+As we made water crossings the belt-driven transmission began to slip
+due to water getting into the CVT. We drained the transmission case, but
+the problem continued so that we would begin to stall as we tried to
+drive through water crossings.
+
+Nate was already working off of Mystery Creek Road, so he drove his UTV
+down the pipeline and towed us through remaining water crossings. Our
+UTV was able to make it down Myster Creek Road.
+
+Nate drove Amanda, Jake, and me to Adkins Road. Jake and Amanda returned
+to the office; I drove back to Mystery Creek Road to pick up Mark and
+the UTV.
 
 Observations from the day are available at
 <https://www.inaturalist.org/calendar/mbowser/2020/6/12>.
@@ -7081,7 +7097,37 @@ I took the Cybersecurity - Federal Information Systems Security
 Awareness (FISSA) training due June 30.
 
 I received word of a new paper on birches (Rowe et al.
-[2020](#ref-rowe_how_2020)), which I pored over.
+[2020](#ref-rowe_how_2020)), which I pored over. This work does confirm
+what we thought about the relative distributions of *Betula neoalaskana*
+(*Betula pendula* ssp. *mandshurica*) and *Betula papyrifera* in Alaska.
+They did not find any obvious pattern for something that would match
+what we expect for *Betula kenaica*.
+
+Their samples 1031, 8576, 8577, 8578 are all from the Russian River area
+from Along the Sterling Highway up to Lower Russian Lake and are all
+identified as *Betula neoalaskana*.
+
+I am most curious about the different genotypes they obtained in the
+Anchorage area, Alaska’s biggest city. It is peculiar that these were
+not picked up in other areas. These different genotypes were both on
+Joint Base Elmendorf-Richardson several miles north of the main part of
+the city. I do not know if ornamental birches were planted anywhere on
+the base, but a variety of ornamental birches including *Betula
+papyrifera*, *Betula papyrifera* ‘Multistem’ (maybe the same as *Betula
+papyrifera* ‘Clump’), *Betula pendula* ‘Dalecarlica’, and *Betula
+pendula* ‘Youngii’ are sold and planted in the Anchorage area (one
+example: <https://faltzland.com/projects/deciduous-trees/>).
+
+I started looking into mapping the two birch genomes we received using
+bwa (<https://github.com/lh3/bwa>) to map against the *Betula pendula*
+genome of Salojärvi et al. ([2017](#ref-salojarvi_genome_2017))
+(<https://genomevolution.org/CoGe/GenomeInfo.pl?gid=35079>,<https://genomevolution.org/CoGe/GenomeInfo.pl?gid=35080>).
+
+## Wednesday, June 24
+
+I finished editing and sent off this week’s *Refuge Notebook* article.
+
+### KBBI pollinator interview at 18:00
 
 # Bibliography
 
@@ -7345,7 +7391,7 @@ doi:[10.15468/39omei](https://doi.org/10.15468/39omei).
 <div id="ref-gross_unterscheidung_2003">
 
 Gross, E.M., Erhard, D., Glaschke, A., and Haid, V. 2003. Unterscheidung
-unklarer morphotypen von *elodea* spp. Durch chemotaxonomische und
+unklarer morphotypen von *Elodea* spp. Durch chemotaxonomische und
 molekulartaxonomische methoden. Deutsche Gesellschaft für Limnologie
 (DGL) - Tagungsbericht (Köln). Available from
 <https://docplayer.org/7100923-Unterscheidung-unklarer-morphotypen-von-elodea-spp-durch-chemotaxonomische-und-molekulartaxonomische-methoden.html>.
@@ -7601,6 +7647,32 @@ Rowe, C.A., Lichvar, R.W., and Wolf, P.G. 2020. How many tree species of
 birch are in Alaska? Implications for wetland designations. Frontiers in
 Plant Science **11**: 750.
 doi:[10.3389/fpls.2020.00750](https://doi.org/10.3389/fpls.2020.00750).
+
+</div>
+
+<div id="ref-salojarvi_genome_2017">
+
+Salojärvi, J., Smolander, O.-P., Nieminen, K., Rajaraman, S., Safronov,
+O., Safdari, P., Lamminmäki, A., Immanen, J., Lan, T., Tanskanen, J.,
+Rastas, P., Amiryousefi, A., Jayaprakash, B., Kammonen, J.I., Hagqvist,
+R., Eswaran, G., Ahonen, V.H., Serra, J.A., Asiegbu, F.O., Dios
+Barajas-Lopez, J. de, Blande, D., Blokhina, O., Blomster, T., Broholm,
+S., Brosché, M., Cui, F., Dardick, C., Ehonen, S.E., Elomaa, P.,
+Escamez, S., Fagerstedt, K.V., Fujii, H., Gauthier, A., Gollan, P.J.,
+Halimaa, P., Heino, P.I., Himanen, K., Hollender, C., Kangasjärvi, S.,
+Kauppinen, L., Kelleher, C.T., Kontunen-Soppela, S., Koskinen, J.P.,
+Kovalchuk, A., Kärenlampi, S.O., Kärkönen, A.K., Lim, K.-J., Leppälä,
+J., Macpherson, L., Mikola, J., Mouhu, K., Mähönen, A.P., Niinemets, Ü.,
+Oksanen, E., Overmyer, K., Palva, E.T., Pazouki, L., Pennanen, V.,
+Puhakainen, T., Poczai, P., Possen, B.J.H.M., Punkkinen, M., Rahikainen,
+M.M., Rousi, M., Ruonala, R., Schoot, C. van der, Shapiguzov, A.,
+Sierla, M., Sipilä, T.P., Sutela, S., Teeri, T.H., Tervahauta, A.I.,
+Vaattovaara, A., Vahala, J., Vetchinnikova, L., Welling, A., Wrzaczek,
+M., Xu, E., Paulin, L.G., Schulman, A.H., Lascoux, M., Albert, V.A.,
+Auvinen, P., Helariutta, Y., and Kangasjärvi, J. 2017. Genome sequencing
+and population genomic analyses provide insights into the adaptive
+landscape of silver birch. Nature Genetics **49**: 904.
+doi:[10.1038/ng.3862](https://doi.org/10.1038/ng.3862).
 
 </div>
 
