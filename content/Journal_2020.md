@@ -135,6 +135,8 @@
       - [Monday, June 22](#monday-june-22)
       - [Tuesday, June 23](#tuesday-june-23)
       - [Wednesday, June 24](#wednesday-june-24)
+      - [Thursday, June 25](#thursday-june-25)
+      - [Friday, June 26](#friday-june-26)
   - [Bibliography](#bibliography)
 
 # January
@@ -3126,7 +3128,7 @@ records
 (*Caenis youngi*),
 [KNWR:Inv:53](http://arctos.database.museum/guid/KNWR:Inv:53)
 (*Sphaerium* sp. BOLD:AAG0345), and
-KNWR:Inv:54\](http://arctos.database.museum/guid/KNWR:Inv:54)
+[KNWR:Inv:54](http://arctos.database.museum/guid/KNWR:Inv:54)
 (Glossiphoniidae).
 
 ## Tuesday, March 24
@@ -7130,167 +7132,84 @@ genome of Salojärvi et al. ([2017](#ref-salojarvi_genome_2017))
 
 I finished editing and sent off this week’s *Refuge Notebook* article.
 
-Preparing answers for the KBBI interview this evening:
-
-  - Why is pollination so important?
-
-This goes back to why many living things reproduce sexually at all. It
-is evidently quite valuable to plants and many other living things to
-have an exchange of genetic information. Living things that do not
-reproduce sexually can end up in a genetic dead-end. They may be
-successful for a while, but since a population of clones has no genetic
-variation, they will be susceptible to changes in the environment or
-inhereted genetic errors. For clones, there is no way to adapt.
-
-Unlike most animals, plants cannot move around to find mates. Moving
-pollen between plants is the way that seed plants share genetic
-variation, enabling them to adapt to their changing environment.
-
-In a similar way that you could measure how important something is by
-how much money people spend on it, you can tell that pollination is
-important to plants by the amount of resources that plants spend to make
-pollen and get it delivered to other plants. This spring everything
-around my house in Kasilof was repeatedly coated with pollen from the
-spruce trees. It is a tremendous amount of pollen when you think about
-it.
-
-In northern latitudes, pollinating insects are actually less important
-than in temperate and tropical regions. Around here, all of our native
-trees, alders, willows, grasses, and sedges are wind-pollinated.
-
-For wind pollination to work, each plant must produce a large amount of
-pollen and there has to be a lot of the same species of plants around.
-For plants that are rare or sparse, it is unlikely that pollen from one
-plant will get to another.
-
-For many plants, it makes much more sense to basically pay for
-pollination services with nectar and pollen. The pollinators are much
-more efficient than wind pollination, especially for smaller plants and
-rare plants.
-
-  - Although you are an entomologist, are there other pollinators
-    besides insects?
-
-Sure, the other groups of important pollinators are hummingbirds and
-bats. We do not have any pollinating bats up here, but we do have
-migratory hummingbirds.
-
-  - Many people recognize honey bees as pollinators, however honey bees
-    are not native to north america. What are some native pollinators
-    found in Alaska?
-
-Wow, we have many native pollinators, mostly native bees, flies, and
-wasps, moths, butterflies, and beetles. There is a broad diversity of
-insects that visit flowers to obtain nectar as an energy food. Flowers
-are fun to watch because you never know what insects you might see
-stopping by to get a snack. Not all of these are very good at moving
-pollen around, though.
-
-Bumblebees are our most conspicious native pollinators. A recent paper
-listed ? species of bumblebees from Alaska.
-
-We also have leafcutter bees, masked bees, and miner bees.
-
-Among flies, the hover flies or flower flies are the most conpsicuous.
-These are common on flowers and many have yellow and black markings that
-mimic wasps and bees. We also have moths that mimics bees and wasps.
-
-A lot of muscoid flies - relatives of house flies - appear to be
-important pollinators here. There are in any case numerous.
-
-  - Are there any alaskan plants that are dependent on a sole
-    pollinator? Are there any Alaskan insects that have a mutualistic or
-    symbiotic relationship with natives plants?
-
-We do have some fairly specialized pollination relationships. Our
-louseworts are only pollinated by bumblebees, for example.
-
-Certainly most of our pollinators and insect-pollinated plants are
-generalists, forming relationships with many species.
-
-  - What are some of the biggest threats to a healthy insect population?
-
-In general, habitat destruction, pesticide use, and non-native species
-are believed to have contributed to declines in insect abundance.
-Locally, we have far less habitat destruction and pesticide use than in
-Europe or the lower 48. Non-native species and climate change pose the
-greatest threat to pollinators here.
-
-  - What are some insects that I can kill guilt free. How can I kill
-    them in a responsible manner?
-
-I would generally not kill any insects unless they are causing problems.
-The vast majority of insects have natural roles in the environment. Do
-not assume an insect is harmful.
-
-That said, insects are our most important competitors for our own food
-and some even feed on use. I think you can smash a mosquito or snipe fly
-that is biting you. It is also legitimate to destroy caterpillars that
-are eating your food. I don’t think that you need to think too hard
-about the most ethical way to kill them; I would concern myself more
-with what is effective.
-
-  - What are some detrimental insects that have parasitic relationships
-    to Native plants and animals?
-
-I don’t like to categorize living things as detrimental, good, or bad,
-unless there is a specific context. Insects are just insects. Each is
-just doing what it is made to do. They can certainly cause problems for
-us, but I do not think that makes them bad.
-
-Many insects feed on or parasitize native plants and animals. Take moose
-flies, for example, which are large, orange-tinted flies that depend on
-moose for all stages of their life cycle. Larvae eat moose droppings and
-adults feed on moose blood.
-
-Or consider willow rose gall midges that cause willows to form compact
-rosettes of leaves that look like green roses. The fly larva causes the
-willow to make a cozy home for it. This reduces the growth of the willow
-plant.
-
-  - Have you noticed any rises in non-native insects within the last few
-    years? Has climate change affected this rise?
-
-We have seen increases in a number of non-native species, especially as
-they become established here. A cluster fly was first found in Alaska
-several years ago and is now abundant in Homer. Large yellow underwing
-moths, green alder sawflies, and multiple species of birch leaf miners
-are all recently established non-native insects that appear to have
-increased in abundance in recent decades. Watch out for the blackberry
-skeletonizer, which arrived in Alaska very recently.
-
-I think the best climate-related example is the spruce aphid. It arrived
-in SE Alaska in the 60s or 70s and made its way northwest in coastal
-Alaska. What allowed it to take off in Homer was a run of warm winters.
-
-  - How can people provide habitat for Native pollinators?
-
-I am not an expert on designing pollinator gardens, but I would plant a
-variety of hummingbird and insect-pollinated plants. Columbines, indian
-paintbrush, fireweed, salmonberry, and currants are supposed to be good
-for hummingbirds. Blueberries, raspberries, fireweed, rusty menziesia,
-and many other native flowers.
-
-Cow parsnip or pushki are one of the most fun plants to observe
-pollinators on. Many insects, especially flies, congregate on the white
-platforms formed by these flowering heads. Certain predacious sawflies
-(which are not flies) routinely stalk these flowers, nabbing flies. Keep
-an eye out for goldenrod crab spiders
-
-  - Salmon eat insects. Which insects do they eat/ which insects are
-    important to healthy salmon ecosystems?
-
-There are some fisheries biologists around here that would be able to
-answer this better than I can, but young silver and king salmon do eat
-mainly aquatic invertebrates and terrestrial invertebrates that end up
-in the water. Interestingly, non-native earthworms have been shown to be
-important locally in places where both the worms and the fish occur.
-Insects are less important to juvenile red salmon, which feed on
-zooplankton and small crustaceans. Juvenile pink salmon generally do not
-feed in fresh water, but migrate to saltwater as soon as they are mature
-enough.
+I prepared answers for the KBBI interview about pollinators this
+evening.
 
 ### KBBI pollinator interview at 18:00
+
+## Thursday, June 25
+
+To do:
+
+  - Contact DEC about pesticide applicator license.
+  - Finish Sandpiper Lake PASP.
+
+I worked on obtaining emergency contacts for the Sandpiper Lake Project
+Aviation Safety Plan.
+
+I tried multiple ways of contacting AK DEC to see about getting my
+pesticide applicator license renewed.
+
+I worked on entering specimen data into Arctos for which data were loss
+in the Arctos data loss event this spring.
+
+## Friday, June 26
+
+I worked on entering specimen data into Arctos for which data were loss
+in the Arctos data loss event this spring.
+
+I created records for
+[KNWR:Inv:54](https://arctos.database.museum/guid/KNWR:Inv:54) and
+[KNWR:Ento:11385](https://arctos.database.museum/guid/KNWR:Ento:11385)-[KNWR:Ento:11390](https://arctos.database.museum/guid/KNWR:Ento:11390).
+
+[KNWR:Ento:11389](https://arctos.database.museum/guid/KNWR:Ento:11389)
+was problematic. I had written on [April 17](#friday-april-17) when I
+sorted this one that this was from site MG12, soil sample 1 (barcode:
+UAM100185964), but we did not visit site MG 12 in 2019.
+
+That left two uncertain associations. These were Long Term Ecological
+Monitoring Program site 3074, soil sample 2 and Slikok watershed project
+site MG24, soil sample 1.
+[KNWR:Ento:11389](https://arctos.database.museum/guid/KNWR:Ento:11389)
+must have been from MG24, soil sample 1, so this is how I assigned it.
+
+[KNWR:Ento:11385](https://arctos.database.museum/guid/KNWR:Ento:11385)
+must have been from Long Term Ecological Monitoring Program site 3074,
+soil sample 2.
+
+I made small edits on the Sandpiper Lake PASP.
+
+I need to make Arctos records for the fungal and bacterial soil sample
+vials.
+
+| RTL sample ID | Arctos GUID |
+| :------------ | :---------- |
+| soifun3069-1  |             |
+| soifun3069-2  |             |
+| soifun3072-1  |             |
+| soifun3072-2  |             |
+| soifun3074-1  |             |
+| soifun3074-2  |             |
+| soifun3092-1  |             |
+| soifun3092-2  |             |
+| soifun3140-1  |             |
+| soifun3140-2  |             |
+| soifun3202-1  |             |
+| soifun3202-2  |             |
+| soifun3288-1  |             |
+| soifun3288-2  |             |
+| soifun5555-1  |             |
+| soifun5555-2  |             |
+| soifunMG07-1  |             |
+| soifunMG07-2  |             |
+| soifunMG19-1  |             |
+| soifunMG19-2  |             |
+| soifunMG24-1  |             |
+| soifunMG24-2  |             |
+| soifunMG39-1  |             |
+| soifunMG39-2  |             |
+| soifunSK22-1  |             |
+| soifunSK22-2  |             |
 
 # Bibliography
 
