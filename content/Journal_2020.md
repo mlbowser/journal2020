@@ -7182,34 +7182,36 @@ I made small edits on the Sandpiper Lake PASP.
 I need to make Arctos records for the fungal and bacterial soil sample
 vials.
 
-| RTL sample ID | Arctos GUID |
-| :------------ | :---------- |
-| soifun3069-1  |             |
-| soifun3069-2  |             |
-| soifun3072-1  |             |
-| soifun3072-2  |             |
-| soifun3074-1  |             |
-| soifun3074-2  |             |
-| soifun3092-1  |             |
-| soifun3092-2  |             |
-| soifun3140-1  |             |
-| soifun3140-2  |             |
-| soifun3202-1  |             |
-| soifun3202-2  |             |
-| soifun3288-1  |             |
-| soifun3288-2  |             |
-| soifun5555-1  |             |
-| soifun5555-2  |             |
-| soifunMG07-1  |             |
-| soifunMG07-2  |             |
-| soifunMG19-1  |             |
-| soifunMG19-2  |             |
-| soifunMG24-1  |             |
-| soifunMG24-2  |             |
-| soifunMG39-1  |             |
-| soifunMG39-2  |             |
-| soifunSK22-1  |             |
-| soifunSK22-2  |             |
+I started entering data for these samples.
+
+| RTL sample ID | Arctos GUID                                                  |
+| :------------ | :----------------------------------------------------------- |
+| soifun3069-1  | [KNWR:Env:1](https://arctos.database.museum/guid/KNWR:Env:1) |
+| soifun3069-2  | [KNWR:Env:2](https://arctos.database.museum/guid/KNWR:Env:2) |
+| soifun3072-1  |                                                              |
+| soifun3072-2  |                                                              |
+| soifun3074-1  |                                                              |
+| soifun3074-2  |                                                              |
+| soifun3092-1  |                                                              |
+| soifun3092-2  |                                                              |
+| soifun3140-1  |                                                              |
+| soifun3140-2  |                                                              |
+| soifun3202-1  |                                                              |
+| soifun3202-2  |                                                              |
+| soifun3288-1  |                                                              |
+| soifun3288-2  |                                                              |
+| soifun5555-1  |                                                              |
+| soifun5555-2  |                                                              |
+| soifunMG07-1  |                                                              |
+| soifunMG07-2  |                                                              |
+| soifunMG19-1  |                                                              |
+| soifunMG19-2  |                                                              |
+| soifunMG24-1  |                                                              |
+| soifunMG24-2  |                                                              |
+| soifunMG39-1  |                                                              |
+| soifunMG39-2  |                                                              |
+| soifunSK22-1  |                                                              |
+| soifunSK22-2  |                                                              |
 
 # Bibliography
 
