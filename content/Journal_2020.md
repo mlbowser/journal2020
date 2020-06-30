@@ -137,6 +137,8 @@
       - [Wednesday, June 24](#wednesday-june-24)
       - [Thursday, June 25](#thursday-june-25)
       - [Friday, June 26](#friday-june-26)
+      - [Monday, June 29](#monday-june-29)
+      - [Tuesday, June 30](#tuesday-june-30)
   - [Bibliography](#bibliography)
 
 # January
@@ -7188,30 +7190,57 @@ I started entering data for these samples.
 | :------------ | :----------------------------------------------------------- |
 | soifun3069-1  | [KNWR:Env:1](https://arctos.database.museum/guid/KNWR:Env:1) |
 | soifun3069-2  | [KNWR:Env:2](https://arctos.database.museum/guid/KNWR:Env:2) |
-| soifun3072-1  |                                                              |
-| soifun3072-2  |                                                              |
-| soifun3074-1  |                                                              |
-| soifun3074-2  |                                                              |
-| soifun3092-1  |                                                              |
-| soifun3092-2  |                                                              |
-| soifun3140-1  |                                                              |
-| soifun3140-2  |                                                              |
-| soifun3202-1  |                                                              |
-| soifun3202-2  |                                                              |
-| soifun3288-1  |                                                              |
-| soifun3288-2  |                                                              |
-| soifun5555-1  |                                                              |
-| soifun5555-2  |                                                              |
-| soifunMG07-1  |                                                              |
-| soifunMG07-2  |                                                              |
-| soifunMG19-1  |                                                              |
-| soifunMG19-2  |                                                              |
-| soifunMG24-1  |                                                              |
-| soifunMG24-2  |                                                              |
-| soifunMG39-1  |                                                              |
-| soifunMG39-2  |                                                              |
-| soifunSK22-1  |                                                              |
-| soifunSK22-2  |                                                              |
+
+## Monday, June 29
+
+Entering data for soil samples:
+
+| RTL sample ID | Arctos GUID                                                    |
+| :------------ | :------------------------------------------------------------- |
+| soifun3072-1  | [KNWR:Env:3](https://arctos.database.museum/guid/KNWR:Env:3)   |
+| soifun3072-2  | [KNWR:Env:4](https://arctos.database.museum/guid/KNWR:Env:4)   |
+| soifun3074-1  | [KNWR:Env:5](https://arctos.database.museum/guid/KNWR:Env:5)   |
+| soifun3074-2  | [KNWR:Env:6](https://arctos.database.museum/guid/KNWR:Env:6)   |
+| soifun3092-1  | [KNWR:Env:7](https://arctos.database.museum/guid/KNWR:Env:7)   |
+| soifun3092-2  | [KNWR:Env:8](https://arctos.database.museum/guid/KNWR:Env:8)   |
+| soifun3140-1  | [KNWR:Env:9](https://arctos.database.museum/guid/KNWR:Env:9)   |
+| soifun3140-2  | [KNWR:Env:10](https://arctos.database.museum/guid/KNWR:Env:10) |
+| soifun3202-1  | [KNWR:Env:11](https://arctos.database.museum/guid/KNWR:Env:11) |
+| soifun3202-2  | [KNWR:Env:12](https://arctos.database.museum/guid/KNWR:Env:12) |
+| soifun3288-1  | [KNWR:Env:13](https://arctos.database.museum/guid/KNWR:Env:13) |
+| soifun3288-2  | [KNWR:Env:14](https://arctos.database.museum/guid/KNWR:Env:14) |
+| soifun5555-1  | [KNWR:Env:15](https://arctos.database.museum/guid/KNWR:Env:15) |
+| soifun5555-2  | [KNWR:Env:16](https://arctos.database.museum/guid/KNWR:Env:16) |
+| soifunMG07-1  | [KNWR:Env:17](https://arctos.database.museum/guid/KNWR:Env:17) |
+| soifunMG07-2  | [KNWR:Env:18](https://arctos.database.museum/guid/KNWR:Env:18) |
+| soifunMG19-1  |                                                                |
+| soifunMG19-2  |                                                                |
+| soifunMG24-1  |                                                                |
+| soifunMG24-2  |                                                                |
+| soifunMG39-1  |                                                                |
+| soifunMG39-2  |                                                                |
+| soifunSK22-1  |                                                                |
+| soifunSK22-2  |                                                                |
+
+### Biology staff meeting at 11:00
+
+  - I will be beginning field work this week on Composite Burn Index
+    (CBI) training with Lisa.
+
+I finished drafts of the Project Aviation Safety Plan and the USFWS
+Alaska Region 2020 Field Project Go/No Go Screening Matrix and
+Individual Project Safety Plan for the Sandpiper Lake elodea eradication
+project. I also got my new pesticide applicator license. I asked to have
+the two PUPs disapproved so that I could change the lead applicator to
+my name.
+
+Just looking at the map, it looks like LTEMP site 3202 might have burned
+in the Swan Lake Fire after we had sampled it in early July 2019. I
+checked: it is in the fire perimeter.
+
+## Tuesday, June 30
+
+I edited and submitted this week’s *Refuge Notebook* article.
 
 # Bibliography
 
