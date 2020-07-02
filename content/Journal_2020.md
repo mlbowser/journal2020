@@ -139,6 +139,9 @@
       - [Friday, June 26](#friday-june-26)
       - [Monday, June 29](#monday-june-29)
       - [Tuesday, June 30](#tuesday-june-30)
+  - [July](#july)
+      - [Wednesday, July 1](#wednesday-july-1)
+      - [Thursday, July 2](#thursday-july-2)
   - [Bibliography](#bibliography)
 
 # January
@@ -7213,14 +7216,6 @@ Entering data for soil samples:
 | soifun5555-2  | [KNWR:Env:16](https://arctos.database.museum/guid/KNWR:Env:16) |
 | soifunMG07-1  | [KNWR:Env:17](https://arctos.database.museum/guid/KNWR:Env:17) |
 | soifunMG07-2  | [KNWR:Env:18](https://arctos.database.museum/guid/KNWR:Env:18) |
-| soifunMG19-1  |                                                                |
-| soifunMG19-2  |                                                                |
-| soifunMG24-1  |                                                                |
-| soifunMG24-2  |                                                                |
-| soifunMG39-1  |                                                                |
-| soifunMG39-2  |                                                                |
-| soifunSK22-1  |                                                                |
-| soifunSK22-2  |                                                                |
 
 ### Biology staff meeting at 11:00
 
@@ -7240,7 +7235,70 @@ checked: it is in the fire perimeter.
 
 ## Tuesday, June 30
 
+I added *Lycogala epidendrum* to the Refuge’s checklist based on
+iNaturalist observation
+[51006945](https://www.inaturalist.org/observations/51006945).
+
 I edited and submitted this week’s *Refuge Notebook* article.
+
+### 10:00 interview
+
+I learned that *Myosotis alpestris* ssp. *asiatica* Vesterg is the name
+currently used by the [Alaska Center for Conservation
+Science](https://accs.uaa.alaska.edu/) for our native, alpine
+*Myosotis*.
+
+I also learned that *Myosotis scorpioides*, a non-native species, is
+present near the Refuge
+(<https://www.inaturalist.org/observations/15957166>,
+<https://nas.er.usgs.gov/queries/SpecimenViewer.aspx?SpecimenID=1628591>).
+
+Entering data for soil samples:
+
+| RTL sample ID | Arctos GUID                                                    |
+| :------------ | :------------------------------------------------------------- |
+| soifunMG19-1  | [KNWR:Env:19](https://arctos.database.museum/guid/KNWR:Env:19) |
+| soifunMG19-2  | [KNWR:Env:20](https://arctos.database.museum/guid/KNWR:Env:20) |
+| soifunMG24-1  | [KNWR:Env:21](https://arctos.database.museum/guid/KNWR:Env:21) |
+| soifunMG24-2  | [KNWR:Env:22](https://arctos.database.museum/guid/KNWR:Env:22) |
+| soifunMG39-1  | [KNWR:Env:23](https://arctos.database.museum/guid/KNWR:Env:23) |
+| soifunMG39-2  | [KNWR:Env:24](https://arctos.database.museum/guid/KNWR:Env:24) |
+| soifunSK22-1  | [KNWR:Env:25](https://arctos.database.museum/guid/KNWR:Env:25) |
+| soifunSK22-2  | [KNWR:Env:26](https://arctos.database.museum/guid/KNWR:Env:26) |
+
+I loaded maps, etc. onto my iPad for field work tomorrow.
+
+# July
+
+## Wednesday, July 1
+
+<!-- 07:00-17:30 -->
+
+Mark, Dawn, Lisa Saperstein, and I drove out to the west entrance of
+Skilak Lake Road so that Lisa could train us on Composite Burn Index
+(CBI) and related plot methods. We followed the protocol and datasheets
+of Hrobak and Barnes ([2020](#ref-hrobak_standard_2020)).
+
+Our first plot, KE-SWAN-01, was near the Marsh Lake Trail on the north
+side of the road. This was in an aspen stand with some black spruce. It
+has been burned quite severely so that no aspen suckers were coming up.
+*Marchantia polymorpha*, *Ceratodon purpureus*, and fireweed covered
+much of the mineral soil. Most of the trees had fallen down due to
+burned-out roots. We saw one black spruce seedling, but no other tree or
+shrub recruitment.
+
+Our second plot, KE-SWAN-05, was off of the road to Lower Skilak
+Campground. This was in a wet black spruce stand with some birch. This
+had been burned pretty severely, removing much of the organic soil and
+burning out almost all tree roots, but the organic soil here was deep
+and damp so that the lower layers remained. Some willows were coming
+back here.
+
+## Thursday, July 2
+
+<!-- 06:45- -->
+
+I came in early to take care of notes, charge batteries, etc.
 
 # Bibliography
 
@@ -7545,6 +7603,16 @@ doi:[10.1371/journal.pone.0220953](https://doi.org/10.1371/journal.pone.0220953)
 Hedlin, A.F. 1974. Cone and Seed Insects of British Columbia.
 Environment Canada, Forestry Service, Pacific Forest Research Centre,
 Victoria, British Columbia.
+
+</div>
+
+<div id="ref-hrobak_standard_2020">
+
+Hrobak, J.L., and Barnes, J.L. 2020. Standard Operating Procedure (SOP)
+2.5: Burn Severity Field Methods, Version 1.0. Fire Monitoring Protocol
+for the Arctic Network: Fire Extent, Severity, and Effects. National
+Park Service, Fairbanks, Alaska. Available from
+<https://irma.nps.gov/DataStore/Reference/Profile/2272205>.
 
 </div>
 
