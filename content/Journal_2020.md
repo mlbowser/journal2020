@@ -7287,6 +7287,10 @@ much of the mineral soil. Most of the trees had fallen down due to
 burned-out roots. We saw one black spruce seedling, but no other tree or
 shrub recruitment.
 
+![Burn severity sampling site
+KE-SWAN-01.](2020-07-01_KE-SWAN-01_N.jpg)  
+Burn severity sampling site KE-SWAN-01.
+
 Our second plot, KE-SWAN-05, was off of the road to Lower Skilak
 Campground. This was in a wet black spruce stand with some birch. This
 had been burned pretty severely, removing much of the organic soil and
