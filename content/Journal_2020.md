@@ -7336,9 +7336,15 @@ Burn severity sampling site KE-SWAN-21, looking north from plot center.
 
 Our last plot for the day was KE-SWAN-19 near the south end of Mystery
 Creek Road. This was again in well-drained black spruce forest, but this
-had been even more moderatly burned, with many willows, some aspen, and
-many *Betula glandulosa* resprouting. We did not have time to complete
-the CBI protocols here; we just looked at it before leaving the field.
+had been even more moderatly burned, with *Salix bebbiana*, some aspen,
+fireweed, a little *Calamagrostis canadensis*, and many *Betula
+glandulosa* resprouting. We did not have time to complete the CBI
+protocols here; we just looked at it before leaving the field.
+
+![Burn severity sampling site KE-SWAN-19, looking north from plot
+center.](2020-07-02_KE-SWAN-19_N.jpg)  
+Burn severity sampling site KE-SWAN-19, looking more or less north from
+near plot center.
 
 # Bibliography
 
