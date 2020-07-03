@@ -7501,7 +7501,7 @@ doi:[10.5066/F71V5C2W](https://doi.org/10.5066/F71V5C2W).
 Fernández, R., Almodóvar, A., Novo, M., Gutiérrez, M., and Díaz Cosín,
 D.J. 2011. A vagrant clone in a peregrine species: Phylogeography, high
 clonal diversity and geographical distribution in the earthworm
-Aporrectodea trapezoides (Dugès, 1828). Soil Biology and Biochemistry
+*Aporrectodea trapezoides* (Dugès, 1828). Soil Biology and Biochemistry
 **43**(10): 2085–2093.
 doi:[10.1016/j.soilbio.2011.06.007](https://doi.org/10.1016/j.soilbio.2011.06.007).
 
