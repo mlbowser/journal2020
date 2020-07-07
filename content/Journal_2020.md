@@ -142,6 +142,8 @@
   - [July](#july)
       - [Wednesday, July 1](#wednesday-july-1)
       - [Thursday, July 2](#thursday-july-2)
+      - [Monday, July 6](#monday-july-6)
+      - [Tuesday, July 7](#tuesday-july-7)
   - [Bibliography](#bibliography)
 
 # January
@@ -7321,7 +7323,8 @@ Burn severity sampling site KE-SWAN-18, looking north from plot center.
 On the way back to the truck we found some orchids that were unfamiliar
 to me. Back at the office I identified these as *Galearis rotundifolia*
 (iNaturalist:
-[51766406](https://www.inaturalist.org/observations/51766406)).
+[51766406](https://www.inaturalist.org/observations/51766406)). This
+looks like a new record for the Kenai Peninsula.
 
 We had lunch at Picnic Lake. There were lots of bryozoans under the
 rocks in the water.
@@ -7345,6 +7348,27 @@ protocols here; we just looked at it before leaving the field.
 center.](2020-07-02_KE-SWAN-19_N.jpg)  
 Burn severity sampling site KE-SWAN-19, looking more or less north from
 near plot center.
+
+## Monday, July 6
+
+<!-- 08:00-16:40 -->
+
+I printed off datasheets and otherwise prepared for field work today.
+
+Ed, Sarah, Jake, and I visited Hakala plot HAK 1 south of the radio
+tower at the west border of the Refuge off of the Sterling Highway. At
+the plot we first took photographs from just outside of the plot looking
+into the plot from the north and south. Next, we set up the first
+milacre plot and tallied all plant species. For dense species like
+Vaccinium uliginosum we made quick visual tallies. Grasses were counted
+as clumps. We also took diameter at breast height measurements of all
+trees.
+
+Jake and I left after finishing the seventh milacre plot.
+
+## Tuesday, July 7
+
+<!-- 07:15- -->
 
 # Bibliography
 
