@@ -1,5 +1,0 @@
-GitHub markdown:
---filter pandoc-citeproc --toc --toc-depth=2 -t gfm -s -o Journal_2020.md 
-
-epub:
---filter pandoc-citeproc --css style.css -o Journal_2020.epub 
