@@ -8363,6 +8363,13 @@ yesterday. More duff remained and more plants were resprouting.
 center.](2020-07-02_KE-SWAN-21_N.jpg)  
 Burn severity sampling site KE-SWAN-21, looking north from plot center.
 
+Here I collected what looked like *Morchella tomentosa* based on the
+large, underground root-like structures, the radiscisclerotium of
+Stefani ([2010](#ref-stefani_morchella_2010)). There were abundant,
+immature aradid bugs apparently feeding on the bases of all of the
+morels I collected. I collected one of these for sequencing (vial
+BOLD-094).
+
 Our last plot for the day was KE-SWAN-19 near the south end of Mystery
 Creek Road. This was again in well-drained black spruce forest, but this
 had been even more moderatly burned, with *Salix bebbiana*, some aspen,
@@ -8405,6 +8412,9 @@ arrived. This plot has extensive layering of black spruce, which may
 become separate trees. Ed explained that he keeps a separate tally of
 layering to avoid anomalies in the tree numbers.
 
+![Hakala plot 2, milacre 2.](2020-07-07_HAK2.jpg)  
+Hakala plot 2, milacre 2.
+
 Ed pointed out a lichen, *Leptogium saturninum*, growing on aspen
 (iNaturalist:
 [52283404](https://www.inaturalist.org/observations/52283404)). This was
@@ -8414,12 +8424,26 @@ After completing HAK2 we drove east down the road to HAK3, an aspen
 stand which had been lightly burned in the 2015 Card Street Fire. Now
 the aspens have fallen in all directions in this area, making getting
 around quite difficult. We only located a subset of the stakes. We
-decided to return to this one later.
+decided to return to this one later. I obtained a GPS averaged location
+for the south end of the plot. This was at 60.49992 °N, 150.49989 °W
+with a GPS averaged accuracy of 1 m.
+
+![Part of Hakala plot 3.](2020-07-07_HAK3.jpg)  
+Part of Hakala plot 3.
+
+On the way back to the truck I looked for noctuid pupae in the leaf
+litter. I found one living, but apparently dehyrdrated larva that looked
+like *Sunira verberata*. I found no pupae. I collected this (vial
+BOLD-QK7).
 
 We drove further east to HAK4, which had been burned in the Swan Lake
 Fire. This was severely burned, which downed black spruce and aspen all
-over and *Marchantia* and fireweed populating it. I left just as we were
-getting started on this plot.
+over and *Marchantia* and fireweed populating it. Dawn filled out a CBI
+datasheet here. I left just as we were getting started on this plot.
+
+![Hakala plot 4 photographed looking south over the north end of the
+plot.](2020-07-07_HAK4-1.jpg)  
+Hakala plot 4 photographed looking south over the north end of the plot.
 
 # Bibliography
 
