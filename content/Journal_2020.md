@@ -8386,7 +8386,8 @@ near plot center.
 
 <!-- 08:00-16:40 -->
 
-I printed off datasheets and otherwise prepared for field work today.
+I printed off datasheets and otherwise prepared for field work today on
+the Hakala plots (Berg [2000](#ref-berg_post-fire_2000)).
 
 Ed, Sarah, Jake, and I visited Hakala plot HAK 1 south of the radio
 tower at the west border of the Refuge off of the Sterling Highway. At
@@ -8406,6 +8407,10 @@ Jake and I left after finishing the seventh milacre plot.
 ## Tuesday, July 7
 
 <!-- 07:15-16:45 -->
+
+I saw two snowshoe hares along the Sterling Highway east of Sterling
+near the east entrance of Skilak Lake Road. They are definitely becoming
+more abundant.
 
 I joined Ed and Sarah at plot HAK2. They were on milacre 2 when I
 arrived. This plot has extensive layering of black spruce, which may
@@ -8433,8 +8438,9 @@ Part of Hakala plot 3.
 
 On the way back to the truck I looked for noctuid pupae in the leaf
 litter. I found one living, but apparently dehyrdrated larva that looked
-like *Sunira verberata*. I found no pupae. I collected this (vial
-BOLD-QK7).
+like *Sunira verberata* (iNaturalist:
+[52380873](https://www.inaturalist.org/observations/52380873)). I found
+no pupae. I collected this (vial BOLD-QK7).
 
 We drove further east to HAK4, which had been burned in the Swan Lake
 Fire. This was severely burned, which downed black spruce and aspen all
@@ -8444,6 +8450,12 @@ datasheet here. I left just as we were getting started on this plot.
 ![Hakala plot 4 photographed looking south over the north end of the
 plot.](2020-07-07_HAK4-1.jpg)  
 Hakala plot 4 photographed looking south over the north end of the plot.
+
+I photographed and collected a gray morel, *Morchella tomentosa* in the
+vicinity of the plot (iNaturalist:
+[52382438](https://www.inaturalist.org/observations/52382438)). A spruce
+seedling was growing by the morel. I had noticed no seedlings in the
+plot.
 
 # Bibliography
 
@@ -8471,6 +8483,15 @@ Metadata Guide. Available from
 Bella, E. 2013. Kenai national wildlife refuge invasive plant survey
 2013. Vogel lake.
 doi:[10.7299/X7V40VHG](https://doi.org/10.7299/X7V40VHG).
+
+</div>
+
+<div id="ref-berg_post-fire_2000">
+
+Berg, E.E. 2000. Post-fire forest regeneration on the western Kenai
+Peninsula, Alaska; a forty-eight year record from nine permanent plots.
+USFWS Kenai National Wildlife Refuge, Soldotna, Alaska. Available from
+<https://www.fws.gov/uploadedFiles/Berg_EE_2000b.pdf>.
 
 </div>
 
