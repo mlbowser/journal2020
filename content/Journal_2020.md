@@ -8386,15 +8386,40 @@ tower at the west border of the Refuge off of the Sterling Highway. At
 the plot we first took photographs from just outside of the plot looking
 into the plot from the north and south. Next, we set up the first
 milacre plot and tallied all plant species. For dense species like
-Vaccinium uliginosum we made quick visual tallies. Grasses were counted
-as clumps. We also took diameter at breast height measurements of all
-trees.
+*Vaccinium vitis-idaea* we made quick visual tallies. Grasses were
+counted as clumps. We also took diameter at breast height measurements
+of all trees.
+
+![Ed tallying *Vaccinium vitis-idaea* on Hakala plot 1, milacre
+1.](2020-07-06_HAK1-1.jpg)  
+Ed tallying *Vaccinium vitis-idaea* on Hakala plot 1, milacre 1.
 
 Jake and I left after finishing the seventh milacre plot.
 
 ## Tuesday, July 7
 
-<!-- 07:15- -->
+<!-- 07:15-16:45 -->
+
+I joined Ed and Sarah at plot HAK2. They were on milacre 2 when I
+arrived. This plot has extensive layering of black spruce, which may
+become separate trees. Ed explained that he keeps a separate tally of
+layering to avoid anomalies in the tree numbers.
+
+Ed pointed out a lichen, *Leptogium saturninum*, growing on aspen
+(iNaturalist:
+[52283404](https://www.inaturalist.org/observations/52283404)). This was
+a species that I did not know.
+
+After completing HAK2 we drove east down the road to HAK3, an aspen
+stand which had been lightly burned in the 2015 Card Street Fire. Now
+the aspens have fallen in all directions in this area, making getting
+around quite difficult. We only located a subset of the stakes. We
+decided to return to this one later.
+
+We drove further east to HAK4, which had been burned in the Swan Lake
+Fire. This was severely burned, which downed black spruce and aspen all
+over and *Marchantia* and fireweed populating it. I left just as we were
+getting started on this plot.
 
 # Bibliography
 
