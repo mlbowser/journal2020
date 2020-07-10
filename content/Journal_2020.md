@@ -145,6 +145,9 @@
       - [Thursday, July 2](#thursday-july-2)
       - [Monday, July 6](#monday-july-6)
       - [Tuesday, July 7](#tuesday-july-7)
+      - [Wednesday, July 8](#wednesday-july-8)
+      - [Thursday, July 9](#thursday-july-9)
+      - [Friday, July 10](#friday-july-10)
   - [Bibliography](#bibliography)
 
 # January
@@ -8443,7 +8446,7 @@ like *Sunira verberata* (iNaturalist:
 no pupae. I collected this (vial BOLD-QK7).
 
 We drove further east to HAK4, which had been burned in the Swan Lake
-Fire. This was severely burned, which downed black spruce and aspen all
+Fire. This was severely burned, whith downed black spruce and aspen all
 over and *Marchantia* and fireweed populating it. Dawn filled out a CBI
 datasheet here. I left just as we were getting started on this plot.
 
@@ -8456,6 +8459,35 @@ vicinity of the plot (iNaturalist:
 [52382438](https://www.inaturalist.org/observations/52382438)). A spruce
 seedling was growing by the morel. I had noticed no seedlings in the
 plot.
+
+## Wednesday, July 8
+
+<!-- 07:30-10:00, 16:00-16:45 -->
+
+I put together my notes and images from the last couple of days.
+
+I edited and submitted this week’s *Refuge Notebook* article.
+
+## Thursday, July 9
+
+<!-- 08:00-17:30 -->
+
+I met Ed and Sarah at Hakala plot HAK5, which had burned in the Swan
+Lake Fire. There were too many downed trees for us to safely work here,
+so we proceeded to HAK6.
+
+Dawn joined us at HAK6. This was a beautiful, lush site under birches
+and *Alnus incana*.
+
+![Surveying part of Hakala plot HAK6.](2020-07-09_HAK6.jpg)  
+Surveying part of Hakala plot HAK6.
+
+The alders were extensively damaged by green sawfly larvae that must be
+<i>Monsoma pulveratum</i>.
+
+## Friday, July 10
+
+<!-- 07:10- -->
 
 # Bibliography
 
