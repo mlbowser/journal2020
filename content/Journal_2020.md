@@ -148,6 +148,8 @@
       - [Wednesday, July 8](#wednesday-july-8)
       - [Thursday, July 9](#thursday-july-9)
       - [Friday, July 10](#friday-july-10)
+      - [Sunday, July 12](#sunday-july-12)
+      - [Monday, July 13](#monday-july-13)
   - [Bibliography](#bibliography)
 
 # January
@@ -8487,7 +8489,36 @@ The alders were extensively damaged by green sawfly larvae that must be
 
 ## Friday, July 10
 
-<!-- 07:10- -->
+<!-- 07:10-16:45 -->
+
+## Sunday, July 12
+
+An adult moth had emerged in each of the two jars of caterpillars
+collected from Marsh Lake Trail on June 3. Both appeared to be *Sunira
+verberata*.
+
+![*Sunira verberata* adult reared from larvae collected by Dan Thompson
+near Marsh Lake Trail on June
+3.](2020-07-12-Sunira_verberata_Thompson.jpg)  
+*Sunira verberata* adult reared from larvae collected by Dan Thompson
+near Marsh Lake Trail on June 3.
+
+## Monday, July 13
+
+Ed sent me his notes and photos from the Hakala plots. He and Sarah did
+survey plot HAK9 on Saturday.
+
+I started on a *Refuge Notebook* article on *Sunira verberata* for this
+week.
+
+I learned that *Sunira verberata* was documented defoliating *Viburnum
+edule* and consuming cultivated crops in 1976 in Alaska (Interagency
+Arctic Research Coordinating Committee
+[1977](#ref-interagency_arctic_research_coordinating_committee_department_1977)),
+but the specific locality was not given. The authors reported that
+disease and parasitism killed some of the larvae.
+
+### 10:00 Biology meeting
 
 # Bibliography
 
@@ -8829,6 +8860,15 @@ Huotari, T., Korpelainen, H., Leskinen, E., and Kostamo, K. 2011.
 Population genetics of the invasive water weed Elodea canadensis in
 Finnish waterways. Plant Systematics and Evolution **294**(1): 27.
 doi:[10.1007/s00606-011-0442-2](https://doi.org/10.1007/s00606-011-0442-2).
+
+</div>
+
+<div id="ref-interagency_arctic_research_coordinating_committee_department_1977">
+
+Interagency Arctic Research Coordinating Committee. 1977. Terrestrial
+biology and ecology: Department of Agriculture. Arctic Bulletin
+**2**(11): 237–243. Available from
+<https://books.google.com/books?id=yJTlyWTDBKoC>.
 
 </div>
 
