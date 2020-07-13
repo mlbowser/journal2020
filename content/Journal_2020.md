@@ -8500,6 +8500,26 @@ incana*.](2020-07-09_Monsoma.jpg)
 
 <!-- 07:10-16:45 -->
 
+Ed, Sarah, Dawn, and I surveyed Hakala plot HAK7 in a black spruce
+muskeg. Difficulties here illustrated problems with trying to use
+individual counts of some of these species. Especially with specie like
+grasses and *Ledum*, it was difficult to recognize individuals. For
+*Vaccinium vitis-idaea* we used basically a stem count. For *Ledum
+palustre* and grasses we used clumps of individuals, yielding a much
+smaller number than the stem count. I much prefer point intercept counts
+for quantifying abundance.
+
+![Surveying part of plot HAK7.](2020-07-10_HAK7.jpg)  
+Surveying part of plot HAK7.
+
+In the afternoon we proceeded to plot HAK8, a much easier plot to deal
+with because the understory was extremely sparse. Mark joined us here.
+
+While others worked on HAK8, Dawn and I drove over to HAK9 to see how it
+had been affected by the fire. We found that it had not been burned even
+though the fire had reached to within less than 10 meters from the plot
+in places. This was a rich, moist, lush plot.
+
 ## Sunday, July 12
 
 An adult moth had emerged in each of the two jars of caterpillars
