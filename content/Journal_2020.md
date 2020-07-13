@@ -8502,7 +8502,7 @@ incana*.](2020-07-09_Monsoma.jpg)
 
 Ed, Sarah, Dawn, and I surveyed Hakala plot HAK7 in a black spruce
 muskeg. Difficulties here illustrated problems with trying to use
-individual counts of some of these species. Especially with specie like
+individual counts of some of these species. Especially with species like
 grasses and *Ledum*, it was difficult to recognize individuals. For
 *Vaccinium vitis-idaea* we used basically a stem count. For *Ledum
 palustre* and grasses we used clumps of individuals, yielding a much
@@ -8512,16 +8512,24 @@ for quantifying abundance.
 ![Surveying part of plot HAK7.](2020-07-10_HAK7.jpg)  
 Surveying part of plot HAK7.
 
+Between this plot and the highway we came across what looked like debris
+from one of the orignal camps from the crews that built the highway in
+the 1940s.
+
 In the afternoon we proceeded to plot HAK8, a much easier plot to deal
 with because the understory was extremely sparse. Mark joined us here.
+
+![Surveying part of plot HAK8.](2020-07-10_HAK8.jpg)  
+Surveying part of plot HAK8.
 
 While others worked on HAK8, Dawn and I drove over to HAK9 to see how it
 had been affected by the fire. We found that it had not been burned even
 though the fire had reached to within less than 10 meters from the plot
 in places. This was a rich, moist, lush plot.
 
-![Surveying part of plot HAK8.](2020-07-10_HAK8.jpg)  
-Surveying part of plot HAK8.
+![View of plot HAK9 looking north from the south end of the
+plot.](2020-07-10_HAK9.jpg)  
+View of plot HAK9 looking north from the south end of the plot.
 
 ## Sunday, July 12
 
@@ -8551,6 +8559,10 @@ but the specific locality was not given. The authors reported that
 disease and parasitism killed some of the larvae.
 
 ### 10:00 Biology meeting
+
+  - Finish last two Hakala plots.
+
+  - LTEMP CBI plots.
 
 # Bibliography
 
