@@ -8478,6 +8478,10 @@ I met Ed and Sarah at Hakala plot HAK5, which had burned in the Swan
 Lake Fire. There were too many downed trees for us to safely work here,
 so we proceeded to HAK6.
 
+![Vicinity of plot HAK5. Photo by Ed
+Berg.](2020-07-09_HAK5_vicinity.jpg)  
+Vicinity of plot HAK5. Photo by Ed Berg.
+
 Dawn joined us at HAK6. This was a beautiful, lush site under birches
 and *Alnus incana*.
 
