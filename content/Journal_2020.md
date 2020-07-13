@@ -8489,7 +8489,12 @@ and *Alnus incana*.
 Surveying part of Hakala plot HAK6.
 
 The alders were extensively damaged by green sawfly larvae that must be
-<i>Monsoma pulveratum</i>.
+<i>Monsoma pulveratum</i> (iNaturalist:
+[52964721](https://www.inaturalist.org/observations/52964721)).
+
+![*Monsoma pulveratum* larva on *Alnus
+incana*.](2020-07-09_Monsoma.jpg)  
+*Monsoma pulveratum* larva on *Alnus incana*.
 
 ## Friday, July 10
 
