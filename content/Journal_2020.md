@@ -8520,6 +8520,9 @@ had been affected by the fire. We found that it had not been burned even
 though the fire had reached to within less than 10 meters from the plot
 in places. This was a rich, moist, lush plot.
 
+![Surveying part of plot HAK8.](2020-07-10_HAK8.jpg)  
+Surveying part of plot HAK8.
+
 ## Sunday, July 12
 
 An adult moth had emerged in each of the two jars of caterpillars
