@@ -7907,8 +7907,8 @@ Sandpiper Lake elodea eradication project aviation map.
 
 Steve Swenson tentatively identified the Marsh Lake Trail caterpillars
 as *Sunira verberata* and sent me photos from the Richardson Highway on
-cottonwoods in 2017. There were an outbreaks of this species in Alaska
-in the 2000s and in 2017 (USDA Forest Service, Alaska Region
+cottonwoods in 2017. There were outbreaks of this species in Alaska in
+the 2000s and in 2017 (USDA Forest Service, Alaska Region
 [2005](#ref-usda_forest_service_alaska_region_forest_2005),
 [2006](#ref-usda_forest_service_alaska_region_forest_2006),
 [2007](#ref-usda_forest_service_alaska_region_forest_2007),
@@ -8562,7 +8562,26 @@ disease and parasitism killed some of the larvae.
 
   - Finish last two Hakala plots.
 
-  - LTEMP CBI plots.
+  - LTEMP/alpine CBI plots.
+
+While searching through emails I found a thread entitled “Caterpillars
+run amok, take Mat Valley by storm\!” in the IPM-L list. Initial post:
+
+> I’ve several calls on these guys lately, anyone know what this one is?
+> They seem to be munching on a wide variety of plants (inc rhubarb),
+> covering the sides of homes and keeping at least one puppy fed.
+
+![Presumed *Sunira verberata* caterpillar from the Mat-Su Valley in June
+2017.](2020-07-13_2017_MatSu_Sunira.jpg)  
+Presumed *Sunira verberata* caterpillar from the Mat-Su Valley in June
+2017.
+
+Later in the thread:
+
+> I collected what I believe are the same thing on Friday in Anchorage.
+> …they were found on a variety of hosts (aspen, elderberry, alder,
+> and devil’s club) as well as houses, sidewalks and other man-made
+> structures.
 
 # Bibliography
 
