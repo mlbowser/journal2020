@@ -150,6 +150,7 @@
       - [Friday, July 10](#friday-july-10)
       - [Sunday, July 12](#sunday-july-12)
       - [Monday, July 13](#monday-july-13)
+      - [Tuesday, July 14](#tuesday-july-14)
   - [Bibliography](#bibliography)
 
 # January
@@ -8582,6 +8583,35 @@ Later in the thread:
 > …they were found on a variety of hosts (aspen, elderberry, alder,
 > and devil’s club) as well as houses, sidewalks and other man-made
 > structures.
+
+### Telecon with McCrea at 15:00
+
+  - It looks like I should store observer names in a separate table.
+
+  - I should try using R Studio and Roxygen for comments on R scripts.
+
+  - R scripts will need mdEditor metadata files.
+
+  - For this Thursday’s meeting I will need to explain what I have done
+    so far and list remaining steps.
+
+  - We can soon prepare to deposit this dataset in the regional
+    repository.
+
+## Tuesday, July 14
+
+Annaleese and I drove out to Hakala plot HAK3 to survery it. We had to
+begin by locating as much of the original rebar as we could, then pound
+in enough replacement rebar where needed to make it so that we could
+survey it well.
+
+HAK3 had been burned in the Card Street fire, killing all standing
+trees, but not burning deeply into the soil. It was now full of aspen
+suckers, downed trees, and grasses. This was a difficult place to work,
+so surveying this plot took the day.
+
+![Hakala plot HAK3.](2020-07-14_HAK3.jpg)  
+Hakala plot HAK3.
 
 # Bibliography
 
