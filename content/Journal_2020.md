@@ -151,6 +151,7 @@
       - [Sunday, July 12](#sunday-july-12)
       - [Monday, July 13](#monday-july-13)
       - [Tuesday, July 14](#tuesday-july-14)
+      - [Wednesday, July 15](#wednesday-july-15)
   - [Bibliography](#bibliography)
 
 # January
@@ -8605,13 +8606,21 @@ begin by locating as much of the original rebar as we could, then pound
 in enough replacement rebar where needed to make it so that we could
 survey it well.
 
-HAK3 had been burned in the Card Street fire, killing all standing
+HAK3 had been burned in the 2015 Card Street fire, killing all standing
 trees, but not burning deeply into the soil. It was now full of aspen
 suckers, downed trees, and grasses. This was a difficult place to work,
 so surveying this plot took the day.
 
 ![Hakala plot HAK3.](2020-07-14_HAK3.jpg)  
 Hakala plot HAK3.
+
+## Wednesday, July 15
+
+I worked on my *Refuge Notebook* article.
+
+HOSTS (Robinson et al. [2020](#ref-robinson_hosts_2020)) lists *Cornus
+sericea*, *Salix*, and *Symphoricarpos* as hosts for *Sunira verberata*
+in Canada.
 
 # Bibliography
 
@@ -9150,6 +9159,15 @@ morels (*Morchella*, Pezizales) of Europe and North America:
 Evolutionary relationships inferred from multilocus data and a unified
 taxonomy. Mycologia **107**(2): 359–382.
 doi:[10.3852/14-166](https://doi.org/10.3852/14-166).
+
+</div>
+
+<div id="ref-robinson_hosts_2020">
+
+Robinson, G.S., Ackery, P.R., Kitching, I.J., Beccaloni, G.W., and
+Hernández, L.M. 2020. HOSTS - a database of the world’s lepidopteran
+hostplants. Natural History Museum, London. Available from
+<https://www.nhm.ac.uk/our-science/data/hostplants/index.html>.
 
 </div>
 
