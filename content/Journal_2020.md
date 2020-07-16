@@ -152,6 +152,7 @@
       - [Monday, July 13](#monday-july-13)
       - [Tuesday, July 14](#tuesday-july-14)
       - [Wednesday, July 15](#wednesday-july-15)
+      - [Thursday, July 16](#thursday-july-16)
   - [Bibliography](#bibliography)
 
 # January
@@ -8616,11 +8617,31 @@ Hakala plot HAK3.
 
 ## Wednesday, July 15
 
-I worked on my *Refuge Notebook* article.
+I worked on my *Refuge Notebook* article on *Sunira verberata*, getting
+it finished at the end of the day.
 
 HOSTS (Robinson et al. [2020](#ref-robinson_hosts_2020)) lists *Cornus
 sericea*, *Salix*, and *Symphoricarpos* as hosts for *Sunira verberata*
 in Canada.
+
+## Thursday, July 16
+
+To do
+
+  - *Refuge Notebook* catch-up
+  - Update Biology News.
+  - Add *Myosotis scorpioides* to the Refuge’s checklist.
+  - Add metadata for snowshoe hare R scripts.
+  - Revise data structure and processing of snowshoe hare data to
+    include multiple observers per survey.
+  - ~~Review new CBI Survey123 form.~~
+
+I posted the *Refuge Notebook* articles from February 14 and 21.
+
+### Data management early adopters’ meeting at 13:00
+
+  - We will work toward depositing data in the regional repository by
+    the end of the fiscal year (September).
 
 # Bibliography
 
