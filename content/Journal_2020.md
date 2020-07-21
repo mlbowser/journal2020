@@ -8662,6 +8662,9 @@ and I took a soil sample of the top 10 cm of soil for soil fungal DNA
 extraction. These were at 15 m east and west of plot center
 corresponding to flagging for t he CBI plot.
 
+![Hakala plot HAK5.](2020-07-20_HAK5.jpg)  
+Hakala plot HAK5.
+
 There were morels here, two of which I collected. I had dug the soil pit
 for the western sample before I realized that there was a morel
 immediately beside the soil pit. I hope that morel DNA is picked up in
@@ -8677,6 +8680,12 @@ Vegetation data are entered as an
 ## Tuesday, July 21
 
 <!-- 06:30- -->
+
+I put together some of my notes from yesterday.
+
+I pulled FMH datasheets and scanned them for Lisa and Hunter.
+
+I edited this week’s *Refuge Notebook* article.
 
 # Appendixes
 
