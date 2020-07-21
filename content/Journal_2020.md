@@ -153,6 +153,11 @@
       - [Tuesday, July 14](#tuesday-july-14)
       - [Wednesday, July 15](#wednesday-july-15)
       - [Thursday, July 16](#thursday-july-16)
+      - [Monday, July 20](#monday-july-20)
+      - [Tuesday, July 21](#tuesday-july-21)
+  - [Appendixes](#appendixes)
+      - [Vegetation data from 5.64 m circular
+        plots](#vegetation-data-from-5.64-m-circular-plots)
   - [Bibliography](#bibliography)
 
 # January
@@ -8642,6 +8647,60 @@ I posted the *Refuge Notebook* articles from February 14 and 21.
 
   - We will work toward depositing data in the regional repository by
     the end of the fiscal year (September).
+
+## Monday, July 20
+
+<!-- 07:00-16:30 -->
+
+Mark and I drove out to plot HAK5, the last Hakala plot to be surveyed.
+This was a burned plot within the Swan Lake Fire. It had burned pretty
+severely, but some aspens were resprouting. Sparse birch and black
+spruce seedlings were also present. I had difficulty identifying an
+immature plant that I think is *Chamerion latifolium*. Lisa and Hunter
+joined us here and did a CBI plot. I did the 5.64 m radius plant survey
+and I took a soil sample of the top 10 cm of soil for soil fungal DNA
+extraction. These were at 15 m east and west of plot center
+corresponding to flagging for t he CBI plot.
+
+There were morels here, two of which I collected. I had dug the soil pit
+for the western sample before I realized that there was a morel
+immediately beside the soil pit. I hope that morel DNA is picked up in
+the soil sample.
+
+After that I stopped by plot HAK4 and did the same LTEMP veg protocol
+and soil samples. I saw no resprouting plants here. I saw what looked
+like immature *Chamerion latifolium* here as well.
+
+Vegetation data are entered as an
+[appendix](#vegetation-data-from-5.64-m-circular-plots).
+
+## Tuesday, July 21
+
+<!-- 06:30- -->
+
+# Appendixes
+
+## Vegetation data from 5.64 m circular plots
+
+| plot | date       | species                 | notes                                                                 |
+| :--- | :--------- | :---------------------- | :-------------------------------------------------------------------- |
+| HAK4 | 2020-07-20 | Betula neoalaskana      | Seedling                                                              |
+| HAK4 | 2020-07-20 | Ceratodon purpureus     |                                                                       |
+| HAK4 | 2020-07-20 | Chamerion angustifolium |                                                                       |
+| HAK4 | 2020-07-20 | Chamerion latifolium?   | Small immature. Could not be identified with certainty. Photographed. |
+| HAK4 | 2020-07-20 | Epilobium ciliatum      |                                                                       |
+| HAK4 | 2020-07-20 | Marchantia polymorpha   |                                                                       |
+| HAK4 | 2020-07-20 | Picea Mariana           | Seedling                                                              |
+| HAK4 | 2020-07-20 | Populus tremuloides     | Fallen and dying, but not dead yet.                                   |
+| HAK5 | 2020-07-20 | Betula neoalaskana      | Seedlings                                                             |
+| HAK5 | 2020-07-20 | Ceratodon purpureus     |                                                                       |
+| HAK5 | 2020-07-20 | Chamerion angustifolium |                                                                       |
+| HAK5 | 2020-07-20 | Chamerion latifolium?   | Small immature. Could not be identified with certainty.               |
+| HAK5 | 2020-07-20 | Lupinus nootkatensis    |                                                                       |
+| HAK5 | 2020-07-20 | Marchantia polymorpha   |                                                                       |
+| HAK5 | 2020-07-20 | Picea mariana           |                                                                       |
+| HAK5 | 2020-07-20 | Polytrichum             |                                                                       |
+| HAK5 | 2020-07-20 | Populus tremuloides     | Suckers                                                               |
 
 # Bibliography
 
