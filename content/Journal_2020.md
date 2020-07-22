@@ -155,6 +155,7 @@
       - [Thursday, July 16](#thursday-july-16)
       - [Monday, July 20](#monday-july-20)
       - [Tuesday, July 21](#tuesday-july-21)
+      - [Wednesday, July 22](#wednesday-july-22)
   - [Appendixes](#appendixes)
       - [Vegetation data from 5.64 m circular
         plots](#vegetation-data-from-5.64-m-circular-plots)
@@ -8686,6 +8687,28 @@ I put together some of my notes from yesterday.
 I pulled FMH datasheets and scanned them for Lisa and Hunter.
 
 I edited this week’s *Refuge Notebook* article.
+
+I spent the day with Lyndda Kahn examining recent work done by HEA on
+the power line right of way between Three Johns Road and Jean Lake. Some
+poles had recently been removed cleanly with minimal damage. In
+contrast, the access road that HEA put in around Jean Lake and Jean
+Creek was poorly seeded, eroding, and weedy in places.
+
+![Eroded access road between Jean Lake and the east end of Skilak Lake
+Road.](2020-07-21_eroded_slope.jpg)  
+Eroded access road between Jean Lake and the east end of Skilak Lake
+Road.
+
+## Wednesday, July 22
+
+to do
+
+  - ~~drop off vehicle 806 to be checked out.~~
+  - LTEMP/FIA plot study plan
+  - Swan Lake Fire invasive plant survey planning.
+  - Hakala plots follow-up
+  - ~~Send out this week’s *Refuge Notebook*.~~
+  - Provide feedback on NPS *Refuge Notebook* article
 
 # Appendixes
 
