@@ -8705,10 +8705,21 @@ to do
 
   - ~~drop off vehicle 806 to be checked out.~~
   - LTEMP/FIA plot study plan
-  - Swan Lake Fire invasive plant survey planning.
+  - Swan Lake Fire BAER invasive plant survey planning.
   - Hakala plots follow-up
   - ~~Send out this week’s *Refuge Notebook*.~~
   - Provide feedback on NPS *Refuge Notebook* article
+
+I worked in the office on cleaning up and catching up.
+
+I did some checking of recent identifications. A *Cerastium* I had seen
+the other day (iNaturalsit:
+[52986938](https://www.inaturalist.org/observations/52986938)) was
+*Cerastium fontanum* ssp. *vulgare*.
+
+I looked at what data are available from my 2018 work in the Mystery
+Hills (Bowser [2018](#ref-bowser_lab_notebook_2018)) and from Paez’s
+work in 1988–1989 (Paez [1991](#ref-paez_alpine_1991)).
 
 # Appendixes
 
@@ -8786,6 +8797,14 @@ of Aquatic Plant Management **33**: 13–19. Available from
 Bowser, M.L. 2012. Key and checklist of the bristletails (Microcoryphia)
 of America north of Mexico. Soldotna, Alaska.
 doi:[10.13140/RG.2.2.19142.22087](https://doi.org/10.13140/RG.2.2.19142.22087).
+
+</div>
+
+<div id="ref-bowser_lab_notebook_2018">
+
+Bowser, M.L. 2018. Lab notebook, 28.Sept.2017 - 30.August.2018. USFWS
+Kenai National Wildlife Refuge, Soldotna, Alaska.
+doi:[10.7299/X7736R6J](https://doi.org/10.7299/X7736R6J).
 
 </div>
 
@@ -9232,7 +9251,8 @@ doi:[10.3752/cjai.2007.03](https://doi.org/10.3752/cjai.2007.03).
 Paez, C.E. 1991. Alpine vegetation of areas utilized by introduced
 populations of caribou (*Rangifer tarandus*) on the Kenai Peninsula,
 Alaska. Master’s thesis, University of Wisconsin-Madison, Madison,
-Wisconsin.
+Wisconsin. Available from
+<https://www.fws.gov/uploadedFiles/Paez_CE_1991.pdf>.
 
 </div>
 
