@@ -8749,6 +8749,9 @@ stand had yellowing needles that were dropping. The trees themselves had
 been left standing, but the soil had burned beneath them. Now it was
 soft ash under fresh, yellow needles.
 
+![Dying hemlocks at the saddle.](2020-07-23_burned_hemlocks.jpg)  
+Dying hemlocks at the saddle.
+
 We looked for the sites from Paez’s work in 1988–1989 (Paez
 [1991](#ref-paez_alpine_1991)) that were just above this hemlock stand
 to the west and up the hill.
@@ -8761,6 +8764,10 @@ find these, also.
 This area of what was probably low shrubs and tundra was severely
 burned. Now only rock, soil, ash, and some coarse woody debris remained,
 with very few surviving plants.
+
+![Woody debris, ash, rock, and soil, all washing
+downslope.](2020-07-23_woody_debris.jpg)  
+Woody debris, ash, rock, and soil, all washing downslope.
 
 At the center point of the coordinates we had or Paez’s site 79 we did
 the CBI survey via Survey123. This was at 60.53048, -150.17537, 2 m
