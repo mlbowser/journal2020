@@ -8841,6 +8841,10 @@ datums.](2020-07-24-1215_Paez_coordinates.jpg)
 Mystery Hills vegetation plot coordinates from Paez’s vegetation plots,
 assuming multiple datums.
 
+I just noticed that Paez’s Mystery Hill sites were resampled in 1998
+(Paez [2009](#ref-paez_dynamics_2009)). I wonder if these data can be
+dug up from ADF\&G’s files.
+
 # Appendixes
 
 ## Vegetation data from 5.64 m circular plots
@@ -9373,6 +9377,15 @@ populations of caribou (*Rangifer tarandus*) on the Kenai Peninsula,
 Alaska. Master’s thesis, University of Wisconsin-Madison, Madison,
 Wisconsin. Available from
 <https://www.fws.gov/uploadedFiles/Paez_CE_1991.pdf>.
+
+</div>
+
+<div id="ref-paez_dynamics_2009">
+
+Paez, C.E. 2009. Dynamics of alpine ranges and areas utilized by
+introduced caribou populations on the Kenai Peninsula, Alaska. State of
+Alaska, Alaska. Available from
+<http://www.arlis.org/docs/vol1/A/325194251.pdf>.
 
 </div>
 
