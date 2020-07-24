@@ -8739,7 +8739,7 @@ pratense* (iNaturalist:
 *Capsella bursa-pastoris* (iNaturalist:
 [54181941](https://www.inaturalist.org/observations/54181941)),
 *Cerastium fontanum* ssp. *vulgare* (inaturalist:
-[54182218](https://www.inaturalist.org/observations/54182218)), and
+[54182218](https://www.inaturalist.org/observations/54182218)),
 *Plantago major*, and *Poa annua*. These were all restricted to the
 immediate vicinity of the trail.
 
@@ -8775,11 +8775,11 @@ downslope.](2020-07-23_woody_debris.jpg)
 Woody debris, ash, rock, and soil, all washing downslope.
 
 At the center point of the coordinates we had or Paez’s site 79 we did
-the CBI survey via Survey123. This was at 60.53048, -150.17537, 2 m
-accuracy. We also inventoried all vascular plants within a 5.64 m radius
-(only *Chamerion angustifolium*, *Achillea borealis*, and *Ceratodon
-purpureus*) and collected two soil samples from the first 10 cm of soil
-for soil fungal DNA work.
+the CBI survey via Survey123. This was at 60.53048, -150.17537, GPS
+averaged to \<2 m GPS error. We also inventoried all vascular plants
+within a 5.64 m radius (only *Chamerion angustifolium*, *Achillea
+borealis*, and *Ceratodon purpureus*) and collected two soil samples
+from the first 10 cm of soil for soil fungal DNA work.
 
 ![5.64 m radius circular plot at Paez site 79
 vicinity.](2020-07-23_Paez_site_79_vicinity_564m_radius_plot.jpg)  
@@ -8799,7 +8799,7 @@ to do
   - Inquire about remaining NGS samples/contract
   - Make Avenza map for Swan Lake Fire BAER invasive plant survey work
   - Review non-native species list
-  - Check projections, etc. for Paez site data.
+  - ~~Check projections, etc. for Paez site data.~~
   - Send Ed Hakala plot data.
 
 I examined the mustard from yesterday (iNaturalist:
@@ -8841,9 +8841,20 @@ datums.](2020-07-24-1215_Paez_coordinates.jpg)
 Mystery Hills vegetation plot coordinates from Paez’s vegetation plots,
 assuming multiple datums.
 
-I just noticed that Paez’s Mystery Hill sites were resampled in 1998
-(Paez [2009](#ref-paez_dynamics_2009)). I wonder if these data can be
-dug up from ADF\&G’s files.
+Both the R script above and ArcMap placed the coordinates to the north
+and west fo where I went, agreeing withthe pink hexagons in the map
+above. This set of reprojected coordinates also seems to be most
+consistent with alpine tundra habitat. I loaded this map (Avenza pdf) to
+my iPad and coordinates into my GPS.
+
+I noticed that Paez’s Mystery Hill sites were resampled in 1998 (Paez
+[2009](#ref-paez_dynamics_2009)). I wonder if these data can be dug up
+from ADF\&G’s files. I found no current contact information for Carlos
+Paez.
+
+After examining more examples over the last few days, I am pretty sure
+that we were seeing small *Chamerion latifolium* plants on Hakala plot
+HAK5 on [July 20](#monday-july-20).
 
 # Appendixes
 
