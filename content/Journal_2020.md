@@ -8889,6 +8889,9 @@ Plot 354-5, viewed from the south.
 
 We stopped by plot 354-2 on the way back. This had burned, also.
 
+![Plot 354-2, viewed from the south.](2020-07-27_plot_354-2.jpg)  
+Plot 354-2, viewed from the south.
+
 On the way down we observed one occurrence of a non-native plant that I
 had missed on Thursday, *Alopecurus pratensis*.
 
