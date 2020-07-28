@@ -8861,6 +8861,8 @@ HAK5 on [July 20](#monday-july-20).
 
 ## Monday, July 27
 
+<!-- 07:30-17:45 -->
+
 I saw an abandoned or feral cat at the headquarters building this
 morning (iNaturalist:
 [54647478](https://www.inaturalist.org/observations/54647478)).
@@ -8875,12 +8877,15 @@ plots. From here we walked over the ridge looking into the next valley.
 Much of the tundra had burned here on the northeast side of the Mystery
 Hills.
 
-We next walked down the southwest-facing slope to site 354-2 that I had
+We next walked down the southwest-facing slope to site 354-5 that I had
 put in in 2018 (Bowser [2018](#ref-bowser_lab_notebook_2018),
 [2019](#ref-bowser_field_2019)[b](#ref-bowser_field_2019)). Most of this
 plot had burned severely so that it was now mostly ash, soil, and rock,
 but there were unburned patches. A couple of hemlock seedlings had
 already gotten started.
+
+![Plot 354-5, viewed from the south.](2020-07-27_plot_354-5.jpg)  
+Plot 354-5, viewed from the south.
 
 We stopped by plot 354-2 on the way back. This had burned, also.
 
