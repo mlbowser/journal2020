@@ -158,6 +158,8 @@
       - [Wednesday, July 22](#wednesday-july-22)
       - [Thursday, July 23](#thursday-july-23)
       - [Friday, July 24](#friday-july-24)
+      - [Monday, July 27](#monday-july-27)
+      - [Tuesday, July 28](#tuesday-july-28)
   - [Appendixes](#appendixes)
       - [Vegetation data from 5.64 m circular
         plots](#vegetation-data-from-5.64-m-circular-plots)
@@ -1029,7 +1031,8 @@ dissect out stomach contents.
 
 In the afternoon, Apphia and I dissected stomach contents from the
 larger blackfish that I had collected on August 23, 2019 (field id:
-2019-08-23\_MLB02) (Bowser [2019](#ref-bowser_work_2019)). Apphia
+2019-08-23\_MLB02) (Bowser
+[2019](#ref-bowser_work_2019)[a](#ref-bowser_work_2019)). Apphia
 dissected out the digestive tracts, determined the sex of each fish, and
 helped with the photographs. I transfered the contents of the stomachs
 and intestines into vials of propylene glycol by squeezing the contents
@@ -8800,7 +8803,7 @@ to do
   - Make Avenza map for Swan Lake Fire BAER invasive plant survey work
   - Review non-native species list
   - ~~Check projections, etc. for Paez site data.~~
-  - Send Ed Hakala plot data.
+  - ~~Send Ed Hakala plot data.~~
 
 I examined the mustard from yesterday (iNaturalist:
 [54176380](https://www.inaturalist.org/observations/54176380)). It
@@ -8855,6 +8858,42 @@ Paez.
 After examining more examples over the last few days, I am pretty sure
 that we were seeing small *Chamerion latifolium* plants on Hakala plot
 HAK5 on [July 20](#monday-july-20).
+
+## Monday, July 27
+
+I saw an abandoned or feral cat at the headquarters building this
+morning (iNaturalist:
+[54647478](https://www.inaturalist.org/observations/54647478)).
+
+Annaleese and I hiked Skyline, this time with a goal looking at how the
+fire burned in tundra and completing CBI plots at sites where we had
+historical vegetation data.
+
+We first hiked to the corrected coordinates (assuming NAD27 datum) for
+Paez’s vegetation plots 142 and 140, but we were unable to locate the
+plots. From here we walked over the ridge looking into the next valley.
+Much of the tundra had burned here on the northeast side of the Mystery
+Hills.
+
+We next walked down the southwest-facing slope to site 354-2 that I had
+put in in 2018 (Bowser [2018](#ref-bowser_lab_notebook_2018),
+[2019](#ref-bowser_field_2019)[b](#ref-bowser_field_2019)). Most of this
+plot had burned severely so that it was now mostly ash, soil, and rock,
+but there were unburned patches. A couple of hemlock seedlings had
+already gotten started.
+
+We stopped by plot 354-2 on the way back. This had burned, also.
+
+On the way down we observed one occurrence of a non-native plant that I
+had missed on Thursday, *Alopecurus pratensis*.
+
+## Tuesday, July 28
+
+to do
+
+  - Notes from yesterday
+  - Edit *Refuge Notebook* article
+  - Review non-native species list.
 
 # Appendixes
 
@@ -8945,9 +8984,17 @@ doi:[10.7299/X7736R6J](https://doi.org/10.7299/X7736R6J).
 
 <div id="ref-bowser_work_2019">
 
-Bowser, M.L. 2019. Work journal 2019. Exported pdf version. U.S. Fish &
+Bowser, M.L. 2019a. Work journal 2019. Exported pdf version. U.S. Fish &
 Wildlife Service, Kenai National Wildlife Refuge., Soldotna, Alaska.
 doi:[10.7299/X7RB74XZ](https://doi.org/10.7299/X7RB74XZ).
+
+</div>
+
+<div id="ref-bowser_field_2019">
+
+Bowser, M.L. 2019b. Field Notebook, June 11, 2018 - May 29, 2019. USFWS
+Kenai National Wildlife Refuge, Soldotna, Alaska. Available from
+<https://arctos.database.museum/media/10612204>.
 
 </div>
 
