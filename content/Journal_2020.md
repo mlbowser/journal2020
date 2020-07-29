@@ -160,6 +160,7 @@
       - [Friday, July 24](#friday-july-24)
       - [Monday, July 27](#monday-july-27)
       - [Tuesday, July 28](#tuesday-july-28)
+      - [Wednesday, July 29](#wednesday-july-29)
   - [Appendixes](#appendixes)
       - [Vegetation data from 5.64 m circular
         plots](#vegetation-data-from-5.64-m-circular-plots)
@@ -8886,11 +8887,19 @@ I had put in in 2018 (Bowser [2018](#ref-bowser_lab_notebook_2018),
 [2019](#ref-bowser_field_2019)[b](#ref-bowser_field_2019)). Most of this
 plot had burned severely so that it was now mostly ash, soil, and rock,
 but there were unburned patches. A couple of hemlock seedlings had
-already gotten started.
+already gotten started. Here we did a CBI plot, collected soil samples
+for detecting soil fungi, recorded presence of plant species within a
+5.64 m radius circular plot, and repeated the two (N and S) point
+intercept transects as was done in 2018. These were at every 0.5 m from
+0.5 m to 10 m on the right side of the tape starting at plot center.
 
 ![Plot Skyline354-5, viewed from the
 south.](2020-07-27_plot_354-5.jpg)  
 Plot 354-5, viewed from the south.
+
+![Plot Skyline354-5, viewed from the south on June 20,
+2018.](2018-06-20_plot_354-5.jpg)  
+Plot Skyline354-5, viewed from the south on June 20, 2018.
 
 It was remarkable how severly the tundra and low shrubs had burned.
 There were unburned areas, but where the fire had come through it was
@@ -8902,6 +8911,10 @@ We stopped by plot Skyline354-2 on the way back. This had burned, also.
 Plot 354-2, viewed from the south. The burned fiberglass rod marking
 plot center is visible in the foreground.
 
+![Plot 354-2, viewed from the south on June 11,
+2018.](2018-06-11_plot_354-2.jpg)  
+Plot 354-2, viewed from the south on June 11, 2018.
+
 On the way down we observed one occurrence of a non-native plant that I
 had missed on Thursday, *Alopecurus pratensis* (iNaturalist:
 [54664464](https://www.inaturalist.org/observations/54664464)).
@@ -8912,10 +8925,67 @@ to do
 
   - ~~Notes from yesterday~~
   - ~~Edit *Refuge Notebook* article~~
-  - Review non-native species list.
+  - ~~Review non-native species list.~~
   - Get snowshoe hare project metadata ready for Thursday meeting.
 
 I edited this week’s *Refuge Notebook* article, getting it sent off.
+
+I started an Arctos project for this year’s vegetation work following
+the Swan Lake Fire (<https://arctos.database.museum/project/10003388>).
+
+Now I need to review the list of non-native terrestrial invertebrates of
+Alaska, updated data from the earlier list (Simpson et al.
+[2019](#ref-simpson_list_2019)).
+
+``` r
+## Comparing the new list to the previous version.
+wd <- "D:/projects/non-native_species/2020_comprehensive_list_review"
+setwd(wd)
+
+old <- read.csv("Non-native_Master_V2-0_20190912.csv", colClasses="character")
+new <- read.csv("NNSL_AK-HI-L48_V3_2020-06-10_ForReview.csv", colClasses="character")
+
+select_old <- (old$Region == "AK") &
+ (old$Kingdom == "Animalia")
+old_animals <- old[select_old, 1:33]
+
+dim(old_animals)
+[1] 142  33
+
+select_new <- (new$Region == "AK") &
+ (new$Kingdom == "Animalia")
+new_animals <- new[select_new, 1:33]
+
+dim(new_animals)
+[1] 142  33
+
+setdiff(old_animals$scientificName, new_animals$scientificName)
+character(0)
+
+setdiff(new_animals$scientificName, old_animals$scientificName)
+character(0)
+## It appears that there are no differences in the lists of species.
+
+write.csv(new_animals, "2020-07-28-1456_AK_animals.csv", row.names=FALSE)
+```
+
+I edited the record for *Eisenia fetida*, added *Eisenia andrei*, and
+got these edits to Annie.
+
+## Wednesday, July 29
+
+to do
+
+  - time
+  - respond to Lisa
+  - ~~Addition of *Adelges piceae* to the checklist of non-native
+    species~~
+  - Prepare to send out morel specimens?
+  - Inquire about NGS contract extension.
+  - snowshoe hare processing / metadata
+
+I edited the list of non-native animal species of Alaska and got these
+edits sent out.
 
 # Appendixes
 
@@ -9579,6 +9649,16 @@ doi:[10.1111/j.1479-8298.2006.00188.x](https://doi.org/10.1111/j.1479-8298.2006.
 Shorthouse, D.P. 2010. SimpleMappr, an online tool to produce
 publication-quality point maps. Available from
 <https://www.simplemappr.net>.
+
+</div>
+
+<div id="ref-simpson_list_2019">
+
+Simpson, A., Eyler, M.C., Sikes, D., Bowser, M., Sellers, E., Guala,
+G.F., Cannister, M., Libby, R., and Kozlowski, N. 2019. A comprehensive
+list of non-native species established in three major regions of the
+united states: Version 2.0.
+doi:[10.5066/P9E5K160](https://doi.org/10.5066/P9E5K160).
 
 </div>
 
