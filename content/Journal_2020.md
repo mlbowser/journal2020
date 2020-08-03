@@ -9052,7 +9052,7 @@ Snowshoe hare pellet counts over time.
 To do
 
   - Edit this week’s *Refuge Notebook*.
-  - weed survey mapping/planning.
+  - ~~weed survey mapping/planning.~~
 
 ### Biology staff meeting at 08:00
 
@@ -9084,9 +9084,15 @@ I mapped our current invasive species records in the Swan Lake Fire from
 the Survey123 form.
 
 ![Map of current non-native species data in the Swan Lake Fire area from
-our Survey123 form.](2020-08-03-1023_invasives_mapping.jpg)  
+our Survey123 form.](2020-08-03-1111_invasives_mapping.jpg)  
 Map of current non-native species data in the Swan Lake Fire area from
 our Survey123 form.
+
+Mike sent me a link to a useful pdf map at
+<https://ftp.nifc.gov/public/incident_specific_data/alaska/2019/2019_SwanLake/Maps/20190930/Ops_arch_e_land_20190930_SwanLake_AKKKS903181.pdf>.
+
+Looking at the maps, it looks like we should visit sites near Fuller
+Lakes Trail and off of Mystery Creek Road.
 
 # Appendixes
 
