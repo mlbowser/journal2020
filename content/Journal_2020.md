@@ -161,6 +161,8 @@
       - [Monday, July 27](#monday-july-27)
       - [Tuesday, July 28](#tuesday-july-28)
       - [Wednesday, July 29](#wednesday-july-29)
+  - [August](#august)
+      - [Monday, August 3](#monday-august-3)
   - [Appendixes](#appendixes)
       - [Vegetation data from 5.64 m circular
         plots](#vegetation-data-from-5.64-m-circular-plots)
@@ -8976,8 +8978,7 @@ got these edits to Annie.
 
 to do
 
-  - time
-  - respond to Lisa
+  - ~~Respond to Lisa~~
   - ~~Addition of *Adelges piceae* to the checklist of non-native
     species~~
   - Prepare to send out morel specimens?
@@ -8986,6 +8987,98 @@ to do
 
 I edited the list of non-native animal species of Alaska and got these
 edits sent out.
+
+I looked over next’s weeks’ *Refuge Notebook* article draft and provided
+edits and comments.
+
+I looked into sequencing morel specimens. The North American Mycoflora
+project is currently transitioning to using BOLD for its sequencing
+service and the sequencing service is temporarily unavailable.
+
+I worked on reorganizing the snowshoe hare pellet count dataset.
+
+``` r
+## I need to reorganize data some in order to associate observers and observations, keeping these in separate tables.
+
+## Load data.
+
+pellet_data <- read.csv("../data/final_data/observations/snowshoe_hare_pellet_counts.csv",
+ stringsAsFactors=FALSE
+ )
+ 
+                                       
+plot_data <- read.csv("../data/final_data/geodata/2020-03-18_snowshoe_hare_plot_data.csv",
+ stringsAsFactors=FALSE
+ )
+ 
+## Join the data to get the grid_name values.
+pellet_data_joined <- merge(
+ plot_data[,c("plot_name", "grid_name")],
+ pellet_data
+ )
+
+## Using eventID sensu http://rs.tdwg.org/dwc/terms/eventID
+
+event <- unique(pellet_data_joined[,c("grid_name", "date")])
+event <- event[order(event$date, event$grid_name),]
+event$eventID <- 1:nrow(event)
+  
+## Now joining these back to the original data.
+pellet_data_new <- merge(pellet_data_joined, event[,c("grid_name", "date", "eventID")])
+## That looked good.
+
+## Now making the observer table.
+## Using recordedBy sensu http://rs.tdwg.org/dwc/terms/recordedBy
+## This will be easier to enter manually...
+
+## Saving the observation table.
+pellet_data_new <- pellet_data_new[order(pellet_data_new$date, pellet_data_new$plot_name),]
+write.csv(pellet_data_new[,c("plot_name", "date", "eventID", "pellet_count")],
+  "../data/final_data/observations/snowshoe_hare_pellet_counts.csv",
+  row.names=FALSE
+  )
+```
+
+I also updated the script for generating graphic summaries.
+
+![Snowshoe hare pellet counts over
+time.](2020-07-29_pellet_count_means_over_time.png)  
+Snowshoe hare pellet counts over time.
+
+# August
+
+## Monday, August 3
+
+To do
+
+  - Edit this week’s *Refuge Notebook*.
+  - weed survey mapping/planning.
+
+### Biology staff meeting at 08:00
+
+  - I will be working on weed survey and Skyline field work this week.
+  - The Sandpiper Lake elodea eradication project may go forward.
+
+I receieved an ITS sequences from mushroom specimens I had submitted.
+
+Specimen iNaturliast:
+[34708025](https://www.inaturalist.org/observations/34708025)) I had
+thought was a *Cortinarius*, but the sequence is identified as *Galerina
+badipes* using UNITE and blastn searches. My photos do not look like
+*Galerina badipes*. I wonder if this is a case of contamination.
+
+Specimen iNaturliast:
+[34709612](https://www.inaturalist.org/observations/34709612)) is
+*Hygrophorus* sp. SH2252126.08FU
+(<https://unite.ut.ee/sh/SH2252126.08FU>) based on its ITS sequence.
+
+Specimen iNaturliast:
+[34710090](https://www.inaturalist.org/observations/34710090)) appears
+to be *Cystodermella granulosa*. It is 99.55% similar to a sequence in
+species hypothesis
+[SH2460475.08FU](https://unite.ut.ee/sh/SH2460475.08FU) (GenBank
+accession
+[GU234151.1](https://www.ncbi.nlm.nih.gov/nucleotide/GU234151.1)).
 
 # Appendixes
 
