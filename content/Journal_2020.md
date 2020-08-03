@@ -9080,6 +9080,14 @@ species hypothesis
 accession
 [GU234151.1](https://www.ncbi.nlm.nih.gov/nucleotide/GU234151.1)).
 
+I mapped our current invasive species records in the Swan Lake Fire from
+the Survey123 form.
+
+![Map of current non-native species data in the Swan Lake Fire area from
+our Survey123 form.](2020-08-03-1023_invasives_mapping.jpg)  
+Map of current non-native species data in the Swan Lake Fire area from
+our Survey123 form.
+
 # Appendixes
 
 ## Vegetation data from 5.64 m circular plots
