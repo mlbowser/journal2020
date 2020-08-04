@@ -9051,7 +9051,7 @@ Snowshoe hare pellet counts over time.
 
 To do
 
-  - Edit this week’s *Refuge Notebook*.
+  - ~~Edit this week’s *Refuge Notebook*.~~
   - ~~weed survey mapping/planning.~~
 
 ### Biology staff meeting at 08:00
@@ -9093,6 +9093,8 @@ Mike sent me a link to a useful pdf map at
 
 Looking at the maps, it looks like we should visit sites near Fuller
 Lakes Trail and off of Mystery Creek Road.
+
+I edited this week’s *Refuge Notebook* article.
 
 # Appendixes
 
