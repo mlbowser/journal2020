@@ -167,8 +167,8 @@
       - [Wednesday, August 5](#wednesday-august-5)
       - [Thursday, August 6](#thursday-august-6)
   - [Appendixes](#appendixes)
-      - [Vegetation data from 5.64 m circular
-        plots](#vegetation-data-from-5.64-m-circular-plots)
+      - [Vegetation data from 564 cm radius circular
+        plots](#vegetation-data-from-564-cm-radius-circular-plots)
   - [Bibliography](#bibliography)
 
 # January
@@ -8687,7 +8687,7 @@ and soil samples. I saw no resprouting plants here. I saw what looked
 like immature *Chamerion latifolium* here as well.
 
 Vegetation data are entered as an
-[appendix](#vegetation-data-from-5.64-m-circular-plots).
+[appendix](#vegetation-data-from-564-cm-radius-circular-plots).
 
 ## Tuesday, July 21
 
@@ -9180,7 +9180,7 @@ kable(a01, format="markdown", caption="Arctos")
 
 # Appendixes
 
-## Vegetation data from 5.64 m circular plots
+## Vegetation data from 564 cm radius circular plots
 
 Pesence-only data in Arctos’ bulkloader format.
 

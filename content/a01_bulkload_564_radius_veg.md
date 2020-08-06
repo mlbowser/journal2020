@@ -1,5 +1,5 @@
 
-## Vegetation data from 5.64 m circular plots 
+## Vegetation data from 564 cm radius circular plots 
 
 Pesence-only data in Arctos' bulkloader format. 
 
