@@ -163,6 +163,9 @@
       - [Wednesday, July 29](#wednesday-july-29)
   - [August](#august)
       - [Monday, August 3](#monday-august-3)
+      - [Tuesday, August 4](#tuesday-august-4)
+      - [Wednesday, August 5](#wednesday-august-5)
+      - [Thursday, August 6](#thursday-august-6)
   - [Appendixes](#appendixes)
       - [Vegetation data from 5.64 m circular
         plots](#vegetation-data-from-5.64-m-circular-plots)
@@ -9095,6 +9098,50 @@ Looking at the maps, it looks like we should visit sites near Fuller
 Lakes Trail and off of Mystery Creek Road.
 
 I edited this week’s *Refuge Notebook* article.
+
+## Tuesday, August 4
+
+I received the Berlese sample data from RTL Genomics this morning. I
+perused these quickly. What I saw looked good.
+
+Annaleese and I first drove to the Marsh Lake Trail trailhead, where we
+looked for *Bromus tectorum*, which had been reported from this site.
+There were many grasses here, but we failed to find *B. tectorum*.
+*Agrostis scabra* and *Deschampsia cespitosa* were the dominant grasses.
+
+Next we hiked the beginning of the Fuller Lakes Trail surveying for
+weeds using Survey123. The trail had been used as a fire break during
+the Swan Lake Fire. On the trail were typical trailside weeds:
+*Taraxacum officinale*, *Poa annua*, *Plantago major*, *Juncus
+bufonius*, and *Phleum pratense*.
+
+We walked as far as the power lines, then we crossed the creek,
+following the power lines west from the Fuller Lakes Trail. The power
+lines were quite weedy.
+
+## Wednesday, August 5
+
+I spent the day on Skyline, surveying two more of the shrub plots I had
+put in in 2018 with Mark. The rest of Mark’s family accompanied us as
+far as the saddle. From there they hiked northwest up the small peak to
+the northwest looking for the Carlos Paez Caribou range study sites
+using the updated coordinates. They failed to find any of these sites.
+
+Mark and I surveyed shrub plot 354-2, which had burned severely. We also
+surveyed plot 354-1, which had burned, but much less severely. Much of
+the plot had burned to mineral soil, but in other places only the top of
+the litter/duff had burned lightly so that vegetation was essentially
+unchanged. At these two sites we completed the CBI protocols, two 10 m,
+20 point vegetation transects, and 5.64 m radius, circular plot
+vegetation inventories.
+
+Tonight I sent in this week’s *Refuge Notebook* article, almost
+forgetting to do so.
+
+## Thursday, August 6
+
+I am trying to identify a *Rorippa* that I collected from the power line
+off of Fuller Lakes Trail on [August 4](#tuesday-august-4).
 
 # Appendixes
 
