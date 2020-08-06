@@ -3,6 +3,8 @@
 
 library(knitr)
 
+options("encoding" = "native.enc")
+
 meta <- read.csv("a00_appendix_metadata.csv")
 
 for (this_table in 1:nrow(meta))
@@ -23,7 +25,8 @@ for (this_table in 1:nrow(meta))
   
  ## Table
  atable <- read.csv(meta$file_name[this_table], stringsAsFactors=FALSE)
- write(kable(a01, format="markdown"),
+ options("encoding" = "UTF-8")
+ write(kable(atable, format="markdown"),
   file=out_file,
   append=TRUE
   )
