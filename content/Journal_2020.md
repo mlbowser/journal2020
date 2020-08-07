@@ -9169,14 +9169,8 @@ uuids <- UUIDgenerate(n=17)
 write.csv(uuids, "uuids.csv")
 ```
 
-``` r
-## Testing generation of markdown tables using knitr...
-library(knitr)
-
-a01 <- read.csv("a01_bulkload_564_radius_veg.csv")
-
-kable(a01, format="markdown", caption="Arctos")
-```
+I uploaded these records
+([KNWRObs:Herb:954](https://arctos.database.museum/guid/KNWRObs:Herb:954)–[KNWRObs:Herb:970](https://arctos.database.museum/guid/KNWRObs:Herb:970)).
 
 # Appendixes
 
