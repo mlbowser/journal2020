@@ -171,6 +171,8 @@
   - [Appendixes](#appendixes)
       - [Vegetation data from 564 cm radius circular
         plots](#vegetation-data-from-564-cm-radius-circular-plots)
+      - [Sandpiper Lake elodea eradication project equipment
+        list](#sandpiper-lake-elodea-eradication-project-equipment-list)
   - [Bibliography](#bibliography)
 
 # January
@@ -9204,12 +9206,19 @@ The 30 gallon liquid tank is 60 cm wide and 92 cm long without valves
 attached. It fits, but it would need to be raised on something to keep
 the valve fitting from having weight on it.
 
+![Liquid application tank in the
+Alumacraft.](2020-08-07_tank_in_boat.jpg)  
+Liquid application tank in the Alumacraft.
+
 I tried assembling the apparatuses for pelleted and liquid applications.
 The pellet spreader is ready to go. We appear to be missing one of the
 nozzles from the liquid application setup. I wrote our staff and some
 others asking about this.
 
 ## Monday, August 10
+
+I worked on communicating, planning, and getting equipmet together for
+the Sandpiper Lake elodea application.
 
 # Appendixes
 
@@ -9258,6 +9267,18 @@ Pesence-only data in Arctos’ bulkloader format.
 |                     37 |                                      | KNWRObs:Herb | mbowser   | KNWR-2020.02-SwanLake-ObsHerb | Veratrum viride          | features       | Matt Bowser         | 2020-08-05 |                                                                                                                                                                                                            | 2020-08-05     | 2020-08-05  | 2020-08-05  | North America, United States, Alaska, Kenai Peninsula Borough | Mystery Hills off of the Skyline Trail, Skyline shrub study site 354-2                               | Mystery Hills off of the Skyline Trail, Skyline shrub study site 354-2                               |                        | 60.52639 | \-150.1659 | World Geodetic System 1984 | Pre-determined plot coordinates |                   30 | m                 | MaNIS georeferencing guidelines | wild caught        | former alder thicket defoliated by moths, then burned | observation           | 5.64 m radius, circular plot presence-only vegetation survey using the methods of Morton et al. (2009). Reference: Morton, J. M., Bowser, M. L., Berg, E., Magness, D., & Eskelin, T. (2009). Long Term Ecological Monitoring Program on the Kenai National Wildlife Refuge, Alaska: An FIA adjunct inventory. In W. McWilliams, G. Moisen, & R. Czaplewski (Eds.), 2008 Forest Inventory and Analysis (FIA) Symposium; October 21-23, 2008; Park City, UT (pp. 1-17). U.S. Department of Agriculture, Forest Service, Rocky Mountain Research Station. http://www.treesearch.fs.fed.us/pubs/33332 | Matt Bowser                | 2020-08-07            | unverified         | Matt Bowser         | collector          | Mark Laker           | collector          | media         | not applicable     | not applicable       |                   1 |
 |                     38 |                                      | KNWRObs:Herb | mbowser   | KNWR-2020.02-SwanLake-ObsHerb | Alnus viridis            | features       | Matt Bowser         | 2020-08-05 |                                                                                                                                                                                                            | 2020-08-05     | 2020-08-05  | 2020-08-05  | North America, United States, Alaska, Kenai Peninsula Borough | Mystery Hills off of the Skyline Trail, Skyline shrub study site 354-2                               | Mystery Hills off of the Skyline Trail, Skyline shrub study site 354-2                               |                        | 60.52639 | \-150.1659 | World Geodetic System 1984 | Pre-determined plot coordinates |                   30 | m                 | MaNIS georeferencing guidelines | wild caught        | former alder thicket defoliated by moths, then burned | observation           | 5.64 m radius, circular plot presence-only vegetation survey using the methods of Morton et al. (2009). Reference: Morton, J. M., Bowser, M. L., Berg, E., Magness, D., & Eskelin, T. (2009). Long Term Ecological Monitoring Program on the Kenai National Wildlife Refuge, Alaska: An FIA adjunct inventory. In W. McWilliams, G. Moisen, & R. Czaplewski (Eds.), 2008 Forest Inventory and Analysis (FIA) Symposium; October 21-23, 2008; Park City, UT (pp. 1-17). U.S. Department of Agriculture, Forest Service, Rocky Mountain Research Station. http://www.treesearch.fs.fed.us/pubs/33332 | Matt Bowser                | 2020-08-07            | unverified         | Matt Bowser         | collector          | Mark Laker           | collector          | media         | not applicable     | not applicable       |                   1 |
 |                     39 |                                      | KNWRObs:Herb | mbowser   | KNWR-2020.02-SwanLake-ObsHerb | Populus tremuloides      | features       | Matt Bowser         | 2020-08-05 | Seedlings                                                                                                                                                                                                  | 2020-08-05     | 2020-08-05  | 2020-08-05  | North America, United States, Alaska, Kenai Peninsula Borough | Mystery Hills off of the Skyline Trail, Skyline shrub study site 354-2                               | Mystery Hills off of the Skyline Trail, Skyline shrub study site 354-2                               |                        | 60.52639 | \-150.1659 | World Geodetic System 1984 | Pre-determined plot coordinates |                   30 | m                 | MaNIS georeferencing guidelines | wild caught        | former alder thicket defoliated by moths, then burned | observation           | 5.64 m radius, circular plot presence-only vegetation survey using the methods of Morton et al. (2009). Reference: Morton, J. M., Bowser, M. L., Berg, E., Magness, D., & Eskelin, T. (2009). Long Term Ecological Monitoring Program on the Kenai National Wildlife Refuge, Alaska: An FIA adjunct inventory. In W. McWilliams, G. Moisen, & R. Czaplewski (Eds.), 2008 Forest Inventory and Analysis (FIA) Symposium; October 21-23, 2008; Park City, UT (pp. 1-17). U.S. Department of Agriculture, Forest Service, Rocky Mountain Research Station. http://www.treesearch.fs.fed.us/pubs/33332 | Matt Bowser                | 2020-08-07            | unverified         | Matt Bowser         | collector          | Mark Laker           | collector          | media         | not applicable     | not applicable       |                   1 |
+
+## Sandpiper Lake elodea eradication project equipment list
+
+| category              | description                   | quantity   | weight\_lbs | total\_weight\_lbs | length\_in | width\_in | height\_in |
+| :-------------------- | :---------------------------- | :--------- | ----------: | -----------------: | :--------- | :-------- | :--------- |
+| herbicide             | SonarONE pelleted fluridone   | 42         |          20 |                840 | NA         | NA        | NA         |
+| herbicide             | Littora liquid Diquat         | 40 gallons |          NA |                 NA | NA         | NA        | NA         |
+| application equipment | pellet spreader               |            |          NA |                 NA | NA         | NA        | NA         |
+| application equipment | liquid tank                   |            |          NA |                 NA | NA         | NA        | NA         |
+| application equipment | spill kit                     |            |          NA |                 NA | NA         | NA        | NA         |
+| survey equipment      | elodea rakes                  | 2          |          NA |                 NA | NA         | NA        | NA         |
+|                       | personal protective equipment |            |          NA |                 NA | NA         | NA        | NA         |
 
 # Bibliography
 
