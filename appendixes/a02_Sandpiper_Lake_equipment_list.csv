@@ -1,8 +1,28 @@
-category,description,quantity,weight_lbs,total_weight_lbs,length_in,width_in,height_in
-herbicide,SonarONE pelleted fluridone,42,20,840,,,
-herbicide,Littora liquid Diquat,40 gallons,,,,,
-application equipment,pellet spreader,,,,,,
-application equipment,liquid tank,,,,,,
-application equipment,spill kit,,,,,,
-survey equipment,elodea rakes,2,,,,,
-,personal protective equipment,,,,,,
+category,description,quantity,weight_lbs,total_weight_lbs,length_in,width_in,height_in,hazmat
+application equipment,pellet spreader,1,81,81,35,24,40,
+application equipment,55 gallon liquid tank,1,25,25,36,24,30,
+application equipment,bucket,1,,,,,,
+application equipment,deep cycle marine batteries,2,,,,,,
+application equipment,electric transfer pump,1,,,,,,
+application equipment,spill kit,1,,,,,,
+boating equipment,9 hp outboard motor,1,103,103,,,,
+boating equipment,bilge pump?,,,,,,,
+boating equipment,outboard gas tank,1,,,,,,yes
+camping equipment,personal bags,4,,,,,,
+camping equipment,tents,,,,,,,
+fuel,1 gallon plastic container of pre-mixed 2-cycle gasoline,1,,,,,,yes
+fuel,camp stove fuel canisters,,,,,,,yes
+herbicide,Littora liquid Diquat (box of 2 2.5 gallon jugs),8,54,432,,,,yes
+herbicide,SonarONE pelleted fluridone,42,20,840,,,,yes
+legal requirements,applicator license,,,,,,,
+legal requirements,permits,,,,,,,
+legal requirements,SDS's,,,,,,,
+legal requirements,signs,,,,,,,
+safety,12 gauge slugs,2,,,,,,
+safety,bag of personal protective equipment,1,,,,,,
+safety,bear spray,3,,,,,,yes
+safety,PFDs,4,,,,,,
+safety,shotgun,1,,,,,,
+survey equipment,elodea rakes,2,,,,,,
+application equipment,GPS,,,,,,,
+application equipment,GPS batteries,,,,,,,

@@ -24,7 +24,7 @@ for (this_table in 1:nrow(meta))
   ) 
   
  ## Table
- atable <- read.csv(meta$file_name[this_table], stringsAsFactors=FALSE)
+ atable <- read.csv(meta$file_name[this_table], colClasses="character")
  options("encoding" = "UTF-8")
  write(kable(atable, format="markdown"),
   file=out_file,
