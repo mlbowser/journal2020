@@ -168,6 +168,8 @@
       - [Thursday, August 6](#thursday-august-6)
       - [Friday, August 7](#friday-august-7)
       - [Monday, August 10](#monday-august-10)
+      - [Tuesday, August 11](#tuesday-august-11)
+      - [Wednesday, August 12](#wednesday-august-12)
   - [Appendixes](#appendixes)
       - [Vegetation data from 564 cm radius circular
         plots](#vegetation-data-from-564-cm-radius-circular-plots)
@@ -9232,6 +9234,38 @@ for people and gear. The 24 gallon, tank intended for the ATV would be
 I must make calculations for applying liquid Littora. This should be
 applied at a maximum of 2 gallons per surface acre. In the past we have
 applied it at 1 gallon per surface acre.
+
+## Tuesday, August 11
+
+Jake and I spent the day preparing for the Sandpiper Lake elodea
+eradication. We spent much of the afternoon adapting the ATV spreader
+for use on a boat and calibrating it.
+
+## Wednesday, August 12
+
+Jake, Mark, and I met Nate and Jim at Soldotna Airport at 09:00. We
+loaded both 206’s with herbicide. Nate and Jim flew this out to
+Sandpiper Lake, where they worked on caching it on the south shore of
+Sandpiper Lake.
+
+![Loading herbicide.](2020-08-12_loading_herbicide.jpg)  
+Loading herbicide.
+
+While they were away, Jake and I filled the gas tank of the outboard,
+connected it, and tested the outboard.
+
+We met Nate and Jim for a second load. We inspected their aircraft for
+*Elodea*. We only found one fragment of *Potamogeton*. this time taking
+out almost all of the application equipment, including the outboard.
+This was also cached at Sandpiper Lake. After dropping this off, Jim and
+Nate returned to Anchorage.
+
+We spent the rest of the day getting equipment together. I printed off
+all of the permits, the prescription, signs, etc.
+
+![Pellet spreader and outboard in the
+206.](2020-08-12_spreader_in_206.jpg)  
+Pellet spreader and outboard in the 206.
 
 # Appendixes
 
