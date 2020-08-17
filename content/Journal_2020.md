@@ -9292,6 +9292,10 @@ Healthy *Elodea* at Sandpiper Lake (iNaturalist:
 ![A dense bed of *Elodea*.](2020-08-13_elodea_bed.jpg)  
 A dense bed of *Elodea*.
 
+![A rake full of long, luxuriant
+*Elodea*.](2020-08-13_elodea_rake.jpg)  
+A rake full of long, luxuriant *Elodea*.
+
 ### *Elodea* rake survey data from Sandpiper Lake on August 13.
 
 “Shoreward” and “lakeward” indicate rake throws away from and towards
@@ -9324,6 +9328,11 @@ tines having picked up *Elodea*.
 |      180 | Sandpiper20 | 61.003107 | \-150.412391 |           |          |
 |      181 | Sandpiper21 | 61.002255 | \-150.412013 |           |          |
 |      182 | Sandpiper22 | 61.001149 | \-150.411302 |           |          |
+
+Afer surveying, Colin and I applied the first round of SonarONE pelleted
+fluridone to Sandpiper Lake.
+
+It was late when we made it back to the cabin in the canoes.
 
 # Appendixes
 
