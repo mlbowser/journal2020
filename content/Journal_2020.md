@@ -9360,6 +9360,11 @@ brought neither *Elodea* nor residual herbicide through the other lakes.
 barrier.](2020-08-14_dragging_boat.jpg)  
 Dragging the boat around a fish barrier.
 
+I was surprised to see one individual of *Scorzoneroides autumnalis* in
+front of the Vogel Lake public use cabin (iNaturalist:
+[56765869](https://www.inaturalist.org/observations/56765869)). I pulled
+it.
+
 Later Shay took us and all of our equipment to Headquarters Lake in
 three loads in the 185.
 
@@ -9371,6 +9376,13 @@ To do:
   - Finish putting away equipment
   - Review spruce genetics document
   - Non-native plant photos to Lynnda
+
+I made a quick map of the distribution of *Elodea* at Sandpiper Lake
+based on a rake throw survey.
+
+![Map of *Elodea* detections at Sandpiper
+Lake.](2020-08-17_Sandpiper_elodea_map.jpg)  
+Map of *Elodea* detections at Sandpiper Lake.
 
 # Appendixes
 
