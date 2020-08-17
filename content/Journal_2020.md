@@ -9284,6 +9284,14 @@ Once at Sandpiper Lake, we set up the outboard on the boat and then Jake
 and I surveyed the lake for *Elodea*. We detected *Elodea* at 3 out of
 22 sites, all detections in the northernmost part of the lake.
 
+![Healthy *Elodea* at Sandpiper Lake (iNaturalist:
+[56759042](https://www.inaturalist.org/observations/56759042)).](2020-08-13_elodea_detail.jpg)  
+Healthy *Elodea* at Sandpiper Lake (iNaturalist:
+[56759042](https://www.inaturalist.org/observations/56759042)).
+
+![A dense bed of *Elodea*.](2020-08-13_elodea_bed.jpg)  
+A dense bed of *Elodea*.
+
 ### *Elodea* rake survey data from Sandpiper Lake on August 13.
 
 “Shoreward” and “lakeward” indicate rake throws away from and towards
