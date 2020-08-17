@@ -9296,6 +9296,10 @@ A dense bed of *Elodea*.
 *Elodea*.](2020-08-13_elodea_rake.jpg)  
 A rake full of long, luxuriant *Elodea*.
 
+![A dense patch of *Elodea* under *Potamogeton
+natans*.](2020-08-13_elodea_Potamogeton.jpg)  
+A dense patch of *Elodea* under *Potamogeton natans*.
+
 ### *Elodea* rake survey data from Sandpiper Lake on August 13.
 
 “Shoreward” and “lakeward” indicate rake throws away from and towards
@@ -9372,17 +9376,22 @@ three loads in the 185.
 
 To do:
 
-  - ~~Record notes from Sandpiper Lake treatment~~
-  - Finish putting away equipment
-  - Review spruce genetics document
-  - Non-native plant photos to Lynnda
+  - ~~Record notes from Sandpiper Lake treatment.~~
+  - ~~Finish putting away equipment.~~
+  - Review spruce genetics document.
+  - Non-native plant photos to Lynnda.
 
 I made a quick map of the distribution of *Elodea* at Sandpiper Lake
 based on a rake throw survey.
 
 ![Map of *Elodea* detections at Sandpiper
 Lake.](2020-08-17_Sandpiper_elodea_map.jpg)  
-Map of *Elodea* detections at Sandpiper Lake.
+Map of *Elodea* detections at Sandpiper Lake. Red dots indicate
+detections; white dots indicate non-detections. The two red balloons
+marked “E” mark the approximate limits of the infestation.
+
+Jake and I put away all of the equipment from the Sandpiper Lake
+treatment.
 
 # Appendixes
 
