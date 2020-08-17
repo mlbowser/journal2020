@@ -171,6 +171,7 @@
       - [Tuesday, August 11](#tuesday-august-11)
       - [Wednesday, August 12](#wednesday-august-12)
       - [Thursday, August 13](#thursday-august-13)
+      - [Friday, August 14](#friday-august-14)
   - [Appendixes](#appendixes)
       - [Vegetation data from 564 cm radius circular
         plots](#vegetation-data-from-564-cm-radius-circular-plots)
@@ -9333,6 +9334,26 @@ Afer surveying, Colin and I applied the first round of SonarONE pelleted
 fluridone to Sandpiper Lake.
 
 It was late when we made it back to the cabin in the canoes.
+
+## Friday, August 14
+
+![Vogel Lake cabin and our tents. We did not all stay in the cabin due
+to COVID-19 concerns.](2020-08-14_tents_and_cabin.jpg)  
+Vogel Lake cabin and our tents. We did not all stay in the cabin due to
+COVID-19 concerns.
+
+Colin, Jake, and I took the canoes back to Sandpiper Lake in the
+morning. Colin and I applied the Littora diquat over the areas where
+elodea was present, treating 2.5 acres in all with 5 gallons of Littora.
+
+![Using a GPS to apply diquat at the prescribed
+rate.](2020-08-14_applying_diquat.jpg)  
+Using a GPS to apply diquat at the prescribed rate.
+
+The bigger task for the day was getting all of our remaining equipment
+back to Vogel Lake cabin for pick-up. We loaded all of the equipment and
+the unused Littora into the Alumacraft and canoes, which we had to drag
+much of the way through the little streams and around the pike barriers.
 
 # Appendixes
 
