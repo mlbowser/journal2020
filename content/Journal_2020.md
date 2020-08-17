@@ -172,11 +172,10 @@
       - [Wednesday, August 12](#wednesday-august-12)
       - [Thursday, August 13](#thursday-august-13)
       - [Friday, August 14](#friday-august-14)
+      - [Monday, August 17](#monday-august-17)
   - [Appendixes](#appendixes)
       - [Vegetation data from 564 cm radius circular
         plots](#vegetation-data-from-564-cm-radius-circular-plots)
-      - [Sandpiper Lake elodea eradication project equipment
-        list](#sandpiper-lake-elodea-eradication-project-equipment-list)
   - [Bibliography](#bibliography)
 
 # January
@@ -9354,6 +9353,24 @@ The bigger task for the day was getting all of our remaining equipment
 back to Vogel Lake cabin for pick-up. We loaded all of the equipment and
 the unused Littora into the Alumacraft and canoes, which we had to drag
 much of the way through the little streams and around the pike barriers.
+We cleaned and inspected our boat and equipment to make sure that we
+brought neither *Elodea* nor residual herbicide through the other lakes.
+
+![Dragging the boat around a fish
+barrier.](2020-08-14_dragging_boat.jpg)  
+Dragging the boat around a fish barrier.
+
+Later Shay took us and all of our equipment to Headquarters Lake in
+three loads in the 185.
+
+## Monday, August 17
+
+To do:
+
+  - ~~Record notes from Sandpiper Lake treatment~~
+  - Finish putting away equipment
+  - Review spruce genetics document
+  - Non-native plant photos to Lynnda
 
 # Appendixes
 
@@ -9402,38 +9419,6 @@ Pesence-only data in Arctos’ bulkloader format.
 | 37                     |                                      | KNWRObs:Herb | mbowser   | KNWR-2020.02-SwanLake-ObsHerb | Veratrum viride          | features       | Matt Bowser         | 2020-08-05 |                                                                                                                                                                                                            | 2020-08-05     | 2020-08-05  | 2020-08-05  | North America, United States, Alaska, Kenai Peninsula Borough | Mystery Hills off of the Skyline Trail, Skyline shrub study site 354-2                               | Mystery Hills off of the Skyline Trail, Skyline shrub study site 354-2                               |                        | 60.52639136 | \-150.1659054 | World Geodetic System 1984 | Pre-determined plot coordinates | 30                   | m                 | MaNIS georeferencing guidelines | wild caught        | former alder thicket defoliated by moths, then burned | observation           | 5.64 m radius, circular plot presence-only vegetation survey using the methods of Morton et al. (2009). Reference: Morton, J. M., Bowser, M. L., Berg, E., Magness, D., & Eskelin, T. (2009). Long Term Ecological Monitoring Program on the Kenai National Wildlife Refuge, Alaska: An FIA adjunct inventory. In W. McWilliams, G. Moisen, & R. Czaplewski (Eds.), 2008 Forest Inventory and Analysis (FIA) Symposium; October 21-23, 2008; Park City, UT (pp. 1-17). U.S. Department of Agriculture, Forest Service, Rocky Mountain Research Station. http://www.treesearch.fs.fed.us/pubs/33332 | Matt Bowser                | 2020-08-07            | unverified         | Matt Bowser         | collector          | Mark Laker           | collector          | media         | not applicable     | not applicable       | 1                   |
 | 38                     |                                      | KNWRObs:Herb | mbowser   | KNWR-2020.02-SwanLake-ObsHerb | Alnus viridis            | features       | Matt Bowser         | 2020-08-05 |                                                                                                                                                                                                            | 2020-08-05     | 2020-08-05  | 2020-08-05  | North America, United States, Alaska, Kenai Peninsula Borough | Mystery Hills off of the Skyline Trail, Skyline shrub study site 354-2                               | Mystery Hills off of the Skyline Trail, Skyline shrub study site 354-2                               |                        | 60.52639136 | \-150.1659054 | World Geodetic System 1984 | Pre-determined plot coordinates | 30                   | m                 | MaNIS georeferencing guidelines | wild caught        | former alder thicket defoliated by moths, then burned | observation           | 5.64 m radius, circular plot presence-only vegetation survey using the methods of Morton et al. (2009). Reference: Morton, J. M., Bowser, M. L., Berg, E., Magness, D., & Eskelin, T. (2009). Long Term Ecological Monitoring Program on the Kenai National Wildlife Refuge, Alaska: An FIA adjunct inventory. In W. McWilliams, G. Moisen, & R. Czaplewski (Eds.), 2008 Forest Inventory and Analysis (FIA) Symposium; October 21-23, 2008; Park City, UT (pp. 1-17). U.S. Department of Agriculture, Forest Service, Rocky Mountain Research Station. http://www.treesearch.fs.fed.us/pubs/33332 | Matt Bowser                | 2020-08-07            | unverified         | Matt Bowser         | collector          | Mark Laker           | collector          | media         | not applicable     | not applicable       | 1                   |
 | 39                     |                                      | KNWRObs:Herb | mbowser   | KNWR-2020.02-SwanLake-ObsHerb | Populus tremuloides      | features       | Matt Bowser         | 2020-08-05 | Seedlings                                                                                                                                                                                                  | 2020-08-05     | 2020-08-05  | 2020-08-05  | North America, United States, Alaska, Kenai Peninsula Borough | Mystery Hills off of the Skyline Trail, Skyline shrub study site 354-2                               | Mystery Hills off of the Skyline Trail, Skyline shrub study site 354-2                               |                        | 60.52639136 | \-150.1659054 | World Geodetic System 1984 | Pre-determined plot coordinates | 30                   | m                 | MaNIS georeferencing guidelines | wild caught        | former alder thicket defoliated by moths, then burned | observation           | 5.64 m radius, circular plot presence-only vegetation survey using the methods of Morton et al. (2009). Reference: Morton, J. M., Bowser, M. L., Berg, E., Magness, D., & Eskelin, T. (2009). Long Term Ecological Monitoring Program on the Kenai National Wildlife Refuge, Alaska: An FIA adjunct inventory. In W. McWilliams, G. Moisen, & R. Czaplewski (Eds.), 2008 Forest Inventory and Analysis (FIA) Symposium; October 21-23, 2008; Park City, UT (pp. 1-17). U.S. Department of Agriculture, Forest Service, Rocky Mountain Research Station. http://www.treesearch.fs.fed.us/pubs/33332 | Matt Bowser                | 2020-08-07            | unverified         | Matt Bowser         | collector          | Mark Laker           | collector          | media         | not applicable     | not applicable       | 1                   |
-
-## Sandpiper Lake elodea eradication project equipment list
-
-| category              | description                                              | quantity | weight\_lbs | total\_weight\_lbs | length\_in | width\_in | height\_in | hazmat |
-| :-------------------- | :------------------------------------------------------- | :------- | :---------- | :----------------- | :--------- | :-------- | :--------- | :----- |
-| application equipment | pellet spreader                                          | 1        | 81          | 81                 | 35         | 24        | 40         |        |
-| application equipment | 55 gallon liquid tank                                    | 1        | 25          | 25                 | 36         | 24        | 30         |        |
-| application equipment | bucket                                                   | 1        |             |                    |            |           |            |        |
-| application equipment | deep cycle marine batteries                              | 2        |             |                    |            |           |            |        |
-| application equipment | electric transfer pump                                   | 1        |             |                    |            |           |            |        |
-| application equipment | spill kit                                                | 1        |             |                    |            |           |            |        |
-| boating equipment     | 9 hp outboard motor                                      | 1        | 103         | 103                |            |           |            |        |
-| boating equipment     | bilge pump?                                              |          |             |                    |            |           |            |        |
-| boating equipment     | outboard gas tank                                        | 1        |             |                    |            |           |            | yes    |
-| camping equipment     | personal bags                                            | 4        |             |                    |            |           |            |        |
-| camping equipment     | tents                                                    |          |             |                    |            |           |            |        |
-| fuel                  | 1 gallon plastic container of pre-mixed 2-cycle gasoline | 1        |             |                    |            |           |            | yes    |
-| fuel                  | camp stove fuel canisters                                |          |             |                    |            |           |            | yes    |
-| herbicide             | Littora liquid Diquat (box of 2 2.5 gallon jugs)         | 8        | 54          | 432                |            |           |            | yes    |
-| herbicide             | SonarONE pelleted fluridone                              | 42       | 20          | 840                |            |           |            | yes    |
-| legal requirements    | applicator license                                       |          |             |                    |            |           |            |        |
-| legal requirements    | permits                                                  |          |             |                    |            |           |            |        |
-| legal requirements    | SDS’s                                                    |          |             |                    |            |           |            |        |
-| legal requirements    | signs                                                    |          |             |                    |            |           |            |        |
-| safety                | 12 gauge slugs                                           | 2        |             |                    |            |           |            |        |
-| safety                | bag of personal protective equipment                     | 1        |             |                    |            |           |            |        |
-| safety                | bear spray                                               | 3        |             |                    |            |           |            | yes    |
-| safety                | PFDs                                                     | 4        |             |                    |            |           |            |        |
-| safety                | shotgun                                                  | 1        |             |                    |            |           |            |        |
-| survey equipment      | elodea rakes                                             | 2        |             |                    |            |           |            |        |
-| application equipment | GPS                                                      |          |             |                    |            |           |            |        |
-| application equipment | GPS batteries                                            |          |             |                    |            |           |            |        |
 
 # Bibliography
 
