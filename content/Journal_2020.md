@@ -173,6 +173,7 @@
       - [Thursday, August 13](#thursday-august-13)
       - [Friday, August 14](#friday-august-14)
       - [Monday, August 17](#monday-august-17)
+      - [Tuesday, August 18](#tuesday-august-18)
   - [Appendixes](#appendixes)
       - [Vegetation data from 564 cm radius circular
         plots](#vegetation-data-from-564-cm-radius-circular-plots)
@@ -8706,7 +8707,7 @@ I pulled FMH datasheets and scanned them for Lisa and Hunter.
 
 I edited this week’s *Refuge Notebook* article.
 
-I spent the day with Lyndda Kahn examining recent work done by HEA on
+I spent the day with Lynnda Kahn examining recent work done by HEA on
 the power line right of way between Three Johns Road and Jean Lake. Some
 poles had recently been removed cleanly with minimal damage. In
 contrast, the access road that HEA put in around Jean Lake and Jean
@@ -9142,6 +9143,14 @@ unchanged. At these two sites we completed the CBI protocols, two 10 m,
 20 point vegetation transects, and 5.64 m radius, circular plot
 vegetation inventories.
 
+![Plot Skyline354-2, looking north over plot
+center.](2020-08-05_Skyline354-2_north.jpg)  
+Plot Skyline354-2, looking north over plot center.
+
+![Plot Skyline354-1, looking north over plot
+center.](2020-08-05_Skyline354-1_north.jpg)  
+Plot Skyline354-1, looking north over plot center.
+
 Tonight I sent in this week’s *Refuge Notebook* article, almost
 forgetting to do so.
 
@@ -9378,7 +9387,7 @@ To do:
 
   - ~~Record notes from Sandpiper Lake treatment.~~
   - ~~Finish putting away equipment.~~
-  - Review spruce genetics document.
+  - ~~Review spruce genetics document.~~
   - Non-native plant photos to Lynnda.
 
 I made a quick map of the distribution of *Elodea* at Sandpiper Lake
@@ -9392,6 +9401,19 @@ marked “E” mark the approximate limits of the infestation.
 
 Jake and I put away all of the equipment from the Sandpiper Lake
 treatment.
+
+## Tuesday, August 18
+
+  - ~~Photos/weed records to Lynnda.~~
+  - meetings
+  - Edit *Refuge Notebook* article.
+
+### Biology staff meeting at 08:00
+
+  - I will be doing non-native plant surveys off of Mystery Creek Road.
+
+I sent Lynnda non-native plant observations from powerlines from [July
+21](#tuesday-july-21) and [August 4](#tuesday-august-4).
 
 # Appendixes
 
@@ -9794,7 +9816,7 @@ doi:[10.1371/journal.pone.0058073](https://doi.org/10.1371/journal.pone.0058073)
 <div id="ref-huotari_population_2011">
 
 Huotari, T., Korpelainen, H., Leskinen, E., and Kostamo, K. 2011.
-Population genetics of the invasive water weed Elodea canadensis in
+Population genetics of the invasive water weed *Elodea canadensis* in
 Finnish waterways. Plant Systematics and Evolution **294**(1): 27.
 doi:[10.1007/s00606-011-0442-2](https://doi.org/10.1007/s00606-011-0442-2).
 
