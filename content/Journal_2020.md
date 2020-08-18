@@ -9151,6 +9151,10 @@ Plot Skyline354-2, looking north over plot center.
 center.](2020-08-05_Skyline354-1_north.jpg)  
 Plot Skyline354-1, looking north over plot center.
 
+![Plot Skyline354-1, looking north from plot center on June 11,
+2018.](2018-06-11_Skyline354-1_north.jpg)  
+Plot Skyline354-1, looking north from plot center on June 11, 2018.
+
 Tonight I sent in this week’s *Refuge Notebook* article, almost
 forgetting to do so.
 
@@ -9164,7 +9168,7 @@ Keying using the key to *Rorippa* in the efloras Flora of North America
 treatment
 (<http://www.efloras.org/florataxon.aspx?flora_id=1&taxon_id=128745>).
 
-1 -\> 2 -\> 4 -\> *Rorippa barbareifolia*. The fruits are consistently 4
+1 → 2 → 4 → *Rorippa barbareifolia*. The fruits are consistently 4
 valved.
 
 The *Polygonum* I collected from the same area on August 4 looks like
