@@ -174,6 +174,7 @@
       - [Friday, August 14](#friday-august-14)
       - [Monday, August 17](#monday-august-17)
       - [Tuesday, August 18](#tuesday-august-18)
+      - [Wedneday, August 19](#wedneday-august-19)
   - [Appendixes](#appendixes)
       - [Vegetation data from 564 cm radius circular
         plots](#vegetation-data-from-564-cm-radius-circular-plots)
@@ -9418,6 +9419,187 @@ treatment.
 
 I sent Lynnda non-native plant observations from powerlines from [July
 21](#tuesday-july-21) and [August 4](#tuesday-august-4).
+
+### AKISP Elodea Committee Meeting at 14:00
+
+## Wedneday, August 19
+
+To do
+
+  - Submit *Refuge Notebook* article.
+  - ~~Process spruce genetics data.~~
+
+<!-- end list -->
+
+``` r
+## Comparing genetics of trees and seedlings.
+
+wd <- "I:/BIOLOGY/Data/ProjectData/Grasslands/2015_grassland_project/spruce_genetics/work_space/2020-08-19_age_classes"
+setwd(wd)
+
+data1 <- read.csv("individuals.csv")
+
+## Extract age classes from sample names.
+data1$age_class <- NA
+data1$age_class[grepl("TREE", data1$Sample)] <- "tree"
+data1$age_class[grepl("SEED", data1$Sample)] <- "seedling"
+data1$age_class[grepl("SAPL", data1$Sample)] <- "sapling"
+data1$age_class[grepl("SAMPLING", data1$Sample)] <- "sapling"
+data1$age_class[grepl("SAPLING", data1$Sample)] <- "sapling"
+
+## Extract some of the site names.
+sample1 <- strsplit(data1$Sample, "X")
+sample1.1 <- sapply(sample1, "[", 1)
+site1 <- strsplit(sample1.1, "-")
+site1.2 <- sapply(site1, "[", 2)
+data1$site <- paste0(site1.2, "X")
+
+for (this_string in c("FSEEDX", "FTREEX", "FSAPLX", "FSAPX", "FSAPLINGX"))
+ {
+ data1$site[grepl(this_string, data1$site)] <- gsub(this_string, "F", data1$site[grepl(this_string, data1$site)])
+ }
+
+data1 <- data1[,c(2,15,14,1,3:13)]
+data1 <- data1[order(data1$site, data1$age_class, data1$Sample),]
+
+## Much of the site names will need to be cleaned up manually.
+write.csv(data1, "2020-08-19-0906_individuals.csv", row.names=FALSE)
+
+data2 <- read.csv("2020-08-19-0908_individuals.csv", stringsAsFactors=FALSE)
+
+## Now starting the process of associating coordinates...
+sites1 <- read.csv("site_data.csv", stringsAsFactors=FALSE)
+
+setdiff(data2$site, sites1$locality)
+
+setdiff(sites1$locality, data2$site)
+
+## I think one of these was a transcription error:
+data2$site[data2$site=="169X"] <- "69X"
+
+## Making another site name more consistent:
+data2$site[data2$site=="Lost Lake"] <- "Lost Lake Trailhead"
+
+data2$site[data2$site=="Fox Creek Fire 1"] <- "100F"
+
+## Loading edited site data.
+sites2 <- read.csv("2020-08-19-0959_site_data.csv", stringsAsFactors=FALSE)
+
+setdiff(data2$site, sites2$locality)
+
+setdiff(sites2$locality, data2$site)
+## That looked great!
+
+names(sites2)[1] <- "site"
+
+dim(data2)
+[1] 446  15
+
+dim(sites2)
+[1] 60  7
+
+data3 <- merge(data2, sites2, all.x=TRUE)
+
+## Saving this.
+write.csv(data3, "2020-08-19-1053_individuals.csv", row.names=FALSE)
+
+## Now it is time to look at these data.
+
+## From Diana's graphics, the salmon color for Sitka spruce is f19b78.
+
+## For the purpose of this exercise I am going to lump saplings and seedlings.
+data4 <- data3
+data4$age_class[data4$age_class=="sapling"] <- "seedling"
+
+## Cutting out missing data.
+data4 <- data4[!is.na(data4$age_class),]
+data4 <- data4[!is.na(data4$Sitka),]
+dim(data4)
+[1] 272  21
+
+## Now for summaries...
+ag1 <- aggregate(data4$Sample, by=list(data4$site), FUN=length)
+names(ag1) <- c("site", "n_samples")
+
+ag1$n_tree <- aggregate(data4$age_class=="tree", by=list(data4$site), FUN=sum, na.rm=FALSE)$x
+ag1$n_seedling <- aggregate(data4$age_class=="seedling", by=list(data4$site), FUN=sum, na.rm=FALSE)$x
+
+## Checking:
+ag1$n_tree + ag1$n_seedling == ag1$n_samples
+## Looked good.
+
+ag1$n_tree_white <- aggregate(data4$age_class=="tree" & data4$Species=="w", by=list(data4$site), FUN=sum, na.rm=FALSE)$x
+ag1$n_tree_sitka <- aggregate(data4$age_class=="tree" & data4$Species=="s", by=list(data4$site), FUN=sum, na.rm=FALSE)$x
+ag1$n_tree_lutz <- aggregate(data4$age_class=="tree" & data4$Species=="HYBRID", by=list(data4$site), FUN=sum, na.rm=FALSE)$x
+ag1$n_tree_black <- aggregate(data4$age_class=="tree" & data4$Species=="b", by=list(data4$site), FUN=sum, na.rm=FALSE)$x
+
+ag1$n_seedling_white <- aggregate(data4$age_class=="seedling" & data4$Species=="w", by=list(data4$site), FUN=sum, na.rm=FALSE)$x
+ag1$n_seedling_sitka <- aggregate(data4$age_class=="seedling" & data4$Species=="s", by=list(data4$site), FUN=sum, na.rm=FALSE)$x
+ag1$n_seedling_lutz <- aggregate(data4$age_class=="seedling" & data4$Species=="HYBRID", by=list(data4$site), FUN=sum, na.rm=FALSE)$x
+ag1$n_seedling_black <- aggregate(data4$age_class=="seedling" & data4$Species=="b", by=list(data4$site), FUN=sum, na.rm=FALSE)$x
+
+## Saving this aggregate here.
+write.csv(ag1, "2020-08-19-1223_counts.csv", row.names=FALSE)
+
+## Now graphing.
+pdf(file="2020-08-19-1251_barplots.pdf", width=8.5, height=11)
+cols <- c("#ffffff", "#006600", "#4dff4d", "#000000")
+labs <- c("P. glauca", "P. sitchensis", "P. x lutzii", "P. mariana")
+ymax <- max(ag1[,5:12])
+headers <- c("trees", "seedlings")
+ylabs <- c("number of individuals", "")
+this_site <- 0
+par(mfrow=c(5,2) )
+for (this_site in 1:55)
+  {
+  header <- ""
+  ylab <- ""
+  print_header <- is.element(this_site, (0:10)*5+1)
+  print_ylab <- is.element(this_site, (0:10)*5+3)
+  for (this_age in 1:2)
+   {
+   if (print_header==TRUE)
+    {
+    header <- headers[this_age]
+    }
+   if (print_ylab==TRUE)
+    {
+    ylab <- ylabs[this_age]
+    } 
+   barplot(as.vector(t(ag1[this_site,(this_age*4+1):(this_age*4+4)])), ylim=c(0,ymax), col=cols, names.arg=labs)
+   mtext(header, side=3)
+   mtext(ylab, side=2, line=3)
+   if (this_age==2)
+    {
+    mtext(ag1$site[this_site], side=4)
+    }
+   } 
+  }
+dev.off()
+
+## Now I just want to look at proportions of white:Sitka
+## Dropping the non-numeric sites.
+
+sums1 <- apply(ag1[1:52,2:12], 2, sum, na.rm=FALSE)
+
+## Ratio of P. x lutzii to P. glauca in trees:
+sums1[6]/sums1[4]
+n_tree_lutz 
+  0.1869159 
+
+## Ratio of P. x lutzii to P. glauca in seedlings/saplings:
+sums1[10]/sums1[8]
+n_seedling_lutz 
+  0.09708738
+
+write.csv(sums1, "2020-08-19-1353_sums.csv")
+
+## Quick map.
+pdf("2020-08-19-1412_map.pdf", width=8.5, height=11, pointsize=6)
+plot(sites2$lon, sites2$lat, cex=0.5, col="red")
+text(sites2$lon, sites2$lat, sites2$site)
+dev.off()
+```
 
 # Appendixes
 
