@@ -9422,11 +9422,13 @@ I sent Lynnda non-native plant observations from powerlines from [July
 
 ### AKISP Elodea Committee Meeting at 14:00
 
+  - Toby asked me to get a cost per acre for treating remote lakes.
+
 ## Wedneday, August 19
 
 To do
 
-  - Submit *Refuge Notebook* article.
+  - ~~Submit *Refuge Notebook* article.~~
   - ~~Process spruce genetics data.~~
 
 <!-- end list -->
@@ -9600,6 +9602,8 @@ plot(sites2$lon, sites2$lat, cex=0.5, col="red")
 text(sites2$lon, sites2$lat, sites2$site)
 dev.off()
 ```
+
+I sent out this week’s *Refuge Notebook* article.
 
 # Appendixes
 
