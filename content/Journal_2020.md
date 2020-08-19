@@ -9121,12 +9121,20 @@ There were many grasses here, but we failed to find *B. tectorum*.
 Next we hiked the beginning of the Fuller Lakes Trail surveying for
 weeds using Survey123. The trail had been used as a fire break during
 the Swan Lake Fire. On the trail were typical trailside weeds:
-*Taraxacum officinale*, *Poa annua*, *Plantago major*, *Juncus
-bufonius*, and *Phleum pratense*.
+*Taraxacum officinale*, *Poa annua*, *Plantago major*, and *Phleum
+pratense*.
 
 We walked as far as the power lines, then we crossed the creek,
 following the power lines west from the Fuller Lakes Trail. The power
-lines were quite weedy.
+lines were quite weedy. We saw a plant that I could not identify. I did
+not collect it because there were no inflorescenses. I thought that I
+would not be able to identify it. I may try to return to this spot to
+identify this plant.
+
+![An unfamiliar plant from the powerlines (iNaturalist:
+[55658833](https://www.inaturalist.org/observations/55658833)).](2020-08-04_msytery_plant.jpg)  
+An unfamiliar plant from the powerlines (iNaturalist:
+[55658833](https://www.inaturalist.org/observations/55658833)).
 
 ## Wednesday, August 5
 
