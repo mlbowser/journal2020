@@ -175,6 +175,8 @@
       - [Monday, August 17](#monday-august-17)
       - [Tuesday, August 18](#tuesday-august-18)
       - [Wedneday, August 19](#wedneday-august-19)
+      - [Thursday, August 20](#thursday-august-20)
+      - [Monday, August 24](#monday-august-24)
   - [Appendixes](#appendixes)
       - [Vegetation data from 564 cm radius circular
         plots](#vegetation-data-from-564-cm-radius-circular-plots)
@@ -9355,8 +9357,7 @@ tines having picked up *Elodea*.
 |      181 | Sandpiper21 | 61.002255 | \-150.412013 |           |          |
 |      182 | Sandpiper22 | 61.001149 | \-150.411302 |           |          |
 
-Afer surveying, Colin and I applied the first round of SonarONE pelleted
-fluridone to Sandpiper Lake.
+Afer surveying, Colin began treating Sandpiper Lake.
 
 It was late when we made it back to the cabin in the canoes.
 
@@ -9368,12 +9369,8 @@ Vogel Lake cabin and our tents. We did not all stay in the cabin due to
 COVID-19 concerns.
 
 Colin, Jake, and I took the canoes back to Sandpiper Lake in the
-morning. Colin and I applied the Littora diquat over the areas where
-elodea was present, treating 2.5 acres in all with 5 gallons of Littora.
-
-![Using a GPS to apply diquat at the prescribed
-rate.](2020-08-14_applying_diquat.jpg)  
-Using a GPS to apply diquat at the prescribed rate.
+morning. Colin and I completed the application at Sandpiper Lake: 5
+gallons of Littora at 2 gallons/acre and 840 lbs. of SonarONE.
 
 The bigger task for the day was getting all of our remaining equipment
 back to Vogel Lake cabin for pick-up. We loaded all of the equipment and
@@ -9612,6 +9609,44 @@ dev.off()
 ```
 
 I sent out this week’s *Refuge Notebook* article.
+
+## Thursday, August 20
+
+Annaleese and I drove out to Mystery Creek Road to survey for non-native
+plants in the Swan Lake Fire. We first followed an old dozer line to
+60.58368, -150.31352. This line had apparently not been used by recent
+fire operations and was free of non-native plants.
+
+We walked down the other direction down the line to 60.58134,-150.31758
+and again we saw no non-native plants. We saw only *Phleum pratense* and
+*Plantago major* on the road. We used Survey123 to document non-native
+plant occurrences.
+
+![An old dozer line at 60.58135, -150.31763 that was quite
+weed-free.](2020-08-20_dozer_line.jpg)  
+An old dozer line at 60.58135, -150.31763 that was quite weed-free.
+
+We stopped at a small gravel pit parking lot that was quite weedy. A
+fuel break west of this was weed-free. We walked as far as
+60.58923,-150.31615.
+
+![A weedy gravel pit at 60.58744,
+-150.31427.](2020-08-20_gravel_pit.jpg)  
+A weedy gravel pit at 60.58744, -150.31427.
+
+We walked east to a helispot at 60.58739,-150.30463. It was quite clean
+in that we saw no non-native plants.
+
+We next drove and walked to the RAWS station at 60.59851,-150.30811. We
+saw no weeds here.
+
+Back at the road we checked puddles for *Psilocarphus*, but we found
+none. We did some surveying for weeds here.
+
+## Monday, August 24
+
+I took care of correspondence regarding *Elodea* surveys and
+invoicing/billing for recent sequencing work.
 
 # Appendixes
 
