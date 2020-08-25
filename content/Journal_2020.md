@@ -177,6 +177,7 @@
       - [Wedneday, August 19](#wedneday-august-19)
       - [Thursday, August 20](#thursday-august-20)
       - [Monday, August 24](#monday-august-24)
+      - [Tuesday, August 25](#tuesday-august-25)
   - [Appendixes](#appendixes)
       - [Vegetation data from 564 cm radius circular
         plots](#vegetation-data-from-564-cm-radius-circular-plots)
@@ -9647,6 +9648,43 @@ none. We did some surveying for weeds here.
 
 I took care of correspondence regarding *Elodea* surveys and
 invoicing/billing for recent sequencing work.
+
+I examined a plant collected at the gravel pit on Mystery Creek Road on
+[Thursday](#thursday-august-20) (iNaturalist:
+[57466121](https://www.inaturalist.org/observations/57466121)). It
+appears to be *Veronica peregrina*, a species that I was unfamiliar
+with.
+
+Ben and I took a canoe out to Canoe Lake to look at the reed canary
+grass infestation out there. We found much of it along the stream
+between Canoe Lake \#1 and Canoe Lake \#2, with the biggest patch on
+Canoe Lake \#2 at the portage to Canoe Lake \#3. We cut inflorescences
+from most of what we saw, but we had to stop so that we would not be out
+too late.
+
+![Cutting inflorescences of *Phalaris arundinacea* along the stream
+between Canoe Lake \#1 and Canoe Lake
+\#2.](2020-08-24_cutting_Phalaris_at_Canoe_Lake.jpg)  
+Cutting inflorescences of *Phalaris arundinacea* along the stream
+between Canoe Lake \#1 and Canoe Lake \#2.
+
+## Tuesday, August 25
+
+  - ~~Pesticide use reporting.~~
+  - Prepare for Sandpiper Lake tomorrow.
+  - Prepare for work with HEA on Thursday.
+  - Deal with plant specimens.
+  - Data back-up.
+
+I looked at the best imagery we have of Sandpiper Lake, aerial imagery
+captured in 2016. The patches of *Elodea* could not be seen in this
+imagery. I did this in response to a request in the last statewide
+*Elodea* meeting to find out if *Elodea* could be seen in aerial
+imagery.
+
+![Image of Sandpiper Lake captured in
+2016.](2020-08-25_Sandpiper_Lake_2016_aerial.jpg)  
+Image of Sandpiper Lake captured in 2016.
 
 # Appendixes
 
