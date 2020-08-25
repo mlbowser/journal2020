@@ -18,10 +18,13 @@ for (this_table in 1:nrow(meta))
   )
   
  ## Caption
- write(paste(meta$caption[this_table], "\n"),
-  file=out_file,
-  append=TRUE
-  ) 
+ if (!is.na(meta$caption[this_table]))
+  {
+  write(paste(meta$caption[this_table], "\n"),
+   file=out_file,
+   append=TRUE
+   )
+  }  
   
  ## Table
  atable <- read.csv(meta$file_name[this_table], colClasses="character")
