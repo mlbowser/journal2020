@@ -9751,6 +9751,13 @@ FasTEST sites for fluridone concentration monitoring in Sandpiper Lake.
 I walked over to the shop and reserved ATVs for tomorrow. Later I
 learned that we will not be going out tomorrow.
 
+I saw in a report on a 1984 survey of Canoe Lake (Friedersdorff
+[1986](#ref-friedersdorff_remote_1986)) that *Sagittaria cuneata* was
+not observed. It was abundant and present over much of the lake among
+the *Nuphar* when I visited on [Monday](#monday-august-24), so I believe
+that it has been introduced relatively recently. I do not think that it
+would have been missed in 1984 it looked then like it does in 2020.
+
 # Appendixes
 
 ## Occurrence data in Arctos bulkloader format
@@ -9983,6 +9990,15 @@ clonal diversity and geographical distribution in the earthworm
 *Aporrectodea trapezoides* (Dugès, 1828). Soil Biology and Biochemistry
 **43**(10): 2085–2093.
 doi:[10.1016/j.soilbio.2011.06.007](https://doi.org/10.1016/j.soilbio.2011.06.007).
+
+</div>
+
+<div id="ref-friedersdorff_remote_1986">
+
+Friedersdorff, J.W. 1986. Remote and roadside lake study - 1984. U.S.
+Fish; Wildlife Service, Kenai Fishery Resources Station, Kenai, Alaska.
+Available from
+<http://www.fws.gov/uploadedFiles/Friedersdorff_JW_1986.pdf>.
 
 </div>
 
