@@ -178,6 +178,7 @@
       - [Thursday, August 20](#thursday-august-20)
       - [Monday, August 24](#monday-august-24)
       - [Tuesday, August 25](#tuesday-august-25)
+      - [Wednesday, August 26](#wednesday-august-26)
   - [Appendixes](#appendixes)
       - [Occurrence data in Arctos bulkloader
         format](#occurrence-data-in-arctos-bulkloader-format)
@@ -9674,11 +9675,12 @@ To do:
 
   - ~~Pesticide use reporting.~~
   - ~~*Refuge Notebook*.~~
+  - ~~Contact RTL regarding missing invoices.~~
   - Catch-up from yesterday.
-  - Prepare for Sandpiper Lake tomorrow.
+  - Prepare for Sandpiper Lake Friday.
   - Prepare for work with HEA on Thursday.
   - Deal with plant specimens.
-  - Get list of DNA sequencing equipment acquisitions to Mark.
+  - ~~Get list of DNA sequencing equipment acquisitions to Mark.~~
   - Inquire about sending Dominique’s material to UAM.
   - Data back-up.
 
@@ -9693,6 +9695,61 @@ imagery.
 Image of Sandpiper Lake captured in 2016.
 
 I edited and sent out this week’s *Refuge Notebook* article.
+
+``` r
+## Adding catalog numbers to the bulkloader file.
+
+loaded <- read.csv("ArctosData_35BF9F98FD.csv", stringsAsFactors=FALSE)
+
+data1 <- read.table("a01_Arctos_bulkload.csv", sep=",", quote="\"", header=TRUE)
+
+loaded$uuid <- substr(loaded$OTHERCATALOGNUMBERS, 6, 41)
+
+loaded$cat_num <- sapply(strsplit(loaded$GUID, ":"), "[", 3)
+
+loaded <- loaded[,c("uuid", "cat_num")]
+
+data2 <- merge(data1, loaded, all.x=TRUE)
+
+write.csv(data2, "a01_Arctos_bulkload_v2020-08-25-1249.csv", row.names=FALSE, na="")
+```
+
+An aquatic plant I collected yesterday at Canoe Lake (iNaturalist:
+[57584513](https://www.inaturalist.org/observations/57584513)) is
+*Caltha natans*, a species that we did not have on the Kenai National
+Wildlife Refuge’s checklist. I processed this specimen to go into the
+collection
+([KNWR:Herb:12445](https://arctos.database.museum/guid/KNWR:Herb:12445)).
+
+## Wednesday, August 26
+
+To do:
+
+  - ~~Prepare for Sandpiper Lake Friday.~~
+  - ~~Prepare for work with HEA on Thursday.~~
+  - ~~Inquire about sending Dominique’s material to UAM.~~
+  - *Refuge Notebook* catch-up.
+
+I selected sites for fluridone concentration monitoring, spreading the
+fours sites along the lake and over a range of depths. I pre-labeled
+vials, printed a map, and loaded coordinates onto a GPS for Mark and
+Jake to go out on Friday.
+
+![FasTEST sites for fluridone concentration monitoring in Sandpiper
+Lake.](2020-08-26_Sandpiper_Lake_FasTEST_sites.jpg)  
+FasTEST sites for fluridone concentration monitoring in Sandpiper Lake.
+
+### Sandpiper Lake FasTEST sites
+
+| site\_name | latitude    | longitude     |
+| :--------- | :---------- | :------------ |
+| FasSA1     | 61.00720005 | \-150.404666  |
+| FasSA2     | 61.00473547 | \-150.405292  |
+| FasSA3     | 61.00243803 | \-150.4081228 |
+| FasSA4     | 61.00165954 | \-150.411796  |
+
+I walked over to the shop and reserved ATVs for tomorrow. Later I
+learned that we will not be going out tomorrow.
 
 # Appendixes
 
@@ -9740,6 +9797,8 @@ I edited and sent out this week’s *Refuge Notebook* article.
 | 38                     | 7f092b3c-80e4-4725-9da4-d24cb2332ec0 | KNWRObs:Herb | 990      |                         |                   | mbowser   | KNWR-2020.02-SwanLake-ObsHerb | Alnus viridis            | features       | Matt Bowser         | 2020-08-05 |                                                                                                                                                                                                            | 2020-08-05     | 2020-08-05  | 2020-08-05  | North America, United States, Alaska, Kenai Peninsula Borough | Mystery Hills off of the Skyline Trail, Skyline shrub study site 354-2                               | Mystery Hills off of the Skyline Trail, Skyline shrub study site 354-2                               | decimal degrees        | 60.52639136 | \-150.1659054 | World Geodetic System 1984 | Pre-determined plot coordinates | 30                   | m                 | MaNIS georeferencing guidelines | wild caught        | former alder thicket defoliated by moths, then burned | observation           | 5.64 m radius, circular plot presence-only vegetation survey using the methods of Morton et al. (2009). Reference: Morton, J. M., Bowser, M. L., Berg, E., Magness, D., & Eskelin, T. (2009). Long Term Ecological Monitoring Program on the Kenai National Wildlife Refuge, Alaska: An FIA adjunct inventory. In W. McWilliams, G. Moisen, & R. Czaplewski (Eds.), 2008 Forest Inventory and Analysis (FIA) Symposium; October 21-23, 2008; Park City, UT (pp. 1-17). U.S. Department of Agriculture, Forest Service, Rocky Mountain Research Station. http://www.treesearch.fs.fed.us/pubs/33332 | Matt Bowser                | 2020-08-07            | unverified         | Matt Bowser         | collector          | Mark Laker           | collector          | media          | not applicable     | not applicable       | 1                   |                  |
 | 39                     | 33f401b2-aa6b-4290-89d1-a19cdca3e667 | KNWRObs:Herb | 991      |                         |                   | mbowser   | KNWR-2020.02-SwanLake-ObsHerb | Populus tremuloides      | features       | Matt Bowser         | 2020-08-05 | Seedlings                                                                                                                                                                                                  | 2020-08-05     | 2020-08-05  | 2020-08-05  | North America, United States, Alaska, Kenai Peninsula Borough | Mystery Hills off of the Skyline Trail, Skyline shrub study site 354-2                               | Mystery Hills off of the Skyline Trail, Skyline shrub study site 354-2                               | decimal degrees        | 60.52639136 | \-150.1659054 | World Geodetic System 1984 | Pre-determined plot coordinates | 30                   | m                 | MaNIS georeferencing guidelines | wild caught        | former alder thicket defoliated by moths, then burned | observation           | 5.64 m radius, circular plot presence-only vegetation survey using the methods of Morton et al. (2009). Reference: Morton, J. M., Bowser, M. L., Berg, E., Magness, D., & Eskelin, T. (2009). Long Term Ecological Monitoring Program on the Kenai National Wildlife Refuge, Alaska: An FIA adjunct inventory. In W. McWilliams, G. Moisen, & R. Czaplewski (Eds.), 2008 Forest Inventory and Analysis (FIA) Symposium; October 21-23, 2008; Park City, UT (pp. 1-17). U.S. Department of Agriculture, Forest Service, Rocky Mountain Research Station. http://www.treesearch.fs.fed.us/pubs/33332 | Matt Bowser                | 2020-08-07            | unverified         | Matt Bowser         | collector          | Mark Laker           | collector          | media          | not applicable     | not applicable       | 1                   |                  |
 | 40                     | 4ea03d89-3933-4b0c-9259-bd19054defae | KNWR:Herb    | 12444    | iNaturalist.org         | 57466121          | mbowser   | KNWR-2020.02-misc-Herb        | Veronica peregrina       | features       | Matt Bowser         | 2020-08-24 |                                                                                                                                                                                                            | 20.August.2020 | 2020-08-20  | 2020-08-20  | North America, United States, Alaska, Kenai Peninsula Borough | Mystery Creek Road. Gravel pit at 60.58768 N, 150.313995 W.                                          | USA: Alaska, Kenai Peninsula, Mystery Creek Road. Gravel pit at 60.58768 N, 150.313995 W.            | decimal degrees        | 60.58768    | \-150.313995  | World Geodetic System 1984 | Olympus TG-6                    | 15                   | m                 | MaNIS georeferencing guidelines | wild caught        | roadside gravel pit                                   | collection            | non-native plant survey                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | Matt Bowser                | 2020-08-24            | unverified         | Matt Bowser         | collector          | Annaleese T. Rasanen | collector          | whole organism | good               | being processed      | 1                   | KNWRC4488        |
+| 41                     | 1ed45d1f-15df-4463-96ac-36ce8d720f23 | KNWR:Herb    | 12445    | iNaturalist.org         | 57584513          | mbowser   | KNWR-2020.02-misc-Herb        | Caltha natans            | features       | Matt Bowser         | 2020-08-25 |                                                                                                                                                                                                            | 24.August.2020 | 2020-08-25  | 2020-08-25  | North America, United States, Alaska, Kenai Peninsula Borough | Canoe Lake 1 at portage between Canoe Lake 1 and Canoe Lake 2                                        | USA: Alaska, Kenai Peninsula, Canoe Lake 1 at portage between Canoe Lake 1 and Canoe Lake 2          | decimal degrees        | 60.7127     | \-150.694075  | World Geodetic System 1984 | Olympus TG-6                    | 15                   | m                 | MaNIS georeferencing guidelines | wild caught        | lakeshore at stream inlet                             | collection            |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Matt Bowser                | 2020-08-25            | unverified         | Matt Bowser         | collector          | Benyamin K. Wishnek  | collector          | whole organism | good               | being processed      | 1                   | KNWRC4419        |
+| 42                     | 99b651da-04bb-4b29-b2a3-80d9dedbaa22 | KNWR:Herb    | 12446    | iNaturalist.org         | 33451572          | mbowser   | KNWR-2019.01-misc-Herb        | Sagittaria cuneata       | features       | Matt Bowser         | 2019-09-26 |                                                                                                                                                                                                            | 24.Sept.2019   | 2019-09-24  | 2019-09-24  | North America, United States, Alaska, Kenai Peninsula Borough | Canoe Lake, Swanson River Road. At put-in at Canoe Lake.                                             | Canoe Lake, Swanson River Road. At put-in at Canoe Lake.                                             | decimal degrees        | 60.721758   | \-150.700083  | World Geodetic System 1984 | Olympus TG-6                    | 15                   | m                 | MaNIS georeferencing guidelines | wild caught        | lake shore                                            | collection            |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Matt Bowser                | 2020-08-26            | unverified         | Matt Bowser         | collector          | Takeyuki Nakamura    | collector          | whole organism | good               | being processed      | 1                   | KNWRC4454        |
 
 # Bibliography
 
