@@ -179,6 +179,7 @@
       - [Monday, August 24](#monday-august-24)
       - [Tuesday, August 25](#tuesday-august-25)
       - [Wednesday, August 26](#wednesday-august-26)
+      - [Thursday, August 27](#thursday-august-27)
   - [Appendixes](#appendixes)
       - [Occurrence data in Arctos bulkloader
         format](#occurrence-data-in-arctos-bulkloader-format)
@@ -9756,7 +9757,13 @@ I saw in a report on a 1984 survey of Canoe Lake (Friedersdorff
 not observed. It was abundant and present over much of the lake among
 the *Nuphar* when I visited on [Monday](#monday-august-24), so I believe
 that it has been introduced relatively recently. I do not think that it
-would have been missed in 1984 it looked then like it does in 2020.
+would have been missed in 1984 if it looked then like it does in 2020.
+
+## Thursday, August 27
+
+I worked at home today writing a *Refuge Notebook* article on Kenai
+birch. I found a great new article on birch phylogeny (Wang et al.
+[2020](#ref-wang_resolving_2020)).
 
 # Appendixes
 
@@ -10533,6 +10540,15 @@ USDA Forest Service, Alaska Region. 2008. Forest Health Conditions in
 Alaska—2007. Protection Report, United States Department of Agriculture
 Forest Service, Alaska Region. Available from
 <https://www.fs.usda.gov/Internet/FSE_DOCUMENTS/fsbdev2_038216.pdf>.
+
+</div>
+
+<div id="ref-wang_resolving_2020">
+
+Wang, N., Kelly, L.J., McAllister, H.A., Zohren, J., and Buggs, R.J.A.
+2020. Resolving phylogeny and polyploid parentage using genus-wide
+genome-wide sequence data from birch trees. bioRxiv.
+doi:[10.1101/2020.07.13.200444](https://doi.org/10.1101/2020.07.13.200444).
 
 </div>
 
