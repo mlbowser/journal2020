@@ -180,6 +180,7 @@
       - [Tuesday, August 25](#tuesday-august-25)
       - [Wednesday, August 26](#wednesday-august-26)
       - [Thursday, August 27](#thursday-august-27)
+      - [Monday, August 31](#monday-august-31)
   - [Appendixes](#appendixes)
       - [Occurrence data in Arctos bulkloader
         format](#occurrence-data-in-arctos-bulkloader-format)
@@ -9764,6 +9765,28 @@ would have been missed in 1984 if it looked then like it does in 2020.
 I worked at home today writing a *Refuge Notebook* article on Kenai
 birch. I found a great new article on birch phylogeny (Wang et al.
 [2020](#ref-wang_resolving_2020)).
+
+## Monday, August 31
+
+To do:
+
+  - ~~Finish *Refuge Notebook* article.~~
+  - Prepare fungi specimens for DNA sequencing submission.
+
+I finished the *Refuge Notebook* article on Kenai birch.
+
+I got together the data, notes, etc. from the whole genome sequencing
+data from birches that we had done last fall and started a data uploat
+to Zenodo.
+
+Jake stopped by and returned the camera from his trip with Mark out to
+Sandpiper Lake on Friday, August 28. The *Elodea* that had been treated
+with diquat was now yellowing and brittle.
+
+![Dense bed of *Elodea* in Sandpiper Lake on August 28 after treatment
+with diquat.](2020-08-20_Sandpiper_Lake_elodea_in_water.jpg)  
+Dense bed of *Elodea* in Sandpiper Lake on August 28 after treatment
+with diquat.
 
 # Appendixes
 
