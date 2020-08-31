@@ -9792,6 +9792,11 @@ with diquat.
 28.](2020-08-28_Sandpiper_Lake_elodea.jpg)  
 Brittle, yellowed *Elodea* from Sandpiper Lake on August 28.
 
+![Other aquatic plant species appeared to be affected less by the diquat
+than *Elodea* was.](2020-08-28_Sandpiper_Lake_vegetation.jpg)  
+Other aquatic plant species appeared to be affected less by the diquat
+than *Elodea* was.
+
 # Appendixes
 
 ## Occurrence data in Arctos bulkloader format
