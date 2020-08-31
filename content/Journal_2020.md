@@ -9784,9 +9784,13 @@ Sandpiper Lake on Friday, August 28. The *Elodea* that had been treated
 with diquat was now yellowing and brittle.
 
 ![Dense bed of *Elodea* in Sandpiper Lake on August 28 after treatment
-with diquat.](2020-08-20_Sandpiper_Lake_elodea_in_water.jpg)  
+with diquat.](2020-08-28_Sandpiper_Lake_elodea_in_water.jpg)  
 Dense bed of *Elodea* in Sandpiper Lake on August 28 after treatment
 with diquat.
+
+![Brittle, yellowed *Elodea* from Sandpiper Lake on August
+28.](2020-08-28_Sandpiper_Lake_elodea.jpg)  
+Brittle, yellowed *Elodea* from Sandpiper Lake on August 28.
 
 # Appendixes
 
