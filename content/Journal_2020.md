@@ -9776,8 +9776,8 @@ To do:
 I finished the *Refuge Notebook* article on Kenai birch.
 
 I got together the data, notes, etc. from the whole genome sequencing
-data from birches that we had done last fall and started a data uploat
-to Zenodo.
+data from birches that we had done last fall and uploaded the dataset to
+Zenodo (Bowser [2020](#ref-bowser_2020_4009469)).
 
 Jake stopped by and returned the camera from his trip with Mark out to
 Sandpiper Lake on Friday, August 28. The *Elodea* that had been treated
@@ -9922,6 +9922,14 @@ doi:[10.7299/X7RB74XZ](https://doi.org/10.7299/X7RB74XZ).
 Bowser, M.L. 2019b. Field Notebook, June 11, 2018 - May 29, 2019. USFWS
 Kenai National Wildlife Refuge, Soldotna, Alaska. Available from
 <https://arctos.database.museum/media/10612204>.
+
+</div>
+
+<div id="ref-bowser_2020_4009469">
+
+Bowser, M.L. 2020. Whole Genome Sequencing of birches (Betulaceae:
+*Betula*) from the Kenai Peninsula, Alaska. Zenodo.
+doi:[10.5281/zenodo.4009469](https://doi.org/10.5281/zenodo.4009469).
 
 </div>
 
