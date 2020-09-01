@@ -10,5 +10,5 @@ language: en-US
 bibliography: bibliography.bib
 toc-title: 'Contents'
 link-citations: true
-csl: genome.csl
+csl: canadian-journal-of-fisheries-and-aquatic-sciences.csl
 ...
