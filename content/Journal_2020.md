@@ -9822,7 +9822,10 @@ FedEx Kenai to go out today (FedEx tracking \#: 396397274746).
 
 I re-entered data for the earthworm specimens sent to me by Tyler
 ([KNWR:Inv:47](http://arctos.database.museum/guid/KNWR:Inv:47)–[KNWR:Inv:52](http://arctos.database.museum/guid/KNWR:Inv:52)),
-this time using Arctos’ bulkloader so that I will not lose my work.
+this time using Arctos’ bulkloader so that I will not lose my work. I
+photographed these specimens, cut tissue samples from their posterior
+ends, and placed tissue in LifeScanner vials, and worked on entering
+data into Arctos and [lifescanner.net](http://lifescanner.net).
 
 # Appendixes
 
