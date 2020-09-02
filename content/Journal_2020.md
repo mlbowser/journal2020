@@ -183,6 +183,7 @@
       - [Monday, August 31](#monday-august-31)
   - [September](#september)
       - [Tuesday, September 1](#tuesday-september-1)
+      - [Wednesday, September 2](#wednesday-september-2)
   - [Appendixes](#appendixes)
       - [Occurrence data in Arctos bulkloader
         format](#occurrence-data-in-arctos-bulkloader-format)
@@ -9826,6 +9827,12 @@ this time using Arctos’ bulkloader so that I will not lose my work. I
 photographed these specimens, cut tissue samples from their posterior
 ends, and placed tissue in LifeScanner vials, and worked on entering
 data into Arctos and [lifescanner.net](http://lifescanner.net).
+
+## Wednesday, September 2
+
+I gathered LifeScanner samples and started preparing them for shipping.
+
+I revised and submitted this week’s *Refuge Notebook* article.
 
 # Appendixes
 
