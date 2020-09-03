@@ -9838,6 +9838,10 @@ I accompanied Lynnda on a walk down the HEA powerline right of way north
 of the Sterling Highway and west of Fuller Lakes Trail. She needed to
 document the work that had been done here by HEA.
 
+![Documenting the changes to the power line
+access.](2020-09-02_powerline.jpg)  
+Documenting the changes to the power line access.
+
 I revisited the unfamiliar plant that Annaleese and I had seen on
 [August 4](#tuesday-august-4) (iNaturalist:
 [55658833](https://www.inaturalist.org/observations/55658833)). Some of
