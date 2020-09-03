@@ -184,9 +184,12 @@
   - [September](#september)
       - [Tuesday, September 1](#tuesday-september-1)
       - [Wednesday, September 2](#wednesday-september-2)
+      - [Thursday, September 3](#thursday-september-3)
   - [Appendixes](#appendixes)
       - [Occurrence data in Arctos bulkloader
         format](#occurrence-data-in-arctos-bulkloader-format)
+      - [LifeScanner vials with missing
+        data](#lifescanner-vials-with-missing-data)
   - [Bibliography](#bibliography)
 
 # January
@@ -9855,6 +9858,17 @@ there are two previous Alaskan records
 I also collected a muscoid fly from the power line just above the ravine
 at Fuller Lakes Trail (BOLD-KO7).
 
+## Thursday, September 3
+
+I prepared 29 LifeScanner specimens to go out (USPS tracking \#:
+LZ991546597US, Arctos container KNWRC4610). [Some
+vials](#lifescanner-vials-with-missing-data) were missing data, which I
+will need to track down and send next time.
+
+In preparation for sequencing of fungal specimens I started an
+iNaturalist project
+(<https://www.inaturalist.org/projects/2020-kenai-peninsula-fungal-sequencing>).
+
 # Appendixes
 
 ## Occurrence data in Arctos bulkloader format
@@ -9909,6 +9923,16 @@ at Fuller Lakes Trail (BOLD-KO7).
 | 46                     | ed2d9c37-999a-4037-85cf-d4192b3c2a99 | KNWR:Inv     | 50       |                         |                   | mbowser   | KNWR-2020.01-Baumann-Inv      | Aporrectodea caliginosa  | features       | Tyler Baumann       | 2020-02-12 |                                                                                                                                                                                                            | 2019-10-04     | 2019-10-04  | 2019-10-04  | North America, United States, Alaska                          | Behnke 2-3                                                                                           | Behnke 2-3                                                                                           | decimal degrees        | 58.25991    | \-134.32252   | World Geodetic System 1984 | GPS                             | 20                   | m                 | MaNIS georeferencing guidelines | Coordinate accuracy not provided. Assumed 20 m. | wild caught        |                                                       | collection            |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Matt Bowser                | 2020-09-01            | unverified         | Tyler Baumann       | collector          | Adrian Wackett       | collector          | whole organism | condition not assessed | being processed      | 1                   |                  |
 | 47                     | d2658e51-db1c-4e05-a222-d25935611406 | KNWR:Inv     | 51       |                         |                   | mbowser   | KNWR-2020.01-Baumann-Inv      | Aporrectodea             | features       | Tyler Baumann       | 2020-02-12 |                                                                                                                                                                                                            | 2019-10-03     | 2019-10-03  | 2019-10-03  | North America, United States, Alaska                          | Behnke 3-1                                                                                           | Behnke 3-1                                                                                           | decimal degrees        | 58.26002    | \-134.32137   | World Geodetic System 1984 | GPS                             | 20                   | m                 | MaNIS georeferencing guidelines | Coordinate accuracy not provided. Assumed 20 m. | wild caught        |                                                       | collection            |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Matt Bowser                | 2020-09-01            | unverified         | Tyler Baumann       | collector          | Adrian Wackett       | collector          | whole organism | condition not assessed | being processed      | 1                   |                  |
 | 48                     | b9d029cc-c607-4ce3-9718-75bf7d558468 | KNWR:Inv     | 52       |                         |                   | mbowser   | KNWR-2020.01-Baumann-Inv      | Aporrectodea limicola    | features       | Tyler Baumann       | 2020-02-12 |                                                                                                                                                                                                            | 2019-10-04     | 2019-10-04  | 2019-10-04  | North America, United States, Alaska                          | Behnke 3-3                                                                                           | Behnke 3-3                                                                                           | decimal degrees        | 58.26007    | \-134.32147   | World Geodetic System 1984 | GPS                             | 20                   | m                 | MaNIS georeferencing guidelines | Coordinate accuracy not provided. Assumed 20 m. | wild caught        |                                                       | collection            |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Matt Bowser                | 2020-09-01            | unverified         | Tyler Baumann       | collector          | Adrian Wackett       | collector          | whole organism | condition not assessed | being processed      | 3                   |                  |
+
+## LifeScanner vials with missing data
+
+| human\_readable\_label |
+| :--------------------- |
+| BOLD-1H8               |
+| BOLD-EG9               |
+| BOLD-OC2               |
+| BOLD-U62               |
+| BOLD-VC8               |
 
 # Bibliography
 
