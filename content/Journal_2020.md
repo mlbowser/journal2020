@@ -190,6 +190,8 @@
         format](#occurrence-data-in-arctos-bulkloader-format)
       - [LifeScanner vials with missing
         data](#lifescanner-vials-with-missing-data)
+      - [Data for fungal specimens to be
+        sequenced](#data-for-fungal-specimens-to-be-sequenced)
   - [Bibliography](#bibliography)
 
 # January
@@ -9845,20 +9847,24 @@ document the work that had been done here by HEA.
 access.](2020-09-02_powerline.jpg)  
 Documenting the changes to the power line access.
 
-I revisited the unfamiliar plant that Annaleese and I had seen on
+We revisited the unfamiliar plant that Annaleese and I had seen on
 [August 4](#tuesday-august-4) (iNaturalist:
 [55658833](https://www.inaturalist.org/observations/55658833)). Some of
 these now had inflorescences that were not mature. I photographed and
-collected these. They appear to be an *Amaranthus*. I think *Amaranthus
-retroflexus* is a good guess because the appearance looks right and
-there are two previous Alaskan records
-([UAM:Herb:16434](https://arctos.database.museum/guid/UAM:Herb:16434),
-[UAM:Herb:46957](https://arctos.database.museum/guid/UAM:Herb:46957)).
+collected these. They appear to be an *Amaranthus*. We pulled all eight
+or so of these plants.
 
 I also collected a muscoid fly from the power line just above the ravine
 at Fuller Lakes Trail (BOLD-KO7).
 
 ## Thursday, September 3
+
+I think the *Amaranthus* from [yesterday](#wednesday-september-2) is
+*Amaranthus retroflexus* because the appearance looks right and there
+are two previous Alaskan records
+([UAM:Herb:16434](https://arctos.database.museum/guid/UAM:Herb:16434),
+[UAM:Herb:46957](https://arctos.database.museum/guid/UAM:Herb:46957)).
+There are also five records on AKEPIC.
 
 I prepared 29 LifeScanner specimens to go out (USPS tracking \#:
 LZ991546597US, Arctos container KNWRC4610). [Some
@@ -9867,7 +9873,59 @@ will need to track down and send next time.
 
 In preparation for sequencing of fungal specimens I started an
 iNaturalist project
-(<https://www.inaturalist.org/projects/2020-kenai-peninsula-fungal-sequencing>).
+(<https://www.inaturalist.org/projects/2020-kenai-peninsula-fungal-sequencing>)
+and exported the [data](#data-for-fungal-specimens-to-be-sequenced). I
+took tissue samples from the 20 specimens, using lighter to sterilize
+the forceps between each specimen.
+
+Over lunch I tried looking for an ITS sequence in one of our birch
+genomes. I tried VSEARCH:
+
+Slurm script:
+
+``` sh
+#!/bin/bash
+#SBATCH --job-name=vsbirch
+#SBATCH -n 1 # number of nodes
+#SBATCH -n 1 # number of tasks
+#SBATCH -p long # parition
+#SBATCH --account=bio # account code
+#SBATCH --time=1-04:00:00 # requested job time D-HH:MM:SS
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=matt_bowser@fws.gov
+#SBATCH -o 2020-09-03-1235_vsearch_matches-%j.out
+
+module load legacy
+module load genetics/vsearch-2.4.3
+
+cd /lustre/projects/fws/fws_bio/mattbowser/projects/birch/data
+
+vsearch --usearch_global KT309005.fas \
+--db MB_BK01_refv1.fasta \
+--id .90 \
+--iddef 0 \
+--blast6out 2020-09-03-1235_vsearch_matches.txt
+
+module purge
+```
+
+Output:
+
+``` sh
+vsearch v2.4.3_linux_x86_64, 125.8GB RAM, 20 cores
+https://github.com/torognes/vsearch
+
+Reading file MB_BK01_refv1.fasta 100%
+37304819 nt in 2281 seqs, min 467, max 49940, avg 16355
+WARNING: 2172 sequences longer than 50000 nucleotides discarded.
+Masking 100%
+Counting unique k-mers 100%
+Creating index of unique k-mers 100%
+Searching 100%
+Matching query sequences: 0 of 1 (0.00%)
+```
+
+So apparently VSEARCH does not search against these long contigs.
 
 # Appendixes
 
@@ -9933,6 +9991,36 @@ iNaturalist project
 | BOLD-OC2               |
 | BOLD-U62               |
 | BOLD-VC8               |
+
+## Data for fungal specimens to be sequenced
+
+Data exported from the [2020 Kenai Peninsula fungal
+sequencing](https://www.inaturalist.org/projects/2020-kenai-peninsula-fungal-sequencing)
+iNaturalist project following the [guidelines of the Fungal Diversity
+Survey](https://fundis.org/sequence/sequence/submit-tissue).
+
+| id       | observed\_on | user\_login | url                                               | image\_url                                                            | description                                                                        | taxon\_phylum\_name | taxon\_class\_name | taxon\_order\_name | taxon\_family\_name | taxon\_genus\_name | taxon\_species\_name | field.collector.s.name |
+| :------- | :----------- | :---------- | :------------------------------------------------ | :-------------------------------------------------------------------- | :--------------------------------------------------------------------------------- | :------------------ | :----------------- | :----------------- | :------------------ | :----------------- | :------------------- | :--------------------- |
+| 46129997 | 2020-05-16   | mbowser     | https://www.inaturalist.org/observations/46129997 | https://static.inaturalist.org/photos/73163328/medium.jpeg?1589657840 | 2020-05-16\_MLB01, under cottonwoods and spruce in mixed forest                    | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          |                      |                        |
+| 46132276 | 2020-05-16   | mbowser     | https://www.inaturalist.org/observations/46132276 | https://static.inaturalist.org/photos/73166513/medium.jpeg?1589658711 | 2020-05-16\_MLB02, under spruce and birch                                          | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          |                      |                        |
+| 46292862 | 2020-05-17   | mbowser     | https://www.inaturalist.org/observations/46292862 | https://static.inaturalist.org/photos/73418758/medium.jpeg?1589748649 | 2020-05-17\_MLB01, under cottonwoods                                               | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          |                      |                        |
+| 46293272 | 2020-05-17   | mbowser     | https://www.inaturalist.org/observations/46293272 | https://static.inaturalist.org/photos/73419346/medium.jpeg?1589748803 | 2020-05-17\_MLB02, under cottonwoods                                               | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          |                      |                        |
+| 47411794 | 2020-05-19   | colcan927   | https://www.inaturalist.org/observations/47411794 | https://static.inaturalist.org/photos/75195597/medium.jpg?1590509826  |                                                                                    | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          | Morchella tomentosa  |                        |
+| 47411855 | 2020-05-19   | colcan927   | https://www.inaturalist.org/observations/47411855 | https://static.inaturalist.org/photos/75195705/medium.jpg?1590509866  |                                                                                    | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          |                      |                        |
+| 47524671 | 2020-05-22   | cahaba      | https://www.inaturalist.org/observations/47524671 | https://static.inaturalist.org/photos/75377675/medium.jpg?1590596949  | vert\_angle\_deg=-71.7 / horiz\_angle\_deg=8.0                                     | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          |                      |                        |
+| 47524963 | 2020-05-22   | cahaba      | https://www.inaturalist.org/observations/47524963 | https://static.inaturalist.org/photos/75378086/medium.jpg?1590597064  | vert\_angle\_deg=-46.1 / horiz\_angle\_deg=-1.3                                    | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          |                      |                        |
+| 47738982 | 2020-05-26   | mbowser     | https://www.inaturalist.org/observations/47738982 | https://static.inaturalist.org/photos/75726878/medium.jpeg?1590765903 | 2020-05-26\_MLB01, collected near spruce, birch, stunted cottonwoods, and grasses. | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          |                      |                        |
+| 47739517 | 2020-05-26   | mbowser     | https://www.inaturalist.org/observations/47739517 | https://static.inaturalist.org/photos/75727906/medium.jpeg?1590766290 | 2020-05-26\_MLB02, near spruce, birch, stunted cottonwoods, and grass.             | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          |                      |                        |
+| 48409941 | 2020-06-03   | mbowser     | https://www.inaturalist.org/observations/48409941 | https://static.inaturalist.org/photos/76812602/medium.jpeg?1591245301 | Under cottonwoods                                                                  | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          |                      |                        |
+| 50778241 | 2020-06-12   | mbowser     | https://www.inaturalist.org/observations/50778241 | https://static.inaturalist.org/photos/80652362/medium.jpeg?1593011658 |                                                                                    | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          |                      |                        |
+| 50807719 | 2020-06-12   | mbowser     | https://www.inaturalist.org/observations/50807719 | https://static.inaturalist.org/photos/80698469/medium.jpeg?1593027640 |                                                                                    | Ascomycota          | Pezizomycetes      | Pezizales          | Discinaceae         | Gyromitra          |                      |                        |
+| 51704078 | 2020-07-01   | mbowser     | https://www.inaturalist.org/observations/51704078 | https://static.inaturalist.org/photos/82164530/medium.jpeg?1593706879 | Collected.                                                                         | Basidiomycota       | Agaricomycetes     | Boletales          | Boletaceae          | Leccinum           |                      |                        |
+| 52167014 | 2020-07-02   | mbowser     | https://www.inaturalist.org/observations/52167014 | https://static.inaturalist.org/photos/82911543/medium.jpeg?1594056152 |                                                                                    | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          |                      |                        |
+| 52167410 | 2020-07-02   | mbowser     | https://www.inaturalist.org/observations/52167410 | https://static.inaturalist.org/photos/82912084/medium.jpeg?1594056330 |                                                                                    | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          | Morchella tomentosa  |                        |
+| 52382438 | 2020-07-07   | mbowser     | https://www.inaturalist.org/observations/52382438 | https://static.inaturalist.org/photos/83266253/medium.jpeg?1594227231 |                                                                                    | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          | Morchella tomentosa  |                        |
+| 57686894 | 2020-08-26   | mbowser     | https://www.inaturalist.org/observations/57686894 | https://static.inaturalist.org/photos/92038251/medium.jpeg?1598483892 |                                                                                    | Basidiomycota       | Agaricomycetes     | Agaricales         | Agaricaceae         | Agaricus           |                      |                        |
+| 58435560 | 2020-07-20   | mbowser     | https://www.inaturalist.org/observations/58435560 | https://static.inaturalist.org/photos/93294510/medium.jpeg?1599156890 | 2020-07-20-MLB01                                                                   | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          |                      |                        |
+| 58435927 | 2020-07-20   | mbowser     | https://www.inaturalist.org/observations/58435927 | https://static.inaturalist.org/photos/93295093/medium.jpeg?1599157091 |                                                                                    | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          |                      |                        |
 
 # Bibliography
 

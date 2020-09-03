@@ -1,3 +1,4 @@
 file_name,title,caption
 a01_Arctos_bulkload.csv,Occurrence data in Arctos bulkloader format,
 a02_LifeScanner_data_missing.csv,LifeScanner vials with missing data,
+a03_iNaturalist_fundis_tissue_sample_export.csv,Data for fungal specimens to be sequenced,Data exported from the [2020 Kenai Peninsula fungal sequencing](https://www.inaturalist.org/projects/2020-kenai-peninsula-fungal-sequencing) iNaturalist project following the [guidelines of the Fungal Diversity Survey](https://fundis.org/sequence/sequence/submit-tissue).
