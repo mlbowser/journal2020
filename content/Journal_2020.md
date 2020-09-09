@@ -9984,9 +9984,39 @@ Snowshoe hare pellet counts, 1984–2020.
 
 To do:
 
-  - Edit and submit this week’s *Refuge Notebook* article.
+  - ~~Edit and submit this week’s *Refuge Notebook* article.~~
 
 I entered data of dates and observers from 2014 snowshoe hare work.
+
+I edited and sent off this week’s *Refuge Notebook* article.
+
+### KPCWMA meeting @ 10:00
+
+I provided an update via chat: We found three species records that are,
+to the best of my knowledge, new records for the Kenai Peninsula:
+
+Sagittaria cuneata This species is native to Interior Alaska, but we
+believe it is not native to Southcentral Alaska and that it was likely
+introduced by users of the Swan Lake Canoe Trail.
+https://www.inaturalist.org/observations/33451572
+https://arctos.database.museum/guid/KNWR:Herb:12446
+
+Amaranthus sp., I think Amaranthus retroflexus
+https://www.inaturalist.org/observations/55658833
+https://www.inaturalist.org/observations/55433248
+
+Veronica peregrina https://www.inaturalist.org/observations/57466121
+https://arctos.database.museum/guid/KNWR:Herb:12444
+
+We should be submitting all of these except the Sagittaria to AKEPIC
+this winter with our annual data submission.
+
+I started to look at snowshoe hare density data in preparation for a
+*Refuge Notebook* on this article for next week.
+
+Berge and Gese ([2010](#ref-berg_relationship_2010)) found a
+relationship of hare density (hares/ha) = 0.0921 X (pellets/m2yr) +
+0.0524 in Wyoming.
 
 # Appendixes
 
@@ -10118,6 +10148,15 @@ Berg, E.E. 2000. Post-fire forest regeneration on the western Kenai
 Peninsula, Alaska; a forty-eight year record from nine permanent plots.
 USFWS Kenai National Wildlife Refuge, Soldotna, Alaska. Available from
 <https://www.fws.gov/uploadedFiles/Berg_EE_2000b.pdf>.
+
+</div>
+
+<div id="ref-berg_relationship_2010">
+
+Berg, N.D., and Gese, E.M. 2010. Relationship between fecal pellet
+counts and snowshoe hare density in western Wyoming. The Journal of
+Wildlife Management **74**(8): 1745–1751.
+doi:[10.2193/2009-354](https://doi.org/10.2193/2009-354).
 
 </div>
 
