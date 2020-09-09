@@ -186,6 +186,7 @@
       - [Wednesday, September 2](#wednesday-september-2)
       - [Thursday, September 3](#thursday-september-3)
       - [Monday, September 8](#monday-september-8)
+      - [Wednesday, September 9](#wednesday-september-9)
   - [Appendixes](#appendixes)
       - [Occurrence data in Arctos bulkloader
         format](#occurrence-data-in-arctos-bulkloader-format)
@@ -9969,11 +9970,23 @@ I filled out the online submission form for fungal samples via the
 [Fungal Diversity Survey](https://fundis.org/), packaged the specimens,
 and drove them to FedEx Kenai (tracking \#: 815820190845).
 
-I imported the remaining 2020 snowshoe hare pellet count data.
+I participated in a USFWS Vogel Lake/Miller Creek NEPA discussion call.
+I plan to supply species occurrence data for this.
+
+I imported the remaining 2020 snowshoe hare pellet count data. I also
+worked on organizing the data and revising the metadata.
 
 ![Snowshoe hare pellet counts,
-1984-2020.](2020-09-08_pellet_count_means_over_time.jpg)  
-Snowshoe hare pellet counts, 1984-2020.
+1984–2020.](2020-09-08_pellet_count_means_over_time.jpg)  
+Snowshoe hare pellet counts, 1984–2020.
+
+## Wednesday, September 9
+
+To do:
+
+  - Edit and submit this week’s *Refuge Notebook* article.
+
+I entered data of dates and observers from 2014 snowshoe hare work.
 
 # Appendixes
 
