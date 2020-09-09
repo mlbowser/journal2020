@@ -10018,6 +10018,12 @@ Berge and Gese ([2010](#ref-berg_relationship_2010)) found a
 relationship of hare density (hares/ha) = 0.0921 X (pellets/m2yr) +
 0.0524 in Wyoming.
 
+I entered more snowshoe hare pellet count data and scanned some data
+sheets.
+
+Colin and I mixed up some herbicide for treating reed canarygrass at
+Canoe Lake tomorrow.
+
 # Appendixes
 
 ## Occurrence data in Arctos bulkloader format
