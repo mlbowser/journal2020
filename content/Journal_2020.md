@@ -188,6 +188,8 @@
       - [Monday, September 8](#monday-september-8)
       - [Wednesday, September 9](#wednesday-september-9)
       - [Thursday, September 10](#thursday-september-10)
+      - [Friday, September 11](#friday-september-11)
+      - [Monday, September 14](#monday-september-14)
   - [Appendixes](#appendixes)
       - [Occurrence data in Arctos bulkloader
         format](#occurrence-data-in-arctos-bulkloader-format)
@@ -10070,6 +10072,177 @@ pallida* (iNaturalist:
 [59171269](https://www.inaturalist.org/observations/59171269)), a
 species not previously recorded from the Refuge.
 
+## Friday, September 11
+
+I worked at home this morning on entering data from the snowshare hare
+pellet survey. While looking up some of the observers, I found that some
+of the *Refuge Notebook* articles from 2012 are inaccessible on our
+website due to broken links. I must fix this.
+
+I worked on improving the calculations and graphics from snowshoe hare
+data.
+
+``` r
+################################################################################
+# Summarize snowshoe hare pellet count data.                                   #
+#                                                                              #
+# Author: First and last name <matt_bowser@fws.gov>                            #
+# Date created: 2020-04-08                                                     #
+# Date last edited: 2020-09-11                                                 #
+################################################################################
+
+
+# Setup ------------------------------------------------------------------------
+
+# Load packages
+library(reshape2)
+
+# Source external scripts
+#source("directory_path/script_foo.R")
+
+
+# 1 Load data -----------------------------------------------------------------
+## ---- load_data  
+
+pellet_data <- read.csv("../data/final_data/observations/snowshoe_hare_pellet_counts.csv",
+ stringsAsFactors=FALSE
+ )
+ 
+plot_data <- read.csv("../data/final_data/geodata/snowshoe_hare_plot_data.csv",
+ stringsAsFactors=FALSE
+ )
+
+
+# 2 Prepare data ---------------------------------------------------------------
+## ---- prep_data  
+
+## Adding a year field for now, which should work.
+pellet_data$year <- as.numeric(substr(pellet_data$date, 1, 4))
+
+## Join the data to get the grid_name values.
+pellet_data_joined <- merge(
+ plot_data[,c("plot_name", "grid_name")],
+ pellet_data
+ )
+
+## Convert the plot names to plot numbers.
+plot_number <- strsplit(pellet_data_joined$plot_name,
+ "-"
+ )
+plot_number <- sapply(plot_number,
+ "[",
+ 2
+ ) 
+pellet_data_joined$plot_name <- as.numeric(plot_number)
+ 
+## Reshape the data into a grid_name X plot number X year array.
+pellet_data_molten <- melt(pellet_data_joined,
+ measure.vars="pellet_count"
+ )
+
+pellet_data_array <- acast(
+ pellet_data_molten,
+ grid_name ~ plot_name ~ year,
+ fun.aggregate=sum,
+ fill=9999 ## Temporary fill value.
+ )
+pellet_data_array[pellet_data_array==9999] <- NA
+ 
+n_grids <- dim(pellet_data_array)[1]
+n_plots <- dim(pellet_data_array)[2]
+n_years <- dim(pellet_data_array)[3]
+
+## Set to NA any plot for which the previous year's count was NA.
+for (this_grid in 1:n_grids)
+ {
+ for (this_plot in 1:n_plots)
+  {
+  for (this_year in n_years:2)
+   if(is.na(pellet_data_array[this_grid,this_plot,this_year-1]))
+    {
+    pellet_data_array[this_grid,this_plot,this_year] <- NA
+    }
+  }
+ }
+ 
+## Also set all year 1 observations to NA.
+pellet_data_array[,,1] <- NA
+
+## Now get averages.
+pellet_count_means <- as.data.frame(apply(pellet_data_array,
+ c(1,3),
+ mean,
+ na.rm=TRUE
+ ))
+
+## Plot.
+plot_title <- paste0("Kenai NWR snowshoe hare pellet counts, ",
+ names(pellet_count_means)[2],
+ "–",
+ names(pellet_count_means)[ncol(pellet_count_means)]
+ )
+
+years <- as.numeric(names(pellet_count_means)[2]):as.numeric(names(pellet_count_means)[ncol(pellet_count_means)]) 
+
+## Colors.
+grid_colors <- c("#EE34D2",
+ "#B33B24",
+ "#FFDB00",
+ "#5E8C31",
+ "#9C51B6",
+ "#5DADEC",
+ "#353839"
+ )
+
+file_name <- paste0("../documents/",
+ as.Date(Sys.time()),
+ "_pellet_count_means_over_time.pdf"
+ )
+
+pdf(file=file_name,
+ width=7,
+ height=6
+ )
+plot(x=c(min(years),
+ max(years)),
+ y=c(0,max(pellet_count_means, na.rm=TRUE)),
+ type="n",
+ main=plot_title,
+ xlab="year",
+ ylab="mean pellets/m2"
+ )
+for (this_grid in 1:n_grids)
+ {
+ lines(years,
+  pellet_count_means[this_grid,2:n_years],
+  col=grid_colors[this_grid],
+  lwd=2
+  )
+ }
+legend("topright",
+ legend = rownames(pellet_count_means),
+ col = grid_colors,
+ lty=1,
+ lwd=2
+ )
+dev.off()
+
+## Save means summaries.
+file_name <- paste0("../documents/",
+ as.Date(Sys.time()),
+ "_pellet_count_means_over_time.csv"
+ )
+write.csv(pellet_count_means,
+ file_name
+ ) 
+```
+
+![Kenai National Wildlife Refuge snowshoe hare pellet counts,
+1983–2020.](2020-09-11_pellet_count_over_time.jpg)  
+Kenai National Wildlife Refuge snowshoe hare pellet counts, 1983–2020.
+
+## Monday, September 14
+
 # Appendixes
 
 ## Occurrence data in Arctos bulkloader format
@@ -10144,28 +10317,28 @@ sequencing](https://www.inaturalist.org/projects/2020-kenai-peninsula-fungal-seq
 iNaturalist project following the [guidelines of the Fungal Diversity
 Survey](https://fundis.org/sequence/sequence/submit-tissue).
 
-| id       | observed\_on | user\_login | url                                               | image\_url                                                            | description                                                                        | taxon\_phylum\_name | taxon\_class\_name | taxon\_order\_name | taxon\_family\_name | taxon\_genus\_name | taxon\_species\_name | field.collector.s.name |
-| :------- | :----------- | :---------- | :------------------------------------------------ | :-------------------------------------------------------------------- | :--------------------------------------------------------------------------------- | :------------------ | :----------------- | :----------------- | :------------------ | :----------------- | :------------------- | :--------------------- |
-| 46129997 | 2020-05-16   | mbowser     | https://www.inaturalist.org/observations/46129997 | https://static.inaturalist.org/photos/73163328/medium.jpeg?1589657840 | 2020-05-16\_MLB01, under cottonwoods and spruce in mixed forest                    | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          |                      |                        |
-| 46132276 | 2020-05-16   | mbowser     | https://www.inaturalist.org/observations/46132276 | https://static.inaturalist.org/photos/73166513/medium.jpeg?1589658711 | 2020-05-16\_MLB02, under spruce and birch                                          | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          |                      |                        |
-| 46292862 | 2020-05-17   | mbowser     | https://www.inaturalist.org/observations/46292862 | https://static.inaturalist.org/photos/73418758/medium.jpeg?1589748649 | 2020-05-17\_MLB01, under cottonwoods                                               | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          |                      |                        |
-| 46293272 | 2020-05-17   | mbowser     | https://www.inaturalist.org/observations/46293272 | https://static.inaturalist.org/photos/73419346/medium.jpeg?1589748803 | 2020-05-17\_MLB02, under cottonwoods                                               | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          |                      |                        |
-| 47411794 | 2020-05-19   | colcan927   | https://www.inaturalist.org/observations/47411794 | https://static.inaturalist.org/photos/75195597/medium.jpg?1590509826  |                                                                                    | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          | Morchella tomentosa  |                        |
-| 47411855 | 2020-05-19   | colcan927   | https://www.inaturalist.org/observations/47411855 | https://static.inaturalist.org/photos/75195705/medium.jpg?1590509866  |                                                                                    | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          |                      |                        |
-| 47524671 | 2020-05-22   | cahaba      | https://www.inaturalist.org/observations/47524671 | https://static.inaturalist.org/photos/75377675/medium.jpg?1590596949  | vert\_angle\_deg=-71.7 / horiz\_angle\_deg=8.0                                     | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          |                      |                        |
-| 47524963 | 2020-05-22   | cahaba      | https://www.inaturalist.org/observations/47524963 | https://static.inaturalist.org/photos/75378086/medium.jpg?1590597064  | vert\_angle\_deg=-46.1 / horiz\_angle\_deg=-1.3                                    | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          |                      |                        |
-| 47738982 | 2020-05-26   | mbowser     | https://www.inaturalist.org/observations/47738982 | https://static.inaturalist.org/photos/75726878/medium.jpeg?1590765903 | 2020-05-26\_MLB01, collected near spruce, birch, stunted cottonwoods, and grasses. | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          |                      |                        |
-| 47739517 | 2020-05-26   | mbowser     | https://www.inaturalist.org/observations/47739517 | https://static.inaturalist.org/photos/75727906/medium.jpeg?1590766290 | 2020-05-26\_MLB02, near spruce, birch, stunted cottonwoods, and grass.             | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          |                      |                        |
-| 48409941 | 2020-06-03   | mbowser     | https://www.inaturalist.org/observations/48409941 | https://static.inaturalist.org/photos/76812602/medium.jpeg?1591245301 | Under cottonwoods                                                                  | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          |                      |                        |
-| 50778241 | 2020-06-12   | mbowser     | https://www.inaturalist.org/observations/50778241 | https://static.inaturalist.org/photos/80652362/medium.jpeg?1593011658 |                                                                                    | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          |                      |                        |
-| 50807719 | 2020-06-12   | mbowser     | https://www.inaturalist.org/observations/50807719 | https://static.inaturalist.org/photos/80698469/medium.jpeg?1593027640 |                                                                                    | Ascomycota          | Pezizomycetes      | Pezizales          | Discinaceae         | Gyromitra          |                      |                        |
-| 51704078 | 2020-07-01   | mbowser     | https://www.inaturalist.org/observations/51704078 | https://static.inaturalist.org/photos/82164530/medium.jpeg?1593706879 | Collected.                                                                         | Basidiomycota       | Agaricomycetes     | Boletales          | Boletaceae          | Leccinum           |                      |                        |
-| 52167014 | 2020-07-02   | mbowser     | https://www.inaturalist.org/observations/52167014 | https://static.inaturalist.org/photos/82911543/medium.jpeg?1594056152 |                                                                                    | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          |                      |                        |
-| 52167410 | 2020-07-02   | mbowser     | https://www.inaturalist.org/observations/52167410 | https://static.inaturalist.org/photos/82912084/medium.jpeg?1594056330 |                                                                                    | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          | Morchella tomentosa  |                        |
-| 52382438 | 2020-07-07   | mbowser     | https://www.inaturalist.org/observations/52382438 | https://static.inaturalist.org/photos/83266253/medium.jpeg?1594227231 |                                                                                    | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          | Morchella tomentosa  |                        |
-| 57686894 | 2020-08-26   | mbowser     | https://www.inaturalist.org/observations/57686894 | https://static.inaturalist.org/photos/92038251/medium.jpeg?1598483892 |                                                                                    | Basidiomycota       | Agaricomycetes     | Agaricales         | Agaricaceae         | Agaricus           |                      |                        |
-| 58435560 | 2020-07-20   | mbowser     | https://www.inaturalist.org/observations/58435560 | https://static.inaturalist.org/photos/93294510/medium.jpeg?1599156890 | 2020-07-20-MLB01                                                                   | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          |                      |                        |
-| 58435927 | 2020-07-20   | mbowser     | https://www.inaturalist.org/observations/58435927 | https://static.inaturalist.org/photos/93295093/medium.jpeg?1599157091 |                                                                                    | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          |                      |                        |
+| id       | observed\_on | user\_login | url                                               | image\_url                                                            | description                                                                        | place\_guess                       | latitude      | longitude        | place\_county\_name | place\_state\_name | place\_country\_name | scientific\_name    | taxon\_phylum\_name | taxon\_class\_name | taxon\_order\_name | taxon\_family\_name | taxon\_genus\_name | taxon\_species\_name |
+| :------- | :----------- | :---------- | :------------------------------------------------ | :-------------------------------------------------------------------- | :--------------------------------------------------------------------------------- | :--------------------------------- | :------------ | :--------------- | :------------------ | :----------------- | :------------------- | :------------------ | :------------------ | :----------------- | :----------------- | :------------------ | :----------------- | :------------------- |
+| 46129997 | 2020-05-16   | mbowser     | https://www.inaturalist.org/observations/46129997 | https://static.inaturalist.org/photos/73163328/medium.jpeg?1589657840 | 2020-05-16\_MLB01, under cottonwoods and spruce in mixed forest                    | Kalifornsky, AK, USA               | 60.3637540556 | \-151.2697553889 | Kenai Peninsula     | Alaska             | United States        | Morchella           | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          |                      |
+| 46132276 | 2020-05-16   | mbowser     | https://www.inaturalist.org/observations/46132276 | https://static.inaturalist.org/photos/73166513/medium.jpeg?1589658711 | 2020-05-16\_MLB02, under spruce and birch                                          | Kalifornsky, AK, USA               | 60.36399351   | \-151.26916317   | Kenai Peninsula     | Alaska             | United States        | Morchella           | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          |                      |
+| 46292862 | 2020-05-17   | mbowser     | https://www.inaturalist.org/observations/46292862 | https://static.inaturalist.org/photos/73418758/medium.jpeg?1589748649 | 2020-05-17\_MLB01, under cottonwoods                                               | Soldotna, AK 99669, USA            | 60.4632655833 | \-151.0784531667 | Kenai Peninsula     | Alaska             | United States        | Morchella           | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          |                      |
+| 46293272 | 2020-05-17   | mbowser     | https://www.inaturalist.org/observations/46293272 | https://static.inaturalist.org/photos/73419346/medium.jpeg?1589748803 | 2020-05-17\_MLB02, under cottonwoods                                               | Soldotna, AK 99669, USA            | 60.4633523889 | \-151.0786019722 | Kenai Peninsula     | Alaska             | United States        | Morchella           | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          |                      |
+| 47411794 | 2020-05-19   | colcan927   | https://www.inaturalist.org/observations/47411794 | https://static.inaturalist.org/photos/75195597/medium.jpg?1590509826  |                                                                                    | Mystery Creek Rd, Sterling, AK, US | 60.54915333   | \-150.27118      | Kenai Peninsula     | Alaska             | United States        | Morchella tomentosa | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          | Morchella tomentosa  |
+| 47411855 | 2020-05-19   | colcan927   | https://www.inaturalist.org/observations/47411855 | https://static.inaturalist.org/photos/75195705/medium.jpg?1590509866  |                                                                                    | Mystery Creek Rd, Sterling, AK, US | 60.5491       | \-150.27108833   | Kenai Peninsula     | Alaska             | United States        | Morchella           | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          |                      |
+| 47524671 | 2020-05-22   | cahaba      | https://www.inaturalist.org/observations/47524671 | https://static.inaturalist.org/photos/75377675/medium.jpg?1590596949  | vert\_angle\_deg=-71.7 / horiz\_angle\_deg=8.0                                     | Kenai Peninsula Borough, AK, USA   | 60.52905      | \-150.2225972222 | Kenai Peninsula     | Alaska             | United States        | Morchella           | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          |                      |
+| 47524963 | 2020-05-22   | cahaba      | https://www.inaturalist.org/observations/47524963 | https://static.inaturalist.org/photos/75378086/medium.jpg?1590597064  | vert\_angle\_deg=-46.1 / horiz\_angle\_deg=-1.3                                    | Kenai Peninsula Borough, AK, USA   | 60.5306472222 | \-150.2244194444 | Kenai Peninsula     | Alaska             | United States        | Morchella           | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          |                      |
+| 47738982 | 2020-05-26   | mbowser     | https://www.inaturalist.org/observations/47738982 | https://static.inaturalist.org/photos/75726878/medium.jpeg?1590765903 | 2020-05-26\_MLB01, collected near spruce, birch, stunted cottonwoods, and grasses. | Kalifornsky, AK, USA               | 60.4484561274 | \-151.2819276111 | Kenai Peninsula     | Alaska             | United States        | Morchella           | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          |                      |
+| 47739517 | 2020-05-26   | mbowser     | https://www.inaturalist.org/observations/47739517 | https://static.inaturalist.org/photos/75727906/medium.jpeg?1590766290 | 2020-05-26\_MLB02, near spruce, birch, stunted cottonwoods, and grass.             | Kalifornsky, AK, USA               | 60.4484733333 | \-151.28173      | Kenai Peninsula     | Alaska             | United States        | Morchella           | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          |                      |
+| 48409941 | 2020-06-03   | mbowser     | https://www.inaturalist.org/observations/48409941 | https://static.inaturalist.org/photos/76812602/medium.jpeg?1591245301 | Under cottonwoods                                                                  | Kalifornsky, AK, USA               | 60.3975791944 | \-151.2938145833 | Kenai Peninsula     | Alaska             | United States        | Morchella           | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          |                      |
+| 50778241 | 2020-06-12   | mbowser     | https://www.inaturalist.org/observations/50778241 | https://static.inaturalist.org/photos/80652362/medium.jpeg?1593011658 |                                                                                    | Kenai Peninsula Borough, AK, USA   | 60.5974233333 | \-150.3945166667 | Kenai Peninsula     | Alaska             | United States        | Morchella           | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          |                      |
+| 50807719 | 2020-06-12   | mbowser     | https://www.inaturalist.org/observations/50807719 | https://static.inaturalist.org/photos/80698469/medium.jpeg?1593027640 |                                                                                    | Kenai Peninsula Borough, AK, USA   | 60.624565     | \-150.3236083333 | Kenai Peninsula     | Alaska             | United States        | Gyromitra           | Ascomycota          | Pezizomycetes      | Pezizales          | Discinaceae         | Gyromitra          |                      |
+| 51704078 | 2020-07-01   | mbowser     | https://www.inaturalist.org/observations/51704078 | https://static.inaturalist.org/photos/82164530/medium.jpeg?1593706879 | Collected.                                                                         | Kenai Peninsula Borough, AK, USA   | 60.4875933333 | \-150.4623133333 | Kenai Peninsula     | Alaska             | United States        | Leccinum            | Basidiomycota       | Agaricomycetes     | Boletales          | Boletaceae          | Leccinum           |                      |
+| 52167014 | 2020-07-02   | mbowser     | https://www.inaturalist.org/observations/52167014 | https://static.inaturalist.org/photos/82911543/medium.jpeg?1594056152 |                                                                                    | Kenai Peninsula Borough, AK, USA   | 60.54855      | \-150.2666983333 | Kenai Peninsula     | Alaska             | United States        | Morchella           | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          |                      |
+| 52167410 | 2020-07-02   | mbowser     | https://www.inaturalist.org/observations/52167410 | https://static.inaturalist.org/photos/82912084/medium.jpeg?1594056330 |                                                                                    | Kenai Peninsula Borough, AK, USA   | 60.5485566667 | \-150.2666483333 | Kenai Peninsula     | Alaska             | United States        | Morchella tomentosa | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          | Morchella tomentosa  |
+| 52382438 | 2020-07-07   | mbowser     | https://www.inaturalist.org/observations/52382438 | https://static.inaturalist.org/photos/83266253/medium.jpeg?1594227231 |                                                                                    | Kenai Peninsula Borough, AK, USA   | 60.4727516667 | \-150.415445     | Kenai Peninsula     | Alaska             | United States        | Morchella tomentosa | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          | Morchella tomentosa  |
+| 57686894 | 2020-08-26   | mbowser     | https://www.inaturalist.org/observations/57686894 | https://static.inaturalist.org/photos/92038251/medium.jpeg?1598483892 |                                                                                    | Kenai Peninsula Borough, AK, USA   | 60.4649783333 | \-151.0730483333 | Kenai Peninsula     | Alaska             | United States        | Agaricus            | Basidiomycota       | Agaricomycetes     | Agaricales         | Agaricaceae         | Agaricus           |                      |
+| 58435560 | 2020-07-20   | mbowser     | https://www.inaturalist.org/observations/58435560 | https://static.inaturalist.org/photos/93294510/medium.jpeg?1599156890 | 2020-07-20-MLB01                                                                   | Kenai Peninsula Borough, AK, USA   | 60.469955     | \-150.358425     | Kenai Peninsula     | Alaska             | United States        | Morchella           | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          |                      |
+| 58435927 | 2020-07-20   | mbowser     | https://www.inaturalist.org/observations/58435927 | https://static.inaturalist.org/photos/93295093/medium.jpeg?1599157091 |                                                                                    | Kenai Peninsula Borough, AK, USA   | 60.46987      | \-150.3586616667 | Kenai Peninsula     | Alaska             | United States        | Morchella           | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          |                      |
 
 # Bibliography
 
