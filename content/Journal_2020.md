@@ -190,6 +190,7 @@
       - [Thursday, September 10](#thursday-september-10)
       - [Friday, September 11](#friday-september-11)
       - [Monday, September 14](#monday-september-14)
+      - [Tuesday, September 15](#tuesday-september-15)
   - [Appendixes](#appendixes)
       - [Occurrence data in Arctos bulkloader
         format](#occurrence-data-in-arctos-bulkloader-format)
@@ -10112,7 +10113,6 @@ plot_data <- read.csv("../data/final_data/geodata/snowshoe_hare_plot_data.csv",
  stringsAsFactors=FALSE
  )
 
-
 # 2 Prepare data ---------------------------------------------------------------
 ## ---- prep_data  
 
@@ -10124,6 +10124,28 @@ pellet_data_joined <- merge(
  plot_data[,c("plot_name", "grid_name")],
  pellet_data
  )
+ 
+## Now it would be good to fill in missing dates. Because each grid was supposed to been surveyed at about the same time each year, we should be able to use the known dates to infer rough dates for when these were usually done.
+
+## First, for each grid we should get the Julian dates when they were usually surveyed.
+has_date <- nchar(pellet_data_joined$date) == 10
+grids_dates <- unique(pellet_data_joined[has_date, c("grid_name", "date", "year")])
+grids_dates$origin <- as.Date(paste0(grids_dates$year, "-01-01"))
+grids_dates$julian <- NA
+for (this_row in 1:nrow(grids_dates))
+ {
+ grids_dates$julian[this_row] <- julian(as.Date(grids_dates$date[this_row]), origin=grids_dates$origin[this_row]) + 1
+ }
+grids_mean_dates <- aggregate(grids_dates$julian, by=list(grids_dates$grid_name), mean)
+names(grids_mean_dates) <- c("grid_name", "julian")
+grids_mean_dates$julian <- round(grids_mean_dates$julian)
+
+## Now we should fill in missing dates with the average dates.
+pellet_data_joined <- merge(pellet_data_joined, grids_mean_dates, by="grid_name", all.x=TRUE)
+pellet_data_joined$date_est <- as.Date(paste0(pellet_data_joined$year, pellet_data_joined$julian), format="%Y%j")
+no_date <- nchar(pellet_data_joined$date) == 4
+pellet_data_joined$date[no_date] <- as.character(pellet_data_joined$date_est[no_date])
+pellet_data_joined <- pellet_data_joined[,1:7] 
 
 ## Convert the plot names to plot numbers.
 plot_number <- strsplit(pellet_data_joined$plot_name,
@@ -10175,65 +10197,200 @@ pellet_count_means <- as.data.frame(apply(pellet_data_array,
  na.rm=TRUE
  ))
 
+## Reformatting so that start and end dates can be incorporated. 
+pellet_count_means$grid_name <- row.names(pellet_count_means)
+pellet_count_means_molten <- melt(pellet_count_means, id.vars="grid_name")
+names(pellet_count_means_molten)[2] <- "year" 
+pellet_count_means_molten$variable <- "mean_pellets_m2"
+
+## We need start and end dates for each grid and year.
+pellet_data_joined$end_date <- pellet_data_joined$date
+## Getting the start dates will take a little more work.
+pellet_data_dates <- unique(pellet_data_joined[c("grid_name", "year", "end_date")])
+pellet_data_dates$year <- pellet_data_dates$year + 1
+names(pellet_data_dates)[3] <- "start_date"
+pellet_data_joined <- merge(pellet_data_joined, pellet_data_dates, by=c("grid_name", "year"), all.x=TRUE)
+pellet_data_dates <- unique(pellet_data_joined[c("grid_name", "year", "start_date", "end_date")])
+
+pellet_count_annual_data <- merge(pellet_count_means_molten,
+ pellet_data_dates,
+ by=c("grid_name", "year"),
+ all.x=TRUE
+ )
+## Dropping the no data years.
+#pellet_count_annual_data <- pellet_count_annual_data[!is.nan(pellet_count_annual_data$value),]
+
+## Now calculate the time differences between start and end dates.
+pellet_count_annual_data$time_dif_days <- as.numeric(as.Date(pellet_count_annual_data$end_date) - as.Date(pellet_count_annual_data$start_date))
+pellet_count_annual_data$time_dif_years <- pellet_count_annual_data$time_dif_days/365.2422
+
+## Calculate pellets per m2 per year.
+pellet_count_annual_data$pellets_m2yr <- pellet_count_annual_data$value/pellet_count_annual_data$time_dif_years
+
+## Cleaning up this data frame a bit for use later.
+pellet_count_annual_data$year <-as.numeric(as.character(pellet_count_annual_data$year))
+pellet_count_annual_data$start_date <- as.Date(pellet_count_annual_data$start_date)
+pellet_count_annual_data$end_date <- as.Date(pellet_count_annual_data$end_date)
+names(pellet_count_annual_data)[3] <- "pellets_m2"
+pellet_count_annual_data <- pellet_count_annual_data[,c(1:3,5:9)]
+
+## It might be useful to calculate a grand mean for clarity on the graph.
+data_agg <- aggregate(pellet_count_annual_data$pellets_m2yr,
+ by=list(pellet_count_annual_data$year),
+ mean,
+ na.rm=TRUE
+ )
+names(data_agg) <-c("year", "pellets_m2yr")
+data_agg$start_date <- aggregate(pellet_count_annual_data$start_date,
+ by=list(pellet_count_annual_data$year),
+ mean,
+ na.rm=TRUE
+ )$x
+data_agg$end_date <- aggregate(pellet_count_annual_data$end_date,
+ by=list(pellet_count_annual_data$year),
+ mean,
+ na.rm=TRUE
+ )$x 
+data_agg <- data_agg[2:nrow(data_agg),]
+ 
 ## Plot.
+
 plot_title <- paste0("Kenai NWR snowshoe hare pellet counts, ",
- names(pellet_count_means)[2],
+ min(pellet_count_annual_data$year),
  "–",
- names(pellet_count_means)[ncol(pellet_count_means)]
+ max(pellet_count_annual_data$year)
  )
-
-years <- as.numeric(names(pellet_count_means)[2]):as.numeric(names(pellet_count_means)[ncol(pellet_count_means)]) 
-
-## Colors.
-grid_colors <- c("#EE34D2",
- "#B33B24",
- "#FFDB00",
- "#5E8C31",
- "#9C51B6",
- "#5DADEC",
- "#353839"
- )
-
+ 
 file_name <- paste0("../documents/",
  as.Date(Sys.time()),
- "_pellet_count_means_over_time.pdf"
+ "_pellet_count_over_time.pdf"
  )
+ 
+lcol <- "#0000001F"
+lwd=2
+#lty=c("11",
+# "31",
+# "12",
+# "44",
+# "5111",
+# "62",
+# "117111"
+# )
+lty=rep(1, 7)
+
+grid_name <- levels(as.factor(pellet_count_annual_data$grid_name))
+this_grid <- 1
+
+sl <- pellet_count_annual_data$grid_name == grid_name[this_grid]
+sln <- pellet_count_annual_data$grid_name == grid_name[this_grid] & !is.nan(pellet_count_annual_data$pellets_m2yr)
 
 pdf(file=file_name,
- width=7,
- height=6
+ width=6,
+ height=5
  )
-plot(x=c(min(years),
- max(years)),
- y=c(0,max(pellet_count_means, na.rm=TRUE)),
+par(mar=c(5,5,3,1))
+plot(pellet_count_annual_data$start_date[sl],
+ pellet_count_annual_data$pellets_m2yr[sl],
  type="n",
+ ylim=c(0, max(pellet_count_annual_data$pellets_m2yr, na.rm=TRUE)),
  main=plot_title,
  xlab="year",
- ylab="mean pellets/m2"
+ ylab=expression(paste("hare pellets per m"^"2", " per year"))
  )
-for (this_grid in 1:n_grids)
+
+## Draw segments showing pellet densities. 
+segments(pellet_count_annual_data$start_date[sln],
+ pellet_count_annual_data$pellets_m2yr[sln],
+ pellet_count_annual_data$end_date[sln],
+ pellet_count_annual_data$pellets_m2yr[sln],
+ col=lcol,
+ lwd=lwd,
+ lty=lty[this_grid]
+ )
+## connect non-missing segments.
+for (this_row in 2:nrow(pellet_count_annual_data))
  {
- lines(years,
-  pellet_count_means[this_grid,2:n_years],
-  col=grid_colors[this_grid],
-  lwd=2
-  )
+ if (sln[this_row-1] & sln[this_row])
+  {
+  segments(pellet_count_annual_data$start_date[this_row],
+   pellet_count_annual_data$pellets_m2yr[this_row-1],
+   pellet_count_annual_data$start_date[this_row],
+   pellet_count_annual_data$pellets_m2yr[this_row],
+   col=lcol,
+   lwd=lwd,
+   lty=lty[this_grid]
+   )
+  }
  }
-legend("topright",
- legend = rownames(pellet_count_means),
- col = grid_colors,
- lty=1,
- lwd=2
+ 
+for (this_grid in 2:n_grids)
+ {
+ sln <- pellet_count_annual_data$grid_name == grid_name[this_grid] & !is.nan(pellet_count_annual_data$pellets_m2yr)
+## Draw segments showing pellet densities. 
+segments(pellet_count_annual_data$start_date[sln],
+ pellet_count_annual_data$pellets_m2yr[sln],
+ pellet_count_annual_data$end_date[sln],
+ pellet_count_annual_data$pellets_m2yr[sln],
+ col=lcol,
+ lwd=lwd,
+ lty=lty[this_grid]
  )
-dev.off()
+## connect non-missing segments.
+for (this_row in 2:nrow(pellet_count_annual_data))
+ {
+ if (sln[this_row-1] & sln[this_row])
+  {
+  segments(pellet_count_annual_data$start_date[this_row],
+   pellet_count_annual_data$pellets_m2yr[this_row-1],
+   pellet_count_annual_data$start_date[this_row],
+   pellet_count_annual_data$pellets_m2yr[this_row],
+   col=lcol,
+   lwd=lwd,
+   lty=lty[this_grid]
+   )
+  }
+ } 
+ }
+ ## Now plot the grand mean lines.
+ segments(data_agg$start_date,
+  data_agg$pellets_m2yr,
+  data_agg$end_date,
+  data_agg$pellets_m2yr,
+  col="#000000",
+  lwd=4,
+  lty=1
+  )
+ for (this_row in 2:nrow(data_agg))
+ {
+  segments(data_agg$start_date[this_row],
+   data_agg$pellets_m2yr[this_row-1],
+   data_agg$start_date[this_row],
+   data_agg$pellets_m2yr[this_row],
+   col="#000000",
+   lwd=4,
+   lty=1
+   )
+ } 
+dev.off() 
 
 ## Save means summaries.
 file_name <- paste0("../documents/",
  as.Date(Sys.time()),
  "_pellet_count_means_over_time.csv"
  )
-write.csv(pellet_count_means,
- file_name
+write.csv(pellet_count_annual_data,
+ file_name,
+ row.names=FALSE
+ ) 
+
+## Save the grand mean summary, also.
+ file_name <- paste0("../documents/",
+ as.Date(Sys.time()),
+ "_grand_means_over_time.csv"
+ )
+write.csv(data_agg,
+ file_name,
+ row.names=FALSE
  ) 
 ```
 
@@ -10242,6 +10399,889 @@ write.csv(pellet_count_means,
 Kenai National Wildlife Refuge snowshoe hare pellet counts, 1983–2020.
 
 ## Monday, September 14
+
+I worked on calculating hare densities from Krebs et
+al. ([1987](#ref-krebs_estimation_1987),
+[2001](#ref-krebs_estimating_2001)), Murray et
+al. ([2002](#ref-murray_estimating_2002)), Berg and Gese
+([2010](#ref-berg_relationship_2010)), and Mills
+([2005](#ref-mills_pellet_2005)).
+
+``` r
+################################################################################
+# Summarize snowshoe hare pellet count data.                                   #
+#                                                                              #
+# Author: First and last name <matt_bowser@fws.gov>                            #
+# Date created: 2020-04-08                                                     #
+# Date last edited: 2020-09-14                                                 #
+################################################################################
+
+
+# Setup ------------------------------------------------------------------------
+
+# Load packages
+library(reshape2)
+
+# Source external scripts
+#source("directory_path/script_foo.R")
+
+
+# 1 Load data -----------------------------------------------------------------
+## ---- load_data  
+
+pellet_data <- read.csv("../data/final_data/observations/snowshoe_hare_pellet_counts.csv",
+ stringsAsFactors=FALSE
+ )
+ 
+plot_data <- read.csv("../data/final_data/geodata/snowshoe_hare_plot_data.csv",
+ stringsAsFactors=FALSE
+ )
+ 
+parameter_data <- read.csv("../data/final_data/parameters/hare_density_parameters.csv") 
+
+# 2 Prepare data ---------------------------------------------------------------
+## ---- prep_data  
+
+## Adding a year field for now, which should work.
+pellet_data$year <- as.numeric(substr(pellet_data$date, 1, 4))
+
+## Join the data to get the grid_name values.
+pellet_data_joined <- merge(
+ plot_data[,c("plot_name", "grid_name")],
+ pellet_data
+ )
+ 
+## Now it would be good to fill in missing dates. Because each grid was supposed to been surveyed at about the same time each year, we should be able to use the known dates to infer rough dates for when these were usually done.
+
+## First, for each grid we should get the Julian dates when they were usually surveyed.
+has_date <- nchar(pellet_data_joined$date) == 10
+grids_dates <- unique(pellet_data_joined[has_date, c("grid_name", "date", "year")])
+grids_dates$origin <- as.Date(paste0(grids_dates$year, "-01-01"))
+grids_dates$julian <- NA
+for (this_row in 1:nrow(grids_dates))
+ {
+ grids_dates$julian[this_row] <- julian(as.Date(grids_dates$date[this_row]), origin=grids_dates$origin[this_row]) + 1
+ }
+grids_mean_dates <- aggregate(grids_dates$julian, by=list(grids_dates$grid_name), mean)
+names(grids_mean_dates) <- c("grid_name", "julian")
+grids_mean_dates$julian <- round(grids_mean_dates$julian)
+
+## Now we should fill in missing dates with the average dates.
+pellet_data_joined <- merge(pellet_data_joined, grids_mean_dates, by="grid_name", all.x=TRUE)
+pellet_data_joined$date_est <- as.Date(paste0(pellet_data_joined$year, pellet_data_joined$julian), format="%Y%j")
+no_date <- nchar(pellet_data_joined$date) == 4
+pellet_data_joined$date[no_date] <- as.character(pellet_data_joined$date_est[no_date])
+pellet_data_joined <- pellet_data_joined[,1:7] 
+
+## Convert the plot names to plot numbers.
+plot_number <- strsplit(pellet_data_joined$plot_name,
+ "-"
+ )
+plot_number <- sapply(plot_number,
+ "[",
+ 2
+ ) 
+pellet_data_joined$plot_name <- as.numeric(plot_number)
+ 
+## Reshape the data into a grid_name X plot number X year array.
+pellet_data_molten <- melt(pellet_data_joined,
+ measure.vars="pellet_count"
+ )
+
+pellet_data_array <- acast(
+ pellet_data_molten,
+ grid_name ~ plot_name ~ year,
+ fun.aggregate=sum,
+ fill=9999 ## Temporary fill value.
+ )
+pellet_data_array[pellet_data_array==9999] <- NA
+ 
+n_grids <- dim(pellet_data_array)[1]
+n_plots <- dim(pellet_data_array)[2]
+n_years <- dim(pellet_data_array)[3]
+
+## Set to NA any plot for which the previous year's count was NA.
+for (this_grid in 1:n_grids)
+ {
+ for (this_plot in 1:n_plots)
+  {
+  for (this_year in n_years:2)
+   if(is.na(pellet_data_array[this_grid,this_plot,this_year-1]))
+    {
+    pellet_data_array[this_grid,this_plot,this_year] <- NA
+    }
+  }
+ }
+ 
+## Also set all year 1 observations to NA.
+pellet_data_array[,,1] <- NA
+
+## Now get averages.
+pellet_count_means <- as.data.frame(apply(pellet_data_array,
+ c(1,3),
+ mean,
+ na.rm=TRUE
+ ))
+
+## Reformatting so that start and end dates can be incorporated. 
+pellet_count_means$grid_name <- row.names(pellet_count_means)
+pellet_count_means_molten <- melt(pellet_count_means, id.vars="grid_name")
+names(pellet_count_means_molten)[2] <- "year" 
+pellet_count_means_molten$variable <- "mean_pellets_m2"
+
+## We need start and end dates for each grid and year.
+pellet_data_joined$end_date <- pellet_data_joined$date
+## Getting the start dates will take a little more work.
+pellet_data_dates <- unique(pellet_data_joined[c("grid_name", "year", "end_date")])
+pellet_data_dates$year <- pellet_data_dates$year + 1
+names(pellet_data_dates)[3] <- "start_date"
+pellet_data_joined <- merge(pellet_data_joined, pellet_data_dates, by=c("grid_name", "year"), all.x=TRUE)
+pellet_data_dates <- unique(pellet_data_joined[c("grid_name", "year", "start_date", "end_date")])
+
+pellet_count_annual_data <- merge(pellet_count_means_molten,
+ pellet_data_dates,
+ by=c("grid_name", "year"),
+ all.x=TRUE
+ )
+## Dropping the no data years.
+#pellet_count_annual_data <- pellet_count_annual_data[!is.nan(pellet_count_annual_data$value),]
+
+## Now calculate the time differences between start and end dates.
+pellet_count_annual_data$time_dif_days <- as.numeric(as.Date(pellet_count_annual_data$end_date) - as.Date(pellet_count_annual_data$start_date))
+pellet_count_annual_data$time_dif_years <- pellet_count_annual_data$time_dif_days/365.2422
+
+## Calculate pellets per m2 per year.
+pellet_count_annual_data$pellets_m2yr <- pellet_count_annual_data$value/pellet_count_annual_data$time_dif_years
+
+## Cleaning up this data frame a bit for use later.
+pellet_count_annual_data$year <-as.numeric(as.character(pellet_count_annual_data$year))
+pellet_count_annual_data$start_date <- as.Date(pellet_count_annual_data$start_date)
+pellet_count_annual_data$end_date <- as.Date(pellet_count_annual_data$end_date)
+names(pellet_count_annual_data)[3] <- "pellets_m2"
+pellet_count_annual_data <- pellet_count_annual_data[,c(1:3,5:9)]
+
+## It might be useful to calculate a grand mean for clarity on the graph.
+data_agg <- aggregate(pellet_count_annual_data$pellets_m2yr,
+ by=list(pellet_count_annual_data$year),
+ mean,
+ na.rm=TRUE
+ )
+names(data_agg) <-c("year", "pellets_m2yr")
+data_agg$start_date <- aggregate(pellet_count_annual_data$start_date,
+ by=list(pellet_count_annual_data$year),
+ mean,
+ na.rm=TRUE
+ )$x
+data_agg$end_date <- aggregate(pellet_count_annual_data$end_date,
+ by=list(pellet_count_annual_data$year),
+ mean,
+ na.rm=TRUE
+ )$x 
+data_agg <- data_agg[2:nrow(data_agg),]
+
+## Now add density estimates.
+
+## Functions from papers.
+Krebs_et_al_1987 <- function(pellets_m2yr)
+ {
+ ## First convert pellets_m2yr to pellets per 0.155 m2 per year.
+ pellets_0155 <- pellets_m2yr*0.155
+ 
+ hares_ha <- 0.27*pellets_0155 + 0.42
+ hares_ha
+ }
+Krebs_et_al_1987(data_agg$pellets_m2yr)
+
+Krebs_et_al_2001 <- function(pellets_m2yr)
+ {
+ ## First convert pellets_m2yr to pellets per 0.155 m2 per year.
+ pellets_0155 <- pellets_m2yr*0.155
+ 
+ ## Apply regression.
+ hares_ha <- exp(-1.203 + 0.889*log(pellets_0155))
+ 
+ ## Apply correction factor.
+ hares_ha <- 1.567*hares_ha
+ hares_ha
+ }
+Krebs_et_al_2001(data_agg$pellets_m2yr)
+
+Murray_et_al_2002 <- function(pellets_m2yr)
+ {
+ pellets_m2yr <- log(pellets_m2yr + 1/6)
+ 
+ hares_ha <- 1.423 * (2.077 - exp(-.662*pellets_m2yr))
+ hares_ha
+ 
+ hares_ha <- exp(hares_ha) - 1/6
+ hares_ha
+ }
+Murray_et_al_2002(data_agg$pellets_m2yr)
+
+Mills_et_al_2005_Seeley <- function(pellets_m2yr)
+ {
+ ## First convert pellets_m2yr to pellets per 0.155 m2 per year.
+ pellets_0155 <- pellets_m2yr*0.155
+ 
+ ## Apply regression.
+ hares_ha <- exp(-1.67 + 0.77*log(pellets_0155))
+ 
+ ## Apply correction factor.
+ hares_ha <- 1.567*hares_ha
+ hares_ha
+ }
+Mills_et_al_2005_Seeley(data_agg$pellets_m2yr)
+
+Mills_et_al_2005_Tally <- function(pellets_m2yr)
+ {
+ ## First convert pellets_m2yr to pellets per 0.155 m2 per year.
+ pellets_0155 <- pellets_m2yr*0.155
+ 
+ ## Apply regression.
+ hares_ha <- exp(-1.14 + 0.63*log(pellets_0155))
+ 
+ ## Apply correction factor.
+ hares_ha <- 1.567*hares_ha
+ hares_ha
+ }
+Mills_et_al_2005_Tally(data_agg$pellets_m2yr)
+
+Berge_and_Gese_2010 <- function(pellets_m2yr)
+ {
+ hares_ha <- 0.0921*pellets_m2yr + 0.0524
+ hares_ha
+ }
+Berge_and_Gese_2010(data_agg$pellets_m2yr)
+ 
+
+
+
+## Plot.
+
+plot_title <- paste0("Kenai NWR snowshoe hare pellet counts, ",
+ min(pellet_count_annual_data$year),
+ "–",
+ max(pellet_count_annual_data$year)
+ )
+ 
+file_name <- paste0("../documents/",
+ as.Date(Sys.time()),
+ "_pellet_count_over_time.pdf"
+ )
+ 
+lcol <- "#0000001F"
+lwd=2
+#lty=c("11",
+# "31",
+# "12",
+# "44",
+# "5111",
+# "62",
+# "117111"
+# )
+lty=rep(1, 7)
+
+grid_name <- levels(as.factor(pellet_count_annual_data$grid_name))
+this_grid <- 1
+
+sl <- pellet_count_annual_data$grid_name == grid_name[this_grid]
+sln <- pellet_count_annual_data$grid_name == grid_name[this_grid] & !is.nan(pellet_count_annual_data$pellets_m2yr)
+
+pdf(file=file_name,
+ width=6,
+ height=5
+ )
+par(mar=c(5,5,3,1))
+plot(pellet_count_annual_data$start_date[sl],
+ pellet_count_annual_data$pellets_m2yr[sl],
+ type="n",
+ ylim=c(0, max(pellet_count_annual_data$pellets_m2yr, na.rm=TRUE)),
+ main=plot_title,
+ xlab="year",
+ ylab=expression(paste("hare pellets per m"^"2", " per year"))
+ )
+
+## Draw segments showing pellet densities. 
+segments(pellet_count_annual_data$start_date[sln],
+ pellet_count_annual_data$pellets_m2yr[sln],
+ pellet_count_annual_data$end_date[sln],
+ pellet_count_annual_data$pellets_m2yr[sln],
+ col=lcol,
+ lwd=lwd,
+ lty=lty[this_grid]
+ )
+## connect non-missing segments.
+for (this_row in 2:nrow(pellet_count_annual_data))
+ {
+ if (sln[this_row-1] & sln[this_row])
+  {
+  segments(pellet_count_annual_data$start_date[this_row],
+   pellet_count_annual_data$pellets_m2yr[this_row-1],
+   pellet_count_annual_data$start_date[this_row],
+   pellet_count_annual_data$pellets_m2yr[this_row],
+   col=lcol,
+   lwd=lwd,
+   lty=lty[this_grid]
+   )
+  }
+ }
+ 
+for (this_grid in 2:n_grids)
+ {
+ sln <- pellet_count_annual_data$grid_name == grid_name[this_grid] & !is.nan(pellet_count_annual_data$pellets_m2yr)
+## Draw segments showing pellet densities. 
+segments(pellet_count_annual_data$start_date[sln],
+ pellet_count_annual_data$pellets_m2yr[sln],
+ pellet_count_annual_data$end_date[sln],
+ pellet_count_annual_data$pellets_m2yr[sln],
+ col=lcol,
+ lwd=lwd,
+ lty=lty[this_grid]
+ )
+## connect non-missing segments.
+for (this_row in 2:nrow(pellet_count_annual_data))
+ {
+ if (sln[this_row-1] & sln[this_row])
+  {
+  segments(pellet_count_annual_data$start_date[this_row],
+   pellet_count_annual_data$pellets_m2yr[this_row-1],
+   pellet_count_annual_data$start_date[this_row],
+   pellet_count_annual_data$pellets_m2yr[this_row],
+   col=lcol,
+   lwd=lwd,
+   lty=lty[this_grid]
+   )
+  }
+ } 
+ }
+ ## Now plot the grand mean lines.
+ segments(data_agg$start_date,
+  data_agg$pellets_m2yr,
+  data_agg$end_date,
+  data_agg$pellets_m2yr,
+  col="#000000",
+  lwd=4,
+  lty=1
+  )
+ for (this_row in 2:nrow(data_agg))
+ {
+  segments(data_agg$start_date[this_row],
+   data_agg$pellets_m2yr[this_row-1],
+   data_agg$start_date[this_row],
+   data_agg$pellets_m2yr[this_row],
+   col="#000000",
+   lwd=4,
+   lty=1
+   )
+ } 
+dev.off() 
+
+## Save means summaries.
+file_name <- paste0("../documents/",
+ as.Date(Sys.time()),
+ "_pellet_count_means_over_time.csv"
+ )
+write.csv(pellet_count_annual_data,
+ file_name,
+ row.names=FALSE
+ ) 
+
+## Save the grand mean summary, also.
+ file_name <- paste0("../documents/",
+ as.Date(Sys.time()),
+ "_grand_means_over_time.csv"
+ )
+write.csv(data_agg,
+ file_name,
+ row.names=FALSE
+ ) 
+```
+
+## Tuesday, September 15
+
+I repackaged LifeScanner specimens to go out, filled out the customs
+form, etc. (USPS tracking \#: LZ991668352US).
+
+I continued with the hare data, also adding the linear regression of
+McCann et al ([2008](#ref-McCann_using_2008))
+
+I found and scanned a file summarizing snowshoe hare data and presenting
+density estimates from program CAPTURE (Otis et al.
+[1978](#ref-otis_statistical_1978)). Of the models in the literature,
+the closest match for our data appears to be that of Krebes et
+al. ([2001](#ref-krebs_estimating_2001)), which produced estimates
+quite close to what was estimated by program CAPTURE.
+
+``` r
+################################################################################
+# Summarize snowshoe hare pellet count data.                                   #
+#                                                                              #
+# Author: First and last name <matt_bowser@fws.gov>                            #
+# Date created: 2020-04-08                                                     #
+# Date last edited: 2020-09-15                                                 #
+################################################################################
+
+
+# Setup ------------------------------------------------------------------------
+
+# Load packages
+library(reshape2)
+
+# Source external scripts
+#source("directory_path/script_foo.R")
+
+
+# 1 Load data -----------------------------------------------------------------
+## ---- load_data  
+
+pellet_data <- read.csv("../data/final_data/observations/snowshoe_hare_pellet_counts.csv",
+ stringsAsFactors=FALSE
+ )
+ 
+plot_data <- read.csv("../data/final_data/geodata/snowshoe_hare_plot_data.csv",
+ stringsAsFactors=FALSE
+ )
+
+# 2 Prepare data ---------------------------------------------------------------
+## ---- prep_data  
+
+## Adding a year field for now, which should work.
+pellet_data$year <- as.numeric(substr(pellet_data$date, 1, 4))
+
+## Join the data to get the grid_name values.
+pellet_data_joined <- merge(
+ plot_data[,c("plot_name", "grid_name")],
+ pellet_data
+ )
+ 
+## Now it would be good to fill in missing dates. Because each grid was supposed to been surveyed at about the same time each year, we should be able to use the known dates to infer rough dates for when these were usually done.
+
+## First, for each grid we should get the Julian dates when they were usually surveyed.
+has_date <- nchar(pellet_data_joined$date) == 10
+grids_dates <- unique(pellet_data_joined[has_date, c("grid_name", "date", "year")])
+grids_dates$origin <- as.Date(paste0(grids_dates$year, "-01-01"))
+grids_dates$julian <- NA
+for (this_row in 1:nrow(grids_dates))
+ {
+ grids_dates$julian[this_row] <- julian(as.Date(grids_dates$date[this_row]), origin=grids_dates$origin[this_row]) + 1
+ }
+grids_mean_dates <- aggregate(grids_dates$julian, by=list(grids_dates$grid_name), mean)
+names(grids_mean_dates) <- c("grid_name", "julian")
+grids_mean_dates$julian <- round(grids_mean_dates$julian)
+
+## Now we should fill in missing dates with the average dates.
+pellet_data_joined <- merge(pellet_data_joined, grids_mean_dates, by="grid_name", all.x=TRUE)
+pellet_data_joined$date_est <- as.Date(paste0(pellet_data_joined$year, pellet_data_joined$julian), format="%Y%j")
+no_date <- nchar(pellet_data_joined$date) == 4
+pellet_data_joined$date[no_date] <- as.character(pellet_data_joined$date_est[no_date])
+pellet_data_joined <- pellet_data_joined[,1:7] 
+
+## Convert the plot names to plot numbers.
+plot_number <- strsplit(pellet_data_joined$plot_name,
+ "-"
+ )
+plot_number <- sapply(plot_number,
+ "[",
+ 2
+ ) 
+pellet_data_joined$plot_name <- as.numeric(plot_number)
+ 
+## Reshape the data into a grid_name X plot number X year array.
+pellet_data_molten <- melt(pellet_data_joined,
+ measure.vars="pellet_count"
+ )
+
+pellet_data_array <- acast(
+ pellet_data_molten,
+ grid_name ~ plot_name ~ year,
+ fun.aggregate=sum,
+ fill=9999 ## Temporary fill value.
+ )
+pellet_data_array[pellet_data_array==9999] <- NA
+ 
+n_grids <- dim(pellet_data_array)[1]
+n_plots <- dim(pellet_data_array)[2]
+n_years <- dim(pellet_data_array)[3]
+
+## Set to NA any plot for which the previous year's count was NA.
+for (this_grid in 1:n_grids)
+ {
+ for (this_plot in 1:n_plots)
+  {
+  for (this_year in n_years:2)
+   if(is.na(pellet_data_array[this_grid,this_plot,this_year-1]))
+    {
+    pellet_data_array[this_grid,this_plot,this_year] <- NA
+    }
+  }
+ }
+ 
+## Also set all year 1 observations to NA.
+pellet_data_array[,,1] <- NA
+
+## Now get averages.
+pellet_count_means <- as.data.frame(apply(pellet_data_array,
+ c(1,3),
+ mean,
+ na.rm=TRUE
+ ))
+
+## Reformatting so that start and end dates can be incorporated. 
+pellet_count_means$grid_name <- row.names(pellet_count_means)
+pellet_count_means_molten <- melt(pellet_count_means, id.vars="grid_name")
+names(pellet_count_means_molten)[2] <- "year" 
+pellet_count_means_molten$variable <- "mean_pellets_m2"
+
+## We need start and end dates for each grid and year.
+pellet_data_joined$end_date <- pellet_data_joined$date
+## Getting the start dates will take a little more work.
+pellet_data_dates <- unique(pellet_data_joined[c("grid_name", "year", "end_date")])
+pellet_data_dates$year <- pellet_data_dates$year + 1
+names(pellet_data_dates)[3] <- "start_date"
+pellet_data_joined <- merge(pellet_data_joined, pellet_data_dates, by=c("grid_name", "year"), all.x=TRUE)
+pellet_data_dates <- unique(pellet_data_joined[c("grid_name", "year", "start_date", "end_date")])
+
+pellet_count_annual_data <- merge(pellet_count_means_molten,
+ pellet_data_dates,
+ by=c("grid_name", "year"),
+ all.x=TRUE
+ )
+## Dropping the no data years.
+#pellet_count_annual_data <- pellet_count_annual_data[!is.nan(pellet_count_annual_data$value),]
+
+## Now calculate the time differences between start and end dates.
+pellet_count_annual_data$time_dif_days <- as.numeric(as.Date(pellet_count_annual_data$end_date) - as.Date(pellet_count_annual_data$start_date))
+pellet_count_annual_data$time_dif_years <- pellet_count_annual_data$time_dif_days/365.2422
+
+## Calculate pellets per m2 per year.
+pellet_count_annual_data$pellets_m2yr <- pellet_count_annual_data$value/pellet_count_annual_data$time_dif_years
+
+## Cleaning up this data frame a bit for use later.
+pellet_count_annual_data$year <-as.numeric(as.character(pellet_count_annual_data$year))
+pellet_count_annual_data$start_date <- as.Date(pellet_count_annual_data$start_date)
+pellet_count_annual_data$end_date <- as.Date(pellet_count_annual_data$end_date)
+names(pellet_count_annual_data)[3] <- "pellets_m2"
+pellet_count_annual_data <- pellet_count_annual_data[,c(1:3,5:9)]
+
+## It might be useful to calculate a grand mean for clarity on the graph.
+data_agg <- aggregate(pellet_count_annual_data$pellets_m2yr,
+ by=list(pellet_count_annual_data$year),
+ mean,
+ na.rm=TRUE
+ )
+names(data_agg) <-c("year", "pellets_m2yr")
+data_agg$start_date <- aggregate(pellet_count_annual_data$start_date,
+ by=list(pellet_count_annual_data$year),
+ mean,
+ na.rm=TRUE
+ )$x
+data_agg$end_date <- aggregate(pellet_count_annual_data$end_date,
+ by=list(pellet_count_annual_data$year),
+ mean,
+ na.rm=TRUE
+ )$x 
+data_agg <- data_agg[2:nrow(data_agg),]
+
+## Now add density estimates.
+
+## Functions from papers.
+Krebs_et_al_1987 <- function(pellets_m2yr)
+ {
+ ## First convert pellets_m2yr to pellets per 0.155 m2 per year.
+ pellets_0155 <- pellets_m2yr*0.155
+ 
+ hares_ha <- 0.27*pellets_0155 + 0.42
+ hares_ha
+ }
+data_agg$Krebs_et_al_1987 <- Krebs_et_al_1987(data_agg$pellets_m2yr)
+
+Krebs_et_al_2001 <- function(pellets_m2yr)
+ {
+ ## First convert pellets_m2yr to pellets per 0.155 m2 per year.
+ pellets_0155 <- pellets_m2yr*0.155
+ 
+ ## Apply regression.
+ hares_ha <- exp(-1.203 + 0.889*log(pellets_0155))
+ 
+ ## Apply correction factor.
+ hares_ha <- 1.567*hares_ha
+ hares_ha
+ }
+data_agg$Krebs_et_al_2001 <- Krebs_et_al_2001(data_agg$pellets_m2yr)
+
+Murray_et_al_2002 <- function(pellets_m2yr)
+ {
+ pellets_m2yr <- log(pellets_m2yr + 1/6)
+ 
+ hares_ha <- 1.423 * (2.077 - exp(-.662*pellets_m2yr))
+ hares_ha
+ 
+ hares_ha <- exp(hares_ha) - 1/6
+ hares_ha
+ }
+#data_agg$Murray_et_al_2002 <- Murray_et_al_2002(data_agg$pellets_m2yr)
+## This estimate is an order of magnitude higher than the other estimates, so I am dropping it. I may be getting the formula wrong.
+
+Mills_et_al_2005_Seeley <- function(pellets_m2yr)
+ {
+ ## First convert pellets_m2yr to pellets per 0.155 m2 per year.
+ pellets_0155 <- pellets_m2yr*0.155
+ 
+ ## Apply regression.
+ hares_ha <- exp(-1.67 + 0.77*log(pellets_0155))
+ 
+ ## Apply correction factor.
+ hares_ha <- 1.567*hares_ha
+ hares_ha
+ }
+data_agg$Mills_et_al_2005_Seeley <- Mills_et_al_2005_Seeley(data_agg$pellets_m2yr)
+
+Mills_et_al_2005_Tally <- function(pellets_m2yr)
+ {
+ ## First convert pellets_m2yr to pellets per 0.155 m2 per year.
+ pellets_0155 <- pellets_m2yr*0.155
+ 
+ ## Apply regression.
+ hares_ha <- exp(-1.14 + 0.63*log(pellets_0155))
+ 
+ ## Apply correction factor.
+ hares_ha <- 1.567*hares_ha
+ hares_ha
+ }
+data_agg$Mills_et_al_2005_Tally <- Mills_et_al_2005_Tally(data_agg$pellets_m2yr)
+
+McCann_et_al_2008 <- function(pellets_m2yr)
+ {
+ hares_ha <- 0.060*pellets_m2yr + 0.398
+ hares_ha
+ }
+data_agg$McCann_et_al_2008 <- McCann_et_al_2008(data_agg$pellets_m2yr) 
+
+Berge_and_Gese_2010 <- function(pellets_m2yr)
+ {
+ hares_ha <- 0.0921*pellets_m2yr + 0.0524
+ hares_ha
+ }
+data_agg$Berge_and_Gese_2010 <- Berge_and_Gese_2010(data_agg$pellets_m2yr)
+ 
+
+## Plot.
+
+## Flag to use metric or standard units.
+#units <- "metric"
+units <- "standard"
+
+plot_title <- paste0("Kenai NWR snowshoe hare pellet counts, ",
+ min(pellet_count_annual_data$year),
+ "–",
+ max(pellet_count_annual_data$year)
+ )
+
+ylab <- expression(paste("hare pellets per m"^"2", " per year"))
+dlab <- "estimated hare density (hares per hectare)"
+
+density_ticks <- 0:10
+
+if (units == "standard")
+ {
+ ylab <- expression(paste("hare pellets per ft"^"2", " per year"))
+ pellet_count_annual_data$pellets_m2yr <- pellet_count_annual_data$pellets_m2yr/10.7639
+ data_agg$pellets_m2yr <- data_agg$pellets_m2yr/10.7639
+ dlab <- "estimated hare density (hares per acre)"
+ data_agg$Krebs_et_al_2001 <- data_agg$Krebs_et_al_2001/2.47105
+ density_ticks <- (0:10)/2
+ }
+ 
+file_name <- paste0("../documents/",
+ as.Date(Sys.time()),
+ "_pellet_count_over_time.pdf"
+ )
+ 
+lcol <- "#0000001F"
+lwd=1.5
+lty=rep(1, 7)
+
+grid_name <- levels(as.factor(pellet_count_annual_data$grid_name))
+this_grid <- 1
+
+sl <- pellet_count_annual_data$grid_name == grid_name[this_grid]
+sln <- pellet_count_annual_data$grid_name == grid_name[this_grid] & !is.nan(pellet_count_annual_data$pellets_m2yr)
+
+ylim <- c(0, max(pellet_count_annual_data$pellets_m2yr, na.rm=TRUE))
+
+pdf(file=file_name,
+ width=6,
+ height=5
+ )
+par(mar=c(4,4,2,4))
+plot(pellet_count_annual_data$start_date[sl],
+ pellet_count_annual_data$pellets_m2yr[sl],
+ type="n",
+ ylim=ylim,
+ main=plot_title,
+ xlab="",
+ ylab=""
+ )
+mtext(text="year",
+ side=1,
+ line=2
+ )
+mtext(text=ylab,
+ side=2,
+ line=2
+ )
+mtext(text=dlab,
+  side=4,
+  line=2
+  )
+## Draw segments showing pellet densities. 
+segments(pellet_count_annual_data$start_date[sln],
+ pellet_count_annual_data$pellets_m2yr[sln],
+ pellet_count_annual_data$end_date[sln],
+ pellet_count_annual_data$pellets_m2yr[sln],
+ col=lcol,
+ lwd=lwd,
+ lty=lty[this_grid]
+ )
+## connect non-missing segments.
+for (this_row in 2:nrow(pellet_count_annual_data))
+ {
+ if (sln[this_row-1] & sln[this_row])
+  {
+  segments(pellet_count_annual_data$start_date[this_row],
+   pellet_count_annual_data$pellets_m2yr[this_row-1],
+   pellet_count_annual_data$start_date[this_row],
+   pellet_count_annual_data$pellets_m2yr[this_row],
+   col=lcol,
+   lwd=lwd,
+   lty=lty[this_grid]
+   )
+  }
+ }
+ 
+for (this_grid in 2:n_grids)
+ {
+ sln <- pellet_count_annual_data$grid_name == grid_name[this_grid] & !is.nan(pellet_count_annual_data$pellets_m2yr)
+## Draw segments showing pellet densities. 
+segments(pellet_count_annual_data$start_date[sln],
+ pellet_count_annual_data$pellets_m2yr[sln],
+ pellet_count_annual_data$end_date[sln],
+ pellet_count_annual_data$pellets_m2yr[sln],
+ col=lcol,
+ lwd=lwd,
+ lty=lty[this_grid]
+ )
+## connect non-missing segments.
+for (this_row in 2:nrow(pellet_count_annual_data))
+ {
+ if (sln[this_row-1] & sln[this_row])
+  {
+  segments(pellet_count_annual_data$start_date[this_row],
+   pellet_count_annual_data$pellets_m2yr[this_row-1],
+   pellet_count_annual_data$start_date[this_row],
+   pellet_count_annual_data$pellets_m2yr[this_row],
+   col=lcol,
+   lwd=lwd,
+   lty=lty[this_grid]
+   )
+  }
+ } 
+ }
+ ## Now plot the grand mean lines.
+ segments(data_agg$start_date,
+  data_agg$pellets_m2yr,
+  data_agg$end_date,
+  data_agg$pellets_m2yr,
+  col="#777777",
+  lwd=2,
+  lty=1
+  )
+ for (this_row in 2:nrow(data_agg))
+ {
+  segments(data_agg$start_date[this_row],
+   data_agg$pellets_m2yr[this_row-1],
+   data_agg$start_date[this_row],
+   data_agg$pellets_m2yr[this_row],
+   col="#777777",
+   lwd=2,
+   lty=1
+   )
+ }
+ ## Now plot the estimated hare densities.
+ adjustment_factor <- max(pellet_count_annual_data$pellets_m2yr, na.rm=TRUE)/max(data_agg$Krebs_et_al_2001)*.98
+ data_agg$Krebs_et_al_2001_adj <- data_agg$Krebs_et_al_2001 * adjustment_factor
+  segments(data_agg$start_date,
+  data_agg$Krebs_et_al_2001_adj,
+  data_agg$end_date,
+  data_agg$Krebs_et_al_2001_adj,
+  col="#000000",
+  lwd=2,
+  lty="11"
+  )
+ for (this_row in 2:nrow(data_agg))
+ {
+  segments(data_agg$start_date[this_row],
+   data_agg$Krebs_et_al_2001_adj[this_row-1],
+   data_agg$start_date[this_row],
+   data_agg$Krebs_et_al_2001_adj[this_row],
+   col="#000000",
+   lwd=2,
+   lty="11"
+   )
+ }
+ axis(side=4,
+  at=density_ticks*adjustment_factor,
+  labels=density_ticks
+  )
+
+text(x=as.Date("2000-01-01"),
+ y=ylim[2] * c(1,0.95,0.9),
+ labels= c("pellet counts, individual grids", "pellet counts, averaged", "estimated hare density"),
+ pos=4
+ )
+segments(x0 = as.Date("1998-01-01"),
+ y0 = ylim[2] * c(1,0.95),
+ x1 = as.Date("2000-01-01"),
+ y1 = ylim[2] * c(1,0.95),
+ lwd = c(1.5, 2),
+ lty = c(1,1),
+ col = c("#0000001F", "#777777")
+ ) 
+segments(x0 = as.Date("1998-01-01"),
+ y0 = ylim[2] * 0.9,
+ x1 = as.Date("2000-01-01"),
+ y1 = ylim[2] * 0.9,
+ lwd = 2,
+ lty = "11",
+ col=("#000000")
+ ) 
+dev.off() 
+
+## Save means summaries.
+file_name <- paste0("../documents/",
+ as.Date(Sys.time()),
+ "_pellet_count_means_over_time.csv"
+ )
+write.csv(pellet_count_annual_data,
+ file_name,
+ row.names=FALSE
+ ) 
+
+## Save the grand mean summary, also.
+ file_name <- paste0("../documents/",
+ as.Date(Sys.time()),
+ "_grand_means_over_time.csv"
+ )
+write.csv(data_agg,
+ file_name,
+ row.names=FALSE
+ ) 
+```
+
+![Snowshoe hare pellet counts over time and estimated snowshoe hare
+densities.](2020-09-15_pellet_count_over_time.jpg)  
+Snowshoe hare pellet counts over time and estimated snowshoe hare
+densities.
 
 # Appendixes
 
@@ -10302,13 +11342,14 @@ Kenai National Wildlife Refuge snowshoe hare pellet counts, 1983–2020.
 
 ## LifeScanner vials with missing data
 
-| human\_readable\_label |
-| :--------------------- |
-| BOLD-1H8               |
-| BOLD-EG9               |
-| BOLD-OC2               |
-| BOLD-U62               |
-| BOLD-VC8               |
+| human\_readable\_label | qr\_code       |
+| :--------------------- | :------------- |
+| BOLD-1H8               |                |
+| BOLD-EB0               | BOLD-3NJSCKEB0 |
+| BOLD-EG9               |                |
+| BOLD-OC2               |                |
+| BOLD-U62               |                |
+| BOLD-VC8               |                |
 
 ## Data for fungal specimens to be sequenced
 
@@ -10770,6 +11811,24 @@ doi:[10.1093/molbev/mst010](https://doi.org/10.1093/molbev/mst010).
 
 </div>
 
+<div id="ref-krebs_estimating_2001">
+
+Krebs, C.J., Boonstra, R., Nams, V., O’Donoghue, M., Hodges, K.E., and
+Boutin, S. 2001. Estimating snowshoe hare population density from pellet
+plots: A further evaluation. Canadian Journal of Zoology **79**(1): 1–4.
+doi:[10.1139/z00-177](https://doi.org/10.1139/z00-177).
+
+</div>
+
+<div id="ref-krebs_estimation_1987">
+
+Krebs, C.J., Gilbert, B.S., Boutin, S., and Boonstra, R. 1987.
+Estimation of snowshoe hare population density from turd transects.
+Canadian Journal of Zoology **65**(3): 565–567.
+doi:[10.1139/z87-087](https://doi.org/10.1139/z87-087).
+
+</div>
+
 <div id="ref-langille_proposed_1904">
 
 Langille, W.A. 1904. The proposed forest reserve on the Kenai Peninsula,
@@ -10842,6 +11901,25 @@ volume 1. Research Branch, Agriculture Canada, Ottawa, Ontario, Canada.
 
 </div>
 
+<div id="ref-McCann_using_2008">
+
+McCann, N.P., Moen, R.A., and Niemi, G.J. 2008. Using pellet counts to
+estimate snowshoe hare numbers in Minnesota. Journal of Wildlife
+Management **72**(4): 955–958.
+doi:[10.2193/2007-083](https://doi.org/10.2193/2007-083).
+
+</div>
+
+<div id="ref-mills_pellet_2005">
+
+Mills, L.S., Griffin, P.C., Hodges, K.E., McKelvey, K., Ruggiero, L.,
+and Ulizio, T. 2005. Pellet count indeces compared to mark-recapture
+estimates for evaluating snowshoe hare density. Journal of Wildlife
+Management **69**(3): 1053–1062.
+doi:[10.2193/0022-541X(2005)069\[1053:PCICTM\]2.0.CO;2](https://doi.org/10.2193/0022-541X\(2005\)069%5B1053:PCICTM%5D2.0.CO;2).
+
+</div>
+
 <div id="ref-morton_ghosts_2014">
 
 Morton, J. 2014. Ghosts of fires past. *In* Refuge Notebook. USFWS Kenai
@@ -10859,11 +11937,29 @@ California. Available from
 
 </div>
 
+<div id="ref-murray_estimating_2002">
+
+Murray, D.L., Roth, J.D., Ellsworth, E., Wirsing, A.J., and Steury, T.D.
+2002. Estimating low-density snowshoe hare populations using fecal
+pellet counts. Canadian Journal of Zoology **80**(4): 771–781.
+doi:[10.1139/z02-027](https://doi.org/10.1139/z02-027).
+
+</div>
+
 <div id="ref-NOAA_beluga_habitat">
 
 NOAA Fisheries. 2019. Beluga whale – cook inlet dps critical habitat.
 Available from
 <https://www.fisheries.noaa.gov/resource/map/beluga-whale-cook-inlet-dps-critical-habitat>.
+
+</div>
+
+<div id="ref-otis_statistical_1978">
+
+Otis, D.L., Burnham, K.P., White, G.C., and Anderson, D.R. 1978.
+Statistical Inference from Capture Data on Closed Animal Populations.
+Wildlife Monographs (62): 3–135. Available from
+<http://www.jstor.org/stable/3830650> \[accessed 15 September 2020\].
 
 </div>
 
