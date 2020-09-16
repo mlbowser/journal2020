@@ -11283,6 +11283,18 @@ densities.](2020-09-15_pellet_count_over_time.jpg)
 Snowshoe hare pellet counts over time and estimated snowshoe hare
 densities.
 
+I took a walk down to Headquarters Lake and Nordic Lake in the
+afternoon. I checked both lakes for any duckweeds, looking especially
+for *Spirodela*. I saw no duckweeds. I collected some larvae from
+mushrooms and soil, which I placed in LifeScanner vials.
+
+In looking into the ecology of hare cycles, I found Boutin et
+al. ([1995](#ref-boutin_population_1995)) and Krebs et
+al. ([2018](#ref-krebs_using_2018)) to be helpful. Interestingly, both
+Buckley ([1954](#ref-buckley_animal_1954)) and Boutin et
+al. ([1995](#ref-boutin_population_1995)) documented the same
+relationship of grouse peaking just before hares.
+
 # Appendixes
 
 ## Occurrence data in Arctos bulkloader format
@@ -11428,6 +11440,18 @@ doi:[10.2193/2009-354](https://doi.org/10.2193/2009-354).
 
 </div>
 
+<div id="ref-boutin_population_1995">
+
+Boutin, S., Krebs, C.J., Boonstra, R., Dale, M.R.T., Hannon, S.J.,
+Martin, K., Sinclair, A.R.E., Smith, J.N.M., Turkington, R., Blower, M.,
+Byrom, A., Doyle, F.I., Doyle, C., Hik, D., Hofer, L., Hubbs, A.,
+Karels, T., Murray, D.L., Nams, V., O’Donoghue, M., Rohner, C., and
+Schweiger, S. 1995. Population changes of the vertebrate community
+during a snowshoe hare cycle in Canada’s boreal forest. Oikos **74**(1):
+69–80. doi:[10.2307/3545676](https://doi.org/10.2307/3545676).
+
+</div>
+
 <div id="ref-bowmer_identification_1995">
 
 Bowmer, K.H., Jacobs, S.W.L., and Sainty, G.R. 1995. Identification,
@@ -11514,6 +11538,15 @@ Steinke, D., Ratnasingham, S., Waard, J.R. de, Sones, J.E., Zakharov,
 E.V., and Hebert, P.D.N. 2019. Metabarcoding a diverse arthropod mock
 community. Molecular Ecology Resources **19**(3): 711–727.
 doi:[10.1111/1755-0998.13008](https://doi.org/10.1111/1755-0998.13008).
+
+</div>
+
+<div id="ref-buckley_animal_1954">
+
+Buckley, J.L. 1954. Animal population fluctuations in Alaska–a history.
+*In* Transactions of the Nineteenth North American Wildlife Conference,
+March 8, 9, and 10, 1954. Wildlife Management Institute, Washington,
+D.C. pp. 338–357.
 
 </div>
 
@@ -11808,6 +11841,15 @@ Katoh, K., and Standley, D.M. 2013. MAFFT multiple sequence alignment
 software version 7: Improvements in performance and usability. Molecular
 Biology and Evolution **30**(4): 772–780. Oxford University Press (OUP).
 doi:[10.1093/molbev/mst010](https://doi.org/10.1093/molbev/mst010).
+
+</div>
+
+<div id="ref-krebs_using_2018">
+
+Krebs, C.J., Boonstra, R., and Boutin, S. 2018. Using experimentation to
+understand the 10-year snowshoe hare cycle in the boreal forest of North
+America. Journal of Animal Ecology **87**(1): 87–100.
+doi:[10.1111/1365-2656.12720](https://doi.org/10.1111/1365-2656.12720).
 
 </div>
 
