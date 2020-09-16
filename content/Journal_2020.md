@@ -191,6 +191,7 @@
       - [Friday, September 11](#friday-september-11)
       - [Monday, September 14](#monday-september-14)
       - [Tuesday, September 15](#tuesday-september-15)
+      - [Wednesday, September 16](#wednesday-september-16)
   - [Appendixes](#appendixes)
       - [Occurrence data in Arctos bulkloader
         format](#occurrence-data-in-arctos-bulkloader-format)
@@ -11294,6 +11295,15 @@ al. ([2018](#ref-krebs_using_2018)) to be helpful. Interestingly, both
 Buckley ([1954](#ref-buckley_animal_1954)) and Boutin et
 al. ([1995](#ref-boutin_population_1995)) documented the same
 relationship of grouse peaking just before hares.
+
+## Wednesday, September 16
+
+I worked on my *Refuge Notebook* article about snowshoe hares due today,
+getting it sent in near the end of the day.
+
+Looking at the literature, there have been peak hare abundances on the
+Kenai Peninsula in 1913–1915 (Buckley [1954](#ref-buckley_animal_1954))
+and 1924–1925 (Buckley [1954](#ref-buckley_animal_1954)).
 
 # Appendixes
 
