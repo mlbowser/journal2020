@@ -192,6 +192,7 @@
       - [Monday, September 14](#monday-september-14)
       - [Tuesday, September 15](#tuesday-september-15)
       - [Wednesday, September 16](#wednesday-september-16)
+      - [Thursday, September 17](#thursday-september-17)
   - [Appendixes](#appendixes)
       - [Occurrence data in Arctos bulkloader
         format](#occurrence-data-in-arctos-bulkloader-format)
@@ -7153,7 +7154,7 @@ swamp on April 24.
 2020-04-24\_MLB01: This gall contained a hymenopteran pupa.
 
 2020-04-24\_MLB02: Two sciaroid flies had emerged. These I put into
-vials BOLD-IH8 and BOLD-LB2.
+vials BOLD-1H8 and BOLD-LB2.
 
 ## Tuesday, May 12
 
@@ -11305,6 +11306,11 @@ Looking at the literature, there have been peak hare abundances on the
 Kenai Peninsula in 1913–1915 (Buckley [1954](#ref-buckley_animal_1954))
 and 1924–1925 (Buckley [1954](#ref-buckley_animal_1954)).
 
+## Thursday, September 17
+
+I did some LifeScanner data entry, looking for data for vials missing
+data.
+
 # Appendixes
 
 ## Occurrence data in Arctos bulkloader format
@@ -11366,12 +11372,7 @@ and 1924–1925 (Buckley [1954](#ref-buckley_animal_1954)).
 
 | human\_readable\_label | qr\_code       |
 | :--------------------- | :------------- |
-| BOLD-1H8               |                |
 | BOLD-EB0               | BOLD-3NJSCKEB0 |
-| BOLD-EG9               |                |
-| BOLD-OC2               |                |
-| BOLD-U62               |                |
-| BOLD-VC8               |                |
 
 ## Data for fungal specimens to be sequenced
 
