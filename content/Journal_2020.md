@@ -11308,8 +11308,129 @@ and 1924–1925 (Buckley [1954](#ref-buckley_animal_1954)).
 
 ## Thursday, September 17
 
+To do:
+
+  - Review ADOT\&PF Veg Management Plan.
+  - Finish snowshoe hare data management work.
+  - Get Funny River Fire weed data to Lisa.
+  - *Refuge Notebook* catch-up.
+
 I did some LifeScanner data entry, looking for data for vials missing
 data.
+
+I entered some additional data into our KNWR invasive plant surveillence
+survey Survey123 form, then exported these data into a new project
+folder.
+
+I scanned some more snowshoe hare pellet data sheets.
+
+``` r
+
+## R script to summarize and reformat data from non-native plant surveys collected using Survey123.
+
+## By Matt Bowser, 17.September2020
+
+library(maptools)
+library(rgdal)
+library(raster)
+
+
+## Load data.
+aggressiveness <- read.csv("../data/raw_data/code_tables/aggressiveness.csv")
+commonName <- read.csv("../data/raw_data/code_tables/commonName.csv")
+controlAction <- read.csv("../data/raw_data/code_tables/controlAction.csv")
+disturbanceType.csv <- read.csv("../data/raw_data/code_tables/disturbanceType.csv")
+observers <- read.csv("../data/raw_data/code_tables/observers.csv")
+scientificName <- read.csv("../data/raw_data/code_tables/scientificName.csv")
+vegetationCommunity <- read.csv("../data/raw_data/code_tables/vegetationCommunity.csv")
+
+wgs84 <- CRS("+proj=longlat +ellps=WGS84 +datum=WGS84")
+exported_data <- readShapeSpatial("../data/raw_data/observations/2020-09-17-0927_survey123_export.shp", 
+ proj4string=wgs84
+ )
+
+exported_data <- readOGR(dsn="../data/raw_data/observations/2020-09-17-0927_survey123_export.shp",
+ stringsAsFactors=FALSE 
+ ) 
+
+## Pull the shapefile's table to manipulate it. 
+data01 <- exported_data@data
+
+## First I will do work needed for reporting in the short term, but I will use field names for import into the AKEPIC data entry form  at the URL below 
+## https://accs.uaa.alaska.edu/wp-content/uploads/AKEPIC_DataEntry.zip
+
+data01$gps_locati
+## This is a mess. I think it needs to be edited in a text editor or spreadsheet.
+write.csv(data01$gps_locati, "../data/raw_data/observations/2020-09-17-1459_coordinates.csv", row.names=FALSE)
+coords1 <- read.csv("../data/raw_data/observations/2020-09-17-1507_coordinates.csv")
+coords1$latitude_m[is.na(coords1$latitude_m)] <- 0
+coords1$longitude_m[is.na(coords1$longitude_m)] <- 0
+coords1$longitude_dd <- -abs(coords1$longitude_dd)
+coords1$latitude_dd <- coords1$latitude_dd + coords1$latitude_m/60
+coords1$longitude_dd <- coords1$longitude_dd - coords1$longitude_m/60
+data01$latitude <- coords1$latitude_dd
+data01$longitude <- coords1$longitude_dd
+## Just checking to make sure these end up in about the same places.
+plot(exported_data)
+points(data01$longitude, data01$latitude)
+## That looked pretty good.
+
+## Now we must get the plant species.
+scientific_split <- strsplit(data01$scientific, ",")
+n_species_obs <- sapply(scientific_split, length)
+total_species_obs <- sum(sapply(scientific_split, length))
+globalid <- rep(NA, total_species_obs)
+scientificName_id <- rep(NA, total_species_obs)
+scinamedf <- as.data.frame(cbind(globalid, scientificName_id))
+this_record <- 0
+for (this_event in 1:nrow(data01))
+ {
+ n_species <- n_species_obs[this_event]
+ for (this_species in 1:n_species)
+  {
+  this_record <- this_record + 1
+  scinamedf$globalid[this_record] <- data01$globalid[this_event]
+  scinamedf$scientificName_id[this_record] <- sapply(scientific_split[this_event], "[", this_species)
+  }
+ }
+scinamedf$scientificName_id <- as.numeric(scinamedf$scientificName_id)
+scinamedf2 <- merge(x=scinamedf,
+ y=scientificName,
+ all.x=TRUE
+ )
+data02 <- merge(data01, 
+ scinamedf2,
+ by="globalid"
+ )
+## Now fill in those species that were not in th list.
+sl <- data02$scientificName == "other species not on list"
+data02$scientificName[sl] <- data02$other_name[sl]
+levels(as.factor(data02$scientificName)) 
+
+## Now for control actions. 
+levels(as.factor(data02$control_ac))
+## That is a strange mix of codes and text, maybe due to updates of the form.
+## I will just fix this manually.
+data02$control_ac[data02$control_ac=="1"] <- "Manual (pulling/digging)"
+data02$control_ac[data02$control_ac=="6"] <- "Other"
+data02$control_ac[data02$control_ac=="7"] <- "None"
+
+## Now I need to get the areas surveyed and treated.
+exported_data@data$area_m2 <- area(exported_data)
+
+## I need to look at this spreadsheet.
+write.csv(data01, "../data/raw_data/observations/2020-09-17-1633_survey123_export.csv", row.names=FALSE)
+
+data01$area_treat
+data01$area_tre_1
+data01$area_treated_acres <- data01$area_tre_1
+data01$area_treated_acres[is.na(data01$area_treated_acres)] <- data01$area_treat[is.na(data01$area_treated_acres)]
+data01$area_treated_acres[data01$area_treated_acres=="1/2 acre"] <- "0.5"
+data01$area_treated_acres <- as.numeric(data01$area_treated_acres)
+
+## This has to be all for today.
+save.image("2020-09-17-1643_workspace.RData")
+```
 
 # Appendixes
 
