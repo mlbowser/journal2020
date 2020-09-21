@@ -11595,21 +11595,36 @@ stands. This is the biggest nightcrawler infestation that I have seen.
 activity.](2020-09-18_exposed_roots.jpg)  
 Roots of aspen exposed by earthworm activity.
 
-At Sucker Creek I collected more *Spirodela*. I saw that there were
-multiple stands of reed canarygrass upstream of the culvert, so it has
-already escaped out of Canoe Lake.
+At Sucker Creek I collected more *Spirodela* (iNaturalist:
+[60326892](https://www.inaturalist.org/observations/60326892)). I saw
+that there were multiple stands of reed canarygrass upstream of the
+culvert (iNaturalist
+[60327151](https://www.inaturalist.org/observations/60327151)), so it
+has already escaped out of Canoe Lake.
 
-Below the culvert I saw some silver salmon and collected a rams horn
-snail (BOLD-XA4).
+Below the culvert I saw some silver salmon (iNaturalist:
+[60327513](https://www.inaturalist.org/observations/60327513)) and
+collected a rams horn snail (iNaturalist:
+[60327761](https://www.inaturalist.org/observations/60327761);
+BOLD-XA4).
 
 From a tuft of plants on a rock at water line I collected a fly larva
-(BOLD-8M6) and a leech (BOLD-YK0). I found no reed canarygrass
-downstream, but I did not go very far.
+(iNaturalist:
+[60329563](https://www.inaturalist.org/observations/60329563); BOLD-8M6)
+and a leech (iNaturalist:
+[60329992](https://www.inaturalist.org/observations/60329992);
+BOLD-YK0). I found no reed canarygrass downstream, but I did not go very
+far.
 
 At Merganser Lake I saw no duck weeds. The soils here were *Lumbricus*
 worked. I saw one immature *Lumbricus*.
 
-I saw no duck weeds at Portage Lake or at a little pond along the way.
+I saw no duck weeds at Portage Lake or at a little pond along the way at
+60.732333 N, 150.619277 W.
+
+On the way back I stopped at another lake at 60.727215 N, 150.558883 W,
+where the only floating duckweed I saw was *Lemna minor* (iNaturalist:
+[60331267](https://www.inaturalist.org/observations/60331267)).
 
 # Appendixes
 
