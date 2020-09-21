@@ -11602,6 +11602,10 @@ culvert (iNaturalist
 [60327151](https://www.inaturalist.org/observations/60327151)), so it
 has already escaped out of Canoe Lake.
 
+![Reed canarygrass at the beaver dam in Sucker Creek below Sucker
+Lake.](2020-09-18_reed_canrygrass_at_Sucker_Creek.jpg)  
+Reed canarygrass at the beaver dam in Sucker Creek below Sucker Lake.
+
 Below the culvert I saw some silver salmon (iNaturalist:
 [60327513](https://www.inaturalist.org/observations/60327513)) and
 collected a rams horn snail (iNaturalist:
