@@ -11612,6 +11612,10 @@ collected a rams horn snail (iNaturalist:
 [60327761](https://www.inaturalist.org/observations/60327761);
 BOLD-XA4).
 
+![Salmonids in Sucker Creek just below the
+culvert.](2020-09-18_salmonids_in_Sucker_Creek.jpg)  
+Salmonids in Sucker Creek just below the culvert.
+
 From a tuft of plants on a rock at water line I collected a fly larva
 (iNaturalist:
 [60329563](https://www.inaturalist.org/observations/60329563); BOLD-8M6)
