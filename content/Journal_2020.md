@@ -194,6 +194,9 @@
       - [Wednesday, September 16](#wednesday-september-16)
       - [Thursday, September 17](#thursday-september-17)
       - [Friday, September 18](#friday-september-18)
+      - [Monday, September 21](#monday-september-21)
+      - [Tuesday, September 22](#tuesday-september-22)
+      - [Wednesday, September 23](#wednesday-september-23)
   - [Appendixes](#appendixes)
       - [Occurrence data in Arctos bulkloader
         format](#occurrence-data-in-arctos-bulkloader-format)
@@ -11633,6 +11636,166 @@ I saw no duck weeds at Portage Lake or at a little pond along the way at
 On the way back I stopped at another lake at 60.727215 N, 150.558883 W,
 where the only floating duckweed I saw was *Lemna minor* (iNaturalist:
 [60331267](https://www.inaturalist.org/observations/60331267)).
+
+## Monday, September 21
+
+To do:
+
+  - ~~Take care of notes and data entry from Friday.~~
+  - Finish snowshoe hare data work.
+
+I searched through paper files, found as many of the snowhshoe hare
+pellet count data sheets as I could, and scanned these.
+
+At the back door by the lab I collected a fly trapped by spider silk
+(BOLD-M90).
+
+On the shore of Headquarters Lake I collected a midge from a swarm among
+*Ledum*.
+
+Some tipulids were apparently just emerging from the lake. These were
+bouncing about, climbing vegetation frantically, and repeatedly falling,
+right on the lake shore. Their wings had not yet expanded (BOLD-OJ9).
+
+From deliquescent fungi (I think *Pholiota*) on a birch I collected a
+larva (BOLD-F59).
+
+## Tuesday, September 22
+
+I worked on flattening the snowshoe hare data, conforming the data
+definitions to to Darwin Core standards, and updating the data
+dictionary.
+
+``` r
+## Today I am reformatting the data, totally flattening the dataset so that it is as transparent and clear as possible.
+
+library(uuid)
+
+## Load data. 
+
+pellet_data <- read.csv("../data/final_data/observations/snowshoe_hare_pellet_counts.csv",
+ stringsAsFactors=FALSE
+ )
+ 
+plot_data <- read.csv("../data/final_data/geodata/snowshoe_hare_plot_data.csv",
+ stringsAsFactors=FALSE
+ )
+ 
+observer_data <- read.csv("../data/final_data/observations/event_recordedBy.csv",
+ stringsAsFactors=FALSE)
+
+## Join plot data and observation data. 
+data2 <- merge(x=pellet_data,
+ y=plot_data,
+ all.x=TRUE
+ ) 
+ 
+ 
+
+
+## Now concatenate the observers
+## First sort them.
+observer_data <- observer_data[order(observer_data$eventID, observer_data$primary_observer, observer_data$recordedBy),]
+
+## Start a data frame for the concatenated observer data.
+eventID <- observer_data$eventID
+recordedBy1 <- as.data.frame(eventID)
+recordedBy1 <- unique(recordedBy1)
+recordedBy1$recordedBy <- NA
+
+## Now popupulate it.
+for (this_event in 1:nrow(recordedBy1))
+ {
+ sl <- observer_data$eventID == recordedBy1$eventID[this_event]
+ observers <- observer_data$recordedBy[sl]
+ observersc <- paste(observers, collapse=" | ")
+ recordedBy1$recordedBy[this_event] <- observersc
+ }
+
+## Now join these data together.
+data3 <- merge(x=data2,
+ y=recordedBy1,
+ all.x=TRUE
+ ) 
+ 
+## Generate occurrenceID values.
+uuid <- UUIDgenerate(n=nrow(data3))
+## Conform these to the RDF standard (https://dwc.tdwg.org/rdf/)
+data3$occurrenceID <- paste0("urn:uuid:", uuid)
+
+## Conforming some of the field names to DwC terms.
+names(data3)[which(names(data3)=="latitude")] <- "decimalLatitude"
+names(data3)[which(names(data3)=="longitude")] <- "decimalLongitude"
+
+## Conforming the actual counts with DwC terms.
+data3$measurementType <- "pellet count"
+names(data3)[which(names(data3)=="pellet_count")] <- "measurementValue"
+
+## Trying to conform the locations to DwC while maintaining the ability to aggregate.
+
+names(data3)[which(names(data3)=="plot_name")] <- "locationID"
+
+grid_name <- unique(data3$grid_name)
+location <- as.data.frame(grid_name)
+location$Location <- c(
+ "Campfire Lake",
+ "Funny River",
+ "Swanson River",
+ "Oil field",
+ "Skilak Lake",
+ "Funny River New",
+ "Skilak Lake New"
+ )
+location$Location <- paste(location$Location, "snowshoe hare grid")
+
+data4 <- merge(x=data3,
+ y=location,
+ all.x=TRUE
+ ) 
+
+## Reorganizing. 
+data5 <- data4[,c("occurrenceID",
+ "eventID",
+ "Location",
+ "locationID",
+ "decimalLatitude",
+ "decimalLongitude",
+ "habitat",
+ "eventDate",
+ "measurementType",
+ "measurementValue",
+ "recordedBy",
+ "eventRemarks"
+ )]
+ 
+data5 <- data5[order(data5$eventID,
+ data5$locationID
+ ),]
+ 
+## Saving here.
+write.csv(data5, "../data/final_data/observations/Kenai_NWR_snowshoe_hare_pellet_count_data.csv", row.names=FALSE)
+```
+
+I need to extract an older version of the original data file I had
+worked with.
+
+``` sh
+git log
+
+git archive 416dea846fe6bbd88e285fc6e413b48c9854756a | gzip >../416dea846fe6bbd88e285fc6e413b48c9854756a.tar.gz
+```
+
+I entered field notebook data for 2008 to 2007.
+
+## Wednesday, September 23
+
+To do:
+
+  - Edit and submit this week’s *Refuge Notebook* article.
+  - invasive species person nomination
+
+I did some final editing on the snowshoe hare dataset and submitted it
+to the regional repository.
 
 # Appendixes
 
