@@ -197,6 +197,7 @@
       - [Monday, September 21](#monday-september-21)
       - [Tuesday, September 22](#tuesday-september-22)
       - [Wednesday, September 23](#wednesday-september-23)
+      - [Thursday, September 24](#thursday-september-24)
   - [Appendixes](#appendixes)
       - [Occurrence data in Arctos bulkloader
         format](#occurrence-data-in-arctos-bulkloader-format)
@@ -11813,6 +11814,9 @@ Clif had asked me to inspect the roof of the visitor center for
 non-native plants, so I did so. The only non-native plant I saw up there
 were a few individuals of *Taraxacum officinale*.
 
+I placed a yellow pan trap at the northeast corner of the lawn behind
+the headquarters building.
+
 ![Plant community on the roof of the Kenai National Wildlife Refuge’s
 visitor center.](2020-09-23_visitor_center_roof.jpg)  
 Plant community on the roof of the Kenai National Wildlife Refuge’s
@@ -11821,6 +11825,38 @@ visitor center.
 One of the grasses from the roof I collected and identified as *Poa
 alpina*. In the spikelets were many amber-colored mites, some of which I
 collected (BOLD-6M6).
+
+## Thursday, September 24
+
+I pulled the pan trap I had set out yesterday. From it I collected four
+small Hymenoptera into LifeScanner vials (BOLD-3NLKTM4P1,
+BOLD-3NLDE2YK4, BOLD-3NLC2UG63, BOLD-3NLFGK474)
+
+Colin and I drove out to Swan Lake Road and walked down Sucker Creek
+looking for reed canarygrass from the culvert to 60.72942, -150.66392.
+We found none. There were many silver salmon spawning in the stream,
+which was neat to see.
+
+![Sucker Creek at 60.72942, -150.66392.](2020-09-24_Sucker_Creek.jpg)  
+Sucker Creek at 60.72942, -150.66392.
+
+At Sucker Creek not far from the road I had set out a yellow pan trap on
+the way out. I checked it on the way back. It had yielded only two
+insects: a tipulid (BOLD-3NWVUOF85) and a cicadellid (BOLD-3NX2VOSB7).
+
+Back at the office I entered data from LifeScanner specimens.
+
+Extracting coordinates from an image:
+
+``` r
+library(exiftoolr)
+
+configure_exiftoolr()
+
+data <- exif_read("P9243582.JPG")
+
+data
+```
 
 # Appendixes
 
