@@ -199,6 +199,7 @@
       - [Wednesday, September 23](#wednesday-september-23)
       - [Thursday, September 24](#thursday-september-24)
       - [Monday, September 28](#monday-september-28)
+      - [Tuesday, September 29](#tuesday-september-29)
   - [Appendixes](#appendixes)
       - [Occurrence data in Arctos bulkloader
         format](#occurrence-data-in-arctos-bulkloader-format)
@@ -11891,6 +11892,21 @@ I had set out a yellow pan trap under my office window earlier in the
 day. It yielded many insects, but I ran out of time, so I only collected
 one, a minute was (BOLD-3NWK5YG21).
 
+## Tuesday, September 29
+
+I entered taxon names and classifications into Arctos for names in
+Hilliard and Asmund ([1963](#ref-hilliard_studies_1963)) that were not
+in Arctos.
+
+I started work on a *Refuge Notebook* article on duckweeds.
+
+I learned that specimens of *Lemna minor* from our area are likely
+*Lemna turionifera* based on known distributions. *Lemna turionifera* is
+the more cold-hardy of the two species (Landolt
+[1975](#ref-landolt_morphological_1975)). These two species are well
+separated based on DNA sequences (Bog et al.
+[2010](#ref-bog_genetic_2010); Wang et al. [2010](#ref-wang_dna_2010)).
+
 # Appendixes
 
 ## Occurrence data in Arctos bulkloader format
@@ -12050,6 +12066,16 @@ Berg, N.D., and Gese, E.M. 2010. Relationship between fecal pellet
 counts and snowshoe hare density in western Wyoming. The Journal of
 Wildlife Management **74**(8): 1745–1751.
 doi:[10.2193/2009-354](https://doi.org/10.2193/2009-354).
+
+</div>
+
+<div id="ref-bog_genetic_2010">
+
+Bog, M., Baumbach, H., Schween, U., Hellwig, F., Landolt, E., and
+Appenroth, K.-J. 2010. Genetic structure of the genus *Lemna* L.
+(Lemnaceae) as revealed by amplified fragment length polymorphism.
+Planta **232**(3): 609–619.
+doi:[10.1007/s00425-010-1201-2](https://doi.org/10.1007/s00425-010-1201-2).
 
 </div>
 
@@ -12492,6 +12518,15 @@ doi:[10.1139/z87-087](https://doi.org/10.1139/z87-087).
 
 </div>
 
+<div id="ref-landolt_morphological_1975">
+
+Landolt, E. 1975. Morphological differentiation and geographical
+distribution of the *Lemna gibba*-*Lemna minor* group. Aquatic Botany
+**1**: 345–363.
+doi:[10.1016/0304-3770(75)90036-4](https://doi.org/10.1016/0304-3770\(75\)90036-4).
+
+</div>
+
 <div id="ref-langille_proposed_1904">
 
 Langille, W.A. 1904. The proposed forest reserve on the Kenai Peninsula,
@@ -12860,6 +12895,15 @@ Wang, Q., Garrity, G.M., Tiedje, J.M., and Cole, J.R. 2007. Naïve
 Bayesian classifier for rapid assignment of rRNA sequences into the new
 bacterial taxonomy. Applied and Environmental Microbiology **73**(16):
 5261. doi:[10.1128/AEM.00062-07](https://doi.org/10.1128/AEM.00062-07).
+
+</div>
+
+<div id="ref-wang_dna_2010">
+
+Wang, W., Wu, Y., Yan, Y., Ermakova, M., Kerstetter, R., and Messing, J.
+2010. DNA barcoding of the Lemnaceae, a family of aquatic monocots. BMC
+Plant Biology **10**(1): 205.
+doi:[10.1186/1471-2229-10-205](https://doi.org/10.1186/1471-2229-10-205).
 
 </div>
 
