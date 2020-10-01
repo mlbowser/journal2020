@@ -11939,7 +11939,7 @@ I got my *Refuge Notebook* article sent off at the end of the day.
 To do:
 
   - ~~Review article for John.~~
-  - Identify duckweed from Daniels Lake outlet stream
+  - ~~Identify duckweed from Daniels Lake outlet stream.~~
   - Collect duckweed from golf course?
   - Post hare data.
 
@@ -11950,6 +11950,28 @@ yellow slug (iNaturalist:
 *Prophysaon*, maybe *Prophysaon foliolatum*. I took a tissue sample from
 the tail (BOLD-3NWKVDLF5). I added this to the collection
 ([KNWR:Inv:56](https://arctos.database.museum/guid/KNWR:Inv:56)).
+
+I did examine the *Lemna* specimens that I collected from the outlet
+stream of Daniels Lake on [Monday](#monday-september-28). They mostly
+were not forming rootless turions, though I did find a couple of what I
+think were turions. I was eventually able to see the dorsal rows of
+papillae, making these *Lemna turionifera*. It was only evident on the
+younger fronds. More disturbing, I did not find any turions that
+completely lacked any vestige of roots. This might have been because I
+have been keeping them at room temperature on the windo sill since
+[Monday](#monday-september-28).
+
+I examined *Lemna* specimens I had collected from an unnamed lake off of
+Swan Lake Road on [September 18](#friday-september-18) (iNaturalist:
+[60331267](https://www.inaturalist.org/observations/60331267)), which I
+had just thrown into the freezer at the end of the day. I was able to
+find a central row of dorsal papillae on these, also, so they are *Lemna
+turionifera*. Strangely, I saw no turions, which I expected at this time
+of year. I found some *Spirodela polyrhiza* (iNaturalist:
+[61429235](https://www.inaturalist.org/observations/61429235)) and
+*Lemna trisulca* (iNaturalist:
+[60331531](https://www.inaturalist.org/observations/60331531)) mixed in
+with this sample.
 
 # Appendixes
 
