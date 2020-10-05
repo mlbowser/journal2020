@@ -204,6 +204,7 @@
   - [October](#october)
       - [Thursday, October 1](#thursday-october-1)
       - [Friday, October 2](#friday-october-2)
+      - [Monday, October 5](#monday-october-5)
   - [Appendixes](#appendixes)
       - [Occurrence data in Arctos bulkloader
         format](#occurrence-data-in-arctos-bulkloader-format)
@@ -12006,6 +12007,21 @@ the Refuge’s species list on FWSpecies based on this evidence. The names
 *Epipyxis gracilis*, *Epipyxis kenaiensis*, *Epipyxis planctonica*,
 *Epipyxis polymorpha*, and *Synura petersenii* were not available in
 FWSpecies.
+
+## Monday, October 5
+
+I submitted 13 taxa that I am requesting to be added to FWSpecies’
+taxonomy for the purpose of the Kenai National Wildlife Refuge’s
+checklist (*Anthomyza gilviventris*, *Chirosia similata*, *Dinaraea
+pacei*, *Epipyxis gracilis*, *Epipyxis kenaiensis*, *Epipyxis
+planctonica*, *Epipyxis polymorpha*, *Liriomyza equiseti*, *Lirula*,
+*Lirula macrospora*, *Ostoma fraterna*, *Ostoma septentrionalis*, and
+*Synura petersenii*).
+
+I entered snowshoe hare data from 2006 to 2004.
+
+I formatted and posted *Refuge Notebook* articles from March 6 to April
+3.
 
 # Appendixes
 
