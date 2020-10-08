@@ -206,6 +206,8 @@
       - [Friday, October 2](#friday-october-2)
       - [Monday, October 5](#monday-october-5)
       - [Tuesday, October 6](#tuesday-october-6)
+      - [Wednesday, October 7](#wednesday-october-7)
+      - [Thursday, October 8](#thursday-october-8)
   - [Appendixes](#appendixes)
       - [Occurrence data in Arctos bulkloader
         format](#occurrence-data-in-arctos-bulkloader-format)
@@ -5748,7 +5750,7 @@ write.csv(pellet_count_means,
 
 ![Kenai National Wildlife Refuge snoeshoe hare pellet counts, means for
 each hare grid and year.](2020-04-08_pellet_count_means_over_time.png)  
-Kenai National Wildlife Refuge snoeshoe hare pellet counts, means for
+Kenai National Wildlife Refuge snowshoe hare pellet counts, means for
 each hare grid and year.
 
 I started editing this week’s *Refuge Notebook* article.
@@ -12073,6 +12075,413 @@ most of the way down each bay. There was no reed canarygrass near the
 portage to Waterfowl Lake. The only reed canarygrass we saw in Canoe
 Lake was at the portage to Canoe Lake \#2 where Ben and I had seen it
 before.
+
+## Wednesday, October 7
+
+To do:
+
+  - ~~Edit and submit this week’s *Refuge Notebook* article.~~
+  - ~~Upload new Survey123 data.~~
+  - Map Canoe Lake to Sucker Creek reed canarygrass infestations.
+
+I worked at home this morning, first recording my notes from yesterday.
+
+I edited and submitted this week’s *Refuge Notebook* article.
+
+### Biology staff meeting at 10:00
+
+I downloaded Survey123 non-native plant data and worked on processing
+this.
+
+``` r
+
+## R script to summarize and reformat data from non-native plant surveys collected using Survey123.
+
+## By Matt Bowser, 7.October.2020
+
+library(maptools)
+library(rgdal)
+library(raster)
+library(stringr)
+
+
+## Load data.
+aggressiveness <- read.csv("../data/raw_data/code_tables/aggressiveness.csv")
+commonName <- read.csv("../data/raw_data/code_tables/commonName.csv")
+controlAction <- read.csv("../data/raw_data/code_tables/controlAction.csv")
+disturbanceType.csv <- read.csv("../data/raw_data/code_tables/disturbanceType.csv")
+observers <- read.csv("../data/raw_data/code_tables/observers.csv")
+scientificName <- read.csv("../data/raw_data/code_tables/scientificName.csv")
+vegetationCommunity <- read.csv("../data/raw_data/code_tables/vegetationCommunity.csv")
+wgs84 <- CRS("+proj=longlat +ellps=WGS84 +datum=WGS84")
+exported_data <- readOGR(dsn="../data/raw_data/observations/2020-10-07-0900_survey123_export.shp",
+ stringsAsFactors=FALSE 
+ ) 
+
+## Pull the shapefile's table to manipulate it. 
+data01 <- exported_data@data
+
+## First I will do work needed for reporting in the short term, but I will use field names for import into the AKEPIC data entry form  at the URL below 
+## https://accs.uaa.alaska.edu/wp-content/uploads/AKEPIC_DataEntry.zip
+
+data01$gps_locati
+## This is a mess. Cleaning up. 
+coords1 <- data01$gps_locati
+coords1 <- gsub("Â°N  ", ",-", coords1)
+coords1 <- gsub("Â°W", "", coords1)
+coords1 <- gsub("â€™ N ", ",-", coords1)
+coords1 <- gsub("â€™ W", "", coords1)
+coords1 <- gsub("â€™W", "", coords1)
+coords1 <- gsub("N ", ",-", coords1)
+coords1 <- gsub("W", "", coords1)
+coords1 <- gsub(", -", ",-", coords1)
+coords1 <- gsub(" -", ",-", coords1)
+coords1 <- gsub(",- ", ",-", coords1)
+coords1 <- gsub("/", ",-", coords1)
+coords1 <- gsub("-", ",-", coords1)
+coords1 <- gsub(",,", ",", coords1)
+sl <- str_count(coords1, pattern = " ") == 1
+coords1[sl] <- gsub(" ", ",", coords1[sl])
+coords1
+coords2 <- strsplit(coords1, ",")
+latitude <- sapply(coords2, "[", 1)
+longitude <- sapply(coords2, "[", 2)
+coordsdf <- as.data.frame(cbind(latitude, longitude))
+for (this_coord in 1:2)
+ {
+ sl <- grepl(" ", coordsdf[,this_coord])
+ coordsp <- strsplit(coordsdf[sl,this_coord], " ")
+ deg <- as.numeric(sapply(coordsp, "[", 1))
+ mins <- as.numeric(sapply(coordsp, "[", 2))
+ coordsdd <- deg + sign(deg)*mins/60
+ coordsdf[sl,this_coord] <- as.character(coordsdd)
+ }
+coordsdf$latitude <- as.numeric(coordsdf$latitude)
+coordsdf$longitude <- -1*abs(as.numeric(coordsdf$longitude))
+coordsdf
+data01$latitude <- coordsdf$latitude
+data01$longitude <- coordsdf$longitude
+
+## Just checking to make sure these end up in about the same places.
+plot(exported_data)
+points(data01$longitude, data01$latitude)
+## That looked pretty good.
+
+## Now we must get the plant species.
+scientific_split <- strsplit(data01$scientific, ",")
+n_species_obs <- sapply(scientific_split, length)
+total_species_obs <- sum(sapply(scientific_split, length))
+globalid <- rep(NA, total_species_obs)
+scientificName_id <- rep(NA, total_species_obs)
+scinamedf <- as.data.frame(cbind(globalid, scientificName_id))
+this_record <- 0
+for (this_event in 1:nrow(data01))
+ {
+ n_species <- n_species_obs[this_event]
+ for (this_species in 1:n_species)
+  {
+  this_record <- this_record + 1
+  scinamedf$globalid[this_record] <- data01$globalid[this_event]
+  scinamedf$scientificName_id[this_record] <- sapply(scientific_split[this_event], "[", this_species)
+  }
+ }
+scinamedf$scientificName_id <- as.numeric(scinamedf$scientificName_id)
+scinamedf2 <- merge(x=scinamedf,
+ y=scientificName,
+ all.x=TRUE
+ )
+data02 <- merge(data01, 
+ scinamedf2,
+ by="globalid"
+ )
+## Now fill in those species that were not in the list.
+sl <- data02$scientificName == "other species not on list"
+data02$scientificName[sl] <- data02$other_name[sl]
+levels(as.factor(data02$scientificName)) 
+
+## Now for control actions. 
+levels(as.factor(data02$control_ac))
+## That is a strange mix of codes and text, maybe due to updates of the form.
+## I will just fix this manually.
+data02$control_ac[data02$control_ac=="1"] <- "Manual (pulling/digging)"
+data02$control_ac[data02$control_ac=="6"] <- "Other"
+data02$control_ac[data02$control_ac=="7"] <- "None"
+
+## Now I need to get the areas surveyed and treated.
+exported_data@data$area_m2 <- area(exported_data)
+
+data01$area_treated_acres <- data01$area_tre_1
+data01$area_treated_acres[is.na(data01$area_treated_acres)] <- data01$area_treat[is.na(data01$area_treated_acres)]
+data01$area_treated_acres[data01$area_treated_acres=="1/2 acre"] <- "0.5"
+data01$area_treated_acres <- as.numeric(data01$area_treated_acres)
+
+## Now I need to get non-native plant species records to Lisa.
+## There are still some missing values.
+scinamemiss <- is.na(data02$scientificName)
+data02[scinamemiss,]
+## One has a common name only.
+data02$scientificName[scinamemiss & data02$common_nam==27] <- "Taraxacum officinale F.H. Wigg."
+scinamemiss <- is.na(data02$scientificName)
+data02[scinamemiss,]
+data02$scientificName[(scinamemiss & data02$other_na_1=="Reed canary grass")] <- "Phalaris arundinacea"
+scinamemiss <- is.na(data02$scientificName)
+data02[scinamemiss,]
+data02$scientificName[(scinamemiss & data02$other_na_1=="Water Forget Me Not")] <- "Myosotis scorpioides"
+scinamemiss <- is.na(data02$scientificName)
+data02[scinamemiss,]
+data02$scientificName[(scinamemiss & data02$other_na_1=="Water Forget-Me-Not")] <- "Myosotis scorpioides"
+scinamemiss <- is.na(data02$scientificName)
+data02[scinamemiss,]
+data02$scientificName[(scinamemiss & data02$other_na_1=="Orange hawkweed")] <- "Hieracium aurantiacum"
+scinamemiss <- is.na(data02$scientificName)
+data02[scinamemiss,]
+data02$scientificName[(scinamemiss & data02$other_na_1=="Reed canary grass and meadow forget me not present")] <- "Phalaris arundinacea"
+## Duplicating these records.
+addrows <- data02[(scinamemiss & data02$other_na_1=="Reed canary grass and meadow forget me not present"),]
+addrows$scientificName <- "Myosotis scorpioides"
+data02 <- rbind(data02, addrows)
+scinamemiss <- is.na(data02$scientificName)
+data02[scinamemiss,]
+
+## Dropping those Juncus bufonius records, a native plant.
+data03 <- data02[!(data02$scientificName=="Juncus bufonis"),]
+
+## Saving this.
+write.csv(data03, 
+ "../data/final_data/observations/2020-10-07-1559_observations.csv",
+ row.names=FALSE
+ )
+```
+
+I deleted the Kenai NWR snowshoe hare dataset from GitHub over concerns
+that this might not be the best way to do things.
+
+## Thursday, October 8
+
+To do:
+
+  - FY2020 accomplishments list to Mark
+  - Canoe Lake to Sucker Creek reed canarygrass map
+
+### Accomplishments list:
+
+  - Permitting, planning, and initiation of elodea eradication in
+    Sandpiper Lake.
+
+  - Publications, peer-reviewed:
+
+Bowser, M.L., Brassfield, R., Dziergowski, A., Eskelin, T., Hester, J.,
+Magness, D.R., McInnis, M., Melvin, T., Morton, J. M., and Stone, J.
+2020. Towards conserving natural diversity: A biotic inventory by
+observations, specimens, dna barcoding and high-throughput sequencing
+methods. Biodiversity Data Journal 8: e50124.
+https://doi.org/10.3897/BDJ.8.e50124.
+
+  - Publications, not peer-reviewd:
+
+Bowser, M.L., Burr, S.J., Davis, I., Dubois, G.D., Graham, E.E., Moan,
+J.E., & Swenson, S. W. (2019). A test of metabarcoding for Early
+Detection and Rapid Response monitoring for non-native forest pest
+beetles (Coleoptera). Research Ideas and Outcomes, 5, e48536.
+https://doi.org/10.3897/rio.5.e48536
+
+Bowser, M.L., Bowser, A.M. 2020. A pilot study examining the diet of
+introduced Alaska blackfish (Dallia pectoralis T. H. Bean, 1880) in
+Kenai, Alaska, by metabarcoding.
+http://www.akentsoc.org/doc/AKES\_newsletter\_2020\_n1\_a07.pdf
+
+  - Conformed our snowshoe hare monitoring project dataset to regional
+    data management team standards as part of an early adopters data
+    management team.
+
+  - Beginning in January 2020, took care of editing and submitting the
+    Refuge’s *Refuge Notebook* series.
+
+  - Improved the Refuge’s species checklist on FWSpecies, adding many
+    species, adding evidence supporting the presence of many species,
+    writing scripts to be eventually used to publish the checklist to
+    GBIF in Darwin Core format, and oversaw Jake’s work improving the
+    checklist on FWSpecies.
+
+  - Hand sorted 52 mixed arthropod samples (26 sweep net and 26 Berlese)
+    from 2019 black spruce inventory work. These were submitted for
+    metabarcoding and data have been received, but I have not processed
+    the data yet.
+
+  - Participated in Composite Burn Index sampling in the Swan Lake Fire
+    burn.
+
+  - Conducted non-native plant surveys in the Swan Lake Fire burn and
+    other areas on the Refuge.
+
+  - Resurveyed Hakala plots with Ed and Sarah Berg.
+
+I worked on generating maps of the reed canarygrass infestation at Canoe
+Lake vicinity.
+
+``` r
+## R script to map reed canarygrass infestations around Canoe Lake.
+
+## By Matt Bowser, 8.October.2020
+
+library(maptools)
+library(rgdal)
+library(raster)
+library(GISTools)
+
+## Load data.
+data03 <- read.csv("../data/final_data/observations/2020-10-07-1559_observations.csv",
+ stringsAsFactors=FALSE
+ )
+ 
+lakes <- readOGR(dsn="../source_data/geodata/KP_lakes/lakes.shp",
+ stringsAsFactors=FALSE 
+ )
+ 
+streams <- readOGR(dsn="../source_data/geodata/KP_streams/streams.shp",
+ stringsAsFactors=FALSE 
+ )
+ 
+transdb <- "../source_data/geodata/Transportation.gdb"
+subset(ogrDrivers(), grepl("GDB", name))
+fc_list <- ogrListLayers(transdb)
+print(fc_list)
+roads <- readOGR(dsn=transdb,layer="Roads")
+## That did not work. (Multiple incompatible geometries)
+## Using a cleaner version.
+roads <- readOGR(dsn="../source_data/geodata/Roads/roads.shp",
+ stringsAsFactors=FALSE 
+ )
+
+## Now select only reed canarygrass.
+sl <- data03$scientificName == "Phalaris arundinacea"
+rcg <- data03[sl,]
+
+coordinates(rcg) <- c("longitude", "latitude")
+
+albers <- "+proj=aea +lat_1=55 +lat_2=65 +lat_0=50 +lon_0=-154 +x_0=0 +y_0=0 +ellps=GRS80 +datum=NAD83 +units=m +no_defs"
+wgs84 <- "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
+
+proj4string(lakes) <- CRS(albers)
+proj4string(streams) <- CRS(albers)
+proj4string(roads) <- CRS(albers)
+
+proj4string(rcg) <- CRS(wgs84)
+rcgab <- spTransform(rcg, CRS(albers))
+
+water <- "#93CCEA" ## #76D7EA = Crayola Sky Blue "#BEBEBE" #93CCEA is Crayola cornflower
+land <- "#E8E8E8"
+road <- "#888888"
+
+par(mar=rep(0.1, 4)) 
+ par(bg=land)
+plot(streams,
+  col=water,
+  lwd=1,
+  bg=land,
+  xlim=c(176e3, 188e3),
+  ylim=c(1192e3, 1194e3)
+  )
+plot(lakes,
+  add=TRUE,
+  col=water,
+  border=water,
+  lwd=1
+  )
+plot(roads,
+  col=road,
+  lwd=2,
+  add=TRUE
+  )
+plot(rcgab,
+ add=TRUE
+ ) 
+## One of those points is way off.
+text(rcgab, labels=rcgab$globalid)  
+## It endes in cf4ad
+
+rcgab@data[which(grepl("cf4ad", rcgab@data$globalid)),]
+
+
+## GPS location is given as "60.70963,-150.6139"
+## I think it should have been "60.70963,-150.6913" This puts it at the portage on Canoe Lake #2.
+## Fixing this here.
+data03$longitude[which(grepl("cf4ad", data03$globalid))] <- -150.6913
+sl <- data03$scientificName == "Phalaris arundinacea"
+rcg <- data03[sl,]
+coordinates(rcg) <- c("longitude", "latitude")
+proj4string(rcg) <- CRS(wgs84)
+rcgab <- spTransform(rcg, CRS(albers))
+
+pdf(file="../documents/2020-10-08_Canoe_Lakes_RCG_map.pdf",
+ width=6,
+ height=6
+ )
+par(mar=rep(0.1, 4)) 
+ par(bg=land)
+plot(streams,
+  col=water,
+  lwd=1,
+  bg=land,
+  xlim=c(179e3, 181e3),
+  ylim=c(1195e3, 1198e3)
+  )
+plot(lakes,
+  add=TRUE,
+  col=water,
+  border=water,
+  lwd=1
+  )
+plot(roads,
+  col=road,
+  lwd=2,
+  add=TRUE
+  )
+plot(rcgab,
+ add=TRUE,
+ col="red",
+ pch=16
+ ) 
+text(lakes,
+ labels=lakes@data$GNIS_Name
+ )
+map.scale(x=179e3, y=1195e3+100, len=1000, ndivs=2, units="km", subdiv=0.5)
+north.arrow(x=179e3, yb=1195e3+300, len=50, lab="N")
+text(180e3-400, 1197e3+680, "Swan Lake Road")
+dev.off() 
+
+## Now exporting kml.
+writeOGR(
+ rcg, 
+ dsn="../data/final_data/observations/2020-10-08_reed_canarygrass_points.kml", 
+ layer="occurrences", 
+ driver="KML", 
+ #dataset_options=c("NameField=scientificName"), 
+ overwrite_layer=TRUE
+ )
+ 
+## I also edited and resent the Survey123 record having the erroneous coordinate.  
+```
+
+![Map of known reed canarygrass infestations in the vicinity of Canoe
+Lake. Note that there is more reed canarygrass than what is indicated in
+the point maps. Along the three streams (Canoe Lake \#2 to Canoe Lake
+\#1, Canoe Lake \#1 to Sucker Creek, and Sucker Creek from Sucker Lake
+to the culvert at Swan Lake Road), there are patches of reed canarygrass
+all along the streams so that the points only indicate the limits of the
+infestations. Also, Reed canarygrass is dotted along most of the
+shoreline of Sucker Lake. We just stopped adding points after a time.
+Canoe Lake \#1 is clean except for the inlet and outlet
+streams.](2020-10-08_Canoe_Lakes_RCG_map.jpg)  
+Map of known reed canarygrass infestations in the vicinity of Canoe
+Lake. Note that there is more reed canarygrass than what is indicated in
+the point maps. Along the three streams (Canoe Lake \#2 to Canoe Lake
+\#1, Canoe Lake \#1 to Sucker Creek, and Sucker Creek from Sucker Lake
+to the culvert at Swan Lake Road), there are patches of reed canarygrass
+all along the streams so that the points only indicate the limits of the
+infestations. Also, Reed canarygrass is dotted along most of the
+shoreline of Sucker Lake. We just stopped adding points after a time.
+Canoe Lake \#1 is clean except for the inlet and outlet streams.
 
 # Appendixes
 
