@@ -208,6 +208,7 @@
       - [Tuesday, October 6](#tuesday-october-6)
       - [Wednesday, October 7](#wednesday-october-7)
       - [Thursday, October 8](#thursday-october-8)
+      - [Friday, October 9](#friday-october-9)
   - [Appendixes](#appendixes)
       - [Occurrence data in Arctos bulkloader
         format](#occurrence-data-in-arctos-bulkloader-format)
@@ -12482,6 +12483,24 @@ all along the streams so that the points only indicate the limits of the
 infestations. Also, Reed canarygrass is dotted along most of the
 shoreline of Sucker Lake. We just stopped adding points after a time.
 Canoe Lake \#1 is clean except for the inlet and outlet streams.
+
+I composed text for an award nomination letter requested by the Alaska
+Invasive Species Partnership.
+
+## Friday, October 9
+
+I spent some time trying to figure out the best test for comparing the
+paired proportions of spruce samples from our 2015 grassland work.
+
+I examined a series of worm specimens from Fairbanks. Clitellum on
+segments 26-31, tubercula pubertatis on segments 29-30. This is
+*Bimastos rubidus*.
+
+I collected two wasps (BOLD-3NUO7C461 and BOLD-3NMISCHX9) and one fly
+(BOLD-3NUD6WCE4) from a yellow pan trap left out for a short time under
+a cottonwood.
+
+I entered snowshoe hare data from 2003 to 2000.
 
 # Appendixes
 
