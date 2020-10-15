@@ -210,6 +210,8 @@
       - [Thursday, October 8](#thursday-october-8)
       - [Friday, October 9](#friday-october-9)
       - [Tuesday, October 13](#tuesday-october-13)
+      - [Wednesday, October 14](#wednesday-october-14)
+      - [Thursday, October 15](#thursday-october-15)
   - [Appendixes](#appendixes)
       - [Occurrence data in Arctos bulkloader
         format](#occurrence-data-in-arctos-bulkloader-format)
@@ -12699,6 +12701,491 @@ dev.off()
 ![Map of weed survey data and treatments from Survey123
 data.](2020-10-13_Survey123_data_map.jpg)  
 Map of weed survey data and treatments from Survey123 data.
+
+I entered snowshoe hare data for 1999-1988.
+
+## Wednesday, October 14
+
+I entered snowshoe hare data from 1987 to 1983.
+
+I edited a *Refuge Notebook* article submitted to me last week that I
+may use for this week.
+
+I posted the *Refuge Notebook* articles from April 10 and April 17.
+
+I worked on checking and cleaning snowshoe hare data.
+
+``` r
+## R script to check over recently entered snowshoe hare data.
+
+## By Matt Bowser, 14.October.2020
+
+## Load data. 
+data01 <- read.csv("../data/final_data/observations/Kenai_NWR_snowshoe_hare_pellet_count_data.csv",
+ stringsAsFactors=FALSE
+ )
+
+dim(data01) 
+[1] 8722   12
+
+summary(data01)
+
+data01$eventID
+
+## Now scrutinize the observers data.
+levels(as.factor(data01$recordedBy))
+
+## Get a list of observers.
+obs1 <- strsplit(x=data01$recordedBy, split=" \\| ")
+obsl <- unique(sapply(obs1, "[", 1))
+for (this_obs in 2:max(lengths(obs1)))
+ {
+ obst <- unique(sapply(obs1, "[", this_obs))
+ obsl <- unique(c(obsl, obst))
+ }
+obsl <- obsl[!is.na(obsl)]
+obsl <- obsl[order(obsl)] 
+obsl
+ [1] "Allison Jost"        
+ [2] "Amanda M. Zuelke"    
+ [3] "Amanda Willingham"   
+ [4] "Andrew Wu"           
+ [5] "Angus Burke"         
+ [6] "Annaleese Rasanen"   
+ [7] "Annie Widdel"        
+ [8] "Atlas Burke"         
+ [9] "Briana Parsons"      
+[10] "Brianna Kilbourne"   
+[11] "Brigid Heckel"       
+[12] "Catherine Urnstead"  
+[13] "Cheryl Pendergrass"  
+[14] "Christina Dinovo"    
+[15] "Colby Tinsley"       
+[16] "Colin J. Canterbury" 
+[17] "Craig Moore"         
+[18] "Crystal Miller"      
+[19] "Cynthia Goff"        
+[20] "Damien Burke"        
+[21] "Danielle Jerry"      
+[22] "David Jacob"         
+[23] "Ed R. Burke"         
+[24] "Elizabeth Jozwiak"   
+[25] "Emily Sunblade"      
+[26] "Emily Williams"      
+[27] "Eve Burke"           
+[28] "Eve Smallwood"       
+[29] "Gemma Burke"         
+[30] "Geoff Beyersdorf"    
+[31] "Grace Burke"         
+[32] "Heather Sinclair"    
+[33] "Hector Rivera"       
+[34] "Isabela Vilella"     
+[35] "Jacob Franzmann"     
+[36] "Jake Cheek"          
+[37] "Jake M. Danner"      
+[38] "Jason Froggatt"      
+[39] "Jennifer Gregory"    
+[40] "Jennifer Kulp"       
+[41] "Jenny Neyman"        
+[42] "Jodie Banks"         
+[43] "John Heydinger"      
+[44] "John M. Morton"      
+[45] "Julia Nagle"         
+[46] "Julie Andersen"      
+[47] "Kendra Bush"         
+[48] "Kendra Lucas"        
+[49] "Kimo Rogala"         
+[50] "Kyla Jorgensen"      
+[51] "Kyle Nyitrai"        
+[52] "Laura Hill"          
+[53] "Lee O'Brien"         
+[54] "Lily Lewis"          
+[55] "Mary Williams"       
+[56] "Matt Bowser"         
+[57] "Matt Stauser"        
+[58] "Mel Langdon"         
+[59] "Melissa Leader"      
+[60] "Mercedes BartKovich" 
+[61] "Mireille Martel"     
+[62] "Natalie Dawson"      
+[63] "Nathan Nelson"       
+[64] "Paul Smotherman"     
+[65] "Quinn Langdon"       
+[66] "Robert Usab"         
+[67] "Sadie Purinton"      
+[68] "Sandra Ribbe"        
+[69] "Sarah Halama"        
+[70] "Sehoya Harris"       
+[71] "Shoshana Keegan"     
+[72] "Stephanie Rickabaugh"
+[73] "Susan Grimes"        
+[74] "Susan Lindahl"       
+[75] "Suzy Medwell"        
+[76] "Ted Bailey"          
+[77] "Tim Baldwin"         
+[78] "Tim Mullet"          
+[79] "Toby A. Burke"       
+[80] "Todd Eskelin"        
+[81] "Tom J. Burke"        
+[82] "Tracy Foulkes"       
+[83] "unknown"             
+[84] "Winthrop Staples"    
+[85] "Zack Saumer"  
+## That looked pretty good.
+
+## Changing one name.
+data01$recordedBy <- gsub("Winthrop Staples", "Winthrop R. Staples", data01$recordedBy)
+       
+## Getting that list of observers again, just to make sure I did not mess it up.
+obs1 <- strsplit(x=data01$recordedBy, split=" \\| ")
+obsl <- unique(sapply(obs1, "[", 1))
+for (this_obs in 2:max(lengths(obs1)))
+ {
+ obst <- unique(sapply(obs1, "[", this_obs))
+ obsl <- unique(c(obsl, obst))
+ }
+obsl <- obsl[!is.na(obsl)]
+obsl <- obsl[order(obsl)] 
+obsl
+## That looked good.
+
+## Now for dates.
+levels(as.factor(data01$eventDate))
+## I do not like Microsoft Excel.
+## Fixing some dates.
+data01$eventDate <- gsub("Aug-93", "1993-08", data01$eventDate)
+data01$eventDate <- gsub("Jul-93", "1993-07", data01$eventDate)
+data01$eventDate <- gsub("Jun-93", "1993-06", data01$eventDate)
+## These reflect the correct temporal resolution of the dates.
+
+## Checking the date ranges just to make sure that they look reasonable.
+sl <- grepl("/", data01$eventDate)
+date1 <- strsplit(x=data01$eventDate[sl], "/")
+sdate <- sapply(date1, "[", 1)
+edate <- sapply(date1, "[", 2)
+date2 <- data.frame(sdate, edate)
+date2 <- unique(date2)
+date2$sdate <- as.Date(date2$sdate)
+date2$edate <- as.Date(date2$edate)
+difs <- date2$edate - date2$sdate
+difs
+## Oops. One of those is negative.
+date2[(difs < 1),]
+         sdate      edate
+981 1996-07-10 1996-06-23
+
+## Looking at those records.
+data01[data01$eventDate=="1996-07-10/1996-06-23",]
+## Campfire and Oil Field grids, 1996.
+## Checking data sheets...
+## Fixing this.
+data01$eventDate[data01$eventDate=="1996-07-10/1996-06-23"] <- "1996-07-10/1996-07-23"
+
+## Rechecking.
+sl <- grepl("/", data01$eventDate)
+date1 <- strsplit(x=data01$eventDate[sl], "/")
+sdate <- sapply(date1, "[", 1)
+edate <- sapply(date1, "[", 2)
+date2 <- data.frame(sdate, edate)
+date2 <- unique(date2)
+date2$sdate <- as.Date(date2$sdate)
+date2$edate <- as.Date(date2$edate)
+difs <- date2$edate - date2$sdate
+difs
+## That was better.
+
+## Now map, just to check.
+plot(data01$decimalLongitude, data01$decimalLatitude)
+## That looked ok.
+
+## Saving.
+write.csv(data01, "../data/final_data/observations/Kenai_NWR_snowshoe_hare_pellet_count_data.csv", row.names=FALSE)
+```
+
+Later I worked on exporting hare data as GBIF sampling event data.
+
+``` r
+## R script to create a Sampling Event Data GBIF export.
+
+## By Matt Bowser, 14.October.2020
+
+## Load data. 
+data01 <- read.csv("../data/final_data/observations/Kenai_NWR_snowshoe_hare_pellet_count_data.csv",
+ stringsAsFactors=FALSE
+ )
+
+## First, dates of sampling events must be generated.
+## For this purpose we will want the maximum values for the time periods sampled.
+data01$year <- substr(data01$eventDate, 1, 4)
+data01$origin <- as.Date(paste0(data01$year, "-01-01"))
+data01$began_date <- NA
+data01$ended_date <- NA
+
+## First, dealing with multi-day events.
+sl <- grepl("/", data01$eventDate)
+date1 <- strsplit(x=data01$eventDate[sl], "/")
+sdate <- sapply(date1, "[", 1)
+edate <- sapply(date1, "[", 2)
+data01$began_date[sl] <- sdate 
+data01$ended_date[sl] <- edate
+
+## Next, dealing with single day events.
+sl <- nchar(data01$eventDate) == 10 
+data01$began_date[sl] <- data01$eventDate[sl]
+data01$ended_date[sl] <- data01$eventDate[sl]
+
+## Now, for the dates where all we have are years, we should assume the earliest start dates and latests end dates for each grid.
+grid_name <- levels(as.factor(data01$verbatimLocality))
+grid_sdate <- rep(NA, length(grid_name))
+grid_edate <- rep(NA, length(grid_name))
+for (this_grid in 1:length(grid_name))
+ {
+ sl <- data01$verbatimLocality == grid_name[this_grid]
+ sdate <- data01$began_date[sl]
+ sdjul <- NA
+ for (this_date in 1:length(sdate))
+  {
+  sdjul[this_date] <- julian(as.Date(sdate[this_date]), origin=data01$origin[sl][this_date])
+  }
+ grid_sdate[this_grid] <- min(sdjul, na.rm=TRUE)
+ edate <- data01$ended_date[sl]
+ edjul <- NA
+ for (this_date in 1:length(edate))
+  {
+  edjul[this_date] <- julian(as.Date(edate[this_date]), origin=data01$origin[sl][this_date])
+  }
+ grid_edate[this_grid] <- max(edjul, na.rm=TRUE)
+ }
+ 
+## Converting dates to dates.
+data01$began_date <- as.Date(data01$began_date)
+data01$ended_date <- as.Date(data01$began_date)
+ 
+## Now fill in missing data.
+for (this_grid in 1:length(grid_name))
+ {
+ sl <- (nchar(data01$eventDate) == 4) & (data01$verbatimLocality == grid_name[this_grid])
+ data01$began_date[sl] <- as.Date(paste0(data01$year[sl], grid_sdate[this_grid]), format="%Y%j")
+ data01$ended_date[sl] <- as.Date(paste0(data01$year[sl], grid_edate[this_grid]), format="%Y%j")
+ }
+
+## Now all that remains should be the year-month dates.
+sl <- nchar(data01$eventDate) == 7
+levels(as.factor(data01$eventDate[sl]))
+[1] "1993-06" "1993-07" "1993-08"
+## With only three of these values, this is easiest to fix manually.
+data01$began_date[data01$eventDate=="1993-06"] <- as.Date("1993-06-01")
+data01$began_date[data01$eventDate=="1993-07"] <- as.Date("1993-07-01")
+data01$began_date[data01$eventDate=="1993-08"] <- as.Date("1993-08-01")
+data01$ended_date[data01$eventDate=="1993-06"] <- as.Date("1993-06-30")
+data01$ended_date[data01$eventDate=="1993-07"] <- as.Date("1993-07-31")
+data01$ended_date[data01$eventDate=="1993-08"] <- as.Date("1993-08-30")
+
+## Just checking:
+sum(is.na(data01$began_date))
+[1] 0
+sum(is.na(data01$ended_date))
+## Good.
+
+plot(data01$began_date, data01$ended_date)
+## That looked reasonable.
+
+## Ok, now I need the bigger, year-to-year event dates.
+## I am not going to get this done today.
+```
+
+## Thursday, October 15
+
+### 08:30 all staff meeting
+
+I worked on exporting snowshoe hare data to GBIF’s sampling event data
+format.
+
+``` r
+## R script to create a Sampling Event Data GBIF export.
+
+## By Matt Bowser, 15.October.2020
+
+## Load data. 
+data01 <- read.csv("../data/final_data/observations/Kenai_NWR_snowshoe_hare_pellet_count_data.csv",
+ stringsAsFactors=FALSE
+ )
+
+## First, dates of sampling events must be generated.
+## For this purpose we will want the maximum values for the time periods sampled.
+data01$year <- substr(data01$eventDate, 1, 4)
+data01$origin <- as.Date(paste0(data01$year, "-01-01"))
+data01$began_date <- NA
+data01$ended_date <- NA
+
+## First, dealing with multi-day events.
+sl <- grepl("/", data01$eventDate)
+date1 <- strsplit(x=data01$eventDate[sl], "/")
+sdate <- sapply(date1, "[", 1)
+edate <- sapply(date1, "[", 2)
+data01$began_date[sl] <- sdate 
+data01$ended_date[sl] <- edate
+
+## Next, dealing with single day events.
+sl <- nchar(data01$eventDate) == 10 
+data01$began_date[sl] <- data01$eventDate[sl]
+data01$ended_date[sl] <- data01$eventDate[sl]
+
+## Now, for the dates where all we have are years, we should assume the earliest start dates and latests end dates for each grid.
+grid_name <- levels(as.factor(data01$verbatimLocality))
+grid_sdate <- rep(NA, length(grid_name))
+grid_edate <- rep(NA, length(grid_name))
+for (this_grid in 1:length(grid_name))
+ {
+ sl <- data01$verbatimLocality == grid_name[this_grid]
+ sdate <- data01$began_date[sl]
+ sdjul <- NA
+ for (this_date in 1:length(sdate))
+  {
+  sdjul[this_date] <- julian(as.Date(sdate[this_date]), origin=data01$origin[sl][this_date])
+  }
+ grid_sdate[this_grid] <- min(sdjul, na.rm=TRUE)
+ edate <- data01$ended_date[sl]
+ edjul <- NA
+ for (this_date in 1:length(edate))
+  {
+  edjul[this_date] <- julian(as.Date(edate[this_date]), origin=data01$origin[sl][this_date])
+  }
+ grid_edate[this_grid] <- max(edjul, na.rm=TRUE)
+ }
+ 
+## Converting dates to dates.
+data01$began_date <- as.Date(data01$began_date)
+data01$ended_date <- as.Date(data01$began_date)
+ 
+## Now fill in missing data.
+for (this_grid in 1:length(grid_name))
+ {
+ sl <- (nchar(data01$eventDate) == 4) & (data01$verbatimLocality == grid_name[this_grid])
+ data01$began_date[sl] <- as.Date(paste0(data01$year[sl], grid_sdate[this_grid]), format="%Y%j")
+ data01$ended_date[sl] <- as.Date(paste0(data01$year[sl], grid_edate[this_grid]), format="%Y%j")
+ }
+
+## Now all that remains should be the year-month dates.
+sl <- nchar(data01$eventDate) == 7
+levels(as.factor(data01$eventDate[sl]))
+[1] "1993-06" "1993-07" "1993-08"
+## With only three of these values, this is easiest to fix manually.
+data01$began_date[data01$eventDate=="1993-06"] <- as.Date("1993-06-01")
+data01$began_date[data01$eventDate=="1993-07"] <- as.Date("1993-07-01")
+data01$began_date[data01$eventDate=="1993-08"] <- as.Date("1993-08-01")
+data01$ended_date[data01$eventDate=="1993-06"] <- as.Date("1993-06-30")
+data01$ended_date[data01$eventDate=="1993-07"] <- as.Date("1993-07-31")
+data01$ended_date[data01$eventDate=="1993-08"] <- as.Date("1993-08-30")
+
+## Just checking:
+sum(is.na(data01$began_date))
+[1] 0
+sum(is.na(data01$ended_date))
+## Good.
+
+plot(data01$began_date, data01$ended_date)
+## That looked reasonable.
+
+## Ok, now I need the bigger, year-to-year event dates.
+data01$event_start_date <- as.Date(NA)
+locs <- levels(as.factor(data01$locationID))
+for (this_loc in 1:length(locs))
+ {
+ loc_df <- data01[data01$locationID==locs[this_loc],]
+ years_sampled <- unique(loc_df$year)
+ #loc_df$event_start_date[1] <- loc_df$began_date[1]
+ sl <- (data01$locationID == locs[this_loc]) & (data01$year == years_sampled[1])
+ data01$event_start_date[sl] <- loc_df$began_date[1]
+ for (this_year in 2:length(years_sampled))
+  {
+  #loc_df$event_start_date[this_year] <- loc_df$began_date[this_year-1]
+  sl <- (data01$locationID == locs[this_loc]) & (data01$year == years_sampled[this_year])
+  data01$event_start_date[sl] <- loc_df$began_date[this_year-1]
+  }
+ }
+## Now make a DwC ISO formatted date.
+data01$eventDateoriginal <- data01$eventDate
+sl <- !(data01$event_start_date == data01$ended_date)
+data01$eventDate[sl] <- paste0(data01$event_start_date[sl], "/", data01$ended_date[sl])
+
+
+
+## Now start a sampling event data frame.
+## For the purpose of GBIF data I think I should exclude the NA values.
+sl <- !is.na(data01$measurementValue)
+data01 <- data01[sl,]
+sampling_event_template <- read.csv("../source_data/GBIF/event_ipt_template_v2_sampling_event.csv")
+sampling_event <- data.frame(data01$occurrenceID)
+names(sampling_event) <- "eventID"
+sampling_event <- merge(x=sampling_event, y=sampling_event_template, all.x=TRUE)
+sampling_event$parentEventID <- data01$eventID
+sampling_event$eventDate <- data01$eventDate
+sampling_event$samplingProtocol <- "Snowshoe hare pellets were counted and removed annually from 1 m x 1 m plots."
+sampling_event$sampleSizeValue <- 1
+sampling_event$sampleSizeUnit <- "square metre"
+sampling_event$locationID <- data01$locationID
+sampling_event$decimalLatitude <- data01$decimalLatitude
+sampling_event$decimalLongitude <- data01$decimalLongitude
+sampling_event$geodeticDatum <- "WGS84"
+sampling_event$countryCode <- "US"
+## I need to remove those NA values.
+#na2naught <- function(x)
+# {
+# if(is.na(x))
+#  {
+#  ""
+#  }
+# else
+#  {
+#  x
+#  }
+# }
+#sampling_event <- apply(sampling_event, c(1,2), na2naught)
+## Save this.
+write.table(sampling_event,
+ "../data/final_data/observations/GBIF_export_sampling_event.tsv",
+ row.names=FALSE,
+ col.names=FALSE,
+ sep="\t",
+ quote=FALSE,
+ na=""
+ )
+
+## Now for associated occurrences.
+associated_occurrences_template <- read.csv("../source_data/GBIF/event_ipt_template_v2_associated_occurrences.csv")
+associated_occurrences <- data.frame(data01$occurrenceID)
+names(associated_occurrences) <- "eventID"
+associated_occurrences <- merge(x=associated_occurrences, y=associated_occurrences_template, all.x=TRUE)
+associated_occurrences$occurrenceID <- data01$occurrenceID
+associated_occurrences$basisOfRecord <- "HumanObservation"
+associated_occurrences$eventDate <- data01$eventDate
+associated_occurrences$kingdom <- "Animalia"
+associated_occurrences$scientificName <- "Lepus americanus"
+associated_occurrences$taxonRank <- "species"
+associated_occurrences$decimalLatitude <- data01$decimalLatitude
+associated_occurrences$decimalLongitude <- data01$decimalLongitude
+associated_occurrences$geodeticDatum <- "WGS84"
+associated_occurrences$countryCode <- "US"
+associated_occurrences$organismQuantity <- data01$measurementValue
+associated_occurrences$organismQuantityType <- data01$measurementType
+associated_occurrences$occurrenceStatus <- NA
+associated_occurrences$occurrenceStatus[data01$measurementValue > 0] <- "present"
+associated_occurrences$occurrenceStatus[data01$measurementValue == 0] <- "absent"
+associated_occurrences$
+
+write.table(associated_occurrences,
+ "../data/final_data/observations/GBIF_export_associated_occurrences.tsv",
+ row.names=FALSE,
+ col.names=FALSE,
+ sep="\t",
+ quote=FALSE,
+ na=""
+ )
+```
+
+I sent a filled-out GBIF sampling event form to the BISON team, asking
+if this would do.
 
 # Appendixes
 
