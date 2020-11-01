@@ -218,6 +218,8 @@
       - [Tuesday, October 27](#tuesday-october-27)
       - [Friday, October 30](#friday-october-30)
       - [Saturday, October 31](#saturday-october-31)
+  - [November](#november)
+      - [Sunday, November 1](#sunday-november-1)
   - [Appendixes](#appendixes)
       - [Occurrence data in Arctos bulkloader
         format](#occurrence-data-in-arctos-bulkloader-format)
@@ -12148,6 +12150,12 @@ I found that I need to fix a link in Bowser and Bowser
 the first image links to a different image on Arctos, I think likely
 related to Arctos’ data loss and/or subsequent upgrade this year. Also,
 I should add citations for all specimens related to this article.
+
+# November
+
+## Sunday, November 1
+
+I formatted and posted articles from May 22–29.
 
 # Appendixes
 
