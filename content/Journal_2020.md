@@ -12267,6 +12267,55 @@ haplotype to a clade.
 al. ([2018](#ref-saito_phylogeography_2018)), an entity with a
 distribution of the Palearctic and the Japanese Archipelago.
 
+A leech from Vogel Lake (iNaturalist:
+[56860767](https://www.inaturalist.org/observations/56860767)) is
+Haemopidae, but there is no close match on BOLD or GenBank. The closest
+is *Haemopis sanguisuga* at 90.62% similarity.
+
+A diving beetle from Vogel Lake (iNaturliast:
+[56861129](https://www.inaturalist.org/observations/56861129)) was
+identified as *Ilybius quadrimaculatus*. I added this species to the
+Refuge’s checklist.
+
+A Lepidoptera larva I had collected from leaf litter off of Skilak Lake
+Road on [July 7](#tuesday-july-7) (iNaturalist:
+[52380873](https://www.inaturalist.org/observations/52380873)) was
+*Sunira verberata*.
+
+A fly from [September 2](#wednesday-september-2) (iNaturalist:
+[59732100](https://www.inaturalist.org/observations/59732100)) is
+*Phasia robertsonii* or *Phasia aeneoventris*. The two species appear to
+be indistinguishable based on COI DNA barcodes. Day
+([1995](#ref-Day1995)) considered *Phasia aeneoventris* to be synonymous
+with *Phasia robertsonii*. Sun and Marshall
+([2003](#ref-sun_systematics_2003)) considered these to be distinct
+species, with *P. robertsonii* in the eastern Nearctic and *Phasia
+aeneoventris* in the western Nearctic. They were also separated
+morphologically by the shape of the ventrolateral process of the
+distiphallus. Most other specimens from our region have been identified
+as *Phasia aeneoventris*. Specimens
+[KNWR:Ento:7439](https://arctos.database.museum/guid/KNWR:Ento:7439)
+from the City of Kenai I had originally identified as *Phasia
+aeneoventris* ? in 2011. A molecular observation record from the Slikok
+project
+[UAMObs:Ento:240173](https://arctos.database.museum/guid/UAMObs:Ento:240173)
+I had identified as *Phasia robertsonii*. It does match some sequences
+identified as *P. robertsonii*, but now I do not think I can say that it
+is P. robertsonii\* because there is really no clear separation between
+these species based on COI DNA barcode sequences. I updated the
+identification of this species to *Phasia aeneoventris* ? with the
+following identification remarks.
+
+> It appears that Phasia robertsonii and Phasia aeneoventris cannot be
+> distinguished based on COI DNA barcode sequences, but of these two
+> species P. aeneoventris is the only one known from this area.
+
+I removed *Phasia robertsonii* from the Refuge’s species list and added
+*Phasia aeneoventris*.
+
+I updated the identification of the iNaturalist record above, including
+similar remarks.
+
 ## Occurrence data in Arctos bulkloader format
 
 | collection\_object\_id | uuid                                 | guid\_prefix | cat\_num | Other\_Id\_Num\_Type\_1 | Other\_Id\_Num\_1 | enteredby | accn                                    | taxon\_name                | nature\_of\_id | id\_made\_by\_agent | made\_date | identification\_remarks                                                                                                                                                                                    | verbatim\_date    | began\_date | ended\_date | higher\_geog                                                  | spec\_locality                                                                                       | verbatim\_locality                                                                                          | orig\_lat\_long\_units | dec\_lat    | dec\_long     | datum                      | georeference\_source            | max\_error\_distance | max\_error\_units | georeference\_protocol          | Locality\_Remarks                                                                                             | collecting\_source | habitat                                               | specimen\_event\_type | collecting\_method                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | event\_assigned\_by\_agent | event\_assigned\_date | verificationstatus | Coll\_Event\_Remarks                                                                            | collector\_agent\_1 | collector\_role\_1 | collector\_agent\_2  | collector\_role\_2 | part\_name\_1   | part\_condition\_1     | part\_disposition\_1 | part\_lot\_count\_1 | Part\_Barcode\_1 |
@@ -12625,6 +12674,16 @@ with entropy): A new software for selection of phylogenetic informative
 regions from multiple sequence alignments. BMC Evolutionary Biology
 **10**(1): 210. Springer Nature.
 doi:[10.1186/1471-2148-10-210](https://doi.org/10.1186/1471-2148-10-210).
+
+</div>
+
+<div id="ref-Day1995">
+
+Day, W.H. 1995. Biological observations on *Phasia* *robertsonii*
+(Townsend) (Diptera: Tachinidae), a native parasite of adult plant bugs
+(Hemiptera: Miridae) feeding on alfalfa and grasses. Journal of the New
+York Entomological Society **103**(1): 100–106. New York Entomological
+Society. Available from <http://www.jstor.org/stable/25010139>.
 
 </div>
 
@@ -13273,6 +13332,14 @@ belowground structure and a new clade of morels. Mycologia **102**(5):
 Stolz, C. 2019. The nestling diet of Svalbard snow buntings identified
 by DNA metabarcoding. Master’s thesis, The Arctic University of Norway.
 Available from <https://hdl.handle.net/10037/15438>.
+
+</div>
+
+<div id="ref-sun_systematics_2003">
+
+Sun, X., and Marshall, S.A. 2003. Systematics of *Phasia* Latreille
+(Diptera: Tachinidae). Zootaxa **276**(1): 1–320.
+doi:[10.11646/zootaxa.276.1.1](https://doi.org/10.11646/zootaxa.276.1.1).
 
 </div>
 
