@@ -12263,6 +12263,10 @@ River?). Identified as haplotype H91 by von Oheimb et
 al. ([2013](#ref-von_Oheimb_et_al_2013)), they did not assign this
 haplotype to a clade.
 
+*Gyraulus* sp. clade B TS-2018 is clade B from Saito et
+al. ([2018](#ref-saito_phylogeography_2018)), an entity with a
+distribution of the Palearctic and the Japanese Archipelago.
+
 ## Occurrence data in Arctos bulkloader format
 
 | collection\_object\_id | uuid                                 | guid\_prefix | cat\_num | Other\_Id\_Num\_Type\_1 | Other\_Id\_Num\_1 | enteredby | accn                                    | taxon\_name                | nature\_of\_id | id\_made\_by\_agent | made\_date | identification\_remarks                                                                                                                                                                                    | verbatim\_date    | began\_date | ended\_date | higher\_geog                                                  | spec\_locality                                                                                       | verbatim\_locality                                                                                          | orig\_lat\_long\_units | dec\_lat    | dec\_long     | datum                      | georeference\_source            | max\_error\_distance | max\_error\_units | georeference\_protocol          | Locality\_Remarks                                                                                             | collecting\_source | habitat                                               | specimen\_event\_type | collecting\_method                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | event\_assigned\_by\_agent | event\_assigned\_date | verificationstatus | Coll\_Event\_Remarks                                                                            | collector\_agent\_1 | collector\_role\_1 | collector\_agent\_2  | collector\_role\_2 | part\_name\_1   | part\_condition\_1     | part\_disposition\_1 | part\_lot\_count\_1 | Part\_Barcode\_1 |
@@ -13158,6 +13162,17 @@ Rowe, C.A., Lichvar, R.W., and Wolf, P.G. 2020. How many tree species of
 birch are in Alaska? Implications for wetland designations. Frontiers in
 Plant Science **11**: 750.
 doi:[10.3389/fpls.2020.00750](https://doi.org/10.3389/fpls.2020.00750).
+
+</div>
+
+<div id="ref-saito_phylogeography_2018">
+
+Saito, T., Hirano, T., Prozorova, L., Tu Do, V., Sulikowska-Drozd, A.,
+Sitnikova, T., Surenkhorloo, P., Yamazaki, D., Morii, Y., Kameda, Y.,
+Fukuda, H., and Chiba, S. 2018. Phylogeography of freshwater planorbid
+snails reveals diversification patterns in Eurasian continental islands.
+BMC Evolutionary Biology **18**: 164.
+doi:[10.1186/s12862-018-1273-3](https://doi.org/10.1186/s12862-018-1273-3).
 
 </div>
 
