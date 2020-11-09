@@ -223,13 +223,13 @@
       - [Thursday, November 5](#thursday-november-5)
       - [Saturday, November 6](#saturday-november-6)
       - [Monday, November 9](#monday-november-9)
+  - [Appendixes](#appendixes)
       - [Occurrence data in Arctos bulkloader
         format](#occurrence-data-in-arctos-bulkloader-format)
       - [LifeScanner vials with missing
         data](#lifescanner-vials-with-missing-data)
       - [Data for fungal specimens to be
         sequenced](#data-for-fungal-specimens-to-be-sequenced)
-  - [Appendixes](#appendixes)
   - [Bibliography](#bibliography)
 
 # January
@@ -5776,7 +5776,7 @@ checklist to move species from our old checklist to FWSpecies.
 
 I received a request to make my old bristletail key available, so I
 posted it as a preprint via ResearchGate (Bowser
-[2012](#ref-bowser_key_2012)).
+[2012](#ref-bowser_key_2012)[a](#ref-bowser_key_2012)).
 
 I was able to make a search to download the GBIF version of the lost
 data (GBIF.org
@@ -12296,12 +12296,13 @@ distiphallus. Most other specimens from our region have been identified
 as *Phasia aeneoventris*. Specimens
 [KNWR:Ento:7439](https://arctos.database.museum/guid/KNWR:Ento:7439)
 from the City of Kenai I had originally identified as *Phasia
-aeneoventris* ? in 2011. A molecular observation record from the Slikok
-project
+aeneoventris* ? in 2011 (Bowser
+[2012](#ref-bowser_lab_2012)[b](#ref-bowser_lab_2012)). A molecular
+observation record from the Slikok project
 [UAMObs:Ento:240173](https://arctos.database.museum/guid/UAMObs:Ento:240173)
 I had identified as *Phasia robertsonii*. It does match some sequences
 identified as *P. robertsonii*, but now I do not think I can say that it
-is P. robertsonii\* because there is really no clear separation between
+is *P. robertsonii* because there is really no clear separation between
 these species based on COI DNA barcode sequences. I updated the
 identification of this species to *Phasia aeneoventris* ? with the
 following identification remarks.
@@ -12315,6 +12316,8 @@ I removed *Phasia robertsonii* from the Refuge’s species list and added
 
 I updated the identification of the iNaturalist record above, including
 similar remarks.
+
+# Appendixes
 
 ## Occurrence data in Arctos bulkloader format
 
@@ -12432,8 +12435,6 @@ Survey](https://fundis.org/sequence/sequence/submit-tissue).
 | 58435560 | 2020-07-20   | mbowser     | https://www.inaturalist.org/observations/58435560 | https://static.inaturalist.org/photos/93294510/medium.jpeg?1599156890 | 2020-07-20-MLB01                                                                   | Kenai Peninsula Borough, AK, USA   | 60.469955     | \-150.358425     | Kenai Peninsula     | Alaska             | United States        | Morchella           | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          |                      |
 | 58435927 | 2020-07-20   | mbowser     | https://www.inaturalist.org/observations/58435927 | https://static.inaturalist.org/photos/93295093/medium.jpeg?1599157091 |                                                                                    | Kenai Peninsula Borough, AK, USA   | 60.46987      | \-150.3586616667 | Kenai Peninsula     | Alaska             | United States        | Morchella           | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          |                      |
 
-# Appendixes
-
 # Bibliography
 
 <div id="refs" class="references">
@@ -12542,9 +12543,16 @@ of Aquatic Plant Management **33**: 13–19. Available from
 
 <div id="ref-bowser_key_2012">
 
-Bowser, M.L. 2012. Key and checklist of the bristletails (Microcoryphia)
-of America north of Mexico. Soldotna, Alaska.
+Bowser, M.L. 2012a. Key and checklist of the bristletails
+(Microcoryphia) of America north of Mexico. Soldotna, Alaska.
 doi:[10.13140/RG.2.2.19142.22087](https://doi.org/10.13140/RG.2.2.19142.22087).
+
+</div>
+
+<div id="ref-bowser_lab_2012">
+
+Bowser, M.L. 2012b. Lab Notebook, March 11, 2011 - July 10, 2012.
+Available from <https://arctos.database.museum/publication/10006473>.
 
 </div>
 

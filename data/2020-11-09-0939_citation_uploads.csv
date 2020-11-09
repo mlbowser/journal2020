@@ -1,0 +1,7 @@
+guid,scientific_name,nature_of_id,made_date,type_status,publication_id,USE_EXISTING_ACCEPTED_ID,accepted_id_fg,use_pub_authors
+UAMObs:Ento:240173,Phasia aeneoventris ?,molecular,2020-11-09,referral,10009015,1,0,1
+KNWR:Inv:47,Dendrodrilus rubidus,molecular,2020-11-05,referral,10009015,1,0,1
+KNWR:Inv:49,Dendrodrilus parvus,molecular,2020-11-05,referral,10009015,1,0,1
+KNWR:Inv:50,Aporrectodea caliginosa,molecular,2020-11-05,referral,10009015,1,0,1
+KNWR:Inv:51,Aporrectodea caliginosa,molecular,2020-11-05,referral,10009015,1,0,1
+KNWR:Inv:52,Aporrectodea limicola,molecular,2020-11-05,referral,10009015,1,0,1
