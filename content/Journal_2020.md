@@ -12321,13 +12321,20 @@ The cecidomyiid I had collected from the pith of a spruce cone
 [64540260](https://www.inaturalist.org/observations/64540260)) may be
 *Kaltenbachiola rachiphaga* (Tripp, 1955). This species is known to feed
 in piths of white spruce cones (Werner [1964](#ref-werner_white_1964);
-Fedotova and Averenskij [2016](#ref-fedotova_synopsis_2016)). GBIF
-considers this to be a junior synonym of *Dasineura rachiphaga*, but I
-am not sure that this is correct. I requested more literature on this
-species and *Phytophaga carpophaga*, another species known from spruce
-cones in Alaska (Werner [1964](#ref-werner_white_1964)). A specimen
-identified as *Dasineura rachiphaga* was collected from Palmer
+Hedlin [1974](#ref-hedlin_cone_1974); Fedotova and Averenskij
+[2016](#ref-fedotova_synopsis_2016)). GBIF considers this to be a junior
+synonym of *Dasineura rachiphaga*, but I am not sure that this is
+correct. I requested more literature on this species and *Phytophaga
+carpophaga*, another species known from spruce cones in Alaska (Werner
+[1964](#ref-werner_white_1964)). A specimen identified as *Dasineura
+rachiphaga* was collected from Palmer
 ([UAMObs:Ento:33451](https://arctos.database.museum/guid/UAMObs:Ento:33451)).
+
+*Phytophaga carpophaga* is now *Strobilotia carpophaga*.
+
+Based on descriptions of larvae and damage in Hedlin
+([1974](#ref-hedlin_cone_1974)), this looks like *Kaltenbachiola
+rachiphaga*.
 
 ### Reed canarygrass committee meeting @ 13:00
 
@@ -12909,7 +12916,8 @@ doi:[10.1371/journal.pone.0220953](https://doi.org/10.1371/journal.pone.0220953)
 
 Hedlin, A.F. 1974. Cone and Seed Insects of British Columbia.
 Environment Canada, Forestry Service, Pacific Forest Research Centre,
-Victoria, British Columbia.
+Victoria, British Columbia. Available from
+<https://cfs.nrcan.gc.ca/publications?id=3955>.
 
 </div>
 
