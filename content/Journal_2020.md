@@ -221,13 +221,15 @@
   - [November](#november)
       - [Sunday, November 1](#sunday-november-1)
       - [Thursday, November 5](#thursday-november-5)
-  - [Appendixes](#appendixes)
+      - [Saturday, November 6](#saturday-november-6)
+      - [Monday, November 9](#monday-november-9)
       - [Occurrence data in Arctos bulkloader
         format](#occurrence-data-in-arctos-bulkloader-format)
       - [LifeScanner vials with missing
         data](#lifescanner-vials-with-missing-data)
       - [Data for fungal specimens to be
         sequenced](#data-for-fungal-specimens-to-be-sequenced)
+  - [Appendixes](#appendixes)
   - [Bibliography](#bibliography)
 
 # January
@@ -11287,9 +11289,10 @@ Invasive Species Partnership.
 I spent some time trying to figure out the best test for comparing the
 paired proportions of spruce samples from our 2015 grassland work.
 
-I examined a series of worm specimens from Fairbanks. Clitellum on
-segments 26-31, tubercula pubertatis on segments 29-30. This is
-*Bimastos rubidus*.
+I examined a series of worm specimens from Fairbanks
+([KNWR:Inv:57](https://arctos.database.museum/guid/KNWR:Inv:57)).
+Clitellum on segments 26-31, tubercula pubertatis on segments 29-30.
+This is *Bimastos rubidus*.
 
 I collected two wasps (BOLD-3NUO7C461 and BOLD-3NMISCHX9) and one fly
 (BOLD-3NUD6WCE4) from a yellow pan trap left out for a short time under
@@ -12161,14 +12164,104 @@ I formatted and posted articles from May 22–29.
 ## Thursday, November 5
 
 Examining a series of earthworms from Wasilla sent to me by Joey Slowik
-(KNWR:Inv:58). At first I see only one adult, medium sized, about 33 mm
-long or so. Prostomium tanylobic. Clitellum on 27–31 or 27–32.
-Tubercular pubertal is on 28–31. This is a small specimen of *Lumbricus
-rubellus*.
+([KNWR:Inv:58](https://arctos.database.museum/guid/KNWR:Inv:58)). At
+first I see only one adult, medium sized, about 33 mm long or so.
+Prostomium tanylobic. Clitellum on 27–31 or 27–32. Tubercular pubertal
+is on 28–31. This is a small specimen of *Lumbricus rubellus*.
 
 ### 10:00 Vogel Lake/Miller Creek Meeting
 
-# Appendixes
+I received LifeScanner identifications today.
+
+Specimen [KNWR:Inv:47](https://Arctos.Database.Museum/Guid/KNWR:Inv:47)
+is *Dendrodrilus rubidus*.
+
+We received no sequence for specimen
+[KNWR:Inv:48](https://Arctos.Database.Museum/Guid/KNWR:Inv:48).
+
+Specimen [KNWR:Inv:49](https://Arctos.Database.Museum/Guid/KNWR:Inv:49)
+is *Dendrodrilus parvus*.
+
+Specimen [KNWR:Inv:50](https://arctos.database.museum/Guid/KNWR:Inv:50)
+is *Aporrectodea caliginosa*.
+
+Specimen [KNWR:Inv:51](https://arctos.database.museum/Guid/KNWR:Inv:51)
+is *Aporrectodea caliginosa*.
+
+Specimen [KNWR:Inv:52](https://arctos.database.museum/Guid/KNWR:Inv:52)
+is *Aporrectodea limicola*.
+
+A cranefly larva from last winter (iNaturalist:
+[36630250](https://www.inaturalist.org/observations/36630250)) is
+*Prionocera unimicra*. I had observed adults in this same are in May,
+2017 (iNaturalist:
+[6222032](https://www.inaturalist.org/observations/6222032)).
+
+A lycosid spide I had observed last winter
+([36714592](https://www.inaturalist.org/observations/36714592)) was
+*Arctosa raptor*. I added this to the Refuge’s species list.
+
+A larva I had collected from a spruce cone on [February
+5](#wednesday-february-5) (vial BOLD-268) is \[Cecidomyiidae sp.
+BOLD:ACC6822\]
+(http://boldsystems.org/index.php/Public\_BarcodeCluster?clusteruri=BOLD:ACC6822).
+
+A fly I had collected at Sucker Creek on September 10 (BOLD-8D9) is
+*Eukiefferiella claripennis*.
+
+## Saturday, November 6
+
+A fly collected from within a house (iNaturalist:
+[41528440](https://www.inaturalist.org/observations/41528440)) is
+*Bradysia ocellaris*. This is a cosmopolitan pest of greenhouses that
+can damage plants according to Broadley et
+al. ([2018](#ref-Broadley_et_al_2018)). This may be the first report of
+*B. ocellaris* from Alaska.
+
+A fly larva collected from a seep near the Kasilof River on [April
+4](#saturday-april-4) (iNaturalist:
+[41531388](https://www.inaturalist.org/observations/41531388)) is
+[Limoniidae sp.
+BOLD:ACR8073](http://boldsystems.org/index.php/Public_BarcodeCluster?clusteruri=BOLD:ACR8073).
+It is a 100% match with three specimens from the Yukon, but these have
+not been identified beyond family level.
+
+A larva collected from a volunteering *Brassica* sp. leaf in a high
+tunnel on June 10 in Kasilof was identified as *Rhigognostis
+interrupta*. I did not find out much about this species’ biology.
+
+## Monday, November 9
+
+I looked through some more LifeScanner identification results.
+
+Aphids observed on [June 12](#friday-june-12) (iNaturalist:
+[50057105](https://www.inaturalist.org/observations/50057105)) on *Salix
+bebbiana* are *Aphis farinosa*. I added this species to the Refuge’s
+checklist.
+
+A larva observed on [June 12](#friday-june-12) (iNaturalist:
+[50823985](https://www.inaturalist.org/observations/50823985)) was
+identified *Acilius semisulcatus*. This species had been on the Refuge’s
+checklist, but it had lacked evidence.
+
+A sequence from a minute wasp (iNaturalist:
+[50806246](https://www.inaturalist.org/observations/50806246)) was 98%
+similar to a sequence of a pteromalid on BOLD (BIN
+[BOLD:ACM1005](http://boldsystems.org/index.php/Public_BarcodeCluster?clusteruri=BOLD:ACM1005)).
+
+A snail from Vogel Lake (iNaturalist:
+[56859573](https://www.inaturalist.org/observations/56859573)) is genus
+*Gyraulus*. Its sequence is closest to sequences of specimens from
+Russia and Mongolia. These are labeled on BOLD and GenBank as *Gyraulus*
+sp. 17106 or *Gyraulus* sp. clade B TS-2018. These are in BIN
+[BOLD:ACQ2739](http://boldsystems.org/index.php/Public_BarcodeCluster?clusteruri=BOLD:ACQ2739).
+
+The GenBank sequence labeled as *Gyraulus* sp. 17106 is GenBank
+accession [KC495834](https://www.ncbi.nlm.nih.gov/nucleotide/KC495834).
+This specimen came from Russia, Irkutsk Oblast, Angara (maybe the Angara
+River?). Identified as haplotype H91 by von Oheimb et
+al. ([2013](#ref-von_Oheimb_et_al_2013)), they did not assign this
+haplotype to a clade.
 
 ## Occurrence data in Arctos bulkloader format
 
@@ -12285,6 +12378,8 @@ Survey](https://fundis.org/sequence/sequence/submit-tissue).
 | 57686894 | 2020-08-26   | mbowser     | https://www.inaturalist.org/observations/57686894 | https://static.inaturalist.org/photos/92038251/medium.jpeg?1598483892 |                                                                                    | Kenai Peninsula Borough, AK, USA   | 60.4649783333 | \-151.0730483333 | Kenai Peninsula     | Alaska             | United States        | Agaricus            | Basidiomycota       | Agaricomycetes     | Agaricales         | Agaricaceae         | Agaricus           |                      |
 | 58435560 | 2020-07-20   | mbowser     | https://www.inaturalist.org/observations/58435560 | https://static.inaturalist.org/photos/93294510/medium.jpeg?1599156890 | 2020-07-20-MLB01                                                                   | Kenai Peninsula Borough, AK, USA   | 60.469955     | \-150.358425     | Kenai Peninsula     | Alaska             | United States        | Morchella           | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          |                      |
 | 58435927 | 2020-07-20   | mbowser     | https://www.inaturalist.org/observations/58435927 | https://static.inaturalist.org/photos/93295093/medium.jpeg?1599157091 |                                                                                    | Kenai Peninsula Borough, AK, USA   | 60.46987      | \-150.3586616667 | Kenai Peninsula     | Alaska             | United States        | Morchella           | Ascomycota          | Pezizomycetes      | Pezizales          | Morchellaceae       | Morchella          |                      |
+
+# Appendixes
 
 # Bibliography
 
@@ -12479,6 +12574,16 @@ Steinke, D., Ratnasingham, S., Waard, J.R. de, Sones, J.E., Zakharov,
 E.V., and Hebert, P.D.N. 2019. Metabarcoding a diverse arthropod mock
 community. Molecular Ecology Resources **19**(3): 711–727.
 doi:[10.1111/1755-0998.13008](https://doi.org/10.1111/1755-0998.13008).
+
+</div>
+
+<div id="ref-Broadley_et_al_2018">
+
+Broadley, A., Kauschke, E., and Mohrig, W. 2018. Black fungus gnats
+(diptera: Sciaridae) found in association with cultivated plants and
+mushrooms in australia, with notes on cosmopolitan pest species and
+biosecurity interceptions. Zootaxa **4415**(2): 201–242.
+doi:[10.11646/zootaxa.4415.2.1](https://doi.org/10.11646/zootaxa.4415.2.1).
 
 </div>
 
@@ -12951,6 +13056,16 @@ doi:[10.1139/z02-027](https://doi.org/10.1139/z02-027).
 NOAA Fisheries. 2019. Beluga whale – cook inlet dps critical habitat.
 Available from
 <https://www.fisheries.noaa.gov/resource/map/beluga-whale-cook-inlet-dps-critical-habitat>.
+
+</div>
+
+<div id="ref-von_Oheimb_et_al_2013">
+
+Oheimb, P.V. von, Albrecht, C., Riedel, F., Bössneck, U., Zhang, H., and
+Wilke, T. 2013. Testing the role of the Himalaya Mountains as a
+dispersal barrier in freshwater gastropods (*Gyraulus* spp.). Biological
+Journal of the Linnean Society **109**(3): 526–534.
+doi:[10.1111/bij.12068](https://doi.org/10.1111/bij.12068).
 
 </div>
 
