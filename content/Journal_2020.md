@@ -12202,9 +12202,8 @@ A lycosid spide I had observed last winter
 *Arctosa raptor*. I added this to the Refuge’s species list.
 
 A larva I had collected from a spruce cone on [February
-5](#wednesday-february-5) (vial BOLD-268) is \[Cecidomyiidae sp.
-BOLD:ACC6822\]
-(http://boldsystems.org/index.php/Public\_BarcodeCluster?clusteruri=BOLD:ACC6822).
+5](#wednesday-february-5) (vial BOLD-268) is [Cecidomyiidae sp.
+BOLD:ACC6822](http://boldsystems.org/index.php/Public_BarcodeCluster?clusteruri=BOLD:ACC6822).
 
 A fly I had collected at Sucker Creek on September 10 (BOLD-8D9) is
 *Eukiefferiella claripennis*.
@@ -12316,6 +12315,21 @@ I removed *Phasia robertsonii* from the Refuge’s species list and added
 
 I updated the identification of the iNaturalist record above, including
 similar remarks.
+
+The cecidomyiid I had collected from the pith of a spruce cone
+(iNaturalist:
+[64540260](https://www.inaturalist.org/observations/64540260)) may be
+*Kaltenbachiola rachiphaga* (Tripp, 1955). This species is known to feed
+in piths of white spruce cones (Werner [1964](#ref-werner_white_1964);
+Fedotova and Averenskij [2016](#ref-fedotova_synopsis_2016)). GBIF
+considers this to be a junior synonym of *Dasineura rachiphaga*, but I
+am not sure that this is correct. I requested more literature on this
+species and *Phytophaga carpophaga*, another species known from spruce
+cones in Alaska (Werner [1964](#ref-werner_white_1964)). A specimen
+identified as *Dasineura rachiphaga* was collected from Palmer
+([UAMObs:Ento:33451](https://arctos.database.museum/guid/UAMObs:Ento:33451)).
+
+### Reed canarygrass committee meeting @ 13:00
 
 # Appendixes
 
@@ -12711,6 +12725,17 @@ Drake, C.J., and Lattin, J.D. 1963. American species of the lacebug
 genus *Acalypta* (Hemiptera: Tingidae). Proceedings of the United States
 National Museum **115**(3486): 331–345 +15 plates.
 doi:[10.5479/si.00963801.115-3486.331](https://doi.org/10.5479/si.00963801.115-3486.331).
+
+</div>
+
+<div id="ref-fedotova_synopsis_2016">
+
+Fedotova, Z.A., and Averenskij, A.I. 2016. A synopsis of gall midges
+associated with conifers, with description of a new species of the genus
+*Kaltenbachiola* Hedicke (Diptera, Cecidomyiidae: Lasiopterinae) from
+Yakutia, damaging cones of the Siberian spruce (*Picea* *obovata*).
+Entomological Review **96**(6): 753–774.
+doi:[10.1134/S0013873816060075](https://doi.org/10.1134/S0013873816060075).
 
 </div>
 
@@ -13411,6 +13436,14 @@ Wang, W., Wu, Y., Yan, Y., Ermakova, M., Kerstetter, R., and Messing, J.
 2010. DNA barcoding of the Lemnaceae, a family of aquatic monocots. BMC
 Plant Biology **10**(1): 205.
 doi:[10.1186/1471-2229-10-205](https://doi.org/10.1186/1471-2229-10-205).
+
+</div>
+
+<div id="ref-werner_white_1964">
+
+Werner, R.A. 1964. White spruce seed loss caused by insects in Interior
+Alaska. The Canadian Entomologist **96**(11): 1462–1464.
+doi:[10.4039/Ent961462-11](https://doi.org/10.4039/Ent961462-11).
 
 </div>
 
