@@ -223,6 +223,7 @@
       - [Thursday, November 5](#thursday-november-5)
       - [Saturday, November 6](#saturday-november-6)
       - [Monday, November 9](#monday-november-9)
+      - [Tuesday, November 10](#tuesday-november-10)
   - [Appendixes](#appendixes)
       - [Occurrence data in Arctos bulkloader
         format](#occurrence-data-in-arctos-bulkloader-format)
@@ -12338,6 +12339,20 @@ rachiphaga*.
 
 ### Reed canarygrass committee meeting @ 13:00
 
+## Tuesday, November 10
+
+To do:
+
+  - Posts requested by John
+  - Review Jake’s *Refuge Notebook* article.
+  - Edit this week’s *Refuge Notebook* article.
+  - *Refuge Notebook* catch-up.
+
+I received a copy of Tripp ([1955](#ref-tripp_descriptions_1955)) via
+ARLIS. The cecidomyiid I had collected from a spruce cone yesterday is
+consistent with Tripp’s description of *Kaltenbachiola rachiphaga* (as
+*Dasyneura rachiphaga*).
+
 # Appendixes
 
 ## Occurrence data in Arctos bulkloader format
@@ -13381,6 +13396,14 @@ Available from <https://hdl.handle.net/10037/15438>.
 Sun, X., and Marshall, S.A. 2003. Systematics of *Phasia* Latreille
 (Diptera: Tachinidae). Zootaxa **276**(1): 1–320.
 doi:[10.11646/zootaxa.276.1.1](https://doi.org/10.11646/zootaxa.276.1.1).
+
+</div>
+
+<div id="ref-tripp_descriptions_1955">
+
+Tripp, H.A. 1955. Descriptions and habits of Cecidomyiidae (Diptera)
+from white spruce cones. The Canadian Entomologist **87**(6): 253–263.
+doi:[10.4039/Ent87253-6](https://doi.org/10.4039/Ent87253-6).
 
 </div>
 
