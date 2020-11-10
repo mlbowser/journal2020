@@ -12344,14 +12344,24 @@ rachiphaga*.
 To do:
 
   - Posts requested by John
-  - Review Jake’s *Refuge Notebook* article.
+  - ~~Review Jake’s *Refuge Notebook* article.~~
   - Edit this week’s *Refuge Notebook* article.
   - *Refuge Notebook* catch-up.
 
 I received a copy of Tripp ([1955](#ref-tripp_descriptions_1955)) via
 ARLIS. The cecidomyiid I had collected from a spruce cone yesterday is
 consistent with Tripp’s description of *Kaltenbachiola rachiphaga* (as
-*Dasyneura rachiphaga*).
+*Dasyneura rachiphaga*). I also received a copy of Prévost
+([1990](#ref-prevost_spruce_1990)). These descriptions are also
+consistent with the gall midge I had collected. I added *Kaltenbachiola
+rachiphaga* to the Refuge’s species list.
+
+I edited Jake’s *Refuge Notebook* article.
+
+### Biology staff meeting at 09:00
+
+  - Will work with Ben on MRDG for reed canarygrass at Sucker Lake.
+  - Need to talk with Leah and Steve about transition to new website.
 
 # Appendixes
 
@@ -13248,6 +13258,15 @@ doi:[10.1016/j.apsoil.2017.11.001](https://doi.org/10.1016/j.apsoil.2017.11.001)
 Pratt, G.K., and Pratt, H.D. 1980. Notes on Nearctic *Sylvicola*
 (Diptera: Anisopodidae). Proceedings of the Entomological Society of
 Washington **82**: 86–98.
+
+</div>
+
+<div id="ref-prevost_spruce_1990">
+
+Prévost, Y.H. 1990. Spruce cone axis mide, *Dasineura* *rachiphaga*
+Tripp (Diptera: Cecidomyiidae), in cones of black spruce, *Picea
+mariana* (Mill.) B.S.P. The Canadian Entomologist **122**(3): 441–447.
+doi:[10.4039/Ent122441-5](https://doi.org/10.4039/Ent122441-5).
 
 </div>
 
