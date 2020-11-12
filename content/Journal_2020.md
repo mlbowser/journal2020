@@ -12381,14 +12381,19 @@ To do:
 
   - Start occupancy manuscript and analysis.
   - ~~Post Biology News entery for John.~~
-  - Update Bio literature entries.
+  - ~~Update Bio literature entries.~~
 
 I updated [*Biology
 News*](https://www.fws.gov/refuge/Kenai/what_we_do/science/biology-news.html)
 as requested by John. I added Krebs et
-al. ([2013](#ref-krebs_synchrony_2013)) and Thompson et
-al. ([2020](#ref-thompson_responding_2020)) to our [Publications
+al. ([2013](#ref-krebs_synchrony_2013)), Bowser et
+al. ([2020](#ref-bowser_et_al_2020)), Bowser and Bowser
+([2020](#ref-BowserBowser2020)[b](#ref-BowserBowser2020)), and Thompson
+et al. ([2020](#ref-thompson_responding_2020)) to our [Publications
 Bibliography](https://www.fws.gov/refuge/Kenai/what_we_do/science/bibliography.html).
+
+I uploaded the snowshoe hare dataset to ServCat (Canterbury et al.
+[2020](#ref-canterbury_kenai_2020)).
 
 # Appendixes
 
@@ -12673,10 +12678,10 @@ doi:[10.5281/zenodo.3731327](https://doi.org/10.5281/zenodo.3731327).
 <div id="ref-BowserBowser2020">
 
 Bowser, M.L., and Bowser, A.M. 2020b. A pilot study examining the diet
-of introduced alaska blackfish (*Dallia pectoralis* t. H. Bean, 1880) in
-kenai, alaska, by metabarcoding. Newsletter of the Alaska Entomological
-Society **13**(1): 19–25.
-doi:[10.7299/X78052XK](https://doi.org/10.7299/X78052XK).
+of introduced Alaska blackfish (*Dallia pectoralis* T. H. Bean, 1880) in
+Kenai, Alaska, by metabarcoding. Newsletter of the Alaska Entomological
+Society **13**(1): 19–25. Available from
+<http://www.akentsoc.org/doc/AKES_newsletter_2020_n1_a07.pdf>.
 
 </div>
 
@@ -12695,7 +12700,7 @@ doi:[10.7299/X7833SBX](https://doi.org/10.7299/X7833SBX).
 Bowser, M.L., Brassfield, R., Dziergowski, A., Eskelin, T., Hester, J.,
 Magness, D.R., McInnis, M., Melvin, T., Morton, J.M., and Stone, J.
 2020. Towards conserving natural diversity: A biotic inventory by
-observations, specimens, dna barcoding and high-throughput sequencing
+observations, specimens, DNA barcoding and high-throughput sequencing
 methods. Biodiversity Data Journal **8**: e50124. Pensoft Publishers.
 doi:[10.3897/BDJ.8.e50124](https://doi.org/10.3897/BDJ.8.e50124).
 
@@ -12727,6 +12732,15 @@ Buckley, J.L. 1954. Animal population fluctuations in Alaska–a history.
 *In* Transactions of the Nineteenth North American Wildlife Conference,
 March 8, 9, and 10, 1954. Wildlife Management Institute, Washington,
 D.C. pp. 338–357.
+
+</div>
+
+<div id="ref-canterbury_kenai_2020">
+
+Canterbury, C.J., Bowser, M.L., and Laker, M. 2020. Kenai National
+Wildlife Refuge Snowshoe Hare Grid Surveys. 1983-2020. U.S. Fish &
+Wildlife Service, Kenai National Wildlife Refuge, Soldotna, Alaska.
+Available from <https://ecos.fws.gov/ServCat/Reference/Profile/125430>.
 
 </div>
 
