@@ -224,6 +224,8 @@
       - [Saturday, November 6](#saturday-november-6)
       - [Monday, November 9](#monday-november-9)
       - [Tuesday, November 10](#tuesday-november-10)
+      - [Wednesday, November 11](#wednesday-november-11)
+      - [Thursday, November 12](#thursday-november-12)
   - [Appendixes](#appendixes)
       - [Occurrence data in Arctos bulkloader
         format](#occurrence-data-in-arctos-bulkloader-format)
@@ -12345,7 +12347,7 @@ To do:
 
   - Posts requested by John
   - ~~Review Jake’s *Refuge Notebook* article.~~
-  - Edit this week’s *Refuge Notebook* article.
+  - \~\~Edit this week’s *Refuge Notebook* article.
   - *Refuge Notebook* catch-up.
 
 I received a copy of Tripp ([1955](#ref-tripp_descriptions_1955)) via
@@ -12362,6 +12364,31 @@ I edited Jake’s *Refuge Notebook* article.
 
   - Will work with Ben on MRDG for reed canarygrass at Sucker Lake.
   - Need to talk with Leah and Steve about transition to new website.
+
+I edited this week’s *Refuge Notebook* article.
+
+I started working on ways to make archived and future *Refuge Notebook*
+articles (and other pdf files) more Section 508 compliant.
+
+## Wednesday, November 11
+
+I finished editing and sent to the *Clarion* this week’s *Refuge
+Notebook* article.
+
+## Thursday, November 12
+
+To do:
+
+  - Start occupancy manuscript and analysis.
+  - ~~Post Biology News entery for John.~~
+  - Update Bio literature entries.
+
+I updated [*Biology
+News*](https://www.fws.gov/refuge/Kenai/what_we_do/science/biology-news.html)
+as requested by John. I added Krebs et
+al. ([2013](#ref-krebs_synchrony_2013)) and Thompson et
+al. ([2020](#ref-thompson_responding_2020)) to our [Publications
+Bibliography](https://www.fws.gov/refuge/Kenai/what_we_do/science/bibliography.html).
 
 # Appendixes
 
@@ -13054,6 +13081,18 @@ doi:[10.1139/z87-087](https://doi.org/10.1139/z87-087).
 
 </div>
 
+<div id="ref-krebs_synchrony_2013">
+
+Krebs, C.J., Kielland, K., Bryant, J., O’Donoghue, M., Doyle, F.,
+McIntyre, C., DiFolco, D., Berg, N., Carriere, S., Boonstra, R., Boutin,
+S., Kenney, A.J., Reid, D.G., Bodony, K., Putera, J., Timm, H.K., and
+Burke, T. 2013. Synchrony in the snowshoe hare (*Lepus americanus*)
+cycle in northwestern North America, 1970–2012. Canadian Journal of
+Zoology **91**(8): 562–572.
+doi:[10.1139/cjz-2013-0012](https://doi.org/10.1139/cjz-2013-0012).
+
+</div>
+
 <div id="ref-landolt_morphological_1975">
 
 Landolt, E. 1975. Morphological differentiation and geographical
@@ -13415,6 +13454,17 @@ Available from <https://hdl.handle.net/10037/15438>.
 Sun, X., and Marshall, S.A. 2003. Systematics of *Phasia* Latreille
 (Diptera: Tachinidae). Zootaxa **276**(1): 1–320.
 doi:[10.11646/zootaxa.276.1.1](https://doi.org/10.11646/zootaxa.276.1.1).
+
+</div>
+
+<div id="ref-thompson_responding_2020">
+
+Thompson, L.M., Lynch, A.J., Beever, E.A., Engman, A.C., Falke, J.A.,
+Jackson, S.T., Krabbenhoft, T.J., Lawrence, D.J., Limpinsel, D., Magill,
+R.T., Melvin, T.A., Morton, J.M., Newman, R.A., Peterson, J.O., Porath,
+M.T., Rahel, F.J., Sethi, S.A., and Wilkening, J.L. 2020. Responding to
+ecosystem transformation: Resist, accept, or direct? Fisheries.
+doi:[10.1002/fsh.10506](https://doi.org/10.1002/fsh.10506).
 
 </div>
 
