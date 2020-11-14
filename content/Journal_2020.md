@@ -226,6 +226,7 @@
       - [Tuesday, November 10](#tuesday-november-10)
       - [Wednesday, November 11](#wednesday-november-11)
       - [Thursday, November 12](#thursday-november-12)
+      - [Friday, November 13](#friday-november-13)
   - [Appendixes](#appendixes)
       - [Occurrence data in Arctos bulkloader
         format](#occurrence-data-in-arctos-bulkloader-format)
@@ -13405,6 +13406,12 @@ I downloaded the 2375 occurrences (saved search URI:
 I started a file structure and manuscript for this work using the
 recommended file structure of Alaska Region Data Stewardship Team
 ([2019](#ref-ak_region_data_stewardship_team_alaska_2020)[a](#ref-ak_region_data_stewardship_team_alaska_2020)).
+
+## Friday, November 13
+
+I worked on writing an introduction for a paper on occupancy modeling
+from the Slikok project and initiated a repository on GitHub for it
+(<https://github.com/mlbowser/HTSocc>).
 
 # Appendixes
 
