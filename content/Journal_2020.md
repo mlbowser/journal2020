@@ -1,247 +1,41 @@
   - [January](#january)
-      - [Thursday, January 2](#thursday-january-2)
-      - [Friday, January 3](#friday-january-3)
-      - [Monday, January 6](#monday-january-6)
-      - [Tuesday, January 7](#tuesday-january-7)
-      - [Wedesday, January 8](#wedesday-january-8)
-      - [Thursday, January 9](#thursday-january-9)
-      - [Friday, January 10](#friday-january-10)
-      - [Monday, January 13](#monday-january-13)
-      - [Tuesday, January 14](#tuesday-january-14)
-      - [Wednesday, January 15](#wednesday-january-15)
-      - [Thursday, January 16](#thursday-january-16)
-      - [Friday, January 17](#friday-january-17)
-      - [Monday, January 20](#monday-january-20)
-      - [Tuesday, January 21](#tuesday-january-21)
-      - [Wednesday, January 22](#wednesday-january-22)
-      - [Thursday, January 23](#thursday-january-23)
-      - [Friday, January 24](#friday-january-24)
-      - [Monday, January 27](#monday-january-27)
-      - [Tuesday, January 28](#tuesday-january-28)
-      - [Wednesday, January 29](#wednesday-january-29)
-      - [Thursday, January 30](#thursday-january-30)
-      - [Friday, January 31](#friday-january-31)
   - [February](#february)
-      - [Monday, February 3](#monday-february-3)
-      - [Tuesday, February 4](#tuesday-february-4)
-      - [Wednesday, February 5](#wednesday-february-5)
-      - [Thursday, February 6](#thursday-february-6)
-      - [Friday, February 7](#friday-february-7)
-      - [Saturday, February 8](#saturday-february-8)
-      - [Monday, February 10](#monday-february-10)
-      - [Tuesday, February 11](#tuesday-february-11)
-      - [Wednesday, February 12](#wednesday-february-12)
-      - [Thursday, February 13](#thursday-february-13)
-      - [Friday, February 14](#friday-february-14)
-      - [Monday, February 17](#monday-february-17)
-      - [Tuesday, February 18](#tuesday-february-18)
-      - [Wednesday, February 19](#wednesday-february-19)
-      - [Thursday, February 20](#thursday-february-20)
-      - [Friday, February 21](#friday-february-21)
-      - [Monday, February 24](#monday-february-24)
-      - [Tuesday, February 25](#tuesday-february-25)
-      - [Wednesday, February 26](#wednesday-february-26)
-      - [Thursday, February 27](#thursday-february-27)
-      - [Friday, February 28](#friday-february-28)
   - [March](#march)
-      - [Monday, March 2](#monday-march-2)
-      - [Tuesday, March 3](#tuesday-march-3)
-      - [Wednesday, March 4](#wednesday-march-4)
-      - [Thursday, March 5](#thursday-march-5)
-      - [Friday, March 6](#friday-march-6)
-      - [Sunday, March 8](#sunday-march-8)
-      - [Monday, March 9](#monday-march-9)
-      - [Tuesday, March 10](#tuesday-march-10)
-      - [Thursday, March 12](#thursday-march-12)
-      - [Friday, March 13](#friday-march-13)
-      - [Sunday, March 15](#sunday-march-15)
-      - [Monday, March 16](#monday-march-16)
-      - [Tuesday, March 17](#tuesday-march-17)
-      - [Wednesday, March 18](#wednesday-march-18)
-      - [Thursday, March 19](#thursday-march-19)
-      - [Friday, March 20](#friday-march-20)
-      - [Saturday, March 21](#saturday-march-21)
-      - [Monday, March 23](#monday-march-23)
-      - [Tuesday, March 24](#tuesday-march-24)
-      - [Wednesday, March 25](#wednesday-march-25)
-      - [Thursday, March 26](#thursday-march-26)
-      - [Friday, March 27](#friday-march-27)
-      - [Saturday, March 28](#saturday-march-28)
-      - [Sunday, March 29](#sunday-march-29)
-      - [Monday, March 30](#monday-march-30)
-      - [Tuesday, March 31](#tuesday-march-31)
   - [April](#april)
-      - [Wednesday, April 1](#wednesday-april-1)
-      - [Thursday, April 2](#thursday-april-2)
-      - [Friday, April 3](#friday-april-3)
-      - [Saturday, April 4](#saturday-april-4)
-      - [Monday, April 6](#monday-april-6)
-      - [Tuesday, April 7](#tuesday-april-7)
-      - [Wednesday, April 8](#wednesday-april-8)
-      - [Thursday, April 9](#thursday-april-9)
-      - [Friday, April 10](#friday-april-10)
-      - [Saturday, April 11](#saturday-april-11)
-      - [Monday, April 13](#monday-april-13)
-      - [Tuesday, April 14](#tuesday-april-14)
-      - [Wednesday, April 15](#wednesday-april-15)
-      - [Thursday, April 16](#thursday-april-16)
-      - [Friday, April 17](#friday-april-17)
-      - [Monday, April 20](#monday-april-20)
-      - [Tuesday, April 21](#tuesday-april-21)
-      - [Wednesday, April 22](#wednesday-april-22)
-      - [Thursday, April 23](#thursday-april-23)
-      - [Friday, April 24](#friday-april-24)
-      - [Saturday, April 25](#saturday-april-25)
-      - [Monday, April 27](#monday-april-27)
-      - [Tuesday, April 28](#tuesday-april-28)
-      - [Wednesday, April 29](#wednesday-april-29)
-      - [Thursday, April 30](#thursday-april-30)
   - [May](#may)
-      - [Friday, May 1](#friday-may-1)
-      - [Monday, May 4](#monday-may-4)
-      - [Tuesday, May 5](#tuesday-may-5)
-      - [Wednesday, May 6](#wednesday-may-6)
-      - [Thursday, May 7](#thursday-may-7)
-      - [Friday, May 8](#friday-may-8)
-      - [Monday, May 11](#monday-may-11)
-      - [Tuesday, May 12](#tuesday-may-12)
-      - [Wednesday, May 13](#wednesday-may-13)
-      - [Thursday, May 14](#thursday-may-14)
-      - [Friday, May 15](#friday-may-15)
-      - [Saturday, May 16](#saturday-may-16)
-      - [Sunday, May 17](#sunday-may-17)
-      - [Monday, May 18](#monday-may-18)
-      - [Tuesday, May 19](#tuesday-may-19)
-      - [Wednesday, May 20](#wednesday-may-20)
-      - [Thursday, May 21](#thursday-may-21)
-      - [Tuesday, May 26](#tuesday-may-26)
-      - [Wednesday, May 27](#wednesday-may-27)
-      - [Thursday, May 28](#thursday-may-28)
-      - [Friday, May 29](#friday-may-29)
   - [June](#june)
-      - [Monday, June 1](#monday-june-1)
-      - [Tuesday, June 2](#tuesday-june-2)
-      - [Wednesday, June 3](#wednesday-june-3)
-      - [Thursday, June 4](#thursday-june-4)
-      - [Friday, June 5](#friday-june-5)
-      - [Monday, June 8](#monday-june-8)
-      - [Tuesday, June 9](#tuesday-june-9)
-      - [Wednesday, June 10](#wednesday-june-10)
-      - [Thursday, June 11](#thursday-june-11)
-      - [Friday, June 12](#friday-june-12)
-      - [Tuesday, June 16](#tuesday-june-16)
-      - [Wednesday, June 17](#wednesday-june-17)
-      - [Thursday, June 18](#thursday-june-18)
-      - [Friday, June 19](#friday-june-19)
-      - [Monday, June 22](#monday-june-22)
-      - [Tuesday, June 23](#tuesday-june-23)
-      - [Wednesday, June 24](#wednesday-june-24)
-      - [Thursday, June 25](#thursday-june-25)
-      - [Friday, June 26](#friday-june-26)
-      - [Monday, June 29](#monday-june-29)
-      - [Tuesday, June 30](#tuesday-june-30)
   - [July](#july)
-      - [Wednesday, July 1](#wednesday-july-1)
-      - [Thursday, July 2](#thursday-july-2)
-      - [Monday, July 6](#monday-july-6)
-      - [Tuesday, July 7](#tuesday-july-7)
-      - [Wednesday, July 8](#wednesday-july-8)
-      - [Thursday, July 9](#thursday-july-9)
-      - [Friday, July 10](#friday-july-10)
-      - [Sunday, July 12](#sunday-july-12)
-      - [Monday, July 13](#monday-july-13)
-      - [Tuesday, July 14](#tuesday-july-14)
-      - [Wednesday, July 15](#wednesday-july-15)
-      - [Thursday, July 16](#thursday-july-16)
-      - [Monday, July 20](#monday-july-20)
-      - [Tuesday, July 21](#tuesday-july-21)
-      - [Wednesday, July 22](#wednesday-july-22)
-      - [Thursday, July 23](#thursday-july-23)
-      - [Friday, July 24](#friday-july-24)
-      - [Monday, July 27](#monday-july-27)
-      - [Tuesday, July 28](#tuesday-july-28)
-      - [Wednesday, July 29](#wednesday-july-29)
   - [August](#august)
-      - [Monday, August 3](#monday-august-3)
-      - [Tuesday, August 4](#tuesday-august-4)
-      - [Wednesday, August 5](#wednesday-august-5)
-      - [Thursday, August 6](#thursday-august-6)
-      - [Friday, August 7](#friday-august-7)
-      - [Monday, August 10](#monday-august-10)
-      - [Tuesday, August 11](#tuesday-august-11)
-      - [Wednesday, August 12](#wednesday-august-12)
-      - [Thursday, August 13](#thursday-august-13)
-      - [Friday, August 14](#friday-august-14)
-      - [Monday, August 17](#monday-august-17)
-      - [Tuesday, August 18](#tuesday-august-18)
-      - [Wedneday, August 19](#wedneday-august-19)
-      - [Thursday, August 20](#thursday-august-20)
-      - [Monday, August 24](#monday-august-24)
-      - [Tuesday, August 25](#tuesday-august-25)
-      - [Wednesday, August 26](#wednesday-august-26)
-      - [Thursday, August 27](#thursday-august-27)
-      - [Monday, August 31](#monday-august-31)
   - [September](#september)
-      - [Tuesday, September 1](#tuesday-september-1)
-      - [Wednesday, September 2](#wednesday-september-2)
-      - [Thursday, September 3](#thursday-september-3)
-      - [Monday, September 8](#monday-september-8)
-      - [Wednesday, September 9](#wednesday-september-9)
-      - [Thursday, September 10](#thursday-september-10)
-      - [Friday, September 11](#friday-september-11)
-      - [Monday, September 14](#monday-september-14)
-      - [Tuesday, September 15](#tuesday-september-15)
-      - [Wednesday, September 16](#wednesday-september-16)
-      - [Thursday, September 17](#thursday-september-17)
-      - [Friday, September 18](#friday-september-18)
-      - [Monday, September 21](#monday-september-21)
-      - [Tuesday, September 22](#tuesday-september-22)
-      - [Wednesday, September 23](#wednesday-september-23)
-      - [Thursday, September 24](#thursday-september-24)
-      - [Monday, September 28](#monday-september-28)
-      - [Tuesday, September 29](#tuesday-september-29)
-      - [Wednesday, September 30](#wednesday-september-30)
   - [October](#october)
-      - [Thursday, October 1](#thursday-october-1)
-      - [Friday, October 2](#friday-october-2)
-      - [Monday, October 5](#monday-october-5)
-      - [Tuesday, October 6](#tuesday-october-6)
-      - [Wednesday, October 7](#wednesday-october-7)
-      - [Thursday, October 8](#thursday-october-8)
-      - [Friday, October 9](#friday-october-9)
-      - [Tuesday, October 13](#tuesday-october-13)
-      - [Wednesday, October 14](#wednesday-october-14)
-      - [Thursday, October 15](#thursday-october-15)
-      - [Friday, October 16](#friday-october-16)
-      - [Monday, October 19](#monday-october-19)
-      - [Monday, October 26](#monday-october-26)
-      - [Tuesday, October 27](#tuesday-october-27)
-      - [Friday, October 30](#friday-october-30)
-      - [Saturday, October 31](#saturday-october-31)
   - [November](#november)
-      - [Sunday, November 1](#sunday-november-1)
-      - [Thursday, November 5](#thursday-november-5)
-      - [Saturday, November 6](#saturday-november-6)
-      - [Monday, November 9](#monday-november-9)
-      - [Tuesday, November 10](#tuesday-november-10)
-      - [Wednesday, November 11](#wednesday-november-11)
-      - [Thursday, November 12](#thursday-november-12)
-      - [Friday, November 13](#friday-november-13)
-      - [Monday, November 16](#monday-november-16)
-      - [Tuesday, November 17](#tuesday-november-17)
-      - [Wednesday, November 18](#wednesday-november-18)
-      - [Thursday, November 19](#thursday-november-19)
-      - [Friday, November 20](#friday-november-20)
   - [Appendixes](#appendixes)
-      - [Occurrence data in Arctos bulkloader
-        format](#occurrence-data-in-arctos-bulkloader-format)
-      - [LifeScanner vials with missing
-        data](#lifescanner-vials-with-missing-data)
-      - [Data for fungal specimens to be
-        sequenced](#data-for-fungal-specimens-to-be-sequenced)
   - [Bibliography](#bibliography)
 
 # January
+
+  - [Thursday, January 2](#thursday-january-2)
+  - [Friday, January 3](#friday-january-3)
+  - [Monday, January 6](#monday-january-6)
+  - [Tuesday, January 7](#tuesday-january-7)
+  - [Wedesday, January 8](#wedesday-january-8)
+  - [Thursday, January 9](#thursday-january-9)
+  - [Friday, January 10](#friday-january-10)
+  - [Monday, January 13](#monday-january-13)
+  - [Tuesday, January 14](#tuesday-january-14)
+  - [Wednesday, January 15](#wednesday-january-15)
+  - [Thursday, January 16](#thursday-january-16)
+  - [Friday, January 17](#friday-january-17)
+  - [Monday, January 20](#monday-january-20)
+  - [Tuesday, January 21](#tuesday-january-21)
+  - [Wednesday, January 22](#wednesday-january-22)
+  - [Thursday, January 23](#thursday-january-23)
+  - [Friday, January 24](#friday-january-24)
+  - [Monday, January 27](#monday-january-27)
+  - [Tuesday, January 28](#tuesday-january-28)
+  - [Wednesday, January 29](#wednesday-january-29)
+  - [Thursday, January 30](#thursday-january-30)
+  - [Friday, January 31](#friday-january-31)
 
 ## Thursday, January 2
 
@@ -1159,6 +953,28 @@ species not already on the Refuge’s checklist: *Caenis youngi* and
 
 # February
 
+  - [Monday, February 3](#monday-february-3)
+  - [Tuesday, February 4](#tuesday-february-4)
+  - [Wednesday, February 5](#wednesday-february-5)
+  - [Thursday, February 6](#thursday-february-6)
+  - [Friday, February 7](#friday-february-7)
+  - [Saturday, February 8](#saturday-february-8)
+  - [Monday, February 10](#monday-february-10)
+  - [Tuesday, February 11](#tuesday-february-11)
+  - [Wednesday, February 12](#wednesday-february-12)
+  - [Thursday, February 13](#thursday-february-13)
+  - [Friday, February 14](#friday-february-14)
+  - [Monday, February 17](#monday-february-17)
+  - [Tuesday, February 18](#tuesday-february-18)
+  - [Wednesday, February 19](#wednesday-february-19)
+  - [Thursday, February 20](#thursday-february-20)
+  - [Friday, February 21](#friday-february-21)
+  - [Monday, February 24](#monday-february-24)
+  - [Tuesday, February 25](#tuesday-february-25)
+  - [Wednesday, February 26](#wednesday-february-26)
+  - [Thursday, February 27](#thursday-february-27)
+  - [Friday, February 28](#friday-february-28)
+
 ## Monday, February 3
 
 To do:
@@ -1719,8 +1535,8 @@ The [KNWR:Env](https://arctos.database.museum/knwr_env) collection was
 created today to accomodate environmental samples beginning with soil
 samples from the black spruce inventory project.
 
-I formatted and posted the *Refuge Notebook* [article from
-December 13, 2019](https://www.fws.gov/uploadedFiles/Region_7/NWRS/Zone_2/Kenai/Sections/What_We_Do/In_The_Community/Refuge_Notebooks/2019_Articles/Refuge_Notebook_v21_n44.pdf).
+I formatted and posted the *Refuge Notebook* [article from December 13,
+2019](https://www.fws.gov/uploadedFiles/Region_7/NWRS/Zone_2/Kenai/Sections/What_We_Do/In_The_Community/Refuge_Notebooks/2019_Articles/Refuge_Notebook_v21_n44.pdf).
 
 I edited this week’s *Refuge Notebook* article.
 
@@ -2007,6 +1823,33 @@ best shape and it is not one that I have worked with.
 
 # March
 
+  - [Monday, March 2](#monday-march-2)
+  - [Tuesday, March 3](#tuesday-march-3)
+  - [Wednesday, March 4](#wednesday-march-4)
+  - [Thursday, March 5](#thursday-march-5)
+  - [Friday, March 6](#friday-march-6)
+  - [Sunday, March 8](#sunday-march-8)
+  - [Monday, March 9](#monday-march-9)
+  - [Tuesday, March 10](#tuesday-march-10)
+  - [Thursday, March 12](#thursday-march-12)
+  - [Friday, March 13](#friday-march-13)
+  - [Sunday, March 15](#sunday-march-15)
+  - [Monday, March 16](#monday-march-16)
+  - [Tuesday, March 17](#tuesday-march-17)
+  - [Wednesday, March 18](#wednesday-march-18)
+  - [Thursday, March 19](#thursday-march-19)
+  - [Friday, March 20](#friday-march-20)
+  - [Saturday, March 21](#saturday-march-21)
+  - [Monday, March 23](#monday-march-23)
+  - [Tuesday, March 24](#tuesday-march-24)
+  - [Wednesday, March 25](#wednesday-march-25)
+  - [Thursday, March 26](#thursday-march-26)
+  - [Friday, March 27](#friday-march-27)
+  - [Saturday, March 28](#saturday-march-28)
+  - [Sunday, March 29](#sunday-march-29)
+  - [Monday, March 30](#monday-march-30)
+  - [Tuesday, March 31](#tuesday-march-31)
+
 ## Monday, March 2
 
 To do:
@@ -2056,7 +1899,6 @@ sl <- grepl("site MG28", d1$SPEC_LOCALITY)
 d1[sl,]
 levels(as.factor(d1$SPECIES[sl]))
 ## 80 species or BIN resolution identifications were obtained at this site.
-
 ```
 
 ## Tuesday, March 3
@@ -2771,7 +2613,7 @@ Next week work list:
     earthworm for Alaska, for the *AKES Newsletter*?
   - Get started on Slikok watershed project occupancy analysis?
 
-<!-- end list -->
+<!-- -->
 
     cd /home/matt/SCVUC_COI_metabarcode_pipeline
     snakemake --jobs 1 --snakefile snakefile_withPseudogeneFiltering --configfile 2020-03-20-0747_config_ml-jg.yaml
@@ -3959,6 +3801,32 @@ and associated it with the occurrence records
 (<http://arctos.database.museum/media/10608330>).
 
 # April
+
+  - [Wednesday, April 1](#wednesday-april-1)
+  - [Thursday, April 2](#thursday-april-2)
+  - [Friday, April 3](#friday-april-3)
+  - [Saturday, April 4](#saturday-april-4)
+  - [Monday, April 6](#monday-april-6)
+  - [Tuesday, April 7](#tuesday-april-7)
+  - [Wednesday, April 8](#wednesday-april-8)
+  - [Thursday, April 9](#thursday-april-9)
+  - [Friday, April 10](#friday-april-10)
+  - [Saturday, April 11](#saturday-april-11)
+  - [Monday, April 13](#monday-april-13)
+  - [Tuesday, April 14](#tuesday-april-14)
+  - [Wednesday, April 15](#wednesday-april-15)
+  - [Thursday, April 16](#thursday-april-16)
+  - [Friday, April 17](#friday-april-17)
+  - [Monday, April 20](#monday-april-20)
+  - [Tuesday, April 21](#tuesday-april-21)
+  - [Wednesday, April 22](#wednesday-april-22)
+  - [Thursday, April 23](#thursday-april-23)
+  - [Friday, April 24](#friday-april-24)
+  - [Saturday, April 25](#saturday-april-25)
+  - [Monday, April 27](#monday-april-27)
+  - [Tuesday, April 28](#tuesday-april-28)
+  - [Wednesday, April 29](#wednesday-april-29)
+  - [Thursday, April 30](#thursday-april-30)
 
 ## Wednesday, April 1
 
@@ -5808,6 +5676,28 @@ the Sandpiper Lake *Elodea* erradication project.
 
 # May
 
+  - [Friday, May 1](#friday-may-1)
+  - [Monday, May 4](#monday-may-4)
+  - [Tuesday, May 5](#tuesday-may-5)
+  - [Wednesday, May 6](#wednesday-may-6)
+  - [Thursday, May 7](#thursday-may-7)
+  - [Friday, May 8](#friday-may-8)
+  - [Monday, May 11](#monday-may-11)
+  - [Tuesday, May 12](#tuesday-may-12)
+  - [Wednesday, May 13](#wednesday-may-13)
+  - [Thursday, May 14](#thursday-may-14)
+  - [Friday, May 15](#friday-may-15)
+  - [Saturday, May 16](#saturday-may-16)
+  - [Sunday, May 17](#sunday-may-17)
+  - [Monday, May 18](#monday-may-18)
+  - [Tuesday, May 19](#tuesday-may-19)
+  - [Wednesday, May 20](#wednesday-may-20)
+  - [Thursday, May 21](#thursday-may-21)
+  - [Tuesday, May 26](#tuesday-may-26)
+  - [Wednesday, May 27](#wednesday-may-27)
+  - [Thursday, May 28](#thursday-may-28)
+  - [Friday, May 29](#friday-may-29)
+
 ## Friday, May 1
 
 To do:
@@ -6386,7 +6276,6 @@ write.csv(species_list,
  "2020-05-21-1540_AKEPIC_KP_species_list.csv",
  row.names=FALSE
  )
-
 ```
 
 ## Tuesday, May 26
@@ -6569,6 +6458,28 @@ have recovered quite a bit since the fence was but in and vehicles have
 been kept off of the dunes.
 
 # June
+
+  - [Monday, June 1](#monday-june-1)
+  - [Tuesday, June 2](#tuesday-june-2)
+  - [Wednesday, June 3](#wednesday-june-3)
+  - [Thursday, June 4](#thursday-june-4)
+  - [Friday, June 5](#friday-june-5)
+  - [Monday, June 8](#monday-june-8)
+  - [Tuesday, June 9](#tuesday-june-9)
+  - [Wednesday, June 10](#wednesday-june-10)
+  - [Thursday, June 11](#thursday-june-11)
+  - [Friday, June 12](#friday-june-12)
+  - [Tuesday, June 16](#tuesday-june-16)
+  - [Wednesday, June 17](#wednesday-june-17)
+  - [Thursday, June 18](#thursday-june-18)
+  - [Friday, June 19](#friday-june-19)
+  - [Monday, June 22](#monday-june-22)
+  - [Tuesday, June 23](#tuesday-june-23)
+  - [Wednesday, June 24](#wednesday-june-24)
+  - [Thursday, June 25](#thursday-june-25)
+  - [Friday, June 26](#friday-june-26)
+  - [Monday, June 29](#monday-june-29)
+  - [Tuesday, June 30](#tuesday-june-30)
 
 ## Monday, June 1
 
@@ -7175,6 +7086,27 @@ Entering data for soil samples:
 I loaded maps, etc. onto my iPad for field work tomorrow.
 
 # July
+
+  - [Wednesday, July 1](#wednesday-july-1)
+  - [Thursday, July 2](#thursday-july-2)
+  - [Monday, July 6](#monday-july-6)
+  - [Tuesday, July 7](#tuesday-july-7)
+  - [Wednesday, July 8](#wednesday-july-8)
+  - [Thursday, July 9](#thursday-july-9)
+  - [Friday, July 10](#friday-july-10)
+  - [Sunday, July 12](#sunday-july-12)
+  - [Monday, July 13](#monday-july-13)
+  - [Tuesday, July 14](#tuesday-july-14)
+  - [Wednesday, July 15](#wednesday-july-15)
+  - [Thursday, July 16](#thursday-july-16)
+  - [Monday, July 20](#monday-july-20)
+  - [Tuesday, July 21](#tuesday-july-21)
+  - [Wednesday, July 22](#wednesday-july-22)
+  - [Thursday, July 23](#thursday-july-23)
+  - [Friday, July 24](#friday-july-24)
+  - [Monday, July 27](#monday-july-27)
+  - [Tuesday, July 28](#tuesday-july-28)
+  - [Wednesday, July 29](#wednesday-july-29)
 
 ## Wednesday, July 1
 
@@ -7902,6 +7834,26 @@ time.](2020-07-29_pellet_count_means_over_time.png)
 Snowshoe hare pellet counts over time.
 
 # August
+
+  - [Monday, August 3](#monday-august-3)
+  - [Tuesday, August 4](#tuesday-august-4)
+  - [Wednesday, August 5](#wednesday-august-5)
+  - [Thursday, August 6](#thursday-august-6)
+  - [Friday, August 7](#friday-august-7)
+  - [Monday, August 10](#monday-august-10)
+  - [Tuesday, August 11](#tuesday-august-11)
+  - [Wednesday, August 12](#wednesday-august-12)
+  - [Thursday, August 13](#thursday-august-13)
+  - [Friday, August 14](#friday-august-14)
+  - [Monday, August 17](#monday-august-17)
+  - [Tuesday, August 18](#tuesday-august-18)
+  - [Wedneday, August 19](#wedneday-august-19)
+  - [Thursday, August 20](#thursday-august-20)
+  - [Monday, August 24](#monday-august-24)
+  - [Tuesday, August 25](#tuesday-august-25)
+  - [Wednesday, August 26](#wednesday-august-26)
+  - [Thursday, August 27](#thursday-august-27)
+  - [Monday, August 31](#monday-august-31)
 
 ## Monday, August 3
 
@@ -8648,6 +8600,26 @@ I later ran bowtie2, but this crashed later. I also think I might not be
 using the correct index for *Betula pendula*.
 
 # September
+
+  - [Tuesday, September 1](#tuesday-september-1)
+  - [Wednesday, September 2](#wednesday-september-2)
+  - [Thursday, September 3](#thursday-september-3)
+  - [Monday, September 8](#monday-september-8)
+  - [Wednesday, September 9](#wednesday-september-9)
+  - [Thursday, September 10](#thursday-september-10)
+  - [Friday, September 11](#friday-september-11)
+  - [Monday, September 14](#monday-september-14)
+  - [Tuesday, September 15](#tuesday-september-15)
+  - [Wednesday, September 16](#wednesday-september-16)
+  - [Thursday, September 17](#thursday-september-17)
+  - [Friday, September 18](#friday-september-18)
+  - [Monday, September 21](#monday-september-21)
+  - [Tuesday, September 22](#tuesday-september-22)
+  - [Wednesday, September 23](#wednesday-september-23)
+  - [Thursday, September 24](#thursday-september-24)
+  - [Monday, September 28](#monday-september-28)
+  - [Tuesday, September 29](#tuesday-september-29)
+  - [Wednesday, September 30](#wednesday-september-30)
 
 ## Tuesday, September 1
 
@@ -10746,6 +10718,23 @@ I got my *Refuge Notebook* article sent off at the end of the day.
 
 # October
 
+  - [Thursday, October 1](#thursday-october-1)
+  - [Friday, October 2](#friday-october-2)
+  - [Monday, October 5](#monday-october-5)
+  - [Tuesday, October 6](#tuesday-october-6)
+  - [Wednesday, October 7](#wednesday-october-7)
+  - [Thursday, October 8](#thursday-october-8)
+  - [Friday, October 9](#friday-october-9)
+  - [Tuesday, October 13](#tuesday-october-13)
+  - [Wednesday, October 14](#wednesday-october-14)
+  - [Thursday, October 15](#thursday-october-15)
+  - [Friday, October 16](#friday-october-16)
+  - [Monday, October 19](#monday-october-19)
+  - [Monday, October 26](#monday-october-26)
+  - [Tuesday, October 27](#tuesday-october-27)
+  - [Friday, October 30](#friday-october-30)
+  - [Saturday, October 31](#saturday-october-31)
+
 ## Thursday, October 1
 
 To do:
@@ -12166,6 +12155,20 @@ I should add citations for all specimens related to this article.
 
 # November
 
+  - [Sunday, November 1](#sunday-november-1)
+  - [Thursday, November 5](#thursday-november-5)
+  - [Saturday, November 6](#saturday-november-6)
+  - [Monday, November 9](#monday-november-9)
+  - [Tuesday, November 10](#tuesday-november-10)
+  - [Wednesday, November 11](#wednesday-november-11)
+  - [Thursday, November 12](#thursday-november-12)
+  - [Friday, November 13](#friday-november-13)
+  - [Monday, November 16](#monday-november-16)
+  - [Tuesday, November 17](#tuesday-november-17)
+  - [Wednesday, November 18](#wednesday-november-18)
+  - [Thursday, November 19](#thursday-november-19)
+  - [Friday, November 20](#friday-november-20)
+
 ## Sunday, November 1
 
 I formatted and posted articles from May 22–29.
@@ -13520,6 +13523,13 @@ Rock Sandpiper dropping (iNaturalist:
   - Charge card training.
 
 # Appendixes
+
+  - [Occurrence data in Arctos bulkloader
+    format](#occurrence-data-in-arctos-bulkloader-format)
+  - [LifeScanner vials with missing
+    data](#lifescanner-vials-with-missing-data)
+  - [Data for fungal specimens to be
+    sequenced](#data-for-fungal-specimens-to-be-sequenced)
 
 ## Occurrence data in Arctos bulkloader format
 
