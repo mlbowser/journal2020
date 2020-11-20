@@ -227,6 +227,11 @@
       - [Wednesday, November 11](#wednesday-november-11)
       - [Thursday, November 12](#thursday-november-12)
       - [Friday, November 13](#friday-november-13)
+      - [Monday, November 16](#monday-november-16)
+      - [Tuesday, November 17](#tuesday-november-17)
+      - [Wednesday, November 18](#wednesday-november-18)
+      - [Thursday, November 19](#thursday-november-19)
+      - [Friday, November 20](#friday-november-20)
   - [Appendixes](#appendixes)
       - [Occurrence data in Arctos bulkloader
         format](#occurrence-data-in-arctos-bulkloader-format)
@@ -13413,6 +13418,107 @@ I worked on writing an introduction for a paper on occupancy modeling
 from the Slikok project and initiated a repository on GitHub for it
 (<https://github.com/mlbowser/HTSocc>).
 
+## Monday, November 16
+
+To do
+
+  - ~~Edit this week’s *Refuge Notebook* article.~~
+  - Slikok occupancy manuscript/analysis.
+  - New CMS training.
+  - ~~Posts regarding snowmachine article.~~
+  - FY20 Summary Report on Invasive Species Projects
+
+I started the Study Site section of the Slikok occupancy manuscript, I
+bogged down a bit at the step of generating maps.
+
+I posted entries for Mullet and Morton
+([2021](#ref-mullet_snowmobile_2021)) in our [publications
+bibliography](https://www.fws.gov/refuge/Kenai/what_we_do/science/bibliography.html)
+and [Biology
+News](https://www.fws.gov/refuge/Kenai/what_we_do/science/biology-news.html).
+
+I edited this week’s *Refuge Notebook* article.
+
+I started the CMS training, watching [Part 1 - Introduction to the
+Drupal Content Management
+System](https://web.microsoftstream.com/video/63bd6de4-7003-4da6-8bd5-45463e7454e1)
+and [Part 2 - Editing
+Content](https://web.microsoftstream.com/video/8c36ebf9-f826-478e-9585-f260c2111c58).
+
+## Tuesday, November 17
+
+To do
+
+  - Submit this week’s *Refuge Notebook* article.
+  - Slikok occupancy manuscript/analysis.
+  - New CMS training.
+  - FY20 Summary Report on Invasive Species Projects
+
+I worked on the Slikok occupancy manuscript some. I decided to change
+the formatting to the [Journal of the Entomological Society of British
+Columbia](https://journal.entsocbc.ca/index.php/journal/index).
+
+## Wednesday, November 18
+
+To do
+
+  - ~~Submit this week’s *Refuge Notebook* article.~~
+  - Slikok occupancy manuscript/analysis.
+  - New CMS training.
+  - FY20 Summary Report on Invasive Species Projects
+  - Update chemicals inventory based on data from Jake.
+  - Get bird fecal sampling stuff to Todd.
+  - PUP reporting.
+
+I continued work summarizing data for the Slikok occupancy manuscript.
+
+### Biology staff meeting @ 09:00
+
+  - Need to update performance plan.
+  - Start moving content to new CMS.
+
+I learned later today that the move to the new Content Management System
+has just been put off for some time.
+
+## Thursday, November 19
+
+  - Slikok occupancy manuscript/analysis.
+  - FY20 Summary Report on Invasive Species Projects
+  - Update chemicals inventory based on data from Jake.
+  - ~~Get bird fecal sampling stuff to Todd.~~
+  - PUP reporting.
+  - ~~Ship out LifeScanner samples.~~
+  - Charge card training.
+  - ~~Edit next week’s *Refuge Notebook* article.~~
+
+Today I drove in to the office.
+
+Pulling specimens from bulk sample
+[KNWR:Ento:7159](https://arctos.database.museum/guid/KNWR:Ento:7159).
+These were insects from yellow pan traps at Emerald Lake, 30 June to 1
+July 2011 to test whether or not we can get good sequences from these
+specimens stored in ethanal in a freezer since 2011. From this sample I
+pulled a delphacid (BOLD-3NI8V5KR9), a nematode (BOLD-3NM7B6XI1), and a
+muscoid fly (BOLD-3NLY2S1E7). I prepared a shipment of 49 LifeScanner
+specimens to go out (USPS tracking number: LZ992622666US).
+
+I looked in the lab drains for *Badonnelia*, but I found only what
+looked like *Entomobrya*.
+
+I edited a draft of next week’s *Refuge Notebook* article.
+
+While on a walk on Kasilof Beach in the late afternoon I picked up one
+Rock Sandpiper dropping (iNaturalist:
+[65249534](https://www.inaturalist.org/observations/65249534)).
+
+## Friday, November 20
+
+  - Slikok occupancy manuscript/analysis.
+  - FY20 Summary Report on Invasive Species Projects
+  - Update chemicals inventory based on data from Jake.
+  - PUP reporting.
+  - Charge card training.
+
 # Appendixes
 
 ## Occurrence data in Arctos bulkloader format
@@ -14242,6 +14348,15 @@ California. Available from
 
 </div>
 
+<div id="ref-mullet_snowmobile_2021">
+
+Mullet, T.C., and Morton, J.M. 2021. Snowmobile effects on height and
+live stem abundance of wetland shrubs in south-central Alaska. Journal
+of Outdoor Recreation and Tourism **33**: 100347.
+doi:[10.1016/j.jort.2020.100347](https://doi.org/10.1016/j.jort.2020.100347).
+
+</div>
+
 <div id="ref-murray_estimating_2002">
 
 Murray, D.L., Roth, J.D., Ellsworth, E., Wirsing, A.J., and Steury, T.D.
@@ -14253,7 +14368,7 @@ doi:[10.1139/z02-027](https://doi.org/10.1139/z02-027).
 
 <div id="ref-NOAA_beluga_habitat">
 
-NOAA Fisheries. 2019. Beluga whale – cook inlet dps critical habitat.
+NOAA Fisheries. 2019. Beluga Whale – Cook Inlet DPS Critical Habitat.
 Available from
 <https://www.fisheries.noaa.gov/resource/map/beluga-whale-cook-inlet-dps-critical-habitat>.
 
