@@ -12168,6 +12168,7 @@ I should add citations for all specimens related to this article.
   - [Wednesday, November 18](#wednesday-november-18)
   - [Thursday, November 19](#thursday-november-19)
   - [Friday, November 20](#friday-november-20)
+  - [Monday, November 23](#monday-november-23)
 
 ## Sunday, November 1
 
@@ -13517,10 +13518,35 @@ Rock Sandpiper dropping (iNaturalist:
 ## Friday, November 20
 
   - Slikok occupancy manuscript/analysis.
-  - FY20 Summary Report on Invasive Species Projects
+  - FY20 Summary Report on Invasive Species Projects.
   - Update chemicals inventory based on data from Jake.
   - PUP reporting.
   - Charge card training.
+  - 2021 invasive species funding request
+
+I had reading up on document accessibility and tried modifying the table
+of contents and structure of this journal to make it more accessible.
+
+I produced a draft FY20 Summary Report on Invasive Species Projects for
+the Sandpiper Lake Elodea Eradication Project.
+
+I added some summaries for the Slikok occupancy data.
+
+## Monday, November 23
+
+  - ~~Performance plan~~
+  - Slikok occupancy manuscript/analysis.
+  - FY20 Summary Report on Invasive Species Projects.
+  - Update chemicals inventory based on data from Jake.
+  - PUP reporting.
+  - Charge card training.
+  - 2021 invasive species funding request
+  - Non-native plant data to Colin
+
+I provided comments on my FY2021 performance plan.
+
+I worked on running an occupancy model based on an example given by
+Joseph ([2013](#ref-Joseph_2013)).
 
 # Appendixes
 
@@ -14171,6 +14197,14 @@ biology and ecology: Department of Agriculture. Arctic Bulletin
 Jakubas, W.J., and Firman, A.S. 1984. Sandpiper Lake, 7/3/84. U.S. Fish
 & Wildlife Service.
 doi:[10.7299/X7JM29X1](https://doi.org/10.7299/X7JM29X1).
+
+</div>
+
+<div id="ref-Joseph_2013">
+
+Joseph, M.B. 2013. Dynamic community occupancy modeling with R and JAGS.
+Available from
+<https://web.archive.org/web/20150929072630/http://www.r-bloggers.com/dynamic-community-occupancy-modeling-with-r-and-jags/>.
 
 </div>
 
