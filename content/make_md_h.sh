@@ -25,6 +25,8 @@ pandoc 2020-10-*.md --toc --toc-depth=2 -o Journal_2020-10.md -s
 
 pandoc 2020-11-*.md --toc --toc-depth=2 -o Journal_2020-11.md -s
 
+pandoc 2020-12-*.md --toc --toc-depth=2 -o Journal_2020-12.md -s
+
 pandoc a0*.md --toc --toc-depth=2 -o Journal_2020-appendixes.md -s
 
 pandoc 01_title.md \
@@ -39,6 +41,7 @@ pandoc 01_title.md \
  2020-09.md Journal_2020-09.md \
  2020-10.md Journal_2020-10.md \
  2020-11.md Journal_2020-11.md \
+ 2020-12.md Journal_2020-12.md \
  appendixes.md Journal_2020-appendixes.md \
  bibliography.md \
  --filter pandoc-citeproc \

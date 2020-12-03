@@ -9,6 +9,7 @@
   - [September](#september)
   - [October](#october)
   - [November](#november)
+  - [December](#december)
   - [Appendixes](#appendixes)
   - [Bibliography](#bibliography)
 
@@ -12169,6 +12170,10 @@ I should add citations for all specimens related to this article.
   - [Thursday, November 19](#thursday-november-19)
   - [Friday, November 20](#friday-november-20)
   - [Monday, November 23](#monday-november-23)
+  - [Tuesday, November 24](#tuesday-november-24)
+  - [Wednesday, November 25](#wednesday-november-25)
+  - [Friday, November 27](#friday-november-27)
+  - [Monday, November 30](#monday-november-30)
 
 ## Sunday, November 1
 
@@ -13547,6 +13552,601 @@ I provided comments on my FY2021 performance plan.
 
 I worked on running an occupancy model based on an example given by
 Joseph ([2013](#ref-Joseph_2013)).
+
+## Tuesday, November 24
+
+  - Slikok occupancy manuscript/analysis.
+  - FY20 Summary Report on Invasive Species Projects.
+  - Update chemicals inventory based on data from Jake.
+  - PUP reporting.
+  - Charge card training.
+  - 2021 invasive species funding request.
+  - Non-native plant data to Colin.
+  - Get RCG reporting to KPCWMA.
+
+I examined results from yesterday’s occupancy modeling.
+
+I started working on pulling non-native plant survey data for AKEPIC.
+
+### KPCWMA meeting @ 10:00
+
+I left the meeting at 11:00.
+
+## Wednesday, November 25
+
+  - Slikok occupancy manuscript/analysis.
+  - FY20 Summary Report on Invasive Species Projects.
+  - Update chemicals inventory based on data from Jake.
+  - PUP reporting.
+  - Charge card training.
+  - 2021 invasive species funding request.
+  - Non-native plant data to Colin.
+  - Get RCG reporting to KPCWMA.
+  - KPCWMA MOU.
+
+I sent this week’s *Refuge Notebook* article off to the *Clarion*.
+
+I spent most of the day working on getting non-native plant survey data
+formatted for AKEPIC.
+
+## Friday, November 27
+
+  - Slikok occupancy manuscript/analysis.
+  - FY20 Summary Report on Invasive Species Projects.
+  - Update chemicals inventory based on data from Jake.
+  - PUP reporting.
+  - Charge card training.
+  - 2021 invasive species funding request.
+  - ~~Non-native plant data to Colin.~~
+  - Get RCG reporting to KPCWMA.
+  - KPCWMA MOU.
+
+I appended elodea survey data to the data to be submitted to AKEPIC.
+
+Scripts from recently:
+
+``` r
+## Script to generate data for submission to AKEPIC
+
+## By Matt Bowser, 24-15.November.2020
+
+library(maptools)
+library(rgdal)
+library(raster)
+
+data03 <- read.csv("../data/final_data/observations/2020-10-13-0844_observations.csv", stringsAsFactors=FALSE)
+
+species_list <- read.csv("../source_data/AKEPIC/Non-Native Plant_Species_List-Alaska-Center-for-Conservation-Science.csv")
+
+## How many species are in our dataset?
+length(levels(as.factor(data03$scientificName)))
+[1] 25
+
+## How many of these match names in the AKEPIC species list?
+sum(levels(as.factor(data03$scientificName)) %in% species_list$Scientific.Name)
+[1] 7
+## So the remaining 18 must not match.
+
+## Which ones do not match?
+nonmatch <- levels(as.factor(data03$scientificName))[!(levels(as.factor(data03$scientificName)) %in% species_list$Scientific.Name)]
+nonmatch
+ [1] "Amaranthus sp."          
+ [2] "Capsella bursa-pastoris "
+ [3] "Cerastium fontanum"      
+ [4] "Chenopodium album"       
+ [5] "Crepis tectorum "        
+ [6] "Hieracium aurantiacum"   
+ [7] "Hieracium caespitosum"   
+ [8] "Leucanthemum vulgare "   
+ [9] "Linaria vulgaria"        
+[10] "Lupinus polyphyllus "    
+[11] "Matricaria discoidea"    
+[12] "Myosotis scorpioides"    
+[13] "nothing present"         
+[14] "Phalaris arundinacea"    
+[15] "Rumex acetosella"        
+[16] "Spergularia rubra"       
+[17] "Veronica peregrina"      
+[18] "Vicia cracca"  
+
+## Saving this.
+write.csv(nonmatch,
+ "../data/final_data/observations/2020-11-24-0807_unmatched_names.csv",
+ row.names=FALSE
+ )
+ 
+## For the "nothing present" species I should try to determine whether these were single species or exhaustive inventories.
+data03[data03$scientificName=="nothing present",]
+## Those were exhaustive.
+
+spcrosswalk <- read.csv("../data/final_data/observations/2020-11-24-0811_names_crosswalk.csv", stringsAsFactors=FALSE) 
+
+## Putting these together.
+dim(data03)
+[1] 186  50
+
+data03 <- merge(x=data03, y=spcrosswalk, all.x=TRUE)
+dim(data03)
+[1] 186  51
+
+## Filling in missing values...
+data03$Scientific.Name[is.na(data03$Scientific.Name)] <- data03$scientificName[is.na(data03$Scientific.Name)]
+
+## Join the species codes.
+data03 <- merge(x=data03, y=species_list[,c("Scientific.Name", "Symbol")], all.x=TRUE)
+
+data03[is.na(data03$Symbol),]
+## That looked good.
+
+## Manually entering some values.
+data03$Symbol[data03$scientificName=="Amaranthus sp."] <- "XXXX"
+data03$Symbol[data03$scientificName=="nothing present"] <- "NONE"
+
+## Renaming to conform with data entry form.
+names(data03)[which(names(data03)=="Symbol")] <- "Plant.Species.Code"
+
+## Filling in presence values.
+data03$Presence <- 1
+data03$Presence[data03$Plant.Species.Code=="NONE"] <- 0
+
+## Need to be able to fill in certain data into the Project Discussions field. 
+data03$Project.Discussions <- ""
+
+## Filling in species names for taxa not in AKEPIC.
+sl <- data03$scientificName=="Amaranthus sp."
+data03$Project.Discussions[sl] <- "Scientific name: Amaranthus sp."
+
+## Infested area.
+names(data03)[which(names(data03)=="infested_a")] <- "Infested.Area"
+
+## Percent Cover.
+data03$percent_co
+## That is a mess.
+levels(as.factor(data03$percent_co))
+
+## Saving this.
+write.csv(levels(as.factor(data03$percent_co)),
+ "../data/final_data/observations/2020-11-24-1017_percent_cover.csv",
+ row.names=FALSE
+ )
+covercw <- read.csv("../data/final_data/observations/2020-11-24-1018_percent_cover_crosswalk.csv", stringsAsFactors=FALSE)
+covercw$percent_co <- levels(as.factor(data03$percent_co))
+data03 <- merge(x=data03, y=covercw, all.x=TRUE)
+
+## Stem Count
+names(data03)[which(names(data03)=="stem_count")] <- "Stem.Count"
+data03$Stem.Count[is.na(data03$Stem.Count)] <- "N/A"
+
+## Herbarium
+data03$Herbarium <- "Not Collected"
+data03$Herbarium[data03$herbarium=="yes"] <- "Other"
+data03$Project.Discussions[data03$Herbarium=="Other"] <- paste(data03$Project.Discussions[data03$Herbarium=="Other"], "Specimen deposited in Kenai National Wildlife Refuge herbarium (coden: KNWR).")
+data03$Project.Discussions <- trimws(data03$Project.Discussions)
+
+## Control Action
+## Why were these not given the exact values in the submission form?
+write.csv(levels(as.factor(data03$control_ac)),
+ "../data/final_data/observations/2020-11-25-0900_control_actions.csv",
+ row.names=FALSE
+ )
+controlcw <- read.csv("../data/final_data/observations/2020-11-25-0904_control_actions_crosswalk.csv", stringsAsFactors=FALSE)
+data03 <- merge(x=data03, y=controlcw, all.x=TRUE)
+
+## Aggressiveness
+data03$aggressive
+## Why are some of these numeric?
+write.csv(levels(as.factor(data03$aggressive)),
+ "../data/final_data/observations/2020-11-25-0919_aggressiveness.csv",
+ row.names=FALSE
+ )
+aggresscw <- read.csv("../data/final_data/observations/2020-11-25-0920_aggressiveness_crosswalk.csv", stringsAsFactors=FALSE)
+data03 <- merge(x=data03, y=aggresscw, all.x=TRUE)
+
+## Notes
+names(data03)[which(names(data03)=="notes")] <- "Notes"
+
+## Survey Date
+data03$Survey.Date <- format(as.Date(data03$survey_dat, format="%Y/%m/%d"), format="%m/%d/%Y")
+
+## Project Name
+data03$Project.Name <- gsub("_", " ", data03$project_na)
+data03$Project.Name <- gsub(" 2020", "", data03$Project.Name)
+data03$Project.Name <- gsub("KNWR", "Kenai National Wildlife Refuge", data03$Project.Name)
+data03$Project.Name[is.na(data03$Project.Name)] <- ""
+
+## Observers
+observers <- read.csv("../data/raw_data/code_tables/observers.csv")
+data03$Observers <- data03$observers
+## For this small number of values I can just substitute using gsub...
+data03$Observers <- gsub(",", "; ", data03$Observers)
+for (this_observer in 1:nrow(observers))
+ {
+ data03$Observers <- gsub(this_observer, observers$observer_last_init[this_observer], data03$Observers)
+ }
+
+## Affiliation
+data03$Affiliation <- "USFWS"
+
+## Site Code
+## Infestations within a 50 m radius are assigned the same site code.
+## I will need to get distances.
+## First ordering by date.
+data03$Site.Code <- ""
+data03 <- data03[order(data03$survey_dat),]
+coordinates(data03) <- c("longitude", "latitude")
+dst <- pointDistance(data03, lonlat=TRUE)
+prefix <- "KENWR2020-"
+site_number <- 1001
+for (this_site in 1:nrow(data03))
+ {
+ if (this_site==1)
+  {
+  site_code <- paste0(prefix, substr(site_number,2,4))
+  }
+ else
+  {
+  dists <- dst[this_site, 1:(this_site-1)]
+  mindist <- min(dists)
+  if (mindist > 50)
+   {
+   site_number <- site_number + 1
+   site_code <- paste0(prefix, substr(site_number,2,4))
+   }
+  else
+   {
+   which_near_sites <- which(dists==mindist)
+   which_near_site <- which_near_sites[1]
+   site_code <- data03$Site.Code[which_near_site]
+   }
+  }
+ data03$Site.Code[this_site] <- site_code 
+ }
+
+## Visit Type
+names(data03)[which(names(data03)=="visit_type")] <- "Visit.Type"
+
+## Revisit
+data03$Revisit. <- "no" ## Some of these might be revisits, but we are not really tracking them yet using AKEPIC's site codes, etc. Maybe next year we can.
+
+## Area Surveyed
+exported_data <- readOGR(dsn="../data/raw_data/observations/2020-09-17-0927_survey123_export.shp",
+ stringsAsFactors=FALSE 
+ ) 
+exported_data@data$area_m2 <- area(exported_data)
+exported_data@data$Area.Surveyed <- round(exported_data@data$area_m2 * 0.000247105, 3)
+data03 <- merge(x=data03, y=exported_data@data[,c("globalid", "Area.Surveyed")])
+
+## Study Type
+## We should include this field in next year's data sheet. For now exhaustive fits best.
+data03$Study.Type <- "Exhaustive species inventory"
+
+## Site Vegetation Community Description
+vegetationCommunity <- read.csv("../data/raw_data/code_tables/vegetationCommunity.csv")
+levels(as.factor(data03$vegetation))
+## I cannot really crosswalk these because the AKEPIC values are more specific than what we used.
+
+## Disturbance Type
+## Can only choose one. Will need to choose the first one.
+## Again, we used different disturbance types than AKEPIC's drop down list. Why?
+disturb <- strsplit(data03$disturbanc, ",")
+disturb <- sapply(disturb, "[", 1)
+data03$disturbanc <- disturb
+distcw <- read.csv("../data/raw_data/code_tables/disturbanceType.csv", stringsAsFactors=FALSE)
+data03 <- merge(data03, distcw[,c("disturbanc", "Disturbance.Type")])
+data03$Disturbance.Type[is.na(data03$Disturbance.Type)] <- ""
+
+## Coordinates
+data03$Latitude <- round(coordinates(data03)[,2],9)
+data03$Longitude <- round(coordinates(data03)[,1],9)
+
+## Collection Method
+data03$Collection.Method <- "GPS"
+
+## Accuracy
+data03$Accuracy <- "0-30"
+
+## That should be about it!
+## Getting ready to export a table.
+data03$blank <- ""
+
+template <- read.csv("../source_data/AKEPIC/AKEPIC_DataEntry_col_names.csv")
+
+names(template) %in% names(data03)
+fieldnames <- names(template)
+matchnames <- fieldnames
+matchnames[!(matchnames %in% names(data03))] <- "blank"
+## Looking at these.
+cbind(fieldnames, matchnames)
+
+write.table(data03@data[,matchnames],
+ "../data/final_data/observations/2020-11-25-1345_AKEPIC_upload.tsv",
+ row.names=FALSE,
+ quote=FALSE,
+ sep="\t",
+ na = ""
+ )
+```
+
+``` r
+## Script to append elodea survey data to AKEPIC data submission.
+
+## By Matt Bowser, 27.November.2020
+ 
+akepic1 <- read.delim("../data/final_data/observations/2020-11-25-1345_AKEPIC_upload.tsv", stringsAsFactors=FALSE)
+
+## Fixing missing column names.
+template <- read.csv("../source_data/AKEPIC/AKEPIC_DataEntry_col_names.csv")
+names(akepic1) <- names(template)
+
+## Filling in some missing values.
+akepic1$Project.Descriptions <- "Surveys for non-native plants on Kenai National Wildlife Refuge"
+akepic1$Project.Methods <- "Plots of variable sizes and shapes were surveyed for non-native plants using a Survey123 form designed to collect data that would comply with AKEPIC data standards."
+
+## Now load elodea data. These data were taken from my journal entry for 13.August.2020.
+el1 <- read.csv("../data/raw_data/observations/2020-11-27_Sandpiper_Lake_elodea_observations.csv", stringsAsFactors=FALSE)
+
+el1$Survey.Date <- "08/13/2020"
+el1$Project.Name <- "Sandpiper Lake Elodea Eradication"
+el1$Observers <- "Bowser, M.; Danner, J."
+el1$Affiliation <- "USFWS"
+el1$Secondary.Affiliation <- NA
+el1$Site.Code <- paste0("KENWR2020-", substr(1093:(1092 + nrow(el1)),2,4))
+el1$Original.Site.Code <- NA
+el1$Visit.Type <- "Reconnaissance"
+el1$Revisit. <- "no"
+el1$Area.Surveyed <- round(2 * 30*0.3048 * .3 * 0.000247105, 3) # 2 rake throws X 30 ft pull X ~ 30 cm width rake., converted to acres.
+el1$Study.Type <- "Single species study"
+el1$Site.Vegetation.Community.Description <- "III.D.1.-C2 Freshwater Aquatic Herbaceous"
+el1$Disturbance.Type <- ""
+el1$Elevation <- NA
+el1$Quad.Name <- NA
+el1$Quad.Number <- NA
+el1$Collection.Method <- "GPS"
+el1$Accuracy <- "0-30"
+el1$Map.Source <- NA
+el1$Map.Scale <- NA
+el1$Map.Date <- NA
+el1$Location.Notes <- NA
+el1$Plant.Species.Code <- "ELCA7"
+el1$Presence <- as.numeric(!is.na(el1$shoreward) | !is.na(el1$lakeward))
+el1$Scientific.Name <- "Elodea canadensis Michx."
+el1$Common.Name <- NA
+el1$Infested.Area <- el1$Area.Surveyed * el1$Presence ## In these cases I would have gone with half of the area since elodea was found in only one of two rake throws, but 0.001 acres is already the minimum size allowable.
+el1$Percent.Cover <- 50 * el1$Presence ## In this case all of the presences were values of 3 in our rakethrow scale on one side of the boat. Translating this to 50% cover.
+el1$Stem.Count <- "N/A" ## Leaving this as NA. This is hard to translate from our methods and, unlike the infested area and percent cover, it is not required.
+el1$Disturbance.Age <- NA
+el1$Herbarium <- "Not Collected"
+el1$Control.Action <- "Broadcast Herbicide"
+el1$Aggressiveness <- "High"
+el1$Notes <- ""
+el1$Project.Descriptions <- "A pre-treatment rake throw survey in Sandpiper Lake"
+el1$Project.Methods <- "Elodea was surveyed using a pair of throw rakes thrown on opposite sides of the boat at a set of points around the lake."
+el1$Project.Discussions <- ""
+
+akepic2 <- rbind(akepic1, el1[,names(akepic1)])
+
+write.table(akepic2,
+ "../data/final_data/observations/2020-11-27-0813_AKEPIC_upload.tsv",
+ row.names=FALSE,
+ quote=FALSE,
+ sep="\t",
+ na = ""
+ )
+ 
+## Trying this as a CSV, also.
+write.csv(akepic2,
+ "../data/final_data/observations/2020-11-27-0813_AKEPIC_upload.csv",
+ row.names=FALSE,
+ quote=TRUE,
+ na = ""
+ )
+
+## Now generate list of sites for next year.
+## These data should be used for revisits in following years.
+site_data <- aggregate(akepic2$Longitude, by=list(akepic2$Site.Code), mean)
+names(site_data) <- c("Site.Code", "Longitude")
+site_data$Latitude <- aggregate(akepic2$Latitude, by=list(akepic2$Site.Code), mean)$x
+write.csv(site_data, "../data/final_data/observations/2020-11-27-0821_site_data.csv", row.names=FALSE)
+```
+
+``` r
+
+## Script to add revisit histories.
+
+## By Matt Bowser, 27.November.2020
+
+library(maptools)
+library(rgdal)
+library(raster)
+
+## Load AKEPIC data to be submitted. 
+akepic1 <- read.delim("../data/final_data/observations/2020-11-27-0813_AKEPIC_upload.tsv", stringsAsFactors=FALSE)
+akepicnames <- names(akepic1)
+
+## Load historic, downloaded AKEPIC data from Kenai Peninsula vicinity.
+past <- read.csv("../source_data/AKEPIC/AKEPIC_data_download_2020-11-27-1057.csv", stringsAsFactors=FALSE)
+
+## Load Kenai Peninsula boundary and reproject to WGS84.
+kp <- readOGR(dsn="../source_data/geodata/Kenai_Peninsula/Kenai_Peninsula.shp",
+ stringsAsFactors=FALSE 
+ ) 
+albers <- "+proj=aea +lat_1=55 +lat_2=65 +lat_0=50 +lon_0=-154 +x_0=0 +y_0=0 +ellps=GRS80 +datum=NAD83 +units=m +no_defs"
+wgs84 <- "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
+proj4string(kp) <- CRS(albers)
+kpwgs84 <- spTransform(kp, CRS(wgs84))
+
+## Now clip historic data to Kenai Peninsula extent.
+coordinates(past) <- c("longitude", "latitude")
+proj4string(past) <- CRS(wgs84)
+pastkp <- over(x=past, y=kpwgs84)
+sl <- !is.na(pastkp$OBJECTID)
+past <- past[sl,]
+
+## Have a look.
+plot(kpwgs84)
+plot(past, add=TRUE)
+
+## Now trying to get a revisit history based on proximity.
+
+## First have to figure out how dates are stored.
+## Looking at a test record on AKEPIC, a date of 07/30/2006 is downloaded as 1154217600.
+past$date <- as.Date(past$epoch_timestamp/(24*60*60), origin="1970-01-01")
+past <- past[order(past$date),]
+## We only need points that have some kind of site code.
+sl <- !(past$site_code=="") | !(past$original_site_code=="")
+past <- past[sl,]
+## Overwriting site codes with older ones.
+sl <- !(past$original_site_code=="")
+past$site_code[sl] <- past$original_site_code[sl]
+site_code <- unique(past$site_code)
+## Select the first instance of each site code.
+site_data <- data.frame(site_code)
+site_data$lat <- NA
+site_data$lon <- NA
+for (this_code in 1:length(site_code))
+ {
+ sl <- past$site_code==site_code[this_code]
+ tmpdf <- past[sl,]
+ site_data$lat[this_code] <- coordinates(tmpdf)[1,2]
+ site_data$lon[this_code] <- coordinates(tmpdf)[1,1]
+ }
+coordinates(site_data) <- c("lon", "lat")
+proj4string(site_data) <- CRS(wgs84) 
+ 
+dst <- pointDistance(site_data, lonlat=TRUE)
+
+## Assigning site codes.
+for (this_site in 1:nrow(site_data))
+ {
+ if (this_site==1)
+  {
+  }
+ else
+  {
+  dists <- dst[this_site, 1:(this_site-1)]
+  mindist <- min(dists)
+  if (mindist < 50)
+   {
+   which_near_sites <- which(dists==mindist)
+   which_near_site <- which_near_sites[1]
+   new_site_code <- site_data$site_code[which_near_site]
+   site_data$site_code[this_site] <- new_site_code
+   }
+  }
+ }
+ 
+site_code <- unique(site_data$site_code)
+## Select the first instance of each site code.
+site_data <- data.frame(site_code)
+site_data$lat <- NA
+site_data$lon <- NA
+for (this_code in 1:length(site_code))
+ {
+ sl <- past$site_code==site_code[this_code]
+ tmpdf <- past[sl,]
+ site_data$lat[this_code] <- coordinates(tmpdf)[1,2]
+ site_data$lon[this_code] <- coordinates(tmpdf)[1,1]
+ }
+coordinates(site_data) <- c("lon", "lat")
+proj4string(site_data) <- CRS(wgs84) 
+
+## Now putting the two datasets together.
+coordinates(akepic1) <- c("Longitude", "Latitude")
+proj4string(akepic1) <- CRS(wgs84)
+site_code <- unique(akepic1$Site.Code)
+new_site_data <- data.frame(site_code)
+new_site_data$lat <- NA
+new_site_data$lon <- NA
+for (this_code in 1:length(site_code))
+ {
+ sl <- akepic1$Site.Code==site_code[this_code]
+ tmpdf <- akepic1[sl,]
+ new_site_data$lat[this_code] <- coordinates(tmpdf)[1,2]
+ new_site_data$lon[this_code] <- coordinates(tmpdf)[1,1]
+ }
+coordinates(new_site_data) <- c("lon", "lat")
+proj4string(new_site_data) <- CRS(wgs84) 
+
+all_site_data <- rbind(site_data, new_site_data)
+
+## Assigning original site codes.
+dst <- pointDistance(all_site_data, lonlat=TRUE)
+all_site_data$Original.Site.Code <- ""
+
+for (this_site in (nrow(all_site_data)-(nrow(new_site_data)-1)):nrow(all_site_data)) #(nrow(all_site_data)-(nrow(new_site_data)-1)):nrow(all_site_data)
+ {
+  dists <- dst[this_site, 1:(this_site-1)]
+  mindist <- min(dists)
+  if (mindist < 50)
+   {
+   which_near_sites <- which(dists==mindist)
+   which_near_site <- which_near_sites[1]
+   original_site_code <- all_site_data$site_code[which_near_site]
+   all_site_data$Original.Site.Code[this_site] <- original_site_code
+   }
+ }
+ 
+## Now joining this back to the akepic data.
+akepic2 <- as.data.frame(akepic1)
+names(akepic2)[which(names(akepic2)=="Original.Site.Code")] <- "Original.Site.Code.old"
+names(all_site_data@data)[1] <- "Site.Code"
+akepic3 <- merge(x=akepic2, y=all_site_data@data, all.x=TRUE)
+sl <- !(akepic3$Original.Site.Code=="")
+akepic3$Revisit.[sl] <- "yes"
+
+## I saw some blanks where there should not be.
+sl <- akepic3$Project.Name==""
+akepic3$Project.Name[sl] <- "Kenai National Wildlife Refuge Invasive Plant Surveillance"
+
+## Saving.
+write.table(akepic3[,akepicnames],
+ "../data/final_data/observations/2020-11-27-1533_AKEPIC_upload.tsv",
+ row.names=FALSE,
+ quote=FALSE,
+ sep="\t",
+ na = ""
+ )
+ 
+## Trying this as a CSV, also.
+write.csv(akepic3[,akepicnames],
+ "../data/final_data/observations/2020-11-27-1533_AKEPIC_upload.csv",
+ row.names=FALSE,
+ quote=TRUE,
+ na = ""
+ )
+```
+
+## Monday, November 30
+
+I started work on a *Refuge Notebook* article about Arsenic.
+
+# December
+
+  - [Tuesday, December 1](#tuesday-december-1)
+  - [Wednesday, December 2](#wednesday-december-2)
+  - [Thursday, December 3](#thursday-december-3)
+
+## Tuesday, December 1
+
+I continued work on a *Refuge Notebook* article for this week.
+
+## Wednesday, December 2
+
+I finished the *Refuge Notebook* article for this week and sent it to
+the *Clarion*.
+
+## Thursday, December 3
+
+  - Slikok occupancy manuscript/analysis.
+  - FY20 Summary Report on Invasive Species Projects.
+  - Update chemicals inventory based on data from Jake.
+  - PUP reporting.
+  - Charge card training.
+  - 2021 invasive species funding request.
+  - Get RCG reporting to KPCWMA.
+  - KPCWMA MOU.
+  - *Aporrectodea caliginosa* phylogeny.
+  - Reformat hare data and get it back to USGS BISON.
 
 # Appendixes
 
