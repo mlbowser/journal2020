@@ -438,14 +438,14 @@ proposed regulation on *Lumbricus* species worms.
 I generated maps of *Lumbricus* species distribution data using
 SimpleMappr (Shorthouse [2010](#ref-shorthouse_simplemappr_2010)) and
 data from GBIF (GBIF.org
-[2020](#ref-gbiforg_gbif_2020-1)[f](#ref-gbiforg_gbif_2020-1),
-[2020](#ref-gbiforg_gbif_2020)[g](#ref-gbiforg_gbif_2020)).
+[2020](#ref-gbiforg_gbif_2020-1)[g](#ref-gbiforg_gbif_2020-1),
+[2020](#ref-gbiforg_gbif_2020)[h](#ref-gbiforg_gbif_2020)).
 
 ![Map of *Lumbricus terrestris* distribution in
 Alaska.](2020-01-13-1013_Lumbricus_terrestris_in_Alaska.jpg)  
 Map of *Lumbricus terrestris* distribution in Alaska. Locations were
 obtained from GBIF (GBIF.org
-[2020](#ref-gbiforg_gbif_2020-1)[f](#ref-gbiforg_gbif_2020-1)).
+[2020](#ref-gbiforg_gbif_2020-1)[g](#ref-gbiforg_gbif_2020-1)).
 
 ![Map of *Lumbricus rubellus* distribution in
 Alaska.](2020-01-13-1014_Lumbricus_rubellus_in_Alaska.jpg)  
@@ -1005,7 +1005,7 @@ HUC12 190203021903 “Miller Creek-Frontal Cook Inlet” watershed. I
 simplified this using ArcMap’s Simplify Polygon tool, with a
 simplification tolerance of 500 m. I converted this to WKT so I could
 run a GBIF search (GBIF.org
-[2020](#ref-gbiforg_gbif_2020-2)[h](#ref-gbiforg_gbif_2020-2)).
+[2020](#ref-gbiforg_gbif_2020-2)[i](#ref-gbiforg_gbif_2020-2)).
 
 I finished sorting Berlese sample
 [KNWR:Ento:11362](http://arctos.database.museum/guid/KNWR:Ento:11362)
@@ -2814,7 +2814,7 @@ I attended the 11:00 biology check-in telecon.
 I prepared data for Rob Massengill, but I accidentally overwrote the R
 script. I had downloaded occurrence data from the Vogel Lake vicinity
 from GBIF (GBIF.org
-[2020](#ref-gbiforg_gbif_2020-3)[i](#ref-gbiforg_gbif_2020-3)), Arctos,
+[2020](#ref-gbiforg_gbif_2020-3)[j](#ref-gbiforg_gbif_2020-3)), Arctos,
 and iNaturalist, then processed these. I had entered data for specimen
 records
 [KNWR:Ento:11383](http://arctos.database.museum/guid/KNWR:Ento:11383)
@@ -14125,6 +14125,17 @@ I started work on a *Refuge Notebook* article about Arsenic.
   - [Tuesday, December 1](#tuesday-december-1)
   - [Wednesday, December 2](#wednesday-december-2)
   - [Thursday, December 3](#thursday-december-3)
+  - [Friday, December 4](#friday-december-4)
+  - [Saturday, December 5](#saturday-december-5)
+  - [Monday, December 7](#monday-december-7)
+  - [Tuesday, December 8](#tuesday-december-8)
+  - [Wednesday, December 9](#wednesday-december-9)
+  - [Thursday, December 10](#thursday-december-10)
+  - [Friday, December 11](#friday-december-11)
+  - [Saturday, December 12](#saturday-december-12)
+  - [Monday, December 14](#monday-december-14)
+  - [Tuesday, December 15](#tuesday-december-15)
+  - [Wednesday, December 16](#wednesday-december-16)
 
 ## Tuesday, December 1
 
@@ -14140,13 +14151,521 @@ the *Clarion*.
   - Slikok occupancy manuscript/analysis.
   - FY20 Summary Report on Invasive Species Projects.
   - Update chemicals inventory based on data from Jake.
-  - PUP reporting.
+  - ~~PUP reporting.~~
   - Charge card training.
   - 2021 invasive species funding request.
   - Get RCG reporting to KPCWMA.
   - KPCWMA MOU.
-  - *Aporrectodea caliginosa* phylogeny.
+  - ~~*Aporrectodea caliginosa* phylogeny.~~
   - Reformat hare data and get it back to USGS BISON.
+  - Pre-NEPA Planning for Programmatic Invasive Terrestrial Plant
+    Treatment comments
+
+I edited the snowshoe hare dataset metadata for import to GBIF via USGS’
+IPT.
+
+I submitted the PUP usage report SonarONE, but I could not complete the
+usage report or Littora because I failed to find it in search tool.
+
+I tried to get more budget info from the Sandpiper Lake elodea
+eradication project for the FY20 Summary Report on Invasive Species
+Projects.
+
+I added recently-obtained *Aporrectodea* sequences and the four
+sequences identified as *Aporrectodea limicola* on
+[BOLD](http://boldsystems.org/) to the FASTA file I had made on [March
+12](#thursday-march-12). This is submitted to
+[NGPhylogeny.fr](https://ngphylogeny.fr/) using the FastME/OneClick
+analysis (results:
+<https://ngphylogeny.fr/workspace/history/c27e903be4666575>).
+
+I identified speicmen
+[KNWR:Inv:50](https://arctos.database.museum/guid/KNWR:Inv:50) and
+[KNWR:Inv:51](https://arctos.database.museum/guid/KNWR:Inv:51) as
+*Aporrectodea caliginosa* lineage L3.
+
+I downloaded a couple of additional sequences from Arctos and re-ran the
+analysis (<https://ngphylogeny.fr/workspace/history/8465048aa002edee>).
+
+![Phylogenetic tree including recent worm
+sequences.](2020-12-03_Aporrectodea_tree.png)  
+Phylogenetic tree including recent worm sequences.
+
+[KNWR:Inv:25](https://arctos.database.museum/guid/KNWR:Inv:25) and
+[UAM:Ento:362505](https://arctos.database.museum/guid/UAM:Ento:362505)
+are also Aporrectodea caliginosa\* lineage L3.
+
+The problem with the PUP was resolved and I submitted the usage report
+for Littora.
+
+I started work on reformatting the snowshoe hare data as occurrence
+data.
+
+## Friday, December 4
+
+  - Slikok occupancy manuscript/analysis.
+  - FY20 Summary Report on Invasive Species Projects.
+  - Update chemicals inventory based on data from Jake.
+  - Charge card training.
+  - 2021 invasive species funding request.
+  - Get RCG reporting to KPCWMA.
+  - KPCWMA MOU.
+  - ~~Reformat hare data and get it back to USGS BISON.~~
+
+I finished reformatting the snowshoe hare data and got it sent off to
+the BISON folks.
+
+### Invasive Plant Treatment Pre-NEPA Discussion @ 10:00
+
+``` r
+## Thinking about the snowshow hare data, what if we reduced effort by sampling every other plot?
+(1:49)[c(TRUE, FALSE)]
+ [1]  1  3  5  7  9 11 13 15 17 19 21 23 25 27 29 31 33 35 37 39 41 43 45 47 49
+ 
+length((1:49)[c(TRUE, FALSE)])
+[1] 25 
+
+haregrid <- matrix(1:49, nrow=7, ncol=7)
+
+haregrid %in% (1:49)[c(TRUE, FALSE)]
+
+matrix(matrix(1:49, nrow=7, ncol=7) %in% (1:49)[c(TRUE, FALSE)], nrow=7, ncol=7)
+      [,1]  [,2]  [,3]  [,4]  [,5]  [,6]  [,7]
+[1,]  TRUE FALSE  TRUE FALSE  TRUE FALSE  TRUE
+[2,] FALSE  TRUE FALSE  TRUE FALSE  TRUE FALSE
+[3,]  TRUE FALSE  TRUE FALSE  TRUE FALSE  TRUE
+[4,] FALSE  TRUE FALSE  TRUE FALSE  TRUE FALSE
+[5,]  TRUE FALSE  TRUE FALSE  TRUE FALSE  TRUE
+[6,] FALSE  TRUE FALSE  TRUE FALSE  TRUE FALSE
+[7,]  TRUE FALSE  TRUE FALSE  TRUE FALSE  TRUE
+## That is a nice checkerboard pattern, and it works whether or not even-numbered columns are inverted.
+```
+
+I started addressing questions about the Slikok occupancy work.
+
+## Saturday, December 5
+
+I worked some on my Slikok occupancy manuscript in the morning.
+
+## Monday, December 7
+
+I worked some on my Slikok occupancy manuscript in the morning. I took
+the afternoon off.
+
+## Tuesday, December 8
+
+I scrutinized and addressed some problems in the dates in the snowshoe
+hare dataset, then sent the revised GBIF export dataset to BISON. I also
+updated metadata and posted the current version of the repository to
+ServCat at <https://ecos.fws.gov/ServCat/DownloadFile/190188>.
+
+## Wednesday, December 9
+
+I did some literature review regarding primers and methods for
+metabarcoding diet of birds. Todd had collected a fecal sample from a
+Rufous Hummingbird that we are interested in having processed using
+metabarcoding methods. It still looks like the old ZBJ-ArtF1c and
+ZBJ-ArtR2c primer set (Zeale et al.
+[2011](#ref-zeale_taxon-specific_2011)) is still a good option. It
+looked good in a recent comparision of primer sets for this kind of work
+(Tournayre et al. [2020](#ref-tournayre_silico_2020)). While this primer
+pair is good for identifying arthropods, it does not amplify vertebrate
+DNA well, so it would not be good for identifying predators from fecal
+samples where the predator was not known. It should work well in this
+case, though. I requested a quote from [Mr. DNA
+Lab](https://www.mrdnalab.com) for processing a single, tiny fecal
+sample.
+
+I received, edited, and sent off this week’s *Refuge Notebook* article.
+
+I started work on moving *Refuge Notebook* articles to ServCat by first
+extracting a bibliography from zotero, a bibliographical dataset from
+2016. I tried entering one record into ServCat as a trial run.
+
+I started trying to a biological assessment for land exchange. I
+received summary data on habitat types. I found that the classification
+used (USDA Forest Service, Alaska Region
+[2019](#ref-usda_forest_service_alaska_region_kenai_2019); Bellante et
+al. [2020](#ref-bellante_kenai_2020)) did not have definitions of the
+habitat types.
+
+## Thursday, December 10
+
+I worked on a biological assessment for land exchange, describing the
+plant communities present.
+
+I downloaded an occurrence dataset of a bounding box including both
+parcels (GBIF.org
+[2020](#ref-gbiforg_gbif_2020-9_land_exchange)[f](#ref-gbiforg_gbif_2020-9_land_exchange)).
+
+## Friday, December 11
+
+I extracted GBIF records from the two land exchange parcels.
+
+``` r
+## Script to pull GBIF occurrence records for land exchange parcels
+
+## By Matt Bowser, 11.December.2020
+
+## Load libraries.
+library(maptools)
+library(rgdal)
+library(raster)
+library(knitr)
+
+## Load parcel polygons.
+fws <- readOGR(dsn="../data/raw_data/geodata/FWS_Land.shp") 
+## This included seven features. I need just one of these.
+fws <- fws[7,]
+ciri <- readOGR(dsn="../data/raw_data/geodata/ciri_poly.shp")
+
+## Reproject polygons to WGS84.
+albers <- "+proj=aea +lat_1=55 +lat_2=65 +lat_0=50 +lon_0=-154 +x_0=0 +y_0=0 +ellps=GRS80 +datum=NAD83 +units=m +no_defs"
+wgs84 <- "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
+proj4string(fws) <- CRS(albers)
+fwsw <- spTransform(fws, CRS(wgs84))
+ciriw <- spTransform(ciri, CRS(wgs84))
+
+## Load GBIF data.
+gbif <- read.delim("../source_data/GBIF/2020-12-10-1457_GBIF_occurrence_download/0134211-200613084148143.csv")
+dim(gbif)
+# 5078 records.
+coordinates(gbif) <- c("decimalLongitude", "decimalLatitude")
+proj4string(gbif) <- CRS(wgs84)
+
+## Now select occurrences within parcels.
+fwso <- over(x=gbif, y=fwsw)
+sl <- !is.na(fwso$Tract_No)
+fwso <- gbif[sl,]
+
+cirio <- over(x=gbif, y=ciriw)
+sl <- !is.na(cirio$Id)
+cirio <- gbif[sl,]
+
+## Now get a species list for each parcel.
+fwss <- levels(as.factor(fwso$scientificName[fwso$taxonRank=="SPECIES"]))
+fwss
+[1] "Bubo virginianus (Gmelin, 1788)"      
+[2] "Troglodytes pacificus S.F.Baird, 1864"
+[3] "Vicia cracca L." 
+
+ciris <- levels(as.factor(cirio$scientificName[cirio$taxonRank=="SPECIES"]))
+ciris
+[1] "Gavia immer (Brunnich, 1764)"             
+[2] "Haliaeetus leucocephalus (Linnaeus, 1766)"
+[3] "Sterna paradisaea Pontoppidan, 1763" 
+
+## Combine and summarize those occurrences.
+fwso$parcel <- "FWS"
+cirio$parcel <- "CIRI"
+obs <- rbind(fwso, cirio)
+obs <- obs[obs$taxonRank=="SPECIES",] 
+
+ag1 <- aggregate(obs$gbifID, by=list(obs$scientificName, obs$parcel), length)
+names(ag1) <- c("species", "parcel", "n_records")
+ag1$year_min <- aggregate(obs$year, by=list(obs$scientificName, obs$parcel), min)$x
+ag1$year_max <- aggregate(obs$year, by=list(obs$scientificName, obs$parcel), max)$x
+
+ag1$year_range <- as.character(ag1$year_min)
+sl <- !ag1$year_min==ag1$year_max
+ag1$year_range[sl] <- paste(ag1$year_min[sl], ag1$year_max[sl], sep="-")
+ag1$common_name <- ""
+
+ag2 <- ag1[,c("parcel", "common_name", "species", "n_records", "year_range")]
+
+kable(ag2)
+
+write.csv(ag1, "../documents/reports/biological_assessment/GBIF_occurrences_by_parcel.csv", row.names=FALSE)
+
+## Pulling AKEPIC records, also.
+## Load AKEPIC data.
+ake <- read.csv("../source_data/AKEPIC/2020-11-27-1057_AKEPIC_data_download.csv")
+dim(ake)
+
+coordinates(ake) <- c("longitude", "latitude")
+proj4string(ake) <- CRS(wgs84)
+
+## Now select occurrences within parcels.
+fwsa <- over(x=ake, y=fwsw)
+sl <- !is.na(fwsa$Tract_No)
+fwsa <- ake[sl,]
+dim(fwsa)
+#[1] 10 45
+
+ciria <- over(x=ake, y=ciriw)
+sl <- !is.na(ciria$Id)
+ciria <- ake[sl,]
+dim(ciria)
+#[1]  0 45
+
+write.csv(fwsa[,c("common_name", "scientific_name")], "../documents/reports/biological_assessment/AKEPIC_occurrences.csv", row.names=FALSE)
+```
+
+I revised my part of the draft biological assessment for the land
+exchange. I usually do not deal with common names, so I found some of
+them interesting when I looked them up for the assessment. I did not
+know that there was such a thing as a black-bristled logsitter
+(*Brachyopa ferruginea* (Fallen, 1817)).
+
+I read up on versioning in ServCat and separated the two versions. The
+current version is now at
+<https://ecos.fws.gov/ServCat/Reference/Profile/127503>.
+
+## Saturday, December 12
+
+I edited and made comments on the draft biological assessment for the
+land exchange.
+
+## Monday, December 14
+
+I completed the fleet card training for cardholders.
+
+I stopped by the office today to some computer/account maintenance
+taskds and to pick up a hummingbird fecal sample that Todd had left for
+me in the freezer.
+
+I entered the sample into Arctos
+([KNWR:Env:27](https://arctos.database.museum/guid/KNWR:Env:27)) and
+filled out a submission form for [Mr. DNA](https://www.mrdnalab.com/).
+
+## Tuesday, December 15
+
+I packaged the hummingbird fecal sample to be shipped out this morning.
+
+I studied Kéry and Royle ([2016](#ref-kery_applied_2016)). The Slikok
+creek dataset corresponds to the situation in section 10.11.2 of Kéry
+and Royle ([2016](#ref-kery_applied_2016)), the space-for-time design
+where no magical covariate is known.
+
+## Wednesday, December 16
+
+I worked on generating spatial data for the Slikok occupancy project.
+
+``` r
+
+## Script to calculate and save spatial polygons from the Slikok project.
+## Much of this code is recycled from the earlier data summary work.
+
+## Load libraries.
+library(reshape2)
+library(unmarked)
+library(AHMbook)
+library(maptools)
+library(rgdal)
+library(raster)
+library(swfscMisc)
+library(rgeos)
+
+## Load functions.
+source("functions/functions.R")
+
+data01 <- read.csv("../data/raw_data/occurrence_data/2020-11-12-1400_occurrences.csv", stringsAsFactors=FALSE)
+
+## Separate plot and subplot identifiers.
+data01$plot_half <- NA
+data01$plot_half[grepl("east half of plot", data01$SPEC_LOCALITY)] <- "east"
+data01$plot_half[grepl("west half of plot", data01$SPEC_LOCALITY)] <- "west"
+
+data01$plot_name <- gsub(", east half of plot", "", data01$SPEC_LOCALITY)
+data01$plot_name <- gsub(", west half of plot", "", data01$plot_name)
+data01$plot_name <- substr(data01$plot_name, nchar(data01$plot_name)-3, nchar(data01$plot_name))
+
+## I think it will be most handy to use Julian dates.
+data01$BEGAN_DATE <- as.Date(data01$BEGAN_DATE)
+data01$julian_day <- as.numeric(format(data01$BEGAN_DATE, "%j"))
+
+## Summarize the number of plots surveyed per day.
+plot_data <- unique(data01[,c("plot_name", "julian_day")])
+ag02 <- aggregate(plot_data$plot_name, by=list(plot_data$julian_day), length)
+names(ag02) <- c("julian_day", "n_plots")
+
+## I really should summarize the number of plot halves surveyed per day.
+supblot_data <- unique(data01[,c("SPEC_LOCALITY", "julian_day")])
+ag03 <- aggregate(supblot_data$SPEC_LOCALITY, by=list(supblot_data$julian_day), length)
+names(ag03) <- c("julian_day", "n_subplots")
+
+## It would be good to make a table of the number of revisits at each plot.
+## I will divide the dates into two time periods.
+data01$time_period <- NA
+data01$time_period[data01$julian_day < 190] <- 1
+data01$time_period[data01$julian_day > 190] <- 2
+
+ag05 <- unique(data01[,c("plot_name", "plot_half", "time_period", "DEC_LAT",  "DEC_LONG")])
+ag05 <- melt(ag05, id.vars=c("plot_name", "plot_half", "time_period", "DEC_LAT",  "DEC_LONG"))
+ag05 <- dcast(ag05, plot_name + DEC_LAT + DEC_LONG ~ plot_half + time_period, fun.aggregate=length)
+
+colSums(ag05[,c("west_1", "west_2")])
+#west_1 west_2 
+#    23     22 
+
+## Now that we have the structure, it is time to simulate some data.
+## Following the example of Kery and Royle (2016).
+
+site_data <- ag05
+names(site_data)[which(names(site_data)=="DEC_LAT")] <- "latitude"
+names(site_data)[which(names(site_data)=="DEC_LONG")] <- "longitude"
+coordinates(site_data) <- c("longitude", "latitude")
+
+## Projections.
+albers <- "+proj=aea +lat_1=55 +lat_2=65 +lat_0=50 +lon_0=-154 +x_0=0 +y_0=0 +ellps=GRS80 +datum=NAD83 +units=m +no_defs"
+wgs84 <- "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
+proj4string(site_data) <- CRS(wgs84)
+row.names(site_data) <- site_data$plot_name
+
+## Generate circular polygons for the plots.
+this_plot <- 1
+circs <- list(NA)
+for(this_plot in 1:40)
+ {
+ circ <- circle.polygon(x=site_data$longitude[this_plot],
+  y=site_data$latitude[this_plot],
+  radius=5.64/1000,
+  sides=32,
+  by.length=FALSE,
+  units="km",
+  poly.type="gc.earth",
+  ellipsoid=datum("wgs84")
+  )
+ p = Polygon(circ)
+ ps = Polygons(list(p),1)
+ ps@ID <- site_data$plot_name[this_plot]
+ circs[[this_plot]] <- ps 
+ }
+#ps = Polygons(circs,1)
+sps = SpatialPolygons(circs)
+plot(sps) 
+proj4string(sps) <- CRS(wgs84)
+plot(sps)
+plotsdf <- SpatialPolygonsDataFrame(sps, data=site_data@data)
+plotsdf$wkt <- writeWKT(plotsdf, byid = TRUE)
+## Saving this object.
+dump("plotsdf", file=paste0("../data/final_data/geodata/", nowstring(), "_plot_circles.R"))
+save(plotsdf, file=paste0("../data/final_data/geodata/", nowstring(), "_plot_circles.RData"))
+## Now exporting kml.
+writeOGR(
+ plotsdf, 
+ dsn=paste0("../data/final_data/geodata/", nowstring(), "_plot_circles.kml"), 
+ layer="plots", 
+ driver="KML", 
+ dataset_options=c("NameField=plot_name"), 
+ overwrite_layer=TRUE
+ )
+
+## Now generate subplots.
+this_plot <- 1
+nsides <- 32
+semis <- list(NA)
+for(this_plot in 1:1)
+ {
+ circ <- circle.polygon(x=site_data$longitude[this_plot],
+  y=site_data$latitude[this_plot],
+  radius=5.64/1000,
+  sides=nsides,
+  by.length=FALSE,
+  units="km",
+  brng.limits = 90,
+  poly.type="gc.earth",
+  ellipsoid=datum("wgs84")
+  )
+ e <- Polygon(circ[c(1:(round(nsides/2 + 1)),1),]) 
+ ps = Polygons(list(e),1)
+ ps@ID <- site_data$plot_name[this_plot]
+ semis[[this_plot]] <- ps 
+ }
+semisp = SpatialPolygons(semis)
+plot(semisp) 
+proj4string(semisp) <- CRS(wgs84)
+plot(semisp)
+area(semisp)
+#[1] 49.72726
+## Area of semicircle of radius 5.64 m
+pi*(5.64)^2/2
+#[1] 49.9664
+
+That semicircle looked good. Now generating the whole set.
+## Now generate subplots.
+this_plot <- 1
+nsides <- 32
+semise <- list(NA)
+semisw <- list(NA)
+for(this_plot in 1:40)
+ {
+ circ <- circle.polygon(x=site_data$longitude[this_plot],
+  y=site_data$latitude[this_plot],
+  radius=5.64/1000,
+  sides=nsides,
+  by.length=FALSE,
+  units="km",
+  brng.limits = 90,
+  poly.type="gc.earth",
+  ellipsoid=datum("wgs84")
+  )
+ e <- Polygon(circ[c(1:(round(nsides/2 + 1)),1),])
+ w <- Polygon(circ[c(round(nsides/2 + 1):(nsides+1),round(nsides/2 + 1)),]) 
+ pse = Polygons(list(e),1)
+ psw = Polygons(list(w),1)
+ pse@ID <- paste0(site_data$plot_name[this_plot], "_east")
+ psw@ID <- paste0(site_data$plot_name[this_plot], "_west")
+ semise[[this_plot]] <- pse
+ semisw[[this_plot]] <- psw 
+ }
+sde <- site_data@data
+row.names(sde) <- paste0(site_data$plot_name, "_east")
+semisep = SpatialPolygons(semise)
+proj4string(semisep) <- CRS(wgs84)
+semisedf <- SpatialPolygonsDataFrame(semisep, data=sde)
+sdw <- site_data@data
+row.names(sdw) <- paste0(site_data$plot_name, "_west")
+semiswp = SpatialPolygons(semisw)
+proj4string(semiswp) <- CRS(wgs84)
+semiswdf <- SpatialPolygonsDataFrame(semiswp, data=sdw)
+semisdf <- rbind(semisedf, semiswdf)
+semisdf$plot_name <- row.names(semisdf)
+semisdf$wkt <- writeWKT(semisdf, byid = TRUE) 
+## Saving this object.
+dump("semisdf", file=paste0("../data/final_data/geodata/", nowstring(), "_subplot_semicircles.R"))
+save(semisdf, file=paste0("../data/final_data/geodata/", nowstring(), "_subplot_semicircles.RData"))
+## Now exporting kml.
+writeOGR(
+ semisdf, 
+ dsn=paste0("../data/final_data/geodata/", nowstring(), "_subplot_semicircles.kml"), 
+ layer="plots", 
+ driver="KML", 
+ dataset_options=c("NameField=plot_name"), 
+ overwrite_layer=TRUE
+ )
+
+## Now export these polygons for import into Arctos later.
+
+## Plots.
+file_name <- paste0("Slikok_project_plot_", plotsdf$plot_name, ".wkt")
+write.csv(as.data.frame(cbind(plotsdf$plot_name, file_name)),
+ file=paste0("../data/final_data/geodata/wkt/plots/", nowstring(), "_plot_files.csv"),
+ row.names=FALSE
+ )
+for (this_poly in 1:nrow(plotsdf))
+ {
+ write(plotsdf$wkt[this_poly],
+ file=paste0("../data/final_data/geodata/wkt/plots/", file_name[this_poly]))
+ } 
+
+## Subplots. 
+file_name <- paste0("Slikok_project_subplot_", semisdf$plot_name, ".wkt")
+write.csv(as.data.frame(cbind(semisdf$plot_name, file_name)),
+ file=paste0("../data/final_data/geodata/wkt/subplots/", nowstring(), "_subplot_files.csv"),
+ row.names=FALSE
+ )
+for (this_poly in 1:nrow(semisdf))
+ {
+ write(semisdf$wkt[this_poly],
+ file=paste0("../data/final_data/geodata/wkt/subplots/", file_name[this_poly]))
+ }  
+```
+
+I realized that no *Refuge Notebook* article has been turned in for this
+week. I frantically began to put together an article, but, thankfully, I
+received an article this afternoon. I edited this and sent it off to the
+*Clarion*.
 
 # Appendixes
 
@@ -14308,6 +14827,17 @@ doi:[10.3724/SP.J.1145.2013.00001](https://doi.org/10.3724/SP.J.1145.2013.00001)
 Bella, E. 2013. Kenai national wildlife refuge invasive plant survey
 2013. Vogel lake.
 doi:[10.7299/X7V40VHG](https://doi.org/10.7299/X7V40VHG).
+
+</div>
+
+<div id="ref-bellante_kenai_2020">
+
+Bellante, G., Boucher, T., Charnon, B., Goetz, W., Homan, K., Pan, C.,
+Pugh, N., Megown, K., Schrader, B., Schulz, B., and Wittwer, D. 2020.
+Kenai Peninsula Existing Vegetation Map Project. Department of
+Agriculture, Forest Service, Geospatial Technology; Applications Center,
+Salt Lake City, Utah. Available from
+<https://www.fs.usda.gov/Internet/FSE_DOCUMENTS/fseprd754252.pdf>.
 
 </div>
 
@@ -14663,30 +15193,37 @@ doi:[10.15468/dl.f46pcs](https://doi.org/10.15468/dl.f46pcs).
 
 </div>
 
-<div id="ref-gbiforg_gbif_2020-1">
+<div id="ref-gbiforg_gbif_2020-9_land_exchange">
 
 GBIF.org. 2020f. GBIF Occurrence Download. GBIF.org.
+doi:[10.15468/dl.47thc6](https://doi.org/10.15468/dl.47thc6).
+
+</div>
+
+<div id="ref-gbiforg_gbif_2020-1">
+
+GBIF.org. 2020g. GBIF Occurrence Download. GBIF.org.
 doi:[10.15468/dl.bguubm](https://doi.org/10.15468/dl.bguubm).
 
 </div>
 
 <div id="ref-gbiforg_gbif_2020">
 
-GBIF.org. 2020g. GBIF Occurrence Download. GBIF.org.
+GBIF.org. 2020h. GBIF Occurrence Download. GBIF.org.
 doi:[10.15468/dl.3dfs26](https://doi.org/10.15468/dl.3dfs26).
 
 </div>
 
 <div id="ref-gbiforg_gbif_2020-2">
 
-GBIF.org. 2020h. GBIF Occurrence Download. GBIF.org.
+GBIF.org. 2020i. GBIF Occurrence Download. GBIF.org.
 doi:[10.15468/dl.deymas](https://doi.org/10.15468/dl.deymas).
 
 </div>
 
 <div id="ref-gbiforg_gbif_2020-3">
 
-GBIF.org. 2020i. GBIF Occurrence Download. GBIF.org.
+GBIF.org. 2020j. GBIF Occurrence Download. GBIF.org.
 doi:[10.15468/dl.azbzw2](https://doi.org/10.15468/dl.azbzw2).
 
 </div>
@@ -14833,6 +15370,14 @@ Katoh, K., and Standley, D.M. 2013. MAFFT multiple sequence alignment
 software version 7: Improvements in performance and usability. Molecular
 Biology and Evolution **30**(4): 772–780. Oxford University Press (OUP).
 doi:[10.1093/molbev/mst010](https://doi.org/10.1093/molbev/mst010).
+
+</div>
+
+<div id="ref-kery_applied_2016">
+
+Kéry, M., and Royle, J.A. 2016. Applied Hierarchical Modeling in
+Ecology: Analysis of distribution, abundance and species richness in R
+and BUGS. Volume 1: Prelude and Static Models. Academic Press, New York.
 
 </div>
 
@@ -15259,6 +15804,16 @@ doi:[10.1002/fsh.10506](https://doi.org/10.1002/fsh.10506).
 
 </div>
 
+<div id="ref-tournayre_silico_2020">
+
+Tournayre, O., Leuchtmann, M., Filippi-Codaccioni, O., Trillat, M.,
+Piry, S., Pontier, D., Charbonnel, N., and Galan, M. 2020. In silico and
+empirical evaluation of twelve metabarcoding primer sets for
+insectivorous diet analyses. Ecology and Evolution **10**(13):
+6310–6332. doi:[10.1002/ece3.6362](https://doi.org/10.1002/ece3.6362).
+
+</div>
+
 <div id="ref-tripp_descriptions_1955">
 
 Tripp, H.A. 1955. Descriptions and habits of Cecidomyiidae (Diptera)
@@ -15303,6 +15858,14 @@ Forest Service, Alaska Region. Available from
 
 </div>
 
+<div id="ref-usda_forest_service_alaska_region_kenai_2019">
+
+USDA Forest Service, Alaska Region. 2019. Kenai Existing Vegetation 2017
+Map Package. Available from
+<https://www.arcgis.com/home/item.html?id=20b678e83ba1478db77a80567aca3530>.
+
+</div>
+
 <div id="ref-wang_resolving_2020">
 
 Wang, N., Kelly, L.J., McAllister, H.A., Zohren, J., and Buggs, R.J.A.
@@ -15335,6 +15898,15 @@ doi:[10.1186/1471-2229-10-205](https://doi.org/10.1186/1471-2229-10-205).
 Werner, R.A. 1964. White spruce seed loss caused by insects in Interior
 Alaska. The Canadian Entomologist **96**(11): 1462–1464.
 doi:[10.4039/Ent961462-11](https://doi.org/10.4039/Ent961462-11).
+
+</div>
+
+<div id="ref-zeale_taxon-specific_2011">
+
+Zeale, M.R.K., Butlin, R.K., Barker, G.L.A., Lees, D.C., and Jones, G.
+2011. Taxon-specific PCR for DNA barcoding arthropod prey in bat faeces.
+Molecular Ecology Resources **11**(2): 236–244.
+doi:[10.1111/j.1755-0998.2010.02920.x](https://doi.org/10.1111/j.1755-0998.2010.02920.x).
 
 </div>
 
