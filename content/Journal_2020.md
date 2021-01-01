@@ -17421,8 +17421,8 @@ I reviewed and edited the biological assessment for the land exchange.
 
 I am attempting to key a pair of tipuloid fly larvae that I collected
 yesterday using the key of Sundermann et al.
-([2007](#ref-sundermann_key_2007)), p. 72, Limoniidae/Pediciidae. 1 -\>
-2 -\> 3 -\> 4 -\> *Dicranota*?
+([2007](#ref-sundermann_key_2007)), p. 72, Limoniidae/Pediciidae. 1 → 2
+→ 3 → 4 → *Dicranota*?
 
 Based on a GBIF search, Pediciidae in our area include  
 *Dicranota cayuga* (Alexander, 1916), *Dicranota maculata* (Doane,
@@ -17443,9 +17443,26 @@ The sequence I obtained earlier was a short read (388 bp), but it was a
 e.g. specimen
 [CNKLB3574-14](http://boldsystems.org/index.php/Public_RecordView?processid=CNKLB3574-14).
 
+The image representing this BIN (below) a short rostrum, so it is not
+*Ornithodes*. It must be *Dicranota*.
+
+![Photograph of Diptera specimen
+CNKLB072-14.](2020-12-31_BOLDACR8073.jpg)  
+Photograph of specimen
+[CNKLB072-14](http://boldsystems.org/index.php/Public_RecordView?processid=CNKLB072-14),
+a member of BIN
+[BOLD:ACR8073](http://boldsystems.org/index.php/Public_BarcodeCluster?clusteruri=BOLD:ACR8073).
+Image CC-0 by CBG Photography Group, Centre for Biodiversity Genomics,
+downloaded from
+<http://boldsystems.org/pics/CNKLB/BIOUG17221-H01%2B1424887294.jpg>.
+
 Interestingly, there are 27 BINs identified as *Dicranota* on BOLD, but
 none of them are close to the sequences from my specimen or BIN
 BOLD:ACR8073.
+
+Larvae of *Dicranota* are carnivorous and can be found in “wet soil
+along streams, in boggy areas, and in other comparable places” according
+to Alexander ([1967](#ref-alexander_crane_1967)).
 
 # Appendixes
 
@@ -17592,6 +17609,14 @@ Alaska Region Data Stewardship Team. 2019b. Alaska Region Interim
 Metadata Guide. Available from
 <https://ak-region-dst.gitbook.io/alaska-region-mdeditor-interim-user-guide/>
 \[accessed 27 February 2020\].
+
+</div>
+
+<div id="ref-alexander_crane_1967">
+
+Alexander, C.P. 1967. The Crane Flies of California. University of
+California Press. Available from
+<http://essig.berkeley.edu/documents/cis/cis08.pdf>.
 
 </div>
 
