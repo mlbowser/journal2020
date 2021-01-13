@@ -10761,7 +10761,7 @@ think were turions. I was eventually able to see the dorsal rows of
 papillae, making these *Lemna turionifera*. It was only evident on the
 younger fronds. More disturbing, I did not find any turions that
 completely lacked any vestige of roots. This might have been because I
-have been keeping them at room temperature on the windo sill since
+have been keeping them at room temperature on the window sill since
 [Monday](#monday-september-28).
 
 I examined *Lemna* specimens I had collected from an unnamed lake off of
@@ -10778,7 +10778,7 @@ with this sample.
 
 In the afternoon I walked back down to collect my pan trap. On the way I
 saw and collected a *Prophysaon andersonii* slug (iNaturalist
-[61408726](https://www.inaturalist.org/observations/61408726);
+[61435457](https://www.inaturalist.org/observations/61435457);
 BOLD-3NVDGJX09). From the pan trap I collected two small wasps (BOLD-O53
 and BOLD-Y76) and one fly (BOLD-6H8).
 
